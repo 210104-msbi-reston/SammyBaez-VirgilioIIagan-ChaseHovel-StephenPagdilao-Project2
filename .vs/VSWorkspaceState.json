@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\SSIS",
+    "\\SSIS\\NBA-SSIS",
+    "\\SSRS"
   ],
+  "SelectedNode": "\\SSIS\\NBA-SSIS\\NBA-SSIS.sln",
   "PreviewInSolutionExplorer": false
 }
