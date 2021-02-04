@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{166109BA-D5B2-4AF0-9BDC-BD75CCDBBA87}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{BCEC5B88-886D-4E3E-AC22-235F23045AAC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -26,7 +26,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Profiling Task"
       DTS:TaskContact="Data Profiling Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <DataProfilingTaskData>
@@ -55,7 +55,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Expression Task"
       DTS:TaskContact="Expression Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <ExpressionTask
@@ -76,13 +76,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="155,42"
-          Id="Package\Expression Task"
-          TopLeft="324,195" />
-        <NodeLayout
           Size="168,42"
           Id="Package\Data Profiling Task"
-          TopLeft="524,269" />
+          TopLeft="442,108" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Expression Task"
+          TopLeft="186,114" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
