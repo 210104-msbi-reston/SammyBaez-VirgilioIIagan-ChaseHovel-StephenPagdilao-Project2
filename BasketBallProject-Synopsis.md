@@ -10,10 +10,11 @@ Our project aims to finding meaningful statistics on NBA regular season historic
    * Removing null rows and exception handling to log it to a table
    * Transformation of data and mapping columns to a centralized database
 3. Search and data scrap specific NBA player's overall statistics based on player name
-4. Search and data scrap each NBA player's statistics in a single team based on team name
+4. Search and data scrap each NBA player's overall statistics in a single team based on team name
 5. Search and data scrap specific NBA player's statistics in a specific year or a range of years
 6. Search and data scrap specific NBA player's statistics in a specific game
 7. Search and data scrap specific game statistics based on 
+
 ## Tech Stack
 * Microsoft SQL Server 2016
 * SSIS
