@@ -8,7 +8,7 @@ Our project aims to find meaningful statistics on NBA regular season historical 
 2. Data processing: 
    * Find relationships between .CSV files
    * Remove null rows and exception handling to log it to a table
-   * Transform data and mapping columns to a centralized database
+   * Transform data and map columns to a centralized database
 3. Search and data scrap specific NBA player's overall statistics based on player name
 4. Search and data scrap each NBA player's overall statistics in a single team based on team name
 5. Search and data scrap specific NBA player's statistics in a specific year or a range of years
