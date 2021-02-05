@@ -16,6 +16,7 @@ Our project aims to finding meaningful statistics on NBA regular season historic
 7. Search and data scrap specific game statistics based on 
 8. Predict the chance of winning when comparing two NBA teams
 9. Predict the overall seasonal outcomes
+10. Predict the potential MVP player in each team
 
 ## Tech Stack
 * Microsoft SQL Server 2016
