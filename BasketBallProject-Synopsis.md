@@ -1,7 +1,7 @@
 # Basketball Predictions and Analysis
 
 ## Description
-Our project aims to find meaningful statistics on NBA regular season historical data (about 16 years amount of data) such as average points a team makes per game or how many shots they make on average. Using this data, our project can make a number of predictions such as a team's chance of winning againsts another team, who might win the MVP award, etc. All values will be obtained by SSIS through Microsoft Excel, flat files, and/or web services to be stored onto MS SQL Server 2016. This data will then be analyzed using SSAS. Finally, the data is processed using SSRS into easy-to-digest information.
+Our project aims to find meaningful statistics on NBA regular season historical data (about 16 years amount of data) such as average points a team makes per game or how many shots they make on average. Using this data, our project can make a number of predictions such as a team's chance of winning against another team, who might win the MVP award, etc. All values will be obtained by SSIS through Microsoft Excel, flat files, and/or web services to be stored onto MS SQL Server 2016. This data will then be analyzed using SSAS. Finally, the data is processed using SSRS into easy-to-digest information.
 
 ## Automation
 1. Filter data from downloaded [.CSV files](https://www.kaggle.com/nathanlauga/nba-games?select=players.csv)
