@@ -1,0 +1,587 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/5/2021 4:14:46 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-BN01JAD"
+  DTS:CreatorName="DESKTOP-BN01JAD\V"
+  DTS:DTSID="{7539F3DA-0284-484C-98B2-D5CF55AFEEBC}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.150"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="LoadRankingsFile"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{18EF35FE-A3C9-43F0-B363-1E05DA389D55}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Load Data File]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{6FF0792F-59CA-47F4-9421-4A64E6A20A7D}"
+      DTS:ObjectName="Load Data File">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\V\Documents\Revature\Project 2\SammyBaez-VirgilioIIagan-ChaseHovel-StephenPagdilao-Project2\Data\ranking.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TEAM_ID"
+              DTS:DTSID="{CE365452-6087-4856-8C62-6B4776BDF036}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LEAGUE_ID"
+              DTS:DTSID="{A2B5F895-B354-4357-9CC5-63E28654EFEE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SEASON_ID"
+              DTS:DTSID="{C5208746-5267-4AA6-8219-2991EF01BA53}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="STANDINGSDATE"
+              DTS:DTSID="{0C19478B-BC40-4BAB-A7B7-322AB3CD6B1D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CONFERENCE"
+              DTS:DTSID="{F421625B-2896-4CBD-8A2B-9EFE7E15E2BE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="13"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TEAM"
+              DTS:DTSID="{4BF32719-1A5A-49E3-BCC9-5D692C19B6CD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="G"
+              DTS:DTSID="{2D81173B-5B34-4331-B093-4D6C8CAF91FF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="W"
+              DTS:DTSID="{B16678F4-FA6D-4B41-AC16-F4BFFAA367A1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="L"
+              DTS:DTSID="{2037D304-91D6-4BB5-A55D-0B6A0336167C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="W_PCT"
+              DTS:DTSID="{23A48E6F-26EB-469B-AC04-D68C9B2A7934}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HOME_RECORD"
+              DTS:DTSID="{A0E56268-5F2C-453D-B88B-C480F4DE7ED9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ROAD_RECORD"
+              DTS:DTSID="{EB0FB5EB-2133-4536-8F4C-9B3A46D33A48}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="RETURNTOPLAY"
+              DTS:DTSID="{5AF08386-35E0-4481-8CBA-B6F7F0FA9383}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\ETL Rankings"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{0D6D4FA1-AC6C-477E-A719-668DC4FC685E}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ETL Rankings"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\ETL Rankings\Load Rankings"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Load Rankings"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL Rankings\Load Rankings.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Load Data File]"
+                  connectionManagerRefId="Package.ConnectionManagers[Load Data File]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[TEAM_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[TEAM_ID]"
+                      lineageId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[TEAM_ID]"
+                      name="TEAM_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[LEAGUE_ID]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[LEAGUE_ID]"
+                      lineageId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[LEAGUE_ID]"
+                      name="LEAGUE_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[SEASON_ID]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[SEASON_ID]"
+                      lineageId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[SEASON_ID]"
+                      name="SEASON_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[STANDINGSDATE]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[STANDINGSDATE]"
+                      lineageId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[STANDINGSDATE]"
+                      name="STANDINGSDATE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[CONFERENCE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[CONFERENCE]"
+                      length="4"
+                      lineageId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[CONFERENCE]"
+                      name="CONFERENCE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[TEAM]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[TEAM]"
+                      length="13"
+                      lineageId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[TEAM]"
+                      name="TEAM"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[G]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[G]"
+                      lineageId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[G]"
+                      name="G"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[W]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[W]"
+                      lineageId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[W]"
+                      name="W"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[L]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[L]"
+                      lineageId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[L]"
+                      name="L"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[W_PCT]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[W_PCT]"
+                      lineageId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[W_PCT]"
+                      name="W_PCT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[HOME_RECORD]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[HOME_RECORD]"
+                      length="5"
+                      lineageId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[HOME_RECORD]"
+                      name="HOME_RECORD"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[ROAD_RECORD]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[ROAD_RECORD]"
+                      length="5"
+                      lineageId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[ROAD_RECORD]"
+                      name="ROAD_RECORD"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[RETURNTOPLAY]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[RETURNTOPLAY]"
+                      lineageId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].Columns[RETURNTOPLAY]"
+                      name="RETURNTOPLAY"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[TEAM_ID]"
+                      dataType="i4"
+                      name="TEAM_ID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[LEAGUE_ID]"
+                      dataType="i1"
+                      name="LEAGUE_ID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[SEASON_ID]"
+                      dataType="i2"
+                      name="SEASON_ID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[STANDINGSDATE]"
+                      dataType="date"
+                      name="STANDINGSDATE" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[CONFERENCE]"
+                      dataType="wstr"
+                      length="4"
+                      name="CONFERENCE" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[TEAM]"
+                      dataType="wstr"
+                      length="13"
+                      name="TEAM" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[G]"
+                      dataType="i1"
+                      name="G" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[W]"
+                      dataType="i1"
+                      name="W" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[L]"
+                      dataType="i1"
+                      name="L" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[W_PCT]"
+                      dataType="r4"
+                      name="W_PCT" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[HOME_RECORD]"
+                      dataType="wstr"
+                      length="5"
+                      name="HOME_RECORD" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[ROAD_RECORD]"
+                      dataType="wstr"
+                      length="5"
+                      name="ROAD_RECORD" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Output].ExternalColumns[RETURNTOPLAY]"
+                      dataType="r4"
+                      name="RETURNTOPLAY" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL Rankings\Load Rankings.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="142,42"
+          Id="Package\ETL Rankings"
+          TopLeft="466.5,185.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\ETL Rankings">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="147,42"
+          Id="Package\ETL Rankings\Load Rankings"
+          TopLeft="533,194" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

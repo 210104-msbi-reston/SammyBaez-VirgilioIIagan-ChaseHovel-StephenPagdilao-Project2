@@ -1,0 +1,1206 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/5/2021 4:24:48 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-BN01JAD"
+  DTS:CreatorName="DESKTOP-BN01JAD\V"
+  DTS:DTSID="{1B8D2020-1D7D-4ABA-9C95-EDB689F0241B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.150"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="LoadRankings"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{8C5B8273-4BBC-4FB7-AA35-E9DDEFB10087}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-BN01JAD\SANDIEGOSERVER.Project2DataDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{FF8E616F-C20E-4EA4-ABEC-39D623D3236F}"
+      DTS:ObjectName="DESKTOP-BN01JAD\SANDIEGOSERVER.Project2DataDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-BN01JAD\SANDIEGOSERVER;Initial Catalog=Project2DataDB;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Load CSV File]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{0CA0568C-3473-4F41-8512-B1A5128F5C78}"
+      DTS:ObjectName="Load CSV File">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\V\Documents\Revature\Project 2\SammyBaez-VirgilioIIagan-ChaseHovel-StephenPagdilao-Project2\Data\ranking.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TEAM_ID"
+              DTS:DTSID="{A8A62B3A-E16C-49F5-A1D3-6B372496D1AE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LEAGUE_ID"
+              DTS:DTSID="{AF71E6AA-96A9-4511-BCCD-8012B921AC36}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SEASON_ID"
+              DTS:DTSID="{42B57A8E-0D18-4ADB-884A-FE3C3E9FE43A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="STANDINGSDATE"
+              DTS:DTSID="{9A7F676C-9C23-4808-8B77-1E1FCBB15913}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CONFERENCE"
+              DTS:DTSID="{7B94F092-6E09-49D0-B98E-31D5A5E096FC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TEAM"
+              DTS:DTSID="{2C6F1A5C-13AD-4FDE-8315-45C045C1666D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="G"
+              DTS:DTSID="{D2F31F0B-7A0D-49A7-BAB6-E9DD2D7354E2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="W"
+              DTS:DTSID="{004CF9E3-C246-4C9E-A5AF-31BCD4D49E84}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="L"
+              DTS:DTSID="{C1B1BADE-7E59-4339-9B0B-0C7EF35CA1EC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="W_PCT"
+              DTS:DTSID="{D1726006-548F-490E-861B-80291F6FA962}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HOME_RECORD"
+              DTS:DTSID="{7BE9CD9B-8FDE-4598-A0F6-8052152040DE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ROAD_RECORD"
+              DTS:DTSID="{720F6872-0873-4B27-B170-18BF22534E7C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="RETURNTOPLAY"
+              DTS:DTSID="{46EECA48-AB13-461C-95CC-24FB2AB38452}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load Rankings"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{534220AB-347A-44F0-8E56-B4179426FB0A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Rankings"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load Rankings\Data Conversion 1"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load Rankings\Data Conversion 1.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Rankings\Data Conversion 1.Inputs[Data Conversion Input].Columns[TEAM_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TEAM_ID"
+                      lineageId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM_ID]" />
+                    <inputColumn
+                      refId="Package\Load Rankings\Data Conversion 1.Inputs[Data Conversion Input].Columns[SEASON_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SEASON_ID"
+                      lineageId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[SEASON_ID]" />
+                    <inputColumn
+                      refId="Package\Load Rankings\Data Conversion 1.Inputs[Data Conversion Input].Columns[STANDINGSDATE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="STANDINGSDATE"
+                      lineageId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[STANDINGSDATE]" />
+                    <inputColumn
+                      refId="Package\Load Rankings\Data Conversion 1.Inputs[Data Conversion Input].Columns[CONFERENCE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CONFERENCE"
+                      lineageId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[CONFERENCE]" />
+                    <inputColumn
+                      refId="Package\Load Rankings\Data Conversion 1.Inputs[Data Conversion Input].Columns[TEAM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TEAM"
+                      lineageId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM]" />
+                    <inputColumn
+                      refId="Package\Load Rankings\Data Conversion 1.Inputs[Data Conversion Input].Columns[G]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="G"
+                      lineageId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[G]" />
+                    <inputColumn
+                      refId="Package\Load Rankings\Data Conversion 1.Inputs[Data Conversion Input].Columns[W]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="W"
+                      lineageId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[W]" />
+                    <inputColumn
+                      refId="Package\Load Rankings\Data Conversion 1.Inputs[Data Conversion Input].Columns[L]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="L"
+                      lineageId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[L]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Load Rankings\Data Conversion 1.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output].Columns[TeamId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output].Columns[TeamId]"
+                      name="TeamId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM_ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output].Columns[SeasonId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output].Columns[SeasonId]"
+                      name="SeasonId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[SEASON_ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output].Columns[StandingsDate]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output].Columns[StandingsDate]"
+                      name="StandingsDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[STANDINGSDATE]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output].Columns[Conference]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="4"
+                      lineageId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output].Columns[Conference]"
+                      name="Conference"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[CONFERENCE]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output].Columns[TeamName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="30"
+                      lineageId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output].Columns[TeamName]"
+                      name="TeamName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output].Columns[Games]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output].Columns[Games]"
+                      name="Games"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[G]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output].Columns[Wins]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output].Columns[Wins]"
+                      name="Wins"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[W]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output].Columns[Losses]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output].Columns[Losses]"
+                      name="Losses"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[L]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Load Rankings\Data Conversion 1.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Rankings\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Rankings\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Load CSV File]"
+                  connectionManagerRefId="Package.ConnectionManagers[Load CSV File]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TEAM_ID]"
+                      length="50"
+                      lineageId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM_ID]"
+                      name="TEAM_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[LEAGUE_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LEAGUE_ID]"
+                      length="50"
+                      lineageId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[LEAGUE_ID]"
+                      name="LEAGUE_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[SEASON_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SEASON_ID]"
+                      length="50"
+                      lineageId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[SEASON_ID]"
+                      name="SEASON_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[STANDINGSDATE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[STANDINGSDATE]"
+                      length="50"
+                      lineageId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[STANDINGSDATE]"
+                      name="STANDINGSDATE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[CONFERENCE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CONFERENCE]"
+                      length="50"
+                      lineageId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[CONFERENCE]"
+                      name="CONFERENCE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TEAM]"
+                      length="50"
+                      lineageId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM]"
+                      name="TEAM"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[G]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[G]"
+                      length="50"
+                      lineageId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[G]"
+                      name="G"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[W]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[W]"
+                      length="50"
+                      lineageId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[W]"
+                      name="W"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[L]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[L]"
+                      length="50"
+                      lineageId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[L]"
+                      name="L"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[W_PCT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[W_PCT]"
+                      length="50"
+                      lineageId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[W_PCT]"
+                      name="W_PCT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[HOME_RECORD]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[HOME_RECORD]"
+                      length="50"
+                      lineageId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[HOME_RECORD]"
+                      name="HOME_RECORD"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[ROAD_RECORD]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ROAD_RECORD]"
+                      length="50"
+                      lineageId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[ROAD_RECORD]"
+                      name="ROAD_RECORD"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[RETURNTOPLAY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[RETURNTOPLAY]"
+                      length="50"
+                      lineageId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].Columns[RETURNTOPLAY]"
+                      name="RETURNTOPLAY"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TEAM_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TEAM_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LEAGUE_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="LEAGUE_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SEASON_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SEASON_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[STANDINGSDATE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="STANDINGSDATE" />
+                    <externalMetadataColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CONFERENCE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CONFERENCE" />
+                    <externalMetadataColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TEAM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TEAM" />
+                    <externalMetadataColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[G]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="G" />
+                    <externalMetadataColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[W]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="W" />
+                    <externalMetadataColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[L]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="L" />
+                    <externalMetadataColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[W_PCT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="W_PCT" />
+                    <externalMetadataColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[HOME_RECORD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="HOME_RECORD" />
+                    <externalMetadataColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ROAD_RECORD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ROAD_RECORD" />
+                    <externalMetadataColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[RETURNTOPLAY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="RETURNTOPLAY" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Rankings\OLE DB Destination 1"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination 1"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[OLE DB Destination 1]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Rankings\OLE DB Destination 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-BN01JAD\SANDIEGOSERVER.Project2DataDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-BN01JAD\SANDIEGOSERVER.Project2DataDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[TeamId]"
+                      cachedDataType="i4"
+                      cachedName="TeamId"
+                      externalMetadataColumnId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[TeamId]"
+                      lineageId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output].Columns[TeamId]" />
+                    <inputColumn
+                      refId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[SeasonId]"
+                      cachedDataType="i4"
+                      cachedName="SeasonId"
+                      externalMetadataColumnId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[SeasonId]"
+                      lineageId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output].Columns[SeasonId]" />
+                    <inputColumn
+                      refId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[StandingsDate]"
+                      cachedDataType="date"
+                      cachedName="StandingsDate"
+                      externalMetadataColumnId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[StandingsDate]"
+                      lineageId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output].Columns[StandingsDate]" />
+                    <inputColumn
+                      refId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Conference]"
+                      cachedDataType="wstr"
+                      cachedLength="4"
+                      cachedName="Conference"
+                      externalMetadataColumnId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Conference]"
+                      lineageId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output].Columns[Conference]" />
+                    <inputColumn
+                      refId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[TeamName]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="TeamName"
+                      externalMetadataColumnId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[TeamName]"
+                      lineageId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output].Columns[TeamName]" />
+                    <inputColumn
+                      refId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Games]"
+                      cachedDataType="i4"
+                      cachedName="Games"
+                      externalMetadataColumnId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Games]"
+                      lineageId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output].Columns[Games]" />
+                    <inputColumn
+                      refId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Wins]"
+                      cachedDataType="i4"
+                      cachedName="Wins"
+                      externalMetadataColumnId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Wins]"
+                      lineageId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output].Columns[Wins]" />
+                    <inputColumn
+                      refId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Losses]"
+                      cachedDataType="i4"
+                      cachedName="Losses"
+                      externalMetadataColumnId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Losses]"
+                      lineageId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output].Columns[Losses]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[TeamId]"
+                      dataType="i4"
+                      name="TeamId" />
+                    <externalMetadataColumn
+                      refId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[SeasonId]"
+                      dataType="i4"
+                      name="SeasonId" />
+                    <externalMetadataColumn
+                      refId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[StandingsDate]"
+                      dataType="dbTimeStamp"
+                      name="StandingsDate" />
+                    <externalMetadataColumn
+                      refId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Conference]"
+                      dataType="wstr"
+                      length="4"
+                      name="Conference" />
+                    <externalMetadataColumn
+                      refId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[TeamName]"
+                      dataType="wstr"
+                      length="30"
+                      name="TeamName" />
+                    <externalMetadataColumn
+                      refId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Games]"
+                      dataType="i4"
+                      name="Games" />
+                    <externalMetadataColumn
+                      refId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Wins]"
+                      dataType="i4"
+                      name="Wins" />
+                    <externalMetadataColumn
+                      refId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Losses]"
+                      dataType="i4"
+                      name="Losses" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Rankings\OLE DB Destination 1.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Rankings\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Rankings\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Rankings\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Rankings\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load Rankings.Paths[Data Conversion Output]"
+              endId="Package\Load Rankings\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Load Rankings\Data Conversion 1.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Load Rankings.Paths[Flat File Source Output]"
+              endId="Package\Load Rankings\Data Conversion 1.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Load Rankings\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="147,42"
+          Id="Package\Load Rankings"
+          TopLeft="405,197" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load Rankings">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Load Rankings\Flat File Source"
+          TopLeft="484,113" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Load Rankings\Data Conversion 1"
+          TopLeft="374,298" />
+        <EdgeLayout
+          Id="Package\Load Rankings.Paths[Flat File Source Output]"
+          TopLeft="559.5,155">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-103,143"
+              Start="0,0"
+              End="-103,135.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,67.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,67.5"
+                    Point2="0,71.5"
+                    Point3="-4,71.5" />
+                  <mssgle:LineSegment
+                    End="-99,71.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-99,71.5"
+                    Point2="-103,71.5"
+                    Point3="-103,75.5" />
+                  <mssgle:LineSegment
+                    End="-103,135.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Load Rankings\OLE DB Destination 1"
+          TopLeft="397,492" />
+        <EdgeLayout
+          Id="Package\Load Rankings.Paths[Data Conversion Output]"
+          TopLeft="456.5,340">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="30.5,152"
+              Start="0,0"
+              End="30.5,144.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,72" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,72"
+                    Point2="0,76"
+                    Point3="4,76" />
+                  <mssgle:LineSegment
+                    End="26.5,76" />
+                  <mssgle:CubicBezierSegment
+                    Point1="26.5,76"
+                    Point2="30.5,76"
+                    Point3="30.5,80" />
+                  <mssgle:LineSegment
+                    End="30.5,144.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Rankings\OLE DB Destination 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
