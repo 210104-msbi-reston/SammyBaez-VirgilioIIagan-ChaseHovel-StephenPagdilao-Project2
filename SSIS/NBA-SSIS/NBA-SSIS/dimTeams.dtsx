@@ -12,40 +12,11 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="19"
-  DTS:VersionGUID="{80A2017F-0810-41FD-B674-B7F0E556D4FB}">
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{0CE8CA59-D149-4EF8-980F-DF8404FDE494}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Full Team Name File Connection Manager]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{570A2889-8C8F-49C1-8511-A71DABC9590A}"
-      DTS:ObjectName="Full Team Name File Connection Manager">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1033"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Stephen - Work\Documents\Revature\Project2\Data\TeamNames.txt">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Atlanta Hawks"
-              DTS:DTSID="{8691E342-41EA-4195-88BC-62A034A5FFFA}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[STEPH-PAGD\STOREAPPDB.BasketballDB]"
       DTS:CreationName="OLEDB"
@@ -54,6 +25,120 @@
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Data Source=STEPH-PAGD\STOREAPPDB;Initial Catalog=BasketballDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[TeamErrorLog File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{20AC035A-6651-406F-9828-F2C05076D685}"
+      DTS:ObjectName="TeamErrorLog File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Stephen - Work\Documents\Revature\Project2\ErrorLogs\dimTeamsErrorLog.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TEAM_ID"
+              DTS:DTSID="{C1677631-0E4F-4113-9D7C-9B4AA5FBF742}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ABBREVIATION"
+              DTS:DTSID="{4C0ADEA2-BF97-4B8C-8BD0-F0F90C2D493A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="13"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NICKNAME"
+              DTS:DTSID="{53D3F436-219A-4D51-83A8-DA795E688327}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YEARFOUNDED"
+              DTS:DTSID="{9D7BF484-0943-41B4-BDA6-A3D4F163640A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="13"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CITY"
+              DTS:DTSID="{7E63D448-D99A-46F9-876F-82A4F9955DB6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="26"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ARENA"
+              DTS:DTSID="{27B6AEFE-C75B-4800-B68F-F5B36CA7C734}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="35"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OWNER"
+              DTS:DTSID="{AB53A74A-B3F7-4B67-B912-E06029027DE5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GENERALMANAGER"
+              DTS:DTSID="{AB22955D-A9C7-4D47-B4CD-88E716651C57}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="16"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HEADCOACH"
+              DTS:DTSID="{94172E2E-5C07-441C-9DB6-E53D278A3E44}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{F5E68374-B7CE-44D5-A4CB-9DFB22E347C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{FDF08A5E-370B-4EDF-8531-5EAD3012483E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -224,6 +309,187 @@
           version="1">
           <components>
             <component
+              refId="Package\Data Flow Task\ErrorLog Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="ErrorLog Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\ErrorLog Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[TeamErrorLog File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[TeamErrorLog File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].Columns[TEAM_ID]"
+                      cachedDataType="i4"
+                      cachedName="TEAM_ID"
+                      externalMetadataColumnId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].ExternalColumns[TEAM_ID]"
+                      lineageId="Package\Data Flow Task\Team CVS File Source.Outputs[Flat File Source Output].Columns[TEAM_ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].Columns[ABBREVIATION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="ABBREVIATION"
+                      externalMetadataColumnId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].ExternalColumns[ABBREVIATION]"
+                      lineageId="Package\Data Flow Task\Team CVS File Source.Outputs[Flat File Source Output].Columns[ABBREVIATION]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].Columns[NICKNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="13"
+                      cachedName="NICKNAME"
+                      externalMetadataColumnId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].ExternalColumns[NICKNAME]"
+                      lineageId="Package\Data Flow Task\Team CVS File Source.Outputs[Flat File Source Output].Columns[NICKNAME]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].Columns[YEARFOUNDED]"
+                      cachedDataType="i2"
+                      cachedName="YEARFOUNDED"
+                      externalMetadataColumnId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].ExternalColumns[YEARFOUNDED]"
+                      lineageId="Package\Data Flow Task\Team CVS File Source.Outputs[Flat File Source Output].Columns[YEARFOUNDED]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].Columns[CITY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="13"
+                      cachedName="CITY"
+                      externalMetadataColumnId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].ExternalColumns[CITY]"
+                      lineageId="Package\Data Flow Task\Team CVS File Source.Outputs[Flat File Source Output].Columns[CITY]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].Columns[ARENA]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="26"
+                      cachedName="ARENA"
+                      externalMetadataColumnId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].ExternalColumns[ARENA]"
+                      lineageId="Package\Data Flow Task\Team CVS File Source.Outputs[Flat File Source Output].Columns[ARENA]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].Columns[OWNER]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="35"
+                      cachedName="OWNER"
+                      externalMetadataColumnId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].ExternalColumns[OWNER]"
+                      lineageId="Package\Data Flow Task\Team CVS File Source.Outputs[Flat File Source Output].Columns[OWNER]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].Columns[GENERALMANAGER]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="GENERALMANAGER"
+                      externalMetadataColumnId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].ExternalColumns[GENERALMANAGER]"
+                      lineageId="Package\Data Flow Task\Team CVS File Source.Outputs[Flat File Source Output].Columns[GENERALMANAGER]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].Columns[HEADCOACH]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="HEADCOACH"
+                      externalMetadataColumnId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].ExternalColumns[HEADCOACH]"
+                      lineageId="Package\Data Flow Task\Team CVS File Source.Outputs[Flat File Source Output].Columns[HEADCOACH]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].ExternalColumns[TEAM_ID]"
+                      dataType="i4"
+                      name="TEAM_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].ExternalColumns[ABBREVIATION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="ABBREVIATION" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].ExternalColumns[NICKNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="13"
+                      name="NICKNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].ExternalColumns[YEARFOUNDED]"
+                      dataType="i2"
+                      name="YEARFOUNDED" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].ExternalColumns[CITY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="13"
+                      name="CITY" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].ExternalColumns[ARENA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="26"
+                      name="ARENA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].ExternalColumns[OWNER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="35"
+                      name="OWNER" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].ExternalColumns[GENERALMANAGER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="GENERALMANAGER" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].ExternalColumns[HEADCOACH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="HEADCOACH" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      dataType="i4"
+                      name="ErrorColumn" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
               refId="Package\Data Flow Task\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -291,7 +557,7 @@
                 <input
                   refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="RedirectRow"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
@@ -782,6 +1048,11 @@
               endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task\Team CVS File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Destination Error Output]"
+              endId="Package\Data Flow Task\ErrorLog Destination.Inputs[Flat File Destination Input]"
+              name="OLE DB Destination Error Output"
+              startId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -810,7 +1081,7 @@
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="182,42"
           Id="Package\Data Flow Task\Team CVS File Source"
@@ -818,27 +1089,67 @@
         <NodeLayout
           Size="171,42"
           Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="332,193" />
+          TopLeft="336,200" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="421.25,119">
+          TopLeft="423.25,119">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,74"
+              EndConnector="0,81"
               Start="0,0"
-              End="0,66.5">
+              End="0,73.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,66.5" />
+                    End="0,73.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Data Flow Task\ErrorLog Destination"
+          TopLeft="575,284" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Destination Error Output]"
+          TopLeft="421.5,242">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="241.5,42"
+              Start="0,0"
+              End="241.5,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17"
+                    Point2="0,21"
+                    Point3="4,21" />
+                  <mssgle:LineSegment
+                    End="237.5,21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="237.5,21"
+                    Point2="241.5,21"
+                    Point3="241.5,25" />
+                  <mssgle:LineSegment
+                    End="241.5,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="47.54109375,26,146.4178125,11.43359375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
