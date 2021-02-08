@@ -2,19 +2,25 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>NBA-SSIS</Name>
-    <LastWriteTime>2021-02-08T16:28:55.7876515Z</LastWriteTime>
-    <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
+    <LastWriteTime>2021-02-08T21:30:37.9223262Z</LastWriteTime>
+    <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+    <Salt>m0ZxnFhn</Salt>
+    <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9smwIUNYm0y/T2UHsjjOPgAAAAACAAAAAAAQZgAAAAEAACAAAADxs83jTZE/urIRhNPYRb2gRB/yzrmoDV2AoUE/rV1HIwAAAAAOgAAAAAIAACAAAADXqxTfRE0xb9azcrQe4fXPdL+XEvs1YDg75ANGWfr1uDAAAAD1QahvRWGobuLpVKRHinQmtR3PV+IPPbC92wH0RNLFtwBuA+HjmXEb4jjkT+zKx4pAAAAA2UHYb8rwGmD1idVY0xVWtasZ24D4LiAgaiUTuCzR+QDW8aJC9msOrnk81SRhi1vhhmhObj4YD/jzAbWPalzJrw==</LastKnownProtectedHashedPassword>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>UpdateTeamsTable.dtsx</Name>
-      <LastWriteTime>2021-02-08T19:10:40.2307052Z</LastWriteTime>
-      <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
+      <LastWriteTime>2021-02-08T21:31:41.1111488Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+      <Salt>71P4om77</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9smwIUNYm0y/T2UHsjjOPgAAAAACAAAAAAAQZgAAAAEAACAAAAAXXWxGnb0zqDz1iI4tymAgGlkuX09cCtOnq29BdXRlzQAAAAAOgAAAAAIAACAAAABrmsZ5gOgQGgydEo5juMrtbdY7SWVR6tdlpMAsnqiviDAAAAD+KxvaioVVPmzW0NbM9MKv9h18TDzVuUVZc+NlkFxUXqcYc7ax9FUPOnDlvPjK0vpAAAAARC0HxJUg6yTY15nGwbw1ojklC0iyS04gAPTrX4xD6p1XjAE9p4vdE2JQnxEbVEyyScOf9DUsuzxSwc7WqQdbdA==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>UpdatePlayersTable.dtsx</Name>
-      <LastWriteTime>2021-02-08T19:11:54.7010213Z</LastWriteTime>
-      <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
+      <LastWriteTime>2021-02-08T21:31:46.2506583Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+      <Salt>/e5DcrUY</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9smwIUNYm0y/T2UHsjjOPgAAAAACAAAAAAAQZgAAAAEAACAAAAArgoKH43xqyjWCRtYECYShujGZ8Le451a04cGWFwRZKQAAAAAOgAAAAAIAACAAAADisCHk4s4+V3h4lIGIn0lYHpcs72alqGXzptBNxgwEfzAAAADnpPv2qwN1n6nEtzYZ2oNH5UAuQuRNSw7yqIoyC8TN2lj1dslVb16qzwsHfvrhWhxAAAAAZ8d2qDrMP5oFk3zeZLYn/z2sAx2Fea7SETZxH48b3SFzITy42YcD4o9R74tfLQiMlS6oWE9Jy/pzHHQ5WGI0kQ==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
 </BuildLog>

@@ -11,9 +11,9 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:ProtectionLevel="0"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{3DE1BF6A-7E85-4D38-AEE8-FC007CF5161C}">
+  DTS:ProtectionLevel="2"
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{B494133F-0C5A-4DF2-A630-DFF01D65F3C1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -620,7 +620,7 @@
         <NodeLayout
           Size="188,42"
           Id="Package\Players Data Flow Task"
-          TopLeft="283,84" />
+          TopLeft="284,84" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -630,35 +630,13 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="189,42"
-          Id="Package\Players Data Flow Task\Players CSV File Source"
-          TopLeft="206,27" />
-        <NodeLayout
           Size="171,42"
           Id="Package\Players Data Flow Task\OLE DB Destination"
           TopLeft="219,176" />
-        <EdgeLayout
-          Id="Package\Players Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="302.5,69">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,107"
-              Start="0,0"
-              End="0,99.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,99.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="189,42"
+          Id="Package\Players Data Flow Task\Players CSV File Source"
+          TopLeft="206,27" />
         <NodeLayout
           Size="219,42"
           Id="Package\Players Data Flow Task\Error Log Flat File Destination"
@@ -697,6 +675,28 @@
             <mssgm:EdgeLabel
               BoundingBox="66.79109375,17.5,146.4178125,11.43359375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Players Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="302.5,69">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,107"
+              Start="0,0"
+              End="0,99.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,99.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
