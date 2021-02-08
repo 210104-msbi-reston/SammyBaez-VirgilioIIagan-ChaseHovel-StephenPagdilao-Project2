@@ -1,0 +1,302 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/8/2021 10:01:26 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="STEPH-PAGD"
+  DTS:CreatorName="STEPH-PAGD\Stephen - Work"
+  DTS:DTSID="{5C6B2194-8DD0-4957-B453-CB48783142E0}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.150"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{3E6FECCF-3AB9-4888-B1C6-EBA270FCB0F8}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Players CSV File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{CDECDFD5-6ECA-48A1-B44C-94967DF65BE4}"
+      DTS:ObjectName="Players CSV File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Stephen - Work\Documents\Revature\Project2\Data\players.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PLAYER_NAME"
+              DTS:DTSID="{CA21C347-F500-4239-AC93-4A2A0B64719F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TEAM_ID"
+              DTS:DTSID="{B80C75F3-701F-484F-A154-34A240BE4AE5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PLAYER_ID"
+              DTS:DTSID="{E68840AD-B11A-47E5-B617-521413113741}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SEASON"
+              DTS:DTSID="{72009614-7251-4607-A955-C635C24FE4DF}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[STEPH-PAGD\STOREAPPDB.BasketballDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{B75711F4-3CD6-40ED-ABA6-189D269B28EF}"
+      DTS:ObjectName="STEPH-PAGD\STOREAPPDB.BasketballDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=STEPH-PAGD\STOREAPPDB;Initial Catalog=BasketballDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Players Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{952E321E-6758-48A0-9ACD-2764DBD3CB9A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Players Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Players Data Flow Task\Players CSV File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Players CSV File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Players Data Flow Task\Players CSV File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Players CSV File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Players CSV File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].Columns[PLAYER_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].ExternalColumns[PLAYER_NAME]"
+                      length="30"
+                      lineageId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].Columns[PLAYER_NAME]"
+                      name="PLAYER_NAME"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].Columns[TEAM_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].ExternalColumns[TEAM_ID]"
+                      lineageId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].Columns[TEAM_ID]"
+                      name="TEAM_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].Columns[PLAYER_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].ExternalColumns[PLAYER_ID]"
+                      lineageId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].Columns[PLAYER_ID]"
+                      name="PLAYER_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].Columns[SEASON]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].ExternalColumns[SEASON]"
+                      lineageId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].Columns[SEASON]"
+                      name="SEASON"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].ExternalColumns[PLAYER_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="PLAYER_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].ExternalColumns[TEAM_ID]"
+                      dataType="i4"
+                      name="TEAM_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].ExternalColumns[PLAYER_ID]"
+                      dataType="i4"
+                      name="PLAYER_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].ExternalColumns[SEASON]"
+                      dataType="i2"
+                      name="SEASON" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="188,42"
+          Id="Package\Players Data Flow Task"
+          TopLeft="283,84" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Players Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="189,42"
+          Id="Package\Players Data Flow Task\Players CSV File Source"
+          TopLeft="179,26" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
