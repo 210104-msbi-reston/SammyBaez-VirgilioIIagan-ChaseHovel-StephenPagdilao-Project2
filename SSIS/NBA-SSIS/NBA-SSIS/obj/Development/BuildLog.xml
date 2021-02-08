@@ -2,19 +2,32 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>NBA-SSIS</Name>
-    <LastWriteTime>2021-02-08T16:28:55.7876515Z</LastWriteTime>
-    <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
+    <LastWriteTime>2021-02-08T22:16:47.9304626Z</LastWriteTime>
+    <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+    <Salt>0pe6wXX5</Salt>
+    <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9smwIUNYm0y/T2UHsjjOPgAAAAACAAAAAAAQZgAAAAEAACAAAAB2ZC+nhm38q5nrT16mxAiOcWMgkRjKL8KCO/sVToH/SQAAAAAOgAAAAAIAACAAAAA8moQVeRCWQ5kxg6H3jvq5gIW6jIuPdPzU4bdWhazWpjAAAADAVSx3KwD95KHc5ZvPDRwmkn32L5dBJekLZErfSSqTKzy+06ZuB8Awr25Drh7r7AFAAAAAqX1dt6iviU+ghPiir5amyJquR/v8XCAfQny50sb1TJfXPldku4ZBtl+D0GJv/ODxr0m+1fudCHRhFUi94VNwuw==</LastKnownProtectedHashedPassword>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>UpdateTeamsTable.dtsx</Name>
-      <LastWriteTime>2021-02-08T19:10:40.2307052Z</LastWriteTime>
-      <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
+      <LastWriteTime>2021-02-08T22:16:45.2082322Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+      <Salt>9IjWYGQE</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9smwIUNYm0y/T2UHsjjOPgAAAAACAAAAAAAQZgAAAAEAACAAAADHkfo/D9Wy2iMWraim3mGOZsHWjs3b/WW0DzTbkMxakgAAAAAOgAAAAAIAACAAAADItX4Aabw9m1uP327Gnsm9r1vRQ05ZPmFInvolcMas6jAAAACe2mVQjh0qr0bWyWxVMMMPdVbu18oMSmy85CZtbo1O/TA8g+41T4gYlm37TJbdBRVAAAAAFoA48RTFdAGUITOsgVsTHEXd74ax4FcdOZmdbb42eFGwYr75S1Uwlg+xnw/2C2KNEDqE6tfA0R7GMCwcPLK3Sw==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>UpdatePlayersTable.dtsx</Name>
-      <LastWriteTime>2021-02-08T19:11:54.7010213Z</LastWriteTime>
-      <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
+      <LastWriteTime>2021-02-08T22:16:31.7510286Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+      <Salt>/31QWCmd</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9smwIUNYm0y/T2UHsjjOPgAAAAACAAAAAAAQZgAAAAEAACAAAACrtQGbM5GuzcCQ3Tc48z1xNSjgVIVhyTj+BDS0nkZDwgAAAAAOgAAAAAIAACAAAACXCHcPZGxgVLqIT4rW+1TtNiNNZLBfKbHU/43MEHbKaDAAAAAOXN/unPZBPVctM6qTkJIA2i3V+rZxMPugXhi1VFApN375opmlKJcDRrMv2GlEOexAAAAA+D1eiNmt0U0wz1+tMECCspv+7/M3TTofYzmV95ri5KJjG1VZmsRbDuR0f5dKxU+1O8/tFV1F0p4qkCGkzX9NyA==</LastKnownProtectedHashedPassword>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>UpdateFactPerformanceTable.dtsx</Name>
+      <LastWriteTime>2021-02-08T22:16:10.1181428Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+      <Salt>oPiFD8FT</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9smwIUNYm0y/T2UHsjjOPgAAAAACAAAAAAAQZgAAAAEAACAAAADWIcapEgzo6PvsutSzlYFyI4Sv+ZGqKWRfkZPI15VlOgAAAAAOgAAAAAIAACAAAADhBkiTl5B09Cv5XxLfUxfMidezIoP3m/csQDUhpFUncjAAAAC4AsHdYRgJmgFSXx6Whm1KNerKf5iJsIx1vbrk/+f6EwkQQHf8KFcUIh1G+qnSXMBAAAAAHzVWBE0PiMpc4buZ8d3yJELbAsQFGZTFnvw5Xfqbr3mpoJ8dikBN2t+GpxlqrrQRsmo9sLVG9UMw4LXlL9bngA==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
 </BuildLog>
