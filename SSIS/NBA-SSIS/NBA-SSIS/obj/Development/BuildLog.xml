@@ -2,13 +2,18 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>NBA-SSIS</Name>
-    <LastWriteTime>2021-02-06T00:20:23.0721562Z</LastWriteTime>
+    <LastWriteTime>2021-02-08T16:28:55.7876515Z</LastWriteTime>
     <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
-      <Name>dimTeams.dtsx</Name>
-      <LastWriteTime>2021-02-08T15:58:17.7964121Z</LastWriteTime>
+      <Name>UpdateTeamsTable.dtsx</Name>
+      <LastWriteTime>2021-02-08T19:10:40.2307052Z</LastWriteTime>
+      <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>UpdatePlayersTable.dtsx</Name>
+      <LastWriteTime>2021-02-08T19:11:54.7010213Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
