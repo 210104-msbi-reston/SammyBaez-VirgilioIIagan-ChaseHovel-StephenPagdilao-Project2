@@ -1,0 +1,1360 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/8/2021 11:28:10 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SAMMY"
+  DTS:CreatorName="SAMMY\frogmoney"
+  DTS:DTSID="{D39595B1-D02F-41E7-8D12-DCE4281EFACF}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.150"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="FormatGames"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="2"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{6C555D05-6C7F-4E48-B589-57D8340F16ED}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[25.67.200.218\STOREAPPDB.BasketballDB.CSVV_Sam]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{BE39C649-92EE-40EB-9203-098CC01AA661}"
+      DTS:ObjectName="25.67.200.218\STOREAPPDB.BasketballDB.CSVV_Sam">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=25.67.200.218\STOREAPPDB;User ID=CSVV_admin;Initial Catalog=BasketballDB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <EncryptedData
+            Type="http://www.w3.org/2001/04/xmlenc#Element"
+            Salt="Af7+4j9mEKI="
+            IV="RkFVRa+VdtKEmae5vD9Z0A==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <CipherData>
+              <CipherValue>RkFVRa+VdtKEmae5vD9Z0JKCPQoBN5mLok7wIW6TeYyMEwpeeXn4xVOGSTV+YrcSrnwq/FvrJqnKXpM6icmwWKOyIqgaK55mvcBtklq1awacHgQssTJW3j5WPZgqcLM47fHP3lTi6U+4yCoIEEUQoKQ3vdncSs0cyoqpDef17KXIHDGX8ZKZfvFBRZOo5VsK</CipherValue>
+            </CipherData>
+          </EncryptedData>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[GamesCSVManager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{5AACD416-DA5E-4539-9BCC-B5C5CC311FFE}"
+      DTS:ObjectName="GamesCSVManager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\frogmoney\Desktop\Revature_Projects\Project_2\SammyBaez-VirgilioIIagan-ChaseHovel-StephenPagdilao-Project2\Data\games.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GAME_DATE_EST"
+              DTS:DTSID="{0AB873B1-BDD0-4B7A-A9EE-EAA91E289EA0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GAME_ID"
+              DTS:DTSID="{9E7EE6A6-216F-4BCE-80DB-0F2371AF77EA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HOME_TEAM_ID"
+              DTS:DTSID="{81E2AE9F-7D91-42EE-98C6-E48D829861FF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="VISITOR_TEAM_ID"
+              DTS:DTSID="{DA095CCE-EA87-4CA5-835D-BF769E2A99EE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SEASON"
+              DTS:DTSID="{38ED1A5A-C434-412D-B1E0-AD646AEB3AA6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TEAM_ID_home"
+              DTS:DTSID="{2C8A042B-9897-4B77-8546-DE2462279AC7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PTS_home"
+              DTS:DTSID="{369DC4B5-5EAC-4327-8E6B-C4992E3B657D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="14"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FG_PCT_home"
+              DTS:DTSID="{247A4F50-342E-4A18-B5B8-C8585D8D9BC0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="14"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FT_PCT_home"
+              DTS:DTSID="{32A695C0-8C3C-431E-8F51-D3879218CB47}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="14"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FG3_PCT_home"
+              DTS:DTSID="{719F6AA4-E022-492A-8935-A4D3796D6FC2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AST_home"
+              DTS:DTSID="{8FC8498A-EEA3-449B-B015-1FA62E564A12}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="REB_home"
+              DTS:DTSID="{5954E1E4-C5B6-4697-8BA1-EE7C475DC8C7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TEAM_ID_away"
+              DTS:DTSID="{3B0FE1A5-230F-434D-8D73-2CEB9A7F1F93}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PTS_away"
+              DTS:DTSID="{FA825A08-268A-42B0-82CA-A6260FA5153E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="14"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FG_PCT_away"
+              DTS:DTSID="{32E99B52-DC2C-4CD3-8089-09954355C07B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="14"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FT_PCT_away"
+              DTS:DTSID="{C025F5DF-EB58-4411-8995-278F9229C367}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="14"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FG3_PCT_away"
+              DTS:DTSID="{26FDF3FA-9252-432A-A7FE-0BD169F4B8B1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AST_away"
+              DTS:DTSID="{E833EE8E-5233-4C30-8111-FAD893ED122F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="REB_away"
+              DTS:DTSID="{7E5E2418-9101-49FA-94F7-BD4203F1E94B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Test]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{125BF7AD-215C-4BC7-BC4B-C21D6C1C564B}"
+      DTS:ObjectName="Test">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\frogmoney\Desktop\Revature_Projects\Project_2\SammyBaez-VirgilioIIagan-ChaseHovel-StephenPagdilao-Project2\Data\games.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GAME_DATE_EST"
+              DTS:DTSID="{24C80E13-9C1E-4F34-AA70-37A6D506BE1D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GAME_ID"
+              DTS:DTSID="{52A4637D-AEF9-4D51-99FD-E200C5A677B5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GAME_STATUS_TEXT"
+              DTS:DTSID="{D84C9866-FCB3-47E1-AD76-0E7A39FE0E51}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HOME_TEAM_ID"
+              DTS:DTSID="{FB87557E-76F0-4850-955D-B91138ECD6D5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="VISITOR_TEAM_ID"
+              DTS:DTSID="{927E1994-14F7-4EC5-A25A-A05665C62567}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SEASON"
+              DTS:DTSID="{2B8101BB-7C51-4DFE-90BD-FEDD691131B4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TEAM_ID_home"
+              DTS:DTSID="{F25CAAC0-2282-48B0-96BD-EDE661FBAAB7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PTS_home"
+              DTS:DTSID="{17DD3420-0633-4B3C-9D50-3B7D3B9DBCF8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FG_PCT_home"
+              DTS:DTSID="{C4AFA03A-357B-49FF-B047-13FF8B139B68}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FT_PCT_home"
+              DTS:DTSID="{20A2DFEE-4E33-4627-A802-3CE0DCE87F2C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FG3_PCT_home"
+              DTS:DTSID="{0A7001DB-BBC7-4756-B3E7-322DD58761DC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AST_home"
+              DTS:DTSID="{1E373DDE-883D-4031-91EC-31D5E2CC6E31}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="REB_home"
+              DTS:DTSID="{5F03D6D7-8005-4D44-A340-1B2E96FEA76D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TEAM_ID_away"
+              DTS:DTSID="{E61C7B3E-6A10-4B65-B065-83EE3D928576}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PTS_away"
+              DTS:DTSID="{F70AA8FB-482F-42B8-97A9-C3CCF4603087}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FG_PCT_away"
+              DTS:DTSID="{196249C8-375B-4E6B-997F-523EF1E1B7D6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FT_PCT_away"
+              DTS:DTSID="{D8B61E7E-6CD0-4C41-8BCC-D43C054288D4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FG3_PCT_away"
+              DTS:DTSID="{E61DA1C2-6FC9-40D3-9BC2-6069EDA41E8E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AST_away"
+              DTS:DTSID="{2CE4DBDD-F9F8-459C-92CE-2BC4BD2F47D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="REB_away"
+              DTS:DTSID="{3ADB1D60-CB89-4D1B-8DF0-1D85E991A4A5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HOME_TEAM_WINS"
+              DTS:DTSID="{D2365A45-E5CE-46F1-9E74-7BB653F36EB9}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Games CSV"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{E60AD265-4A7B-4890-9A81-119AE932458C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Games CSV"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Games CSV\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Games CSV\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Test]"
+                  connectionManagerRefId="Package.ConnectionManagers[Test]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[GAME_DATE_EST]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[GAME_DATE_EST]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[GAME_DATE_EST]"
+                      name="GAME_DATE_EST"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[GAME_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[GAME_ID]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[GAME_ID]"
+                      name="GAME_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[GAME_STATUS_TEXT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[GAME_STATUS_TEXT]"
+                      length="5"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[GAME_STATUS_TEXT]"
+                      name="GAME_STATUS_TEXT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[HOME_TEAM_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[HOME_TEAM_ID]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[HOME_TEAM_ID]"
+                      name="HOME_TEAM_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[VISITOR_TEAM_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[VISITOR_TEAM_ID]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[VISITOR_TEAM_ID]"
+                      name="VISITOR_TEAM_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[SEASON]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SEASON]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[SEASON]"
+                      name="SEASON"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM_ID_home]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TEAM_ID_home]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM_ID_home]"
+                      name="TEAM_ID_home"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[PTS_home]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PTS_home]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[PTS_home]"
+                      name="PTS_home"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[FG_PCT_home]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FG_PCT_home]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[FG_PCT_home]"
+                      name="FG_PCT_home"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[FT_PCT_home]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FT_PCT_home]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[FT_PCT_home]"
+                      name="FT_PCT_home"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[FG3_PCT_home]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FG3_PCT_home]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[FG3_PCT_home]"
+                      name="FG3_PCT_home"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[AST_home]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AST_home]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[AST_home]"
+                      name="AST_home"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[REB_home]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[REB_home]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[REB_home]"
+                      name="REB_home"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM_ID_away]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TEAM_ID_away]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM_ID_away]"
+                      name="TEAM_ID_away"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[PTS_away]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PTS_away]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[PTS_away]"
+                      name="PTS_away"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[FG_PCT_away]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FG_PCT_away]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[FG_PCT_away]"
+                      name="FG_PCT_away"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[FT_PCT_away]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FT_PCT_away]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[FT_PCT_away]"
+                      name="FT_PCT_away"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[FG3_PCT_away]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FG3_PCT_away]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[FG3_PCT_away]"
+                      name="FG3_PCT_away"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[AST_away]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AST_away]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[AST_away]"
+                      name="AST_away"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[REB_away]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[REB_away]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[REB_away]"
+                      name="REB_away"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[HOME_TEAM_WINS]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[HOME_TEAM_WINS]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[HOME_TEAM_WINS]"
+                      name="HOME_TEAM_WINS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[GAME_DATE_EST]"
+                      dataType="date"
+                      name="GAME_DATE_EST" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[GAME_ID]"
+                      dataType="i4"
+                      name="GAME_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[GAME_STATUS_TEXT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="GAME_STATUS_TEXT" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[HOME_TEAM_ID]"
+                      dataType="i4"
+                      name="HOME_TEAM_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[VISITOR_TEAM_ID]"
+                      dataType="i4"
+                      name="VISITOR_TEAM_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SEASON]"
+                      dataType="i2"
+                      name="SEASON" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TEAM_ID_home]"
+                      dataType="i4"
+                      name="TEAM_ID_home" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PTS_home]"
+                      dataType="i2"
+                      name="PTS_home" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FG_PCT_home]"
+                      dataType="r8"
+                      name="FG_PCT_home" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FT_PCT_home]"
+                      dataType="r8"
+                      name="FT_PCT_home" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FG3_PCT_home]"
+                      dataType="r8"
+                      name="FG3_PCT_home" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AST_home]"
+                      dataType="i4"
+                      name="AST_home" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[REB_home]"
+                      dataType="i4"
+                      name="REB_home" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TEAM_ID_away]"
+                      dataType="i4"
+                      name="TEAM_ID_away" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PTS_away]"
+                      dataType="i4"
+                      name="PTS_away" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FG_PCT_away]"
+                      dataType="r8"
+                      name="FG_PCT_away" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FT_PCT_away]"
+                      dataType="r8"
+                      name="FT_PCT_away" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FG3_PCT_away]"
+                      dataType="r8"
+                      name="FG3_PCT_away" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AST_away]"
+                      dataType="i4"
+                      name="AST_away" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[REB_away]"
+                      dataType="i4"
+                      name="REB_away" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[HOME_TEAM_WINS]"
+                      dataType="i4"
+                      name="HOME_TEAM_WINS" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Games CSV\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[dimGames]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Games CSV\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[25.67.200.218\STOREAPPDB.BasketballDB.CSVV_Sam]"
+                  connectionManagerRefId="Package.ConnectionManagers[25.67.200.218\STOREAPPDB.BasketballDB.CSVV_Sam]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SEASON]"
+                      cachedDataType="i2"
+                      cachedName="SEASON"
+                      externalMetadataColumnId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Season]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[SEASON]" />
+                    <inputColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PTS_home]"
+                      cachedDataType="i2"
+                      cachedName="PTS_home"
+                      externalMetadataColumnId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PTS_Home]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[PTS_home]" />
+                    <inputColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FG_PCT_home]"
+                      cachedDataType="r8"
+                      cachedName="FG_PCT_home"
+                      externalMetadataColumnId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FG_PCT_Home]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[FG_PCT_home]" />
+                    <inputColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FT_PCT_home]"
+                      cachedDataType="r8"
+                      cachedName="FT_PCT_home"
+                      externalMetadataColumnId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FT_PCT_Home]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[FT_PCT_home]" />
+                    <inputColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FG3_PCT_home]"
+                      cachedDataType="r8"
+                      cachedName="FG3_PCT_home"
+                      externalMetadataColumnId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FG3_PCT_Home]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[FG3_PCT_home]" />
+                    <inputColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AST_home]"
+                      cachedDataType="i4"
+                      cachedName="AST_home"
+                      externalMetadataColumnId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AST_Home]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[AST_home]" />
+                    <inputColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[REB_home]"
+                      cachedDataType="i4"
+                      cachedName="REB_home"
+                      externalMetadataColumnId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[REB_Home]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[REB_home]" />
+                    <inputColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PTS_away]"
+                      cachedDataType="i4"
+                      cachedName="PTS_away"
+                      externalMetadataColumnId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PTS_Away]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[PTS_away]" />
+                    <inputColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FG_PCT_away]"
+                      cachedDataType="r8"
+                      cachedName="FG_PCT_away"
+                      externalMetadataColumnId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FG_PCT_Away]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[FG_PCT_away]" />
+                    <inputColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FT_PCT_away]"
+                      cachedDataType="r8"
+                      cachedName="FT_PCT_away"
+                      externalMetadataColumnId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FT_PCT_Away]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[FT_PCT_away]" />
+                    <inputColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FG3_PCT_away]"
+                      cachedDataType="r8"
+                      cachedName="FG3_PCT_away"
+                      externalMetadataColumnId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FG3_PCT_Away]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[FG3_PCT_away]" />
+                    <inputColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AST_away]"
+                      cachedDataType="i4"
+                      cachedName="AST_away"
+                      externalMetadataColumnId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AST_Away]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[AST_away]" />
+                    <inputColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[REB_away]"
+                      cachedDataType="i4"
+                      cachedName="REB_away"
+                      externalMetadataColumnId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[REB_Away]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[REB_away]" />
+                    <inputColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GAME_ID]"
+                      cachedDataType="i4"
+                      cachedName="GAME_ID"
+                      externalMetadataColumnId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameID]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[GAME_ID]" />
+                    <inputColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GAME_DATE_EST]"
+                      cachedDataType="date"
+                      cachedName="GAME_DATE_EST"
+                      externalMetadataColumnId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameDate]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[GAME_DATE_EST]" />
+                    <inputColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[VISITOR_TEAM_ID]"
+                      cachedDataType="i4"
+                      cachedName="VISITOR_TEAM_ID"
+                      externalMetadataColumnId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VisitorTeamID]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[VISITOR_TEAM_ID]" />
+                    <inputColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[HOME_TEAM_ID]"
+                      cachedDataType="i4"
+                      cachedName="HOME_TEAM_ID"
+                      externalMetadataColumnId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HomeTeamID]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[HOME_TEAM_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameID]"
+                      dataType="i4"
+                      name="GameID" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Season]"
+                      dataType="i2"
+                      name="Season" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameDate]"
+                      dataType="dbDate"
+                      name="GameDate" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HomeTeamID]"
+                      dataType="i4"
+                      name="HomeTeamID" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PTS_Home]"
+                      dataType="i4"
+                      name="PTS_Home" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FG_PCT_Home]"
+                      dataType="r4"
+                      name="FG_PCT_Home" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FT_PCT_Home]"
+                      dataType="r4"
+                      name="FT_PCT_Home" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FG3_PCT_Home]"
+                      dataType="r4"
+                      name="FG3_PCT_Home" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AST_Home]"
+                      dataType="i4"
+                      name="AST_Home" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[REB_Home]"
+                      dataType="i4"
+                      name="REB_Home" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VisitorTeamID]"
+                      dataType="i4"
+                      name="VisitorTeamID" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PTS_Away]"
+                      dataType="i4"
+                      name="PTS_Away" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FG_PCT_Away]"
+                      dataType="r4"
+                      name="FG_PCT_Away" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FT_PCT_Away]"
+                      dataType="r4"
+                      name="FT_PCT_Away" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FG3_PCT_Away]"
+                      dataType="r4"
+                      name="FG3_PCT_Away" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AST_Away]"
+                      dataType="i4"
+                      name="AST_Away" />
+                    <externalMetadataColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[REB_Away]"
+                      dataType="i4"
+                      name="REB_Away" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Games CSV\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Games CSV\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Games CSV\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Games CSV\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Games CSV\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Games CSV.Paths[Flat File Source Output]"
+              endId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Games CSV"
+          TopLeft="415,149" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Games CSV">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Games CSV\OLE DB Destination"
+          TopLeft="547,392" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Games CSV\Flat File Source"
+          TopLeft="299,167" />
+        <EdgeLayout
+          Id="Package\Games CSV.Paths[Flat File Source Output]"
+          TopLeft="374.5,209">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="258,183"
+              Start="0,0"
+              End="258,175.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,87.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,87.5"
+                    Point2="0,91.5"
+                    Point3="4,91.5" />
+                  <mssgle:LineSegment
+                    End="254,91.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="254,91.5"
+                    Point2="258,91.5"
+                    Point3="258,95.5" />
+                  <mssgle:LineSegment
+                    End="258,175.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Games CSV\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

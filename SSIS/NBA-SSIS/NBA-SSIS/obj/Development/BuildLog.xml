@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectInfo>
+    <Name>NBA-SSIS</Name>
+    <LastWriteTime>2021-02-08T21:54:56.1761022Z</LastWriteTime>
+    <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+    <Salt>01E06MgL</Salt>
+    <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1iotLNcF5Ui9PSxESB7NKQAAAAACAAAAAAAQZgAAAAEAACAAAADkPLrZ8KpOuG0zzfw145DXXl/SdPi0DhQEMQtFJBtnPwAAAAAOgAAAAAIAACAAAABh9DWlZO190gsVlMBVWFTarIVbTCqwvWNdDYtVkZdncDAAAACQci6XPjrXlGbmOk+X6Fr3Q6ZntnVpXN/J/hLIalzjsMB+6CpDoa5IqLLwNzGhMlpAAAAAInkb6CFC4KltDN+J6ZzO7Rzn0yVXdUCCrW8UfbjsaHCGStIDXsu5sejvIgudfa+WuKD9qYxKBUuNrcEnH0aatg==</LastKnownProtectedHashedPassword>
+  </ProjectInfo>
+  <LastBuildInfos>
+    <ProjectBuildItemInfo>
+      <Name>FormatGames.dtsx</Name>
+      <LastWriteTime>2021-02-08T21:54:56.1530967Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+      <Salt>hnrUsmDI</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1iotLNcF5Ui9PSxESB7NKQAAAAACAAAAAAAQZgAAAAEAACAAAADBFvaZGkTwOhBIBOrl/6QDmZ7gnkknQ1OjZqjNVcgvFAAAAAAOgAAAAAIAACAAAAAqlhNiFGTRUlBUn96K4nBk6Q4Md/hyqkh6RqKJ1UnZzTAAAAC6qRXmS9vm/5FqZ6ZN76n6j8TJzcoa6fm5PbBlmcweGmHeAXUXDbn6gDFWLh2ed0pAAAAAsF+2gwIsww6pKXEts5FAndkDCetr0HR9icjylFmtW8Tyi6JNzlPtY+Sbeah31ONNwdDgckXuIv86tyqvPUE6Tg==</LastKnownProtectedHashedPassword>
+    </ProjectBuildItemInfo>
+  </LastBuildInfos>
+</BuildLog>

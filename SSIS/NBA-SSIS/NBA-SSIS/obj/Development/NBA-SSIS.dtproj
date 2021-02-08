@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">STEPH-PAGD</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1" SSIS:Salt="yRnilAL9sXQ=" SSIS:IV="0WmSlLw1U1owBEuwMWBxJQ==" SSIS:Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc">s8MMgXqvTjMHOk5VRRt22uJdC8PBanVcNW3ttUXnHF1HFDaXD5VurFSr7x/oz/LCMewFweHeL1bHr00XbiVoeFQs4nqhYy4iZWTmn1Q8dhLnSPWXmqDwfz99gWyeJgcVIx3V0df989+u4CkFyq+bYjzXBHVxlNXHIeXJ0e2g+0uXf2sGqWr8lYvDJ5Oq1mTp</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1" SSIS:Salt="HabeJFFQmnU=" SSIS:IV="mhd/HPrxVZRT6u+WZG4fww==" SSIS:Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc">RaheNxeUpKM1pBe5k1Yia7u50fSDElh+NKjhTxTGt1+v4Rzx43vVLbFkNy5aLrBBz/rD2wRHvjciNuapvnroNlo9p2ch3YCOfSaWZRCkmkVXW1kSx9Q1W8lpy2mtf7hkNu3MuFpYz2kwM+2oFIVRImMHxClblVhtYgr9P1fjOLwxoCqMdq1rzUxHOwf/i7Ms</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -530,6 +530,8 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
