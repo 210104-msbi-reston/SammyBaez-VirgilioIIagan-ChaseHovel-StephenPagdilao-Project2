@@ -41,10 +41,10 @@
                 <SSIS:Property SSIS:Name="Name">LoadRankings</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">4</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">14</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{92B7823B-120F-4EDF-A799-F7E0D065FADA}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{B32B6AF6-F905-44BD-96F8-13C0B0240FE8}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

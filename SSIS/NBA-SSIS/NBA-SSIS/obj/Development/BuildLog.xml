@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>NBA-SSIS</Name>
-    <LastWriteTime>2021-02-06T00:47:51.3786731Z</LastWriteTime>
+    <LastWriteTime>2021-02-08T16:50:40.4706323Z</LastWriteTime>
     <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>LoadRankings.dtsx</Name>
-      <LastWriteTime>2021-02-06T01:17:27.1079246Z</LastWriteTime>
+      <LastWriteTime>2021-02-08T17:28:45.6929865Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
