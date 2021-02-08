@@ -2,14 +2,18 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>NBA-SSIS</Name>
-    <LastWriteTime>2021-02-08T16:50:40.4706323Z</LastWriteTime>
-    <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
+    <LastWriteTime>2021-02-08T21:28:58.3253993Z</LastWriteTime>
+    <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+    <Salt>cuVIYewb</Salt>
+    <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA21rzQ7q0KkKip7bdEZYiSQAAAAACAAAAAAAQZgAAAAEAACAAAACT7E6ScNInYbLKQYJ2oufLOlYDp317PJUjeB55hf88FwAAAAAOgAAAAAIAACAAAACsqsovfwWRhCk+5ofloym28rkJgTLrHxnUP92hd48HJjAAAABBORHi9bOCPJpnF6Ol9zmCdDgt/IYbEYdjy7qRtMwaO3tLQvuJXSynyG+QIyDP4SRAAAAAjsad7sdBcuSTJhgMFz+uT8q+OvBrGBWBwYd9IUayzCN9+839ybPW8T01n7YyPIH/t4xSwTZCZ1zGlaonsxShIw==</LastKnownProtectedHashedPassword>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
-      <Name>LoadRankings.dtsx</Name>
-      <LastWriteTime>2021-02-08T17:28:45.6929865Z</LastWriteTime>
-      <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
+      <Name>BuilddimDate.dtsx</Name>
+      <LastWriteTime>2021-02-08T21:38:02.4565832Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+      <Salt>PRZmrcmd</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA21rzQ7q0KkKip7bdEZYiSQAAAAACAAAAAAAQZgAAAAEAACAAAADUsgFfM0+za9YO3X6qeaSoJCLGhfH27AEL0e+7IDoUlgAAAAAOgAAAAAIAACAAAAAs1U2wzwtD+KKthEsaM1ehE9Xe7/Xro0HYUNkqan2weTAAAABe1tTvqTUXMVBdBpHJwLIfKC84UWCg9uFlysC3NRFs/+NujyJtWBMHDS5NaV91wZFAAAAAGpX/m/njLaENGW672nHuQL+eHQoh/MSO+5ymGhhu/cA0SxB2uD5zw7LoKzf9EUxeyS/tmKhgeyGYgUK9JSQwEg==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
 </BuildLog>

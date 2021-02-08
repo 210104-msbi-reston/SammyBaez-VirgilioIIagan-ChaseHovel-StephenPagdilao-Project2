@@ -12,8 +12,8 @@
   DTS:ObjectName="LoadRankings"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{7EF2DED8-E9F6-4EB8-9D8E-C554ACB32CF1}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{A50D571B-A2ED-414E-B6C4-99CA6E6EA18D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -183,13 +183,28 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Create DimTables"
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{3EA81B8D-728A-47CE-9A00-164253CFE88C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Stage Data"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{534220AB-347A-44F0-8E56-B4179426FB0A}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Create DimTables"
+      DTS:ObjectName="Stage Data"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -197,7 +212,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Create DimTables\Data Conversion 1"
+              refId="Package\Stage Data\Data Conversion 1"
               componentClassID="Microsoft.DataConvert"
               contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Data Conversion"
@@ -205,82 +220,82 @@
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Create DimTables\Data Conversion 1.Inputs[Data Conversion Input]"
+                  refId="Package\Stage Data\Data Conversion 1.Inputs[Data Conversion Input]"
                   name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Create DimTables\Data Conversion 1.Inputs[Data Conversion Input].Columns[TEAM_ID]"
+                      refId="Package\Stage Data\Data Conversion 1.Inputs[Data Conversion Input].Columns[TEAM_ID]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="TEAM_ID"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM_ID]" />
+                      lineageId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM_ID]" />
                     <inputColumn
-                      refId="Package\Create DimTables\Data Conversion 1.Inputs[Data Conversion Input].Columns[SEASON_ID]"
+                      refId="Package\Stage Data\Data Conversion 1.Inputs[Data Conversion Input].Columns[SEASON_ID]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="SEASON_ID"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[SEASON_ID]" />
+                      lineageId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[SEASON_ID]" />
                     <inputColumn
-                      refId="Package\Create DimTables\Data Conversion 1.Inputs[Data Conversion Input].Columns[STANDINGSDATE]"
+                      refId="Package\Stage Data\Data Conversion 1.Inputs[Data Conversion Input].Columns[STANDINGSDATE]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="STANDINGSDATE"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[STANDINGSDATE]" />
+                      lineageId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[STANDINGSDATE]" />
                     <inputColumn
-                      refId="Package\Create DimTables\Data Conversion 1.Inputs[Data Conversion Input].Columns[CONFERENCE]"
+                      refId="Package\Stage Data\Data Conversion 1.Inputs[Data Conversion Input].Columns[CONFERENCE]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="CONFERENCE"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[CONFERENCE]" />
+                      lineageId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[CONFERENCE]" />
                     <inputColumn
-                      refId="Package\Create DimTables\Data Conversion 1.Inputs[Data Conversion Input].Columns[TEAM]"
+                      refId="Package\Stage Data\Data Conversion 1.Inputs[Data Conversion Input].Columns[TEAM]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="TEAM"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM]" />
+                      lineageId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM]" />
                     <inputColumn
-                      refId="Package\Create DimTables\Data Conversion 1.Inputs[Data Conversion Input].Columns[G]"
+                      refId="Package\Stage Data\Data Conversion 1.Inputs[Data Conversion Input].Columns[G]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="G"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[G]" />
+                      lineageId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[G]" />
                     <inputColumn
-                      refId="Package\Create DimTables\Data Conversion 1.Inputs[Data Conversion Input].Columns[W]"
+                      refId="Package\Stage Data\Data Conversion 1.Inputs[Data Conversion Input].Columns[W]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="W"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[W]" />
+                      lineageId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[W]" />
                     <inputColumn
-                      refId="Package\Create DimTables\Data Conversion 1.Inputs[Data Conversion Input].Columns[L]"
+                      refId="Package\Stage Data\Data Conversion 1.Inputs[Data Conversion Input].Columns[L]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="L"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[L]" />
+                      lineageId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[L]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Create DimTables\Data Conversion 1.Outputs[Data Conversion Output]"
+                  refId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Output]"
                   exclusionGroup="1"
                   name="Data Conversion Output"
-                  synchronousInputId="Package\Create DimTables\Data Conversion 1.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\Stage Data\Data Conversion 1.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Create DimTables\Data Conversion 1.Outputs[Data Conversion Output].Columns[TeamId]"
+                      refId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Output].Columns[TeamId]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Create DimTables\Data Conversion 1.Outputs[Data Conversion Output].Columns[TeamId]"
+                      lineageId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Output].Columns[TeamId]"
                       name="TeamId"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -288,7 +303,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM_ID]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM_ID]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -296,11 +311,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Create DimTables\Data Conversion 1.Outputs[Data Conversion Output].Columns[SeasonId]"
+                      refId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Output].Columns[SeasonId]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Create DimTables\Data Conversion 1.Outputs[Data Conversion Output].Columns[SeasonId]"
+                      lineageId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Output].Columns[SeasonId]"
                       name="SeasonId"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -308,7 +323,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[SEASON_ID]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[SEASON_ID]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -316,11 +331,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Create DimTables\Data Conversion 1.Outputs[Data Conversion Output].Columns[StandingsDate]"
+                      refId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Output].Columns[StandingsDate]"
                       dataType="date"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Create DimTables\Data Conversion 1.Outputs[Data Conversion Output].Columns[StandingsDate]"
+                      lineageId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Output].Columns[StandingsDate]"
                       name="StandingsDate"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -328,7 +343,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[STANDINGSDATE]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[STANDINGSDATE]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -336,12 +351,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Create DimTables\Data Conversion 1.Outputs[Data Conversion Output].Columns[Conference]"
+                      refId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Output].Columns[Conference]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="4"
-                      lineageId="Package\Create DimTables\Data Conversion 1.Outputs[Data Conversion Output].Columns[Conference]"
+                      lineageId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Output].Columns[Conference]"
                       name="Conference"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -349,7 +364,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[CONFERENCE]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[CONFERENCE]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -357,12 +372,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Create DimTables\Data Conversion 1.Outputs[Data Conversion Output].Columns[TeamName]"
+                      refId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Output].Columns[TeamName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="30"
-                      lineageId="Package\Create DimTables\Data Conversion 1.Outputs[Data Conversion Output].Columns[TeamName]"
+                      lineageId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Output].Columns[TeamName]"
                       name="TeamName"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -370,7 +385,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -378,11 +393,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Create DimTables\Data Conversion 1.Outputs[Data Conversion Output].Columns[Games]"
+                      refId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Output].Columns[Games]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Create DimTables\Data Conversion 1.Outputs[Data Conversion Output].Columns[Games]"
+                      lineageId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Output].Columns[Games]"
                       name="Games"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -390,7 +405,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[G]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[G]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -398,11 +413,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Create DimTables\Data Conversion 1.Outputs[Data Conversion Output].Columns[Wins]"
+                      refId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Output].Columns[Wins]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Create DimTables\Data Conversion 1.Outputs[Data Conversion Output].Columns[Wins]"
+                      lineageId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Output].Columns[Wins]"
                       name="Wins"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -410,7 +425,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[W]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[W]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -418,11 +433,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Create DimTables\Data Conversion 1.Outputs[Data Conversion Output].Columns[Losses]"
+                      refId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Output].Columns[Losses]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Create DimTables\Data Conversion 1.Outputs[Data Conversion Output].Columns[Losses]"
+                      lineageId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Output].Columns[Losses]"
                       name="Losses"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -430,7 +445,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[L]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[L]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -441,22 +456,22 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Create DimTables\Data Conversion 1.Outputs[Data Conversion Error Output]"
+                  refId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Data Conversion Error Output"
-                  synchronousInputId="Package\Create DimTables\Data Conversion 1.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\Stage Data\Data Conversion 1.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Create DimTables\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      refId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Create DimTables\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Create DimTables\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      refId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Create DimTables\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -465,7 +480,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Create DimTables\Derive Season Years"
+              refId="Package\Stage Data\Derive Season Years"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;12"
               description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
@@ -795,11 +810,8 @@ public class ScriptMain : UserComponent
     /// <param name="Row">The row that is currently passing through the component</param>
     public override void Input0_ProcessInputRow(Input0Buffer Row)
     {
-        int currentYear = Convert.ToInt32(Row.STANDINGSDATE.Substring(0, 4));
-        if (Row.SEASONID.StartsWith("1"))
-            Row.SeasonYears = currentYear + "-" + (currentYear + 1);
-        else
-            Row.SeasonYears = (currentYear-1) + "-" + currentYear + 1;
+        int currentYear = Row.SeasonId % 10000;
+        Row.SeasonYears = currentYear + "-" + (currentYear+1);
     }   
 
 }
@@ -829,14 +841,14 @@ public class Input0Buffer: ScriptBuffer
     {
     }
 
-    public String SEASONID
+    public Int32 SeasonId
     {
         get
         {
-            return Buffer.GetString(BufferColumnIndexes[0]);
+            return Buffer.GetInt32(BufferColumnIndexes[0]);
         }
     }
-    public bool SEASONID_IsNull
+    public bool SeasonId_IsNull
     {
         get
         {
@@ -844,26 +856,11 @@ public class Input0Buffer: ScriptBuffer
         }
     }
 
-    public String STANDINGSDATE
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[1]);
-        }
-    }
-    public bool STANDINGSDATE_IsNull
-    {
-        get
-        {
-            return IsNull(1);
-        }
-    }
-
     public String SeasonYears
     {
         set
         {
-            this[2] = value;
+            this[1] = value;
         }
     }
     public bool SeasonYears_IsNull
@@ -872,7 +869,7 @@ public class Input0Buffer: ScriptBuffer
         {
             if (value)
             {
-                SetNull(2);
+                SetNull(1);
             }
             else
             {
@@ -1029,7 +1026,7 @@ namespace SC_e8e977aacb7449d796bb6be4d194e8ab.Properties {
     <msb:CodeName>SC_e8e977aacb7449d796bb6be4d194e8ab</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_e8e977aacb7449d796bb6be4d194e8ab</msb:DisplayName>
-    <msb:ProjectId>{BD432A9D-9B9B-4BB0-81F1-513A48CB2E89}</msb:ProjectId>
+    <msb:ProjectId>{3D441028-9ED9-4351-B718-08C08B9AB6B7}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_e8e977aacb7449d796bb6be4d194e8ab.csproj" />
@@ -1176,122 +1173,113 @@ namespace SC_e8e977aacb7449d796bb6be4d194e8ab.Properties {
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDADduIWAAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAADjMA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAGWUIWAAAAAAAAAAAOAAIiALATAAABIAAAAIAAAAAAAA8jEA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
-ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAALwyAABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAKAxAABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAFBMAAAAgAAAAFAAAAAIA
-AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAWAAAAAAAAAAAAAAAAAABAAABA
-LnJlbG9jAAAMAAAAAGAAAAACAAAAHAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAADw
-MgAAAAAAAEgAAAACAAUAQCIAAMQPAAABAAAAAAAAAAQyAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAYAewAAAAEAABEDbwgAAAYW
-Gm8SAAAKKBMAAAoKA28GAAAGcgEAAHBvFAAACiwfAwaMHAAAAXIFAABwBhdYjBwAAAEoFQAACm8K
-AAAGKgMajRIAAAElFgYXWYwcAAABoiUXcgUAAHCiJRgGjBwAAAGiJRkXjBwAAAGiKBYAAApvCgAA
-BioeAigOAAAGKioCAwQFKBcAAAoqUgJ7GAAACgJ7GQAAChaUbxoAAAoqIgIWKBsAAAoqUgJ7GAAA
-CgJ7GQAACheUbxoAAAoqIgIXKBsAAAoqJgIYAygcAAAKKloDLAgCGCgdAAAKKnIJAABwcx4AAAp6
-HgIoHwAACioeAiggAAAKKn4CKCEAAAoCAnMSAAAGfQEAAAQCAnMTAAAGfQIAAAQqkgRypgAAcBpv
-IgAACiwVAgUCAygjAAAKDgRzBQAABm8QAAAGKkorBwIDbxEAAAYDbwwAAAYt8SoGKjoCKCQAAAoC
-A30DAAAEKjoCKCQAAAoCA30EAAAEKh4CKCQAAAoqrn4FAAAELR5ytgAAcNAHAAACKCUAAApvJgAA
-CnMnAAAKgAUAAAR+BQAABCoafgYAAAQqHgKABgAABCoafgcAAAQqHgIoKAAACioucxkAAAaABwAA
-BCoAAABCU0pCAQABAAAAAAAMAAAAdjQuMC4zMDMxOQAAAAAFAGwAAADIBQAAI34AADQGAACUBgAA
-I1N0cmluZ3MAAAAAyAwAACgBAAAjVVMA8A0AABAAAAAjR1VJRAAAAAAOAADEAQAAI0Jsb2IAAAAA
-AAAAAgAAAVcVogEJAQAAAPoBMwAWAAABAAAAIQAAAAgAAAAHAAAAGgAAAA8AAAAoAAAAEAAAAAEA
-AAADAAAACQAAAAoAAAABAAAABAAAAAEAAAAAACkDAQAAAAAABgALAqwEBgCfAqwEBgBXAZkEDwAg
-BQAABgCEAe4DBgDuAe4DBgDPAe4DBgCGAu4DBgArAu4DBgBEAu4DBgCbAe4DBgC2AdoCCgBfAqQA
-CgBrBKQADgBcBKQACgA3BKQACgD9BaQABgDABaYDBgA6AZkEBgB8BMwEBgArBNkDEgAKARMDEgBr
-ARMDEgDyAMQDBgAfAawEBgD3AqYDBgAqBqYDBgADAKYDBgAABKYDBgAaBKYDBgDFAKYDBgB2AKYD
-BgCKBu4DAAAAAAkAAAAAAAEAAQABABAAuQMAABAAAQABAAEAEABPBAAAOQABAAUAAQAQAN8FAABF
-AAEADgABABAAnQUAAEkAAwASAAEAEABeBQAASQAEABMAAAAQANMELwVJAAUAFAAAARAAjQUvBWEA
-BwAYAAYAnQWXAAYAXgWbAAEA7QWfAAEA7QWfABEArQOjABEA4gCnABEAZgCrAFAgAAAAAMYAvQIG
-AAEAWCAAAAAAxgDIAgYAAQBgIAAAAADGAGcGrwABAOcgAAAAAIYYjAQGAAIA7yAAAAAAhhiMBDwA
-AgD6IAAAAACGCBIAtQAFAA8hAAAAAIYIUQNeAAUAGCEAAAAAhggnALUABQAtIQAAAACGCGUDXgAF
-ADYhAAAAAIYIqQUQAAUAQCEAAAAAhgh+A7kABgBXIQAAAACGAH4GXgAHAF8hAAAAAIYAxwVeAAcA
-ZyEAAAAAhhiMBAYABwCHIQAAAADGAFoGvgAHAKwhAAAAAMYBUwavAAsAvyEAAAAAxgFnBq8ADADB
-IQAAAACGGIwEyAANANAhAAAAAIYYjATIAA4A3yEAAAAAgxiMBAYADwDnIQAAAACTCHgEzgAPABMi
-AAAAAJMIygDTAA8AGiIAAAAAkwjWANgADwAiIgAAAACWCNMF3gAQACkiAAAAAIYYjAQGABAAMSIA
-AAAAkRiSBOMAEAAAAAEAggYAAAEAcQQAAAIAaAUAAAMARQQAAAEA1AIAAAEA1AIAAAEAHwAAAAIA
-mgAAAAMAcQQAAAQARQQAAAEAcQQAAAEAggYAAAEAAwYAAAEAAwYAAAEA1AIJAIwEAQARAIwEBgAZ
-AIwECgApAIwEEAAxAIwEEAA5AIwEEABBAIwEEABJAIwEEABRAIwEEABZAIwEEABhAIwEEABpAIwE
-BgCZAIwEBgC5AIwEFQDJAIwEBgCJAL0CBgCJAMgCBgDRAP4CHwDZAAEAJQDRAAgDKgDRALkFLwDR
-ALkFNgBxAIwEPABxAHEERgBxAGgFSgB5APQCTgBxAI4DUwBxAJ0DWABxAJUDAQDpAIwEEABxAH4G
-XgBxAMcFXgCJAIwEBgDRAJYFYgCJAHwFaQCRAIwEBgD5AIgAbwD5AIYGdwChAIwEfQDBAIwEBgAu
-AAsA/gAuABMABwEuABsAJgEuACMALwEuACsAWAEuADMAWAEuADsAWAEuAEMALwEuAEsAXgEuAFMA
-WAEuAFsAdQFDAGMAvwHhAHsAvwHjAGsAvwHpAHMAJgEJAXMAJgEbAAMAAQAHAAcACAAJAAAAFgDn
-AAAAVQPrAAAAKwDnAAAAaQPrAAAArQXnAAAAggPrAAAAfATvAAAA6gD0AAAA1wX5AAIABgADAAIA
-BwAFAAIACAAHAAIACQAJAAEACgALAAEACwANAAIAFQAPAAIAFgARAAEAFwARAAIAGAATAASAAAAB
-AAAAAAAAAAAAAAAAADkAAAAEAAAAAAAAAAAAAACFAF0AAAAAAA8AAAAAAAAAAAAAAI4ADQYAAAAA
-DwAAAAAAAAAAAAAAjgAyBgAAAAAEAAAAAAAAAAAAAACFAKYDAAAAAAAAAAABAAAA3QQAAAAAAFRv
-SW50MzIAPE1vZHVsZT4AZ2V0X1NFQVNPTklEAElucHV0SUQAZ2V0X1NUQU5ESU5HU0RBVEUAU0Nf
-ZThlOTc3YWFjYjc0NDlkNzk2YmI2YmU0ZDE5NGU4YWIAbXNjb3JsaWIAZGVmYXVsdEluc3RhbmNl
-AFJ1bnRpbWVUeXBlSGFuZGxlAEdldFR5cGVGcm9tSGFuZGxlAElucHV0TmFtZQBNaWNyb3NvZnQu
-U3FsU2VydmVyLkR0cy5QaXBlbGluZQBUeXBlAGdldF9DdWx0dXJlAHNldF9DdWx0dXJlAHJlc291
-cmNlQ3VsdHVyZQBBcHBsaWNhdGlvblNldHRpbmdzQmFzZQBFZGl0b3JCcm93c2FibGVTdGF0ZQBD
-b21waWxlckdlbmVyYXRlZEF0dHJpYnV0ZQBEZWJ1Z2dlck5vblVzZXJDb2RlQXR0cmlidXRlAERl
-YnVnZ2FibGVBdHRyaWJ1dGUARWRpdG9yQnJvd3NhYmxlQXR0cmlidXRlAEFzc2VtYmx5VGl0bGVB
-dHRyaWJ1dGUAQXNzZW1ibHlUcmFkZW1hcmtBdHRyaWJ1dGUAVGFyZ2V0RnJhbWV3b3JrQXR0cmli
-dXRlAEFzc2VtYmx5Q29uZmlndXJhdGlvbkF0dHJpYnV0ZQBBc3NlbWJseURlc2NyaXB0aW9uQXR0
-cmlidXRlAENvbXBpbGF0aW9uUmVsYXhhdGlvbnNBdHRyaWJ1dGUAQXNzZW1ibHlQcm9kdWN0QXR0
-cmlidXRlAEFzc2VtYmx5Q29weXJpZ2h0QXR0cmlidXRlAFNTSVNTY3JpcHRDb21wb25lbnRFbnRy
-eVBvaW50QXR0cmlidXRlAEFzc2VtYmx5Q29tcGFueUF0dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJp
-bGl0eUF0dHJpYnV0ZQBQcmVFeGVjdXRlAFBvc3RFeGVjdXRlAHZhbHVlAFN5c3RlbS5SdW50aW1l
-LlZlcnNpb25pbmcAR2V0U3RyaW5nAFN1YnN0cmluZwBTdGFydHNXaXRoAFN5c3RlbS5Db21wb25l
-bnRNb2RlbABTQ19lOGU5NzdhYWNiNzQ0OWQ3OTZiYjZiZTRkMTk0ZThhYi5kbGwAZ2V0X1NFQVNP
-TklEX0lzTnVsbABnZXRfU1RBTkRJTkdTREFURV9Jc051bGwAc2V0X1NlYXNvblllYXJzX0lzTnVs
-bABTZXROdWxsAHNldF9JdGVtAFN5c3RlbQByZXNvdXJjZU1hbgBTY3JpcHRNYWluAFN5c3RlbS5D
-b25maWd1cmF0aW9uAFN5c3RlbS5HbG9iYWxpemF0aW9uAFN5c3RlbS5SZWZsZWN0aW9uAEludmFs
-aWRPcGVyYXRpb25FeGNlcHRpb24AU3RyaW5nQ29tcGFyaXNvbgBDdWx0dXJlSW5mbwBPdXRwdXRO
-YW1lTWFwAE91dHB1dE1hcABJbnB1dDBCdWZmZXIAUGlwZWxpbmVCdWZmZXIAU2NyaXB0QnVmZmVy
-AGdldF9SZXNvdXJjZU1hbmFnZXIALmN0b3IALmNjdG9yAFN5c3RlbS5EaWFnbm9zdGljcwBTeXN0
-ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2VzAFN5c3RlbS5SZXNvdXJjZXMAU0NfZThlOTc3YWFj
-Yjc0NDlkNzk2YmI2YmU0ZDE5NGU4YWIuUHJvcGVydGllcy5SZXNvdXJjZXMucmVzb3VyY2VzAERl
-YnVnZ2luZ01vZGVzAFNDX2U4ZTk3N2FhY2I3NDQ5ZDc5NmJiNmJlNGQxOTRlOGFiLlByb3BlcnRp
-ZXMAVmFyaWFibGVzAEJ1ZmZlckNvbHVtbkluZGV4ZXMAR2V0Q29sdW1uSW5kZXhlcwBTZXR0aW5n
-cwBFcXVhbHMAQ29ubmVjdGlvbnMAc2V0X1NlYXNvblllYXJzAENvbmNhdABPYmplY3QARW5kT2ZS
-b3dzZXQAZ2V0X0RlZmF1bHQAVXNlckNvbXBvbmVudABQYXJlbnRDb21wb25lbnQAU2NyaXB0Q29t
-cG9uZW50AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuVHhTY3JpcHQAQ29udmVydABNaWNyb3NvZnQuU3Fs
-U2VydmVyLlBpcGVsaW5lSG9zdABJbnB1dDBfUHJvY2Vzc0lucHV0AElucHV0MF9Qcm9jZXNzSW5w
-dXRSb3cATmV4dFJvdwBnZXRfQXNzZW1ibHkAAAADMQAAAy0AAYCbSQBzAE4AdQBsAGwAIABwAHIA
-bwBwAGUAcgB0AHkAIABjAGEAbgBuAG8AdAAgAGIAZQAgAHMAZQB0ACAAdABvACAARgBhAGwAcwBl
-AC4AIABBAHMAcwBpAGcAbgAgAGEAIAB2AGEAbAB1AGUAIAB0AG8AIAB0AGgAZQAgAGMAbwBsAHUA
-bQBuACAAaQBuAHMAdABlAGEAZAAuAAAPSQBuAHAAdQB0ACAAMAAAcVMAQwBfAGUAOABlADkANwA3
-AGEAYQBjAGIANwA0ADQAOQBkADcAOQA2AGIAYgA2AGIAZQA0AGQAMQA5ADQAZQA4AGEAYgAuAFAA
-cgBvAHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAjiNoZm4yfkaM280FoiDJ2gAE
-IAEBCAMgAAEFIAEBEREEIAEBDgUgAQERWQMHAQgFIAIOCAgEAAEIDgQgAQIOBgADDhwcHAUAAQ4d
-HAkgAwESPR0IEkEDBhI9AwYdCAQgAQ4IBCABAggFIAIBCBwDIAACBiACAg4ReQUgAR0ICAcAARJ9
-EYCBBSAAEoCFByACAQ4SgIUIt3pcVhk04IkIiYRdzYCAzJEDBhIUAwYSGAMGEkUDBhJRAwYSVQMG
-EiAFIAEBEgwDIAAOBCABAQIJIAQBCA4SPRJBBSABARJFBAAAElEEAAASVQUAAQESVQQAABIgAwAA
-AQMoAA4DKAACBAgAElEECAASVQQIABIgCAEACAAAAAAAHgEAAQBUAhZXcmFwTm9uRXhjZXB0aW9u
-VGhyb3dzAQgBAAIAAAAAACgBACNTQ19lOGU5NzdhYWNiNzQ0OWQ3OTZiYjZiZTRkMTk0ZThhYgAA
-BQEAAAAAFgEAEUNvcHlyaWdodCBAICAyMDIxAABJAQAaLk5FVEZyYW1ld29yayxWZXJzaW9uPXY0
-LjcBAFQOFEZyYW1ld29ya0Rpc3BsYXlOYW1lEi5ORVQgRnJhbWV3b3JrIDQuNwQBAAAAtAAAAM7K
-774BAAAAkQAAAGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVhZGVyLCBtc2NvcmxpYiwgVmVy
-c2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkz
-NGUwODkjU3lzdGVtLlJlc291cmNlcy5SdW50aW1lUmVzb3VyY2VTZXQCAAAAAAAAAAAAAABQQURQ
-QURQtAAAAOQyAAAAAAAAAAAAAP4yAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwMgAAAAAAAAAA
-AAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/JQAgABAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAA
-SAAAAFhAAADsAwAAAAAAAAAAAADsAzQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAA
-AAAAvQTv/gAAAQAAAAEAAAAAAAAAAQAAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQA
-AAABAFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBu
-AAAAAAAAALAETAMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAKAMAAAEAMAAwADAA
-MAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBu
-AHkATgBhAG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAA
-AABTAEMAXwBlADgAZQA5ADcANwBhAGEAYwBiADcANAA0ADkAZAA3ADkANgBiAGIANgBiAGUANABk
-ADEAOQA0AGUAOABhAGIAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4A
-MAAuADAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfAGUAOABlADkANwA3
-AGEAYQBjAGIANwA0ADQAOQBkADcAOQA2AGIAYgA2AGIAZQA0AGQAMQA5ADQAZQA4AGEAYgAuAGQA
-bABsAAAASAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBvAHAAeQByAGkAZwBo
-AHQAIABAACAAIAAyADAAMgAxAAAAKgABAAEATABlAGcAYQBsAFQAcgBhAGQAZQBtAGEAcgBrAHMA
-AAAAAAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBDAF8AZQA4
-AGUAOQA3ADcAYQBhAGMAYgA3ADQANAA5AGQANwA5ADYAYgBiADYAYgBlADQAZAAxADkANABlADgA
-YQBiAC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAQwBfAGUAOABl
-ADkANwA3AGEAYQBjAGIANwA0ADQAOQBkADcAOQA2AGIAYgA2AGIAZQA0AGQAMQA5ADQAZQA4AGEA
-YgAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAA4
-AAgAAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAA+BEAAAAgAAAAEgAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAUAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAGgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAADU
+MQAAAAAAAEgAAAACAAUA0CEAABgPAAABAAAAAAAAAOgwAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAUALAAAAAEAABEDbwYAAAYg
+ECcAAF0KAwaMGgAAAXIBAABwBhdYjBoAAAEoEgAACm8IAAAGKh4CKAwAAAYqKgIDBAUoEwAACipS
+AnsUAAAKAnsVAAAKFpRvFgAACioiAhYoFwAACiomAhcDKBgAAAoqWgMsCAIXKBkAAAoqcgUAAHBz
+GgAACnoeAigbAAAKKh4CKBwAAAoqfgIoHQAACgICcxAAAAZ9AQAABAICcxEAAAZ9AgAABCqSBHKi
+AABwGm8eAAAKLBUCBQIDKB8AAAoOBHMFAAAGbw4AAAYqSisHAgNvDwAABgNvCgAABi3xKgYqOgIo
+IAAACgIDfQMAAAQqOgIoIAAACgIDfQQAAAQqHgIoIAAACiqufgUAAAQtHnKyAABw0AcAAAIoIQAA
+Cm8iAAAKcyMAAAqABQAABH4FAAAEKhp+BgAABCoeAoAGAAAEKhp+BwAABCoeAigkAAAKKi5zFwAA
+BoAHAAAEKkJTSkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5AAAAAAUAbAAAAHgFAAAjfgAA5AUAAEwG
+AAAjU3RyaW5ncwAAAAAwDAAAJAEAACNVUwBUDQAAEAAAACNHVUlEAAAAZA0AALQBAAAjQmxvYgAA
+AAAAAAACAAABVxWiAQkBAAAA+gEzABYAAAEAAAAgAAAACAAAAAcAAAAYAAAADwAAACQAAAAQAAAA
+AQAAAAMAAAAHAAAACAAAAAEAAAAEAAAAAQAAAAAAAAMBAAAAAAAGAPoBagQGAI4CagQGAEYBVwQP
+AN4EAAAGAHMBrAMGAN0BrAMGAL4BrAMGAHUCrAMGABoCrAMGADMCrAMGAIoBrAMGAKUByQIKAE4C
+kwAKACkEkwAOABoEkwAKAPUDkwAKALsFkwAGAH4FZAMGACkBVwQGADoEigQGAOkDlwMSAPkA6gIS
+AFoB6gISAOEAggMGAA4BagQGAAQAZAMGAOMCZAMGAL4DZAMGANgDZAMGALQAZAMGAGUAZAMGAEAG
+rAMAAAAACgAAAAAAAQABAAEAEAB3AwAAEAABAAEAAQAQAA0EAAA5AAEABQABABAAnQUAAEUAAQAM
+AAEAEABbBQAASQADABAAAQAQABwFAABJAAQAEQAAABAAkQTtBEkABQASAAABEABLBe0EYQAHABYA
+BgBbBYAABgAcBYQAAQCrBYgAAQCrBYgAEQBrA4wAEQDRAJAAEQBVAJQAUCAAAAAAxgCsAgYAAQBY
+IAAAAADGALcCBgABAGAgAAAAAMYAHQaYAAEAmCAAAAAAhhhKBAYAAgCgIAAAAACGGEoEJgACAKsg
+AAAAAIYISACeAAUAwCAAAAAAhggoA0gABQDJIAAAAACGCGcFEAAFANMgAAAAAIYIPAOiAAYA6iAA
+AAAAhgA0BkgABwDyIAAAAACGAIUFSAAHAPogAAAAAIYYSgQGAAcAGiEAAAAAxgAQBqcABwA/IQAA
+AADGAQkGmAALAFIhAAAAAMYBHQaYAAwAVCEAAAAAhhhKBLEADQBjIQAAAACGGEoEsQAOAHIhAAAA
+AIMYSgQGAA8AeiEAAAAAkwg2BLcADwCmIQAAAACTCLkAvAAPAK0hAAAAAJMIxQDBAA8AtSEAAAAA
+lgiRBccAEAC8IQAAAACGGEoEBgAQAMQhAAAAAJEYUATMABAAAAABADgGAAABAC8EAAACACYFAAAD
+AAMEAAABAMMCAAABAMMCAAABABMAAAACAIkAAAADAC8EAAAEAAMEAAABAC8EAAABADgGAAABAMEF
+AAABAMEFAAABAMMCCQBKBAEAEQBKBAYAGQBKBAoAKQBKBBAAMQBKBBAAOQBKBBAAQQBKBBAASQBK
+BBAAUQBKBBAAWQBKBBAAYQBKBBAAaQBKBAYAmQBKBAYAuQBKBBUAyQBKBAYAiQCsAgYAiQC3AgYA
+2QB3BR8AcQBKBCYAcQAvBDAAcQAmBTQAeQABADgAcQBMAz0AcQBbA0IAcQBTAwEA4QBKBBAAcQA0
+BkgAcQCFBUgAiQBKBAYA2QBUBUwAiQA6BVMAkQBKBAYA8QB3AFkA8QA8BmAAoQBKBGYAwQBKBAYA
+LgALAOsALgATAPQALgAbABMBLgAjABwBLgArAEUBLgAzAEUBLgA7AEUBLgBDABwBLgBLAEsBLgBT
+AEUBLgBbAGIBQwBjAKwBqQBzABMByQBzABMB4QB7AKwB4wBrAKwBGwADAAEABwAFAAgABwAAAEwA
+0AAAACwD1AAAAGsF2AAAAEAD1AAAADoE3AAAANkA4QAAAJUF5gACAAYAAwACAAcABQABAAgABwAB
+AAkACQACABMACwACABQADQABABUADQACABYADwAEgAAAAQAAAAAAAAAAAAAAAAAbAAAABAAAAAAA
+AAAAAAAAbgA/AAAAAAAPAAAAAAAAAAAAAAB3AMsFAAAAAA8AAAAAAAAAAAAAAHcA6AUAAAAABAAA
+AAAAAAAAAAAAbgBkAwAAAAAAAAAAAQAAAJsEAAAAAAAAAEdldEludDMyADxNb2R1bGU+AElucHV0
+SUQAU0NfZThlOTc3YWFjYjc0NDlkNzk2YmI2YmU0ZDE5NGU4YWIAbXNjb3JsaWIAZ2V0X1NlYXNv
+bklkAGRlZmF1bHRJbnN0YW5jZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBlRnJvbUhhbmRsZQBJ
+bnB1dE5hbWUATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUGlwZWxpbmUAVHlwZQBnZXRfQ3VsdHVy
+ZQBzZXRfQ3VsdHVyZQByZXNvdXJjZUN1bHR1cmUAQXBwbGljYXRpb25TZXR0aW5nc0Jhc2UARWRp
+dG9yQnJvd3NhYmxlU3RhdGUAQ29tcGlsZXJHZW5lcmF0ZWRBdHRyaWJ1dGUARGVidWdnZXJOb25V
+c2VyQ29kZUF0dHJpYnV0ZQBEZWJ1Z2dhYmxlQXR0cmlidXRlAEVkaXRvckJyb3dzYWJsZUF0dHJp
+YnV0ZQBBc3NlbWJseVRpdGxlQXR0cmlidXRlAEFzc2VtYmx5VHJhZGVtYXJrQXR0cmlidXRlAFRh
+cmdldEZyYW1ld29ya0F0dHJpYnV0ZQBBc3NlbWJseUNvbmZpZ3VyYXRpb25BdHRyaWJ1dGUAQXNz
+ZW1ibHlEZXNjcmlwdGlvbkF0dHJpYnV0ZQBDb21waWxhdGlvblJlbGF4YXRpb25zQXR0cmlidXRl
+AEFzc2VtYmx5UHJvZHVjdEF0dHJpYnV0ZQBBc3NlbWJseUNvcHlyaWdodEF0dHJpYnV0ZQBTU0lT
+U2NyaXB0Q29tcG9uZW50RW50cnlQb2ludEF0dHJpYnV0ZQBBc3NlbWJseUNvbXBhbnlBdHRyaWJ1
+dGUAUnVudGltZUNvbXBhdGliaWxpdHlBdHRyaWJ1dGUAUHJlRXhlY3V0ZQBQb3N0RXhlY3V0ZQB2
+YWx1ZQBTeXN0ZW0uUnVudGltZS5WZXJzaW9uaW5nAFN0cmluZwBTeXN0ZW0uQ29tcG9uZW50TW9k
+ZWwAU0NfZThlOTc3YWFjYjc0NDlkNzk2YmI2YmU0ZDE5NGU4YWIuZGxsAGdldF9TZWFzb25JZF9J
+c051bGwAc2V0X1NlYXNvblllYXJzX0lzTnVsbABTZXROdWxsAHNldF9JdGVtAFN5c3RlbQByZXNv
+dXJjZU1hbgBTY3JpcHRNYWluAFN5c3RlbS5Db25maWd1cmF0aW9uAFN5c3RlbS5HbG9iYWxpemF0
+aW9uAFN5c3RlbS5SZWZsZWN0aW9uAEludmFsaWRPcGVyYXRpb25FeGNlcHRpb24AU3RyaW5nQ29t
+cGFyaXNvbgBDdWx0dXJlSW5mbwBPdXRwdXROYW1lTWFwAE91dHB1dE1hcABJbnB1dDBCdWZmZXIA
+UGlwZWxpbmVCdWZmZXIAU2NyaXB0QnVmZmVyAGdldF9SZXNvdXJjZU1hbmFnZXIALmN0b3IALmNj
+dG9yAFN5c3RlbS5EaWFnbm9zdGljcwBTeXN0ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2VzAFN5
+c3RlbS5SZXNvdXJjZXMAU0NfZThlOTc3YWFjYjc0NDlkNzk2YmI2YmU0ZDE5NGU4YWIuUHJvcGVy
+dGllcy5SZXNvdXJjZXMucmVzb3VyY2VzAERlYnVnZ2luZ01vZGVzAFNDX2U4ZTk3N2FhY2I3NDQ5
+ZDc5NmJiNmJlNGQxOTRlOGFiLlByb3BlcnRpZXMAVmFyaWFibGVzAEJ1ZmZlckNvbHVtbkluZGV4
+ZXMAR2V0Q29sdW1uSW5kZXhlcwBTZXR0aW5ncwBFcXVhbHMAQ29ubmVjdGlvbnMAc2V0X1NlYXNv
+blllYXJzAENvbmNhdABPYmplY3QARW5kT2ZSb3dzZXQAZ2V0X0RlZmF1bHQAVXNlckNvbXBvbmVu
+dABQYXJlbnRDb21wb25lbnQAU2NyaXB0Q29tcG9uZW50AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuVHhT
+Y3JpcHQATWljcm9zb2Z0LlNxbFNlcnZlci5QaXBlbGluZUhvc3QASW5wdXQwX1Byb2Nlc3NJbnB1
+dABJbnB1dDBfUHJvY2Vzc0lucHV0Um93AE5leHRSb3cAZ2V0X0Fzc2VtYmx5AAAAAAADLQABgJtJ
+AHMATgB1AGwAbAAgAHAAcgBvAHAAZQByAHQAeQAgAGMAYQBuAG4AbwB0ACAAYgBlACAAcwBlAHQA
+IAB0AG8AIABGAGEAbABzAGUALgAgAEEAcwBzAGkAZwBuACAAYQAgAHYAYQBsAHUAZQAgAHQAbwAg
+AHQAaABlACAAYwBvAGwAdQBtAG4AIABpAG4AcwB0AGUAYQBkAC4AAA9JAG4AcAB1AHQAIAAwAABx
+UwBDAF8AZQA4AGUAOQA3ADcAYQBhAGMAYgA3ADQANAA5AGQANwA5ADYAYgBiADYAYgBlADQAZAAx
+ADkANABlADgAYQBiAC4AUAByAG8AcABlAHIAdABpAGUAcwAuAFIAZQBzAG8AdQByAGMAZQBzAADT
++C6hySvvRKBrhpeJPO0cAAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFZAwcBCAYAAw4cHBwJIAMB
+Ej0dCBJBAwYSPQMGHQgEIAEICAQgAQIIBSACAQgcAyAAAgYgAgIOEXUFIAEdCAgGAAESeRF9BSAA
+EoCBByACAQ4SgIEIt3pcVhk04IkIiYRdzYCAzJEDBhIUAwYSGAMGEkUDBhJRAwYSVQMGEiAFIAEB
+EgwDIAAIBCABAQIJIAQBCA4SPRJBBSABARJFBAAAElEEAAASVQUAAQESVQQAABIgAwAAAQMoAAgD
+KAACAygADgQIABJRBAgAElUECAASIAgBAAgAAAAAAB4BAAEAVAIWV3JhcE5vbkV4Y2VwdGlvblRo
+cm93cwEIAQACAAAAAAAoAQAjU0NfZThlOTc3YWFjYjc0NDlkNzk2YmI2YmU0ZDE5NGU4YWIAAAUB
+AAAAABYBABFDb3B5cmlnaHQgQCAgMjAyMQAASQEAGi5ORVRGcmFtZXdvcmssVmVyc2lvbj12NC43
+AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZyYW1ld29yayA0LjcEAQAAAAAAALQAAADO
+yu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwgbXNjb3JsaWIsIFZl
+cnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5
+MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAAAAAAAAAAAAAAUEFE
+UEFEULQAAADIMQAAAAAAAAAAAADiMQAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA1DEAAAAAAAAA
+AAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAA
+AEgAAABYQAAA7AMAAAAAAAAAAAAA7AM0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8A
+AAAAAL0E7/4AAAEAAAABAAAAAAAAAAEAAAAAAD8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABE
+AAAAAQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8A
+bgAAAAAAAACwBEwDAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAACgDAAABADAAMAAw
+ADAAMAA0AGIAMAAAABoAAQABAEMAbwBtAG0AZQBuAHQAcwAAAAAAAAAiAAEAAQBDAG8AbQBwAGEA
+bgB5AE4AYQBtAGUAAAAAAAAAAABwACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAA
+AAAAUwBDAF8AZQA4AGUAOQA3ADcAYQBhAGMAYgA3ADQANAA5AGQANwA5ADYAYgBiADYAYgBlADQA
+ZAAxADkANABlADgAYQBiAAAAMAAIAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAu
+ADAALgAwAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABTAEMAXwBlADgAZQA5ADcA
+NwBhAGEAYwBiADcANAA0ADkAZAA3ADkANgBiAGIANgBiAGUANABkADEAOQA0AGUAOABhAGIALgBk
+AGwAbAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAAAEMAbwBwAHkAcgBpAGcA
+aAB0ACAAQAAgACAAMgAwADIAMQAAACoAAQABAEwAZQBnAGEAbABUAHIAYQBkAGUAbQBhAHIAawBz
+AAAAAAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUAbgBhAG0AZQAAAFMAQwBfAGUA
+OABlADkANwA3AGEAYQBjAGIANwA0ADQAOQBkADcAOQA2AGIAYgA2AGIAZQA0AGQAMQA5ADQAZQA4
+AGEAYgAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEAbQBlAAAAAABTAEMAXwBlADgA
+ZQA5ADcANwBhAGEAYwBiADcANAA0ADkAZAA3ADkANgBiAGIANgBiAGUANABkADEAOQA0AGUAOABh
+AGIAAAA0AAgAAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAA
+OAAIAAEAQQBzAHMAZQBtAGIAbAB5ACAAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1299,7 +1287,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAAEDMAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAADAAAAPQxAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1308,7 +1296,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   </arrayElements>
                 </property>
                 <property
@@ -1344,46 +1332,37 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   dataType="System.String"
                   description="Checksum to match component metedata against compiled codes."
                   name="MetadataChecksum140"
-                  typeConverter="NOTBROWSABLE">19</property>
+                  typeConverter="NOTBROWSABLE">76</property>
                 <property
                   dataType="System.String"
                   name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Create DimTables\Derive Season Years.Inputs[Input 0]"
+                  refId="Package\Stage Data\Derive Season Years.Inputs[Input 0]"
                   hasSideEffects="true"
                   name="Input 0">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Create DimTables\Derive Season Years.Inputs[Input 0].Columns[SEASON_ID]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="SEASON_ID"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[SEASON_ID]" />
-                    <inputColumn
-                      refId="Package\Create DimTables\Derive Season Years.Inputs[Input 0].Columns[STANDINGSDATE]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="STANDINGSDATE"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[STANDINGSDATE]" />
+                      refId="Package\Stage Data\Derive Season Years.Inputs[Input 0].Columns[SeasonId]"
+                      cachedDataType="i4"
+                      cachedName="SeasonId"
+                      lineageId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Output].Columns[SeasonId]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Create DimTables\Derive Season Years.Outputs[Output 0]"
+                  refId="Package\Stage Data\Derive Season Years.Outputs[Output 0]"
                   name="Output 0"
-                  synchronousInputId="Package\Create DimTables\Derive Season Years.Inputs[Input 0]">
+                  synchronousInputId="Package\Stage Data\Derive Season Years.Inputs[Input 0]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Create DimTables\Derive Season Years.Outputs[Output 0].Columns[SeasonYears]"
+                      refId="Package\Stage Data\Derive Season Years.Outputs[Output 0].Columns[SeasonYears]"
                       dataType="wstr"
                       length="12"
-                      lineageId="Package\Create DimTables\Derive Season Years.Outputs[Output 0].Columns[SeasonYears]"
+                      lineageId="Package\Stage Data\Derive Season Years.Outputs[Output 0].Columns[SeasonYears]"
                       name="SeasonYears" />
                   </outputColumns>
                   <externalMetadataColumns />
@@ -1391,7 +1370,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </outputs>
             </component>
             <component
-              refId="Package\Create DimTables\Flat File Source"
+              refId="Package\Stage Data\Flat File Source"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
@@ -1411,25 +1390,25 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Create DimTables\Flat File Source.Connections[FlatFileConnection]"
+                  refId="Package\Stage Data\Flat File Source.Connections[FlatFileConnection]"
                   connectionManagerID="Package.ConnectionManagers[Load CSV File]"
                   connectionManagerRefId="Package.ConnectionManagers[Load CSV File]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output]"
+                  refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM_ID]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM_ID]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TEAM_ID]"
+                      externalMetadataColumnId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TEAM_ID]"
                       length="50"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM_ID]"
+                      lineageId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM_ID]"
                       name="TEAM_ID"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1444,14 +1423,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[LEAGUE_ID]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[LEAGUE_ID]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LEAGUE_ID]"
+                      externalMetadataColumnId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LEAGUE_ID]"
                       length="50"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[LEAGUE_ID]"
+                      lineageId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[LEAGUE_ID]"
                       name="LEAGUE_ID"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1466,14 +1445,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[SEASON_ID]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[SEASON_ID]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SEASON_ID]"
+                      externalMetadataColumnId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SEASON_ID]"
                       length="50"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[SEASON_ID]"
+                      lineageId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[SEASON_ID]"
                       name="SEASON_ID"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1488,14 +1467,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[STANDINGSDATE]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[STANDINGSDATE]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[STANDINGSDATE]"
+                      externalMetadataColumnId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[STANDINGSDATE]"
                       length="50"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[STANDINGSDATE]"
+                      lineageId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[STANDINGSDATE]"
                       name="STANDINGSDATE"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1510,14 +1489,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[CONFERENCE]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[CONFERENCE]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CONFERENCE]"
+                      externalMetadataColumnId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CONFERENCE]"
                       length="50"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[CONFERENCE]"
+                      lineageId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[CONFERENCE]"
                       name="CONFERENCE"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1532,14 +1511,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TEAM]"
+                      externalMetadataColumnId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TEAM]"
                       length="50"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM]"
+                      lineageId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM]"
                       name="TEAM"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1554,14 +1533,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[G]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[G]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[G]"
+                      externalMetadataColumnId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[G]"
                       length="50"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[G]"
+                      lineageId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[G]"
                       name="G"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1576,14 +1555,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[W]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[W]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[W]"
+                      externalMetadataColumnId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[W]"
                       length="50"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[W]"
+                      lineageId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[W]"
                       name="W"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1598,14 +1577,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[L]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[L]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[L]"
+                      externalMetadataColumnId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[L]"
                       length="50"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[L]"
+                      lineageId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[L]"
                       name="L"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1620,14 +1599,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[W_PCT]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[W_PCT]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[W_PCT]"
+                      externalMetadataColumnId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[W_PCT]"
                       length="50"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[W_PCT]"
+                      lineageId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[W_PCT]"
                       name="W_PCT"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1642,14 +1621,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[HOME_RECORD]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[HOME_RECORD]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[HOME_RECORD]"
+                      externalMetadataColumnId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[HOME_RECORD]"
                       length="50"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[HOME_RECORD]"
+                      lineageId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[HOME_RECORD]"
                       name="HOME_RECORD"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1664,14 +1643,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[ROAD_RECORD]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[ROAD_RECORD]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ROAD_RECORD]"
+                      externalMetadataColumnId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ROAD_RECORD]"
                       length="50"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[ROAD_RECORD]"
+                      lineageId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[ROAD_RECORD]"
                       name="ROAD_RECORD"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1686,14 +1665,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[RETURNTOPLAY]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[RETURNTOPLAY]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[RETURNTOPLAY]"
+                      externalMetadataColumnId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[RETURNTOPLAY]"
                       length="50"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].Columns[RETURNTOPLAY]"
+                      lineageId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].Columns[RETURNTOPLAY]"
                       name="RETURNTOPLAY"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1711,79 +1690,79 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TEAM_ID]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TEAM_ID]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="TEAM_ID" />
                     <externalMetadataColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LEAGUE_ID]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LEAGUE_ID]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="LEAGUE_ID" />
                     <externalMetadataColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SEASON_ID]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SEASON_ID]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="SEASON_ID" />
                     <externalMetadataColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[STANDINGSDATE]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[STANDINGSDATE]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="STANDINGSDATE" />
                     <externalMetadataColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CONFERENCE]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CONFERENCE]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="CONFERENCE" />
                     <externalMetadataColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TEAM]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TEAM]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="TEAM" />
                     <externalMetadataColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[G]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[G]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="G" />
                     <externalMetadataColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[W]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[W]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="W" />
                     <externalMetadataColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[L]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[L]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="L" />
                     <externalMetadataColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[W_PCT]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[W_PCT]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="W_PCT" />
                     <externalMetadataColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[HOME_RECORD]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[HOME_RECORD]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="HOME_RECORD" />
                     <externalMetadataColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ROAD_RECORD]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ROAD_RECORD]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="ROAD_RECORD" />
                     <externalMetadataColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[RETURNTOPLAY]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[RETURNTOPLAY]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -1791,27 +1770,27 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Error Output]"
+                  refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       codePage="1252"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1820,38 +1799,38 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </outputs>
             </component>
             <component
-              refId="Package\Create DimTables\Multicast"
+              refId="Package\Stage Data\Multicast"
               componentClassID="Microsoft.Multicast"
               contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
               name="Multicast">
               <inputs>
                 <input
-                  refId="Package\Create DimTables\Multicast.Inputs[Multicast Input 1]"
+                  refId="Package\Stage Data\Multicast.Inputs[Multicast Input 1]"
                   name="Multicast Input 1">
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Create DimTables\Multicast.Outputs[Multicast Output 1]"
+                  refId="Package\Stage Data\Multicast.Outputs[Multicast Output 1]"
                   deleteOutputOnPathDetached="true"
                   name="Multicast Output 1"
-                  synchronousInputId="Package\Create DimTables\Multicast.Inputs[Multicast Input 1]">
+                  synchronousInputId="Package\Stage Data\Multicast.Inputs[Multicast Input 1]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Create DimTables\Multicast.Outputs[Multicast Output 2]"
+                  refId="Package\Stage Data\Multicast.Outputs[Multicast Output 2]"
                   dangling="true"
                   deleteOutputOnPathDetached="true"
                   name="Multicast Output 2"
-                  synchronousInputId="Package\Create DimTables\Multicast.Inputs[Multicast Input 1]">
+                  synchronousInputId="Package\Stage Data\Multicast.Inputs[Multicast Input 1]">
                   <externalMetadataColumns />
                 </output>
               </outputs>
             </component>
             <component
-              refId="Package\Create DimTables\OLE DB Destination"
+              refId="Package\Stage Data\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -1866,7 +1845,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dimSeason]</property>
+                  name="OpenRowset">[StagingSeason]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1908,7 +1887,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Create DimTables\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Stage Data\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-BN01JAD\SANDIEGOSERVER.Project2DataDB]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-BN01JAD\SANDIEGOSERVER.Project2DataDB]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1916,58 +1895,68 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Create DimTables\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Stage Data\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Create DimTables\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SeasonId]"
+                      refId="Package\Stage Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SeasonId]"
                       cachedDataType="i4"
                       cachedName="SeasonId"
-                      externalMetadataColumnId="Package\Create DimTables\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SeasonId]"
-                      lineageId="Package\Create DimTables\Data Conversion 1.Outputs[Data Conversion Output].Columns[SeasonId]" />
+                      externalMetadataColumnId="Package\Stage Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SeasonId]"
+                      lineageId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Output].Columns[SeasonId]" />
                     <inputColumn
-                      refId="Package\Create DimTables\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SeasonYears]"
+                      refId="Package\Stage Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SeasonYears]"
                       cachedDataType="wstr"
                       cachedLength="12"
                       cachedName="SeasonYears"
-                      externalMetadataColumnId="Package\Create DimTables\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SeasonYears]"
-                      lineageId="Package\Create DimTables\Derive Season Years.Outputs[Output 0].Columns[SeasonYears]" />
+                      externalMetadataColumnId="Package\Stage Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SeasonYears]"
+                      lineageId="Package\Stage Data\Derive Season Years.Outputs[Output 0].Columns[SeasonYears]" />
+                    <inputColumn
+                      refId="Package\Stage Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StandingsDate]"
+                      cachedDataType="date"
+                      cachedName="StandingsDate"
+                      externalMetadataColumnId="Package\Stage Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StandingsDate]"
+                      lineageId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Output].Columns[StandingsDate]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Create DimTables\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SeasonId]"
+                      refId="Package\Stage Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SeasonId]"
                       dataType="i4"
                       name="SeasonId" />
                     <externalMetadataColumn
-                      refId="Package\Create DimTables\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SeasonYears]"
+                      refId="Package\Stage Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SeasonYears]"
                       dataType="wstr"
                       length="12"
                       name="SeasonYears" />
+                    <externalMetadataColumn
+                      refId="Package\Stage Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StandingsDate]"
+                      dataType="dbTimeStamp"
+                      name="StandingsDate" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Create DimTables\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Stage Data\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Create DimTables\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Stage Data\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Create DimTables\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Stage Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Create DimTables\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Stage Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Create DimTables\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Stage Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Create DimTables\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Stage Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1978,25 +1967,25 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </components>
           <paths>
             <path
-              refId="Package\Create DimTables.Paths[Data Conversion Output]"
-              endId="Package\Create DimTables\Multicast.Inputs[Multicast Input 1]"
+              refId="Package\Stage Data.Paths[Data Conversion Output]"
+              endId="Package\Stage Data\Multicast.Inputs[Multicast Input 1]"
               name="Data Conversion Output"
-              startId="Package\Create DimTables\Data Conversion 1.Outputs[Data Conversion Output]" />
+              startId="Package\Stage Data\Data Conversion 1.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Create DimTables.Paths[Flat File Source Output]"
-              endId="Package\Create DimTables\Data Conversion 1.Inputs[Data Conversion Input]"
+              refId="Package\Stage Data.Paths[Flat File Source Output]"
+              endId="Package\Stage Data\Data Conversion 1.Inputs[Data Conversion Input]"
               name="Flat File Source Output"
-              startId="Package\Create DimTables\Flat File Source.Outputs[Flat File Source Output]" />
+              startId="Package\Stage Data\Flat File Source.Outputs[Flat File Source Output]" />
             <path
-              refId="Package\Create DimTables.Paths[Multicast Output 1]"
-              endId="Package\Create DimTables\Derive Season Years.Inputs[Input 0]"
+              refId="Package\Stage Data.Paths[Multicast Output 1]"
+              endId="Package\Stage Data\Derive Season Years.Inputs[Input 0]"
               name="Multicast Output 1"
-              startId="Package\Create DimTables\Multicast.Outputs[Multicast Output 1]" />
+              startId="Package\Stage Data\Multicast.Outputs[Multicast Output 1]" />
             <path
-              refId="Package\Create DimTables.Paths[Output 0]"
-              endId="Package\Create DimTables\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\Stage Data.Paths[Output 0]"
+              endId="Package\Stage Data\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Output 0"
-              startId="Package\Create DimTables\Derive Season Years.Outputs[Output 0]" />
+              startId="Package\Stage Data\Derive Season Years.Outputs[Output 0]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2006,11 +1995,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{1FA5B4BB-A689-4F84-A1A8-49425C4B024D}"
-      DTS:From="Package\Create DimTables"
+      DTS:DTSID="{762CD933-6AB2-4795-9896-1EEE5E4D708D}"
+      DTS:From="Package\Stage Data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\Build Fact Table" />
+      DTS:To="Package\Data Flow Task" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -2025,27 +2014,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="162,42"
-          Id="Package\Create DimTables"
-          TopLeft="405,197" />
-        <NodeLayout
           Size="154,42"
           Id="Package\Build Fact Table"
-          TopLeft="412,283" />
+          TopLeft="420,380" />
+        <NodeLayout
+          Size="131,42"
+          Id="Package\Stage Data"
+          TopLeft="431,202" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task"
+          TopLeft="428,289" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="487.5,239">
+          TopLeft="500,244">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44"
+              EndConnector="0,45"
               Start="0,0"
-              End="0,36.5">
+              End="0,37.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.5" />
+                    End="0,37.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2058,20 +2051,50 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Create DimTables">
+    design-time-name="Package\Stage Data">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="151,42"
-          Id="Package\Create DimTables\Flat File Source"
+          Id="Package\Stage Data\Flat File Source"
           TopLeft="421,55" />
         <NodeLayout
+          Size="175,42"
+          Id="Package\Stage Data\Derive Season Years"
+          TopLeft="395,326" />
+        <NodeLayout
+          Size="120,42"
+          Id="Package\Stage Data\Multicast"
+          TopLeft="428,230" />
+        <NodeLayout
           Size="165,42"
-          Id="Package\Create DimTables\Data Conversion 1"
+          Id="Package\Stage Data\Data Conversion 1"
           TopLeft="415,146" />
         <EdgeLayout
-          Id="Package\Create DimTables.Paths[Flat File Source Output]"
+          Id="Package\Stage Data.Paths[Multicast Output 1]"
+          TopLeft="485.25,272">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54"
+              Start="0,0"
+              End="0,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Stage Data.Paths[Flat File Source Output]"
           TopLeft="497,97">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2092,12 +2115,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="120,42"
-          Id="Package\Create DimTables\Multicast"
-          TopLeft="428,230" />
         <EdgeLayout
-          Id="Package\Create DimTables.Paths[Data Conversion Output]"
+          Id="Package\Stage Data.Paths[Data Conversion Output]"
           TopLeft="497.5,188">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2131,61 +2150,23 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="175,42"
-          Id="Package\Create DimTables\Derive Season Years"
-          TopLeft="393,323" />
-        <EdgeLayout
-          Id="Package\Create DimTables.Paths[Multicast Output 1]"
-          TopLeft="484.25,272">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,51"
-              Start="0,0"
-              End="0,43.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,43.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
           Size="171,42"
-          Id="Package\Create DimTables\OLE DB Destination"
-          TopLeft="408,424" />
+          Id="Package\Stage Data\OLE DB Destination"
+          TopLeft="396,423" />
         <EdgeLayout
-          Id="Package\Create DimTables.Paths[Output 0]"
-          TopLeft="480.5,365">
+          Id="Package\Stage Data.Paths[Output 0]"
+          TopLeft="482,368">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="13,59"
+              EndConnector="0,55"
               Start="0,0"
-              End="13,51.5">
+              End="0,47.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.5"
-                    Point2="0,29.5"
-                    Point3="4,29.5" />
-                  <mssgle:LineSegment
-                    End="9,29.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="9,29.5"
-                    Point2="13,29.5"
-                    Point3="13,33.5" />
-                  <mssgle:LineSegment
-                    End="13,51.5" />
+                    End="0,47.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2198,7 +2179,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Create DimTables\OLE DB Destination">
+    design-time-name="Package\Stage Data\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
