@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{C9F21091-8ACA-49FB-ACD5-AA56179AB974}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{3A684AEA-6F59-431E-918B-11B14693EFD8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -208,25 +208,26 @@
                       cachedLength="30"
                       cachedName="PLAYER_NAME"
                       externalMetadataColumnId="Package\Players Data Flow Task\Error Log Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PLAYER_NAME]"
-                      lineageId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].Columns[PLAYER_NAME]" />
+                      lineageId="Package\Players Data Flow Task\Removes duplicated values.Outputs[Sort Output].Columns[PLAYER_NAME]" />
                     <inputColumn
                       refId="Package\Players Data Flow Task\Error Log Flat File Destination.Inputs[Flat File Destination Input].Columns[TEAM_ID]"
                       cachedDataType="i4"
                       cachedName="TEAM_ID"
                       externalMetadataColumnId="Package\Players Data Flow Task\Error Log Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TEAM_ID]"
-                      lineageId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].Columns[TEAM_ID]" />
+                      lineageId="Package\Players Data Flow Task\Removes duplicated values.Outputs[Sort Output].Columns[TEAM_ID]" />
                     <inputColumn
                       refId="Package\Players Data Flow Task\Error Log Flat File Destination.Inputs[Flat File Destination Input].Columns[PLAYER_ID]"
                       cachedDataType="i4"
                       cachedName="PLAYER_ID"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Players Data Flow Task\Error Log Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PLAYER_ID]"
-                      lineageId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].Columns[PLAYER_ID]" />
+                      lineageId="Package\Players Data Flow Task\Removes duplicated values.Outputs[Sort Output].Columns[PLAYER_ID]" />
                     <inputColumn
                       refId="Package\Players Data Flow Task\Error Log Flat File Destination.Inputs[Flat File Destination Input].Columns[SEASON]"
                       cachedDataType="i2"
                       cachedName="SEASON"
                       externalMetadataColumnId="Package\Players Data Flow Task\Error Log Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SEASON]"
-                      lineageId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].Columns[SEASON]" />
+                      lineageId="Package\Players Data Flow Task\Removes duplicated values.Outputs[Sort Output].Columns[SEASON]" />
                     <inputColumn
                       refId="Package\Players Data Flow Task\Error Log Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorCode]"
                       cachedDataType="i4"
@@ -288,7 +289,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[dimPlayer]</property>
+                  name="OpenRowset">[dimPlayer]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -345,56 +346,43 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Players Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SEASON]"
-                      cachedDataType="i2"
-                      cachedName="SEASON"
-                      externalMetadataColumnId="Package\Players Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SEASON]"
-                      lineageId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].Columns[SEASON]" />
-                    <inputColumn
                       refId="Package\Players Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PLAYER_NAME]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
                       cachedName="PLAYER_NAME"
-                      externalMetadataColumnId="Package\Players Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PlayerName]"
-                      lineageId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].Columns[PLAYER_NAME]" />
+                      externalMetadataColumnId="Package\Players Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PLAYER_NAME]"
+                      lineageId="Package\Players Data Flow Task\Removes duplicated values.Outputs[Sort Output].Columns[PLAYER_NAME]" />
                     <inputColumn
                       refId="Package\Players Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TEAM_ID]"
                       cachedDataType="i4"
                       cachedName="TEAM_ID"
-                      externalMetadataColumnId="Package\Players Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TeamID]"
-                      lineageId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].Columns[TEAM_ID]" />
+                      externalMetadataColumnId="Package\Players Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TEAM_ID]"
+                      lineageId="Package\Players Data Flow Task\Removes duplicated values.Outputs[Sort Output].Columns[TEAM_ID]" />
                     <inputColumn
                       refId="Package\Players Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PLAYER_ID]"
                       cachedDataType="i4"
                       cachedName="PLAYER_ID"
-                      externalMetadataColumnId="Package\Players Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PlayerID]"
-                      lineageId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].Columns[PLAYER_ID]" />
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Players Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PLAYER_ID]"
+                      lineageId="Package\Players Data Flow Task\Removes duplicated values.Outputs[Sort Output].Columns[PLAYER_ID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Players Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SEASON]"
-                      dataType="i2"
-                      name="SEASON" />
-                    <externalMetadataColumn
-                      refId="Package\Players Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PlayersSurrogateID]"
+                      refId="Package\Players Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PLAYER_ID]"
                       dataType="i4"
-                      name="PlayersSurrogateID" />
+                      name="PLAYER_ID" />
                     <externalMetadataColumn
-                      refId="Package\Players Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PlayerName]"
+                      refId="Package\Players Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PLAYER_NAME]"
                       codePage="1252"
                       dataType="str"
                       length="30"
-                      name="PlayerName" />
+                      name="PLAYER_NAME" />
                     <externalMetadataColumn
-                      refId="Package\Players Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TeamID]"
+                      refId="Package\Players Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TEAM_ID]"
                       dataType="i4"
-                      name="TeamID" />
-                    <externalMetadataColumn
-                      refId="Package\Players Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PlayerID]"
-                      dataType="i4"
-                      name="PlayerID" />
+                      name="TEAM_ID" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -588,11 +576,170 @@
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\Players Data Flow Task\Removes duplicated values"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Removes duplicated values"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Players Data Flow Task\Removes duplicated values.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Players Data Flow Task\Removes duplicated values.Inputs[Sort Input].Columns[PLAYER_NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="PLAYER_NAME"
+                      lineageId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].Columns[PLAYER_NAME]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Players Data Flow Task\Removes duplicated values.Inputs[Sort Input].Columns[TEAM_ID]"
+                      cachedDataType="i4"
+                      cachedName="TEAM_ID"
+                      lineageId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].Columns[TEAM_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Players Data Flow Task\Removes duplicated values.Inputs[Sort Input].Columns[PLAYER_ID]"
+                      cachedDataType="i4"
+                      cachedName="PLAYER_ID"
+                      lineageId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].Columns[PLAYER_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Players Data Flow Task\Removes duplicated values.Inputs[Sort Input].Columns[SEASON]"
+                      cachedDataType="i2"
+                      cachedName="SEASON"
+                      lineageId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].Columns[SEASON]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Players Data Flow Task\Removes duplicated values.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Players Data Flow Task\Removes duplicated values.Outputs[Sort Output].Columns[PLAYER_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Players Data Flow Task\Removes duplicated values.Outputs[Sort Output].Columns[PLAYER_NAME]"
+                      name="PLAYER_NAME">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].Columns[PLAYER_NAME]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Players Data Flow Task\Removes duplicated values.Outputs[Sort Output].Columns[TEAM_ID]"
+                      dataType="i4"
+                      lineageId="Package\Players Data Flow Task\Removes duplicated values.Outputs[Sort Output].Columns[TEAM_ID]"
+                      name="TEAM_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].Columns[TEAM_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Players Data Flow Task\Removes duplicated values.Outputs[Sort Output].Columns[PLAYER_ID]"
+                      dataType="i4"
+                      lineageId="Package\Players Data Flow Task\Removes duplicated values.Outputs[Sort Output].Columns[PLAYER_ID]"
+                      name="PLAYER_ID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].Columns[PLAYER_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Players Data Flow Task\Removes duplicated values.Outputs[Sort Output].Columns[SEASON]"
+                      dataType="i2"
+                      lineageId="Package\Players Data Flow Task\Removes duplicated values.Outputs[Sort Output].Columns[SEASON]"
+                      name="SEASON">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output].Columns[SEASON]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
               refId="Package\Players Data Flow Task.Paths[Flat File Source Output]"
-              endId="Package\Players Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\Players Data Flow Task\Removes duplicated values.Inputs[Sort Input]"
               name="Flat File Source Output"
               startId="Package\Players Data Flow Task\Players CSV File Source.Outputs[Flat File Source Output]" />
             <path
@@ -600,6 +747,11 @@
               endId="Package\Players Data Flow Task\Error Log Flat File Destination.Inputs[Flat File Destination Input]"
               name="OLE DB Destination Error Output"
               startId="Package\Players Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]" />
+            <path
+              refId="Package\Players Data Flow Task.Paths[Sort Output]"
+              endId="Package\Players Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Sort Output"
+              startId="Package\Players Data Flow Task\Removes duplicated values.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -630,27 +782,71 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="171,42"
+          Id="Package\Players Data Flow Task\OLE DB Destination"
+          TopLeft="222,239" />
+        <NodeLayout
           Size="189,42"
           Id="Package\Players Data Flow Task\Players CSV File Source"
           TopLeft="206,27" />
         <NodeLayout
-          Size="171,42"
-          Id="Package\Players Data Flow Task\OLE DB Destination"
-          TopLeft="219,176" />
+          Size="219,42"
+          Id="Package\Players Data Flow Task\Error Log Flat File Destination"
+          TopLeft="478,305" />
         <EdgeLayout
-          Id="Package\Players Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="302.5,69">
+          Id="Package\Players Data Flow Task.Paths[OLE DB Destination Error Output]"
+          TopLeft="307.5,281">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,107"
+              EndConnector="280,24"
               Start="0,0"
-              End="0,99.5">
+              End="280,16.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,99.5" />
+                    End="0,8" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8"
+                    Point2="0,12"
+                    Point3="4,12" />
+                  <mssgle:LineSegment
+                    End="276,12" />
+                  <mssgle:CubicBezierSegment
+                    Point1="276,12"
+                    Point2="280,12"
+                    Point3="280,16" />
+                  <mssgle:LineSegment
+                    End="280,16.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="66.79109375,17,146.4178125,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="206,42"
+          Id="Package\Players Data Flow Task\Removes duplicated values"
+          TopLeft="203,135" />
+        <EdgeLayout
+          Id="Package\Players Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="303.25,69">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,66"
+              Start="0,0"
+              End="0,58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,58.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -659,44 +855,26 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="219,42"
-          Id="Package\Players Data Flow Task\Error Log Flat File Destination"
-          TopLeft="475,243" />
         <EdgeLayout
-          Id="Package\Players Data Flow Task.Paths[OLE DB Destination Error Output]"
-          TopLeft="304.5,218">
+          Id="Package\Players Data Flow Task.Paths[Sort Output]"
+          TopLeft="306.75,177">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="280,25"
+              EndConnector="0,62"
               Start="0,0"
-              End="280,17.5">
+              End="0,54.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,8.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,8.5"
-                    Point2="0,12.5"
-                    Point3="4,12.5" />
-                  <mssgle:LineSegment
-                    End="276,12.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="276,12.5"
-                    Point2="280,12.5"
-                    Point3="280,16.5" />
-                  <mssgle:LineSegment
-                    End="280,17.5" />
+                    End="0,54.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="66.79109375,17.5,146.4178125,11.43359375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
