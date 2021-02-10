@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="20"
-  DTS:VersionGUID="{816CE4F4-6092-4C78-8379-2D51D9DDE541}">
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{42B3DCD1-D57D-4283-8BF1-67914537538D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -114,13 +114,13 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Fact Data Flow Task"
+      DTS:refId="Package\FactPerformance Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{1E8FE392-82BB-489C-B89D-A67421A5A0CF}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Fact Data Flow Task"
+      DTS:ObjectName="FactPerformance Data Flow Task"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -128,7 +128,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Fact Data Flow Task\Adds GameDate from dimGames"
+              refId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
@@ -184,7 +184,7 @@ where [refTable].[GameID] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[GAME_ID]};</property>
+                  name="ParameterMap">#{Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[GAME_ID]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -196,7 +196,7 @@ where [refTable].[GameID] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Fact Data Flow Task\Adds GameDate from dimGames.Connections[OleDbConnection]"
+                  refId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[STEPH-PAGD\STOREAPPDB.BasketballDB]"
                   connectionManagerRefId="Package.ConnectionManagers[STEPH-PAGD\STOREAPPDB.BasketballDB]"
                   description="Connection manager used to access lookup data."
@@ -204,14 +204,14 @@ where [refTable].[GameID] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Fact Data Flow Task\Adds GameDate from dimGames.Inputs[Lookup Input]"
+                  refId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Fact Data Flow Task\Adds GameDate from dimGames.Inputs[Lookup Input].Columns[GAME_ID]"
+                      refId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Inputs[Lookup Input].Columns[GAME_ID]"
                       cachedDataType="i4"
                       cachedName="GAME_ID"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[GAME_ID]">
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[GAME_ID]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -229,18 +229,18 @@ where [refTable].[GameID] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Fact Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Match Output]"
+                  refId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Fact Data Flow Task\Adds GameDate from dimGames.Inputs[Lookup Input]">
+                  synchronousInputId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Match Output].Columns[GameDate]"
+                      refId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Match Output].Columns[GameDate]"
                       dataType="dbDate"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Fact Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Match Output].Columns[GameDate]"
+                      lineageId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Match Output].Columns[GameDate]"
                       name="GameDate"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -254,30 +254,30 @@ where [refTable].[GameID] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Fact Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup No Match Output]"
+                  refId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Fact Data Flow Task\Adds GameDate from dimGames.Inputs[Lookup Input]">
+                  synchronousInputId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Fact Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Error Output]"
+                  refId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Fact Data Flow Task\Adds GameDate from dimGames.Inputs[Lookup Input]">
+                  synchronousInputId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Fact Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Fact Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -286,11 +286,11 @@ where [refTable].[GameID] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Fact Data Flow Task\Adds Shooting Overall column"
+              refId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;12"
               description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
-              name="Adds Shooting Overall column"
+              name="Adds Shooting, Offensive, Defense Overall column"
               version="12">
               <properties>
                 <property
@@ -426,12 +426,17 @@ public class ScriptMain : UserComponent
          * Add your code here
          */
         float xMul = (float)1.5;
+        float qMul = (float)3;
         float yMul = (float)1;
+        float hMul = (float)1.25;
+        float zMul = (float)0.5;
+        float wMul = (float)0.25;
+        float OverallShooting, OverallOffensive, OverallDefense;
         float FG2M = Row.FGM - Row.FG3M - Row.FTM;
         float FG2A = Row.FGA - Row.FG3A - Row.FTA;
         float FG2_PCT;
 
-        if(FG2A != 0)
+        if(FG2A != 0) //Avoids divide by zero error
         {
             FG2_PCT = FG2M / FG2A;
         }
@@ -440,7 +445,31 @@ public class ScriptMain : UserComponent
             FG2_PCT = 0;
         }
 
-        Row.OverallShooting = (Row.FG3M * xMul - (float)2.5*(1-Row.FG3PCT) + (FG2M*yMul - (float)1.5*(1-FG2_PCT))) ;
+        OverallShooting = (Row.FG3M * xMul - (float)2.5 * (1 - Row.FG3PCT) + (FG2M * yMul - (float)1.5 * (1 - FG2_PCT)));
+
+        if(OverallShooting > 0) //Nerfs amount of negative points you get if you did bad in Overall shooting
+        {
+            OverallOffensive = (OverallShooting * xMul + Row.PTS * hMul + Row.OREB * yMul + (Row.AST + Row.TO) * zMul);
+        }
+        else
+        {
+            OverallOffensive = (OverallShooting * yMul + Row.PTS * hMul + Row.OREB * yMul + (Row.AST + Row.TO) * zMul);
+        }
+        
+        if(Row.PlusMinusUpdated < -300)
+        {
+            OverallDefense = Row.BLK * qMul + Row.DREB * xMul + Row.STL * yMul;
+        }
+        else
+        {
+            OverallDefense = Row.BLK * qMul + Row.DREB * xMul + Row.STL * yMul + Row.PlusMinusUpdated * wMul;
+        }
+        
+        
+        Row.OverallShooting = OverallShooting;
+        Row.OverallOffensive = OverallOffensive;
+        Row.OverallDefensive = OverallDefense;
+        Row.Overall = OverallDefense + OverallOffensive + (float)Row.MINUPDATED.TotalMinutes * wMul;
     }
 
 }
@@ -580,7 +609,7 @@ public class ScriptMain : UserComponent
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{e7c800aa-515d-46e3-9027-bc067cd2931d}</ProjectGuid>
+    <ProjectGuid>{E7C800AA-515D-46E3-9027-BC067CD2931D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SC_39cd556cbd254483b75146790333cebf</RootNamespace>
@@ -650,8 +679,8 @@ public class ScriptMain : UserComponent
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
-        <ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
-        <Host Name="ScriptComponent" GeneratedNamespace="SC_39cd556cbd254483b75146790333cebf" IconIndex="0"></Host>
+        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" />
+        <Host Name="ScriptComponent" IconIndex="0" />
         <ProjectClient>
           <HostIdentifier>SSIS_SC150</HostIdentifier>
         </ProjectClient>
@@ -789,11 +818,146 @@ public class Input0Buffer: ScriptBuffer
         }
     }
 
+    public Single OREB
+    {
+        get
+        {
+            return Buffer.GetSingle(BufferColumnIndexes[7]);
+        }
+    }
+    public bool OREB_IsNull
+    {
+        get
+        {
+            return IsNull(7);
+        }
+    }
+
+    public Single AST
+    {
+        get
+        {
+            return Buffer.GetSingle(BufferColumnIndexes[8]);
+        }
+    }
+    public bool AST_IsNull
+    {
+        get
+        {
+            return IsNull(8);
+        }
+    }
+
+    public Single TO
+    {
+        get
+        {
+            return Buffer.GetSingle(BufferColumnIndexes[9]);
+        }
+    }
+    public bool TO_IsNull
+    {
+        get
+        {
+            return IsNull(9);
+        }
+    }
+
+    public Single PTS
+    {
+        get
+        {
+            return Buffer.GetSingle(BufferColumnIndexes[10]);
+        }
+    }
+    public bool PTS_IsNull
+    {
+        get
+        {
+            return IsNull(10);
+        }
+    }
+
+    public Single DREB
+    {
+        get
+        {
+            return Buffer.GetSingle(BufferColumnIndexes[11]);
+        }
+    }
+    public bool DREB_IsNull
+    {
+        get
+        {
+            return IsNull(11);
+        }
+    }
+
+    public Single STL
+    {
+        get
+        {
+            return Buffer.GetSingle(BufferColumnIndexes[12]);
+        }
+    }
+    public bool STL_IsNull
+    {
+        get
+        {
+            return IsNull(12);
+        }
+    }
+
+    public Single BLK
+    {
+        get
+        {
+            return Buffer.GetSingle(BufferColumnIndexes[13]);
+        }
+    }
+    public bool BLK_IsNull
+    {
+        get
+        {
+            return IsNull(13);
+        }
+    }
+
+    public Int32 PlusMinusUpdated
+    {
+        get
+        {
+            return Buffer.GetInt32(BufferColumnIndexes[14]);
+        }
+    }
+    public bool PlusMinusUpdated_IsNull
+    {
+        get
+        {
+            return IsNull(14);
+        }
+    }
+
+    public TimeSpan MINUPDATED
+    {
+        get
+        {
+            return Buffer.GetTime(BufferColumnIndexes[15]);
+        }
+    }
+    public bool MINUPDATED_IsNull
+    {
+        get
+        {
+            return IsNull(15);
+        }
+    }
+
     public Single OverallShooting
     {
         set
         {
-            this[7] = value;
+            this[16] = value;
         }
     }
     public bool OverallShooting_IsNull
@@ -802,7 +966,73 @@ public class Input0Buffer: ScriptBuffer
         {
             if (value)
             {
-                SetNull(7);
+                SetNull(16);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Single OverallOffensive
+    {
+        set
+        {
+            this[17] = value;
+        }
+    }
+    public bool OverallOffensive_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(17);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Single Overall
+    {
+        set
+        {
+            this[18] = value;
+        }
+    }
+    public bool Overall_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(18);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Single OverallDefensive
+    {
+        set
+        {
+            this[19] = value;
+        }
+    }
+    public bool OverallDefensive_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(19);
             }
             else
             {
@@ -939,7 +1169,7 @@ public class Variables
     <msb:CodeName>SC_39cd556cbd254483b75146790333cebf</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_39cd556cbd254483b75146790333cebf</msb:DisplayName>
-    <msb:ProjectId>{68CB770E-683F-4F48-94BD-255A8599582F}</msb:ProjectId>
+    <msb:ProjectId>{95D7D474-45ED-455F-8D5F-80E1DB20EC0A}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_39cd556cbd254483b75146790333cebf.csproj" />
@@ -1086,139 +1316,166 @@ namespace SC_39cd556cbd254483b75146790333cebf.Properties {
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAIguI2AAAAAAAAAAAOAAIiALATAAABYAAAAIAAAAAAAAtjQA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDADR0I2AAAAAAAAAAAOAAIiALATAAABwAAAAIAAAAAAAAyjsA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
-ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAGQ0AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAHg7AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAvBQAAAAgAAAAFgAAAAIA
-AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAYAAAAAAAAAAAAAAAAAABAAABA
-LnJlbG9jAAAMAAAAAGAAAAACAAAAHgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAACY
-NAAAAAAAAEgAAAACAAUA4CIAAMwQAAABAAAAAAAAAKwzAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAYAgQAAAAEAABEiAADAPwoi
-AACAPwsDbwYAAAYDbwgAAAZZA28KAAAGWQwDbw4AAAYDbwwAAAZZA28QAAAGWQ0JIgAAAAAuBwgJ
-WxMEKwciAAAAABMEAwNvCAAABgZaIgAAIEAiAACAPwNvEgAABllaWQgHWiIAAMA/IgAAgD8RBFla
-WVhvFAAABioeAigYAAAGKioCAwQFKBIAAAoqUgJ7EwAACgJ7FAAAChaUbxUAAAoqIgIWKBYAAAoq
-UgJ7EwAACgJ7FAAACheUbxUAAAoqIgIXKBYAAAoqUgJ7EwAACgJ7FAAAChiUbxUAAAoqIgIYKBYA
-AAoqUgJ7EwAACgJ7FAAAChmUbxUAAAoqIgIZKBYAAAoqUgJ7EwAACgJ7FAAAChqUbxUAAAoqIgIa
-KBYAAAoqUgJ7EwAACgJ7FAAAChuUbxUAAAoqIgIbKBYAAAoqUgJ7EwAACgJ7FAAAChyUbxUAAAoq
-IgIcKBYAAAoqOgIdA4waAAABKBcAAAoqWgMsCAIdKBgAAAoqcgEAAHBzGQAACnoeAigaAAAKKh4C
-KBsAAAoqfgIoHAAACgICcxwAAAZ9AQAABAICcx0AAAZ9AgAABCqSBHKeAABwGm8dAAAKLBUCBQID
-KB4AAAoOBHMFAAAGbxoAAAYqSisHAgNvGwAABgNvFgAABi3xKgYqOgIoHwAACgIDfQMAAAQqOgIo
-HwAACgIDfQQAAAQqHgIoHwAACiqufgUAAAQtHnKuAABw0AcAAAIoIAAACm8hAAAKcyIAAAqABQAA
-BH4FAAAEKhp+BgAABCoeAoAGAAAEKhp+BwAABCoeAigjAAAKKi5zIwAABoAHAAAEKgAAQlNKQgEA
-AQAAAAAADAAAAHY0LjAuMzAzMTkAAAAABQBsAAAAqAYAACN+AAAUBwAA2AYAACNTdHJpbmdzAAAA
-AOwNAAAgAQAAI1VTAAwPAAAQAAAAI0dVSUQAAAAcDwAAsAEAACNCbG9iAAAAAAAAAAIAAAFXFaIB
-CQEAAAD6ATMAFgAAAQAAACAAAAAIAAAABwAAACQAAAAPAAAAIwAAABAAAAABAAAAAwAAABMAAAAU
-AAAAAQAAAAQAAAABAAAAAABFAwEAAAAAAAYABwINBQYAmwINBQYAUwH6BA8AgQUAAAYAgAFPBAYA
-6gFPBAYAywFPBAYAggJPBAYAJwJPBAYAQAJPBAYAlwFPBAYAsgH6AgoAWwKgAAoAzASgAA4AvQSg
-AAoAmASgAAoARwagAAYACgYHBAYANgH6BAYA3QQtBQYAjAQ6BBIABgEvAxIAZwEvAxIA7gAlBAYA
-GwENBQYAjwAHBAYAYQQHBAYAFAMHBAYAewQHBAYAwQAHBAYAaAAHBAYAzAZPBAAAAAABAAAAAAAB
-AAEAAQAQABoEAAAQAAEAAQABABAAsAQAADkAAQAFAAEAEAApBgAARQABABgAAQAQAP4FAABJAAMA
-HAABABAAvwUAAEkABAAdAAAAEAA0BZAFSQAFAB4AAAEQAO4FkAVhAAcAIgAGAP4FfQAGAL8FgQAB
-ADcGhQABADcGhQARAA4EiQARAN4AjQARAFgAkQBQIAAAAADGALkCBgABAFggAAAAAMYAxAIGAAEA
-YCAAAAAAxgCpBpUAAQDtIAAAAACGGO0EBgACAPUgAAAAAIYY7QQjAAIAACEAAAAAhgg0AJsABQAV
-IQAAAACGCKsDRQAFAB4hAAAAAIYIKwCbAAUAMyEAAAAAhgibA0UABQA8IQAAAACGCDwAmwAFAFEh
-AAAAAIYIugNFAAUAWiEAAAAAhggKAJsABQBvIQAAAACGCG0DRQAFAHghAAAAAIYIEwCbAAUAjSEA
-AAAAhgh9A0UABQCWIQAAAACGCBsAmwAFAKshAAAAAIYIjANFAAUAtCEAAAAAhghEAJsABQDJIQAA
-AACGCMkDRQAFANIhAAAAAIYIGwOfAAUA4SEAAAAAhgjbA6QABgD4IQAAAACGAMAGRQAHAAAiAAAA
-AIYAEQZFAAcACCIAAAAAhhjtBAYABwAoIgAAAADGAJwGqQAHAE0iAAAAAMYBlQaVAAsAYCIAAAAA
-xgGpBpUADABiIgAAAACGGO0EswANAHEiAAAAAIYY7QSzAA4AgCIAAAAAgxjtBAYADwCIIgAAAACT
-CNkEuQAPALQiAAAAAJMIxgC+AA8AuyIAAAAAkwjSAMMADwDDIgAAAACWCB0GyQAQAMoiAAAAAIYY
-7QQGABAA0iIAAAAAkRjzBM4AEAAAAAEAxAYAAAEA0gQAAAIAyQUAAAMApgQAAAEA0AIAAAEA0AIA
-AAEAIwAAAAIAlgAAAAMA0gQAAAQApgQAAAEA0gQAAAEAxAYAAAEATQYAAAEATQYAAAEA0AIJAO0E
-AQARAO0EBgAZAO0ECgApAO0EEAAxAO0EEAA5AO0EEABBAO0EEABJAO0EEABRAO0EEABZAO0EEABh
-AO0EEABpAO0EBgCZAO0EBgC5AO0EFQDJAO0EBgCJALkCBgCJAMQCBgBxAO0EIwBxANIELQBxAMkF
-MQB5AIwANQBxAO8DOgBxAP4DPwBxAPYDAQDZAO0EEABxAMAGRQBxABEGRQCJAO0EBgDhAPcFSQCJ
-AN0FUACRAO0EBgDxAHoAVgDxAMgGXQChAO0EYwDBAO0EBgAuAAsA6QAuABMA8gAuABsAEQEuACMA
-GgEuACsAQwEuADMAQwEuADsAQwEuAEMAGgEuAEsASQEuAFMAQwEuAFsAYAFDAGMAqgHhAHsAqgHj
-AGsAqgEpAnMAEQFJAnMAEQEbAAMAAQAHABEACAATAAAAOADSAAAArwPWAAAALwDSAAAAnwPWAAAA
-QADSAAAAvgPWAAAADgDSAAAAcQPWAAAAFwDSAAAAgQPWAAAAHwDSAAAAkAPWAAAASADSAAAAzQPW
-AAAAHwPSAAAA3wPWAAAA3QTaAAAA5gDfAAAAIQbkAAIABgADAAIABwAFAAIACAAHAAIACQAJAAIA
-CgALAAIACwANAAIADAAPAAIADQARAAIADgATAAIADwAVAAIAEAAXAAIAEQAZAAIAEgAbAAIAEwAd
-AAEAFAAfAAEAFQAhAAIAHwAjAAIAIAAlAAEAIQAlAAIAIgAnAASAAAABAAAAAAAAAAAAAAAAANYC
-AAAEAAAAAAAAAAAAAABrAE8AAAAAAA8AAAAAAAAAAAAAAHQAVwYAAAAADwAAAAAAAAAAAAAAdAB0
-BgAAAAAEAAAAAAAAAAAAAABrAAcEAAAAAAAAAAABAAAAPgUAAAAAADxNb2R1bGU+AGdldF9GRzNB
-AGdldF9GR0EAZ2V0X0ZUQQBJbnB1dElEAGdldF9GRzNNAGdldF9GR00AZ2V0X0ZUTQBnZXRfRkcz
-UENUAG1zY29ybGliAGRlZmF1bHRJbnN0YW5jZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBlRnJv
-bUhhbmRsZQBHZXRTaW5nbGUASW5wdXROYW1lAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlBpcGVs
-aW5lAFR5cGUAZ2V0X0N1bHR1cmUAc2V0X0N1bHR1cmUAcmVzb3VyY2VDdWx0dXJlAEFwcGxpY2F0
-aW9uU2V0dGluZ3NCYXNlAEVkaXRvckJyb3dzYWJsZVN0YXRlAENvbXBpbGVyR2VuZXJhdGVkQXR0
-cmlidXRlAERlYnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUARGVidWdnYWJsZUF0dHJpYnV0ZQBF
-ZGl0b3JCcm93c2FibGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRsZUF0dHJpYnV0ZQBBc3NlbWJseVRy
-YWRlbWFya0F0dHJpYnV0ZQBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1dGUAQXNzZW1ibHlDb25maWd1
-cmF0aW9uQXR0cmlidXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQ29tcGlsYXRpb25S
-ZWxheGF0aW9uc0F0dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5
-cmlnaHRBdHRyaWJ1dGUAU1NJU1NjcmlwdENvbXBvbmVudEVudHJ5UG9pbnRBdHRyaWJ1dGUAQXNz
-ZW1ibHlDb21wYW55QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAFByZUV4
-ZWN1dGUAUG9zdEV4ZWN1dGUAdmFsdWUAU0NfMzljZDU1NmNiZDI1NDQ4M2I3NTE0Njc5MDMzM2Nl
-YmYAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBTdHJpbmcAc2V0X092ZXJhbGxTaG9vdGluZwBT
-eXN0ZW0uQ29tcG9uZW50TW9kZWwAU0NfMzljZDU1NmNiZDI1NDQ4M2I3NTE0Njc5MDMzM2NlYmYu
-ZGxsAGdldF9GRzNBX0lzTnVsbABnZXRfRkdBX0lzTnVsbABnZXRfRlRBX0lzTnVsbABnZXRfRkcz
-TV9Jc051bGwAZ2V0X0ZHTV9Jc051bGwAZ2V0X0ZUTV9Jc051bGwAZ2V0X0ZHM1BDVF9Jc051bGwA
-c2V0X092ZXJhbGxTaG9vdGluZ19Jc051bGwAU2V0TnVsbABzZXRfSXRlbQBTeXN0ZW0AcmVzb3Vy
-Y2VNYW4AU2NyaXB0TWFpbgBTeXN0ZW0uQ29uZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlv
-bgBTeXN0ZW0uUmVmbGVjdGlvbgBJbnZhbGlkT3BlcmF0aW9uRXhjZXB0aW9uAFN0cmluZ0NvbXBh
-cmlzb24AQ3VsdHVyZUluZm8AT3V0cHV0TmFtZU1hcABPdXRwdXRNYXAASW5wdXQwQnVmZmVyAFBp
-cGVsaW5lQnVmZmVyAFNjcmlwdEJ1ZmZlcgBnZXRfUmVzb3VyY2VNYW5hZ2VyAC5jdG9yAC5jY3Rv
-cgBTeXN0ZW0uRGlhZ25vc3RpY3MAU3lzdGVtLlJ1bnRpbWUuQ29tcGlsZXJTZXJ2aWNlcwBTeXN0
-ZW0uUmVzb3VyY2VzAFNDXzM5Y2Q1NTZjYmQyNTQ0ODNiNzUxNDY3OTAzMzNjZWJmLlByb3BlcnRp
-ZXMuUmVzb3VyY2VzLnJlc291cmNlcwBEZWJ1Z2dpbmdNb2RlcwBTQ18zOWNkNTU2Y2JkMjU0NDgz
-Yjc1MTQ2NzkwMzMzY2ViZi5Qcm9wZXJ0aWVzAFZhcmlhYmxlcwBCdWZmZXJDb2x1bW5JbmRleGVz
-AEdldENvbHVtbkluZGV4ZXMAU2V0dGluZ3MARXF1YWxzAENvbm5lY3Rpb25zAE9iamVjdABFbmRP
-ZlJvd3NldABnZXRfRGVmYXVsdABVc2VyQ29tcG9uZW50AFBhcmVudENvbXBvbmVudABTY3JpcHRD
-b21wb25lbnQATWljcm9zb2Z0LlNxbFNlcnZlci5UeFNjcmlwdABNaWNyb3NvZnQuU3FsU2VydmVy
-LlBpcGVsaW5lSG9zdABJbnB1dDBfUHJvY2Vzc0lucHV0AElucHV0MF9Qcm9jZXNzSW5wdXRSb3cA
-TmV4dFJvdwBnZXRfQXNzZW1ibHkAAAAAAICbSQBzAE4AdQBsAGwAIABwAHIAbwBwAGUAcgB0AHkA
-IABjAGEAbgBuAG8AdAAgAGIAZQAgAHMAZQB0ACAAdABvACAARgBhAGwAcwBlAC4AIABBAHMAcwBp
-AGcAbgAgAGEAIAB2AGEAbAB1AGUAIAB0AG8AIAB0AGgAZQAgAGMAbwBsAHUAbQBuACAAaQBuAHMA
-dABlAGEAZAAuAAAPSQBuAHAAdQB0ACAAMAAAcVMAQwBfADMAOQBjAGQANQA1ADYAYwBiAGQAMgA1
-ADQANAA4ADMAYgA3ADUAMQA0ADYANwA5ADAAMwAzADMAYwBlAGIAZgAuAFAAcgBvAHAAZQByAHQA
-aQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAodgROCg4WkOY9EhcrpxFyQAEIAEBCAMgAAEFIAEB
-EREEIAEBDgUgAQERWQcHBQwMDAwMCSADARI9HQgSQQMGEj0DBh0IBCABDAgEIAECCAUgAgEIHAMg
-AAIGIAICDhF1BSABHQgIBgABEnkRfQUgABKAgQcgAgEOEoCBCLd6XFYZNOCJCImEXc2AgMyRAwYS
-FAMGEhgDBhJFAwYSUQMGElUDBhIgBSABARIMAyAADAQgAQEMBCABAQIJIAQBCA4SPRJBBSABARJF
-BAAAElEEAAASVQUAAQESVQQAABIgAwAAAQMoAAwDKAACBAgAElEECAASVQQIABIgCAEACAAAAAAA
-HgEAAQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhyb3dzAQgBAAIAAAAAACgBACNTQ18zOWNkNTU2Y2Jk
-MjU0NDgzYjc1MTQ2NzkwMzMzY2ViZgAABQEAAAAAFgEAEUNvcHlyaWdodCBAICAyMDIxAABJAQAa
-Lk5FVEZyYW1ld29yayxWZXJzaW9uPXY0LjcBAFQOFEZyYW1ld29ya0Rpc3BsYXlOYW1lEi5ORVQg
-RnJhbWV3b3JrIDQuNwQBAAAAALQAAADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNv
-dXJjZVJlYWRlciwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQ
-dWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJl
-c291cmNlU2V0AgAAAAAAAAAAAAAAUEFEUEFEULQAAACMNAAAAAAAAAAAAACmNAAAACAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAmDQAAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA
-/yUAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAA0BsAAAAgAAAAHAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAeAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAJAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAACs
+OwAAAAAAAEgAAAACAAUAeCUAAEgVAAABAAAAAAAAAMA6AAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAUAgwEAAAEAABEiAADAPwoi
+AABAQAsiAACAPwwiAACgPw0iAAAAPxMEIgAAgD4TBQNvBgAABgNvCAAABlkDbwoAAAZZEwkDbw4A
+AAYDbwwAAAZZA28QAAAGWRMKEQoiAAAAAC4JEQkRClsTCysHIgAAAAATCwNvCAAABgZaIgAAIEAi
+AACAPwNvEgAABllaWREJCFoiAADAPyIAAIA/EQtZWllYEwYRBiIAAAAANisRBgZaA28aAAAGCVpY
+A28UAAAGCFpYA28WAAAGA28YAAAGWBEEWlgTByspEQYIWgNvGgAABglaWANvFAAABghaWANvFgAA
+BgNvGAAABlgRBFpYEwcDbyIAAAYg1P7//y8eA28gAAAGB1oDbxwAAAYGWlgDbx4AAAYIWlgTCCsn
+A28gAAAGB1oDbxwAAAYGWlgDbx4AAAYIWlgDbyIAAAZrEQVaWBMIAxEGbyYAAAYDEQdvKAAABgMR
+CG8sAAAGAxEIEQdYA28kAAAGEwwSDCgSAAAKaxEFWlhvKgAABioeAigwAAAGKioCAwQFKBMAAAoq
+UgJ7FAAACgJ7FQAAChaUbxYAAAoqIgIWKBcAAAoqUgJ7FAAACgJ7FQAACheUbxYAAAoqIgIXKBcA
+AAoqUgJ7FAAACgJ7FQAAChiUbxYAAAoqIgIYKBcAAAoqUgJ7FAAACgJ7FQAAChmUbxYAAAoqIgIZ
+KBcAAAoqUgJ7FAAACgJ7FQAAChqUbxYAAAoqIgIaKBcAAAoqUgJ7FAAACgJ7FQAAChuUbxYAAAoq
+IgIbKBcAAAoqUgJ7FAAACgJ7FQAAChyUbxYAAAoqIgIcKBcAAAoqUgJ7FAAACgJ7FQAACh2UbxYA
+AAoqIgIdKBcAAAoqUgJ7FAAACgJ7FQAACh6UbxYAAAoqIgIeKBcAAAoqVgJ7FAAACgJ7FQAACh8J
+lG8WAAAKKiYCHwkoFwAACipWAnsUAAAKAnsVAAAKHwqUbxYAAAoqJgIfCigXAAAKKlYCexQAAAoC
+exUAAAofC5RvFgAACiomAh8LKBcAAAoqVgJ7FAAACgJ7FQAACh8MlG8WAAAKKiYCHwwoFwAACipW
+AnsUAAAKAnsVAAAKHw2UbxYAAAoqJgIfDSgXAAAKKlYCexQAAAoCexUAAAofDpRvGAAACiomAh8O
+KBcAAAoqVgJ7FAAACgJ7FQAACh8PlG8ZAAAKKiYCHw8oFwAACio+Ah8QA4wbAAABKBoAAAoqXgMs
+CQIfECgbAAAKKnIBAABwcxwAAAp6PgIfEQOMGwAAASgaAAAKKl4DLAkCHxEoGwAACipyAQAAcHMc
+AAAKej4CHxIDjBsAAAEoGgAACipeAywJAh8SKBsAAAoqcgEAAHBzHAAACno+Ah8TA4wbAAABKBoA
+AAoqXgMsCQIfEygbAAAKKnIBAABwcxwAAAp6HgIoHQAACioeAigeAAAKKn4CKB8AAAoCAnM0AAAG
+fQEAAAQCAnM1AAAGfQIAAAQqkgRyngAAcBpvIAAACiwVAgUCAyghAAAKDgRzBQAABm8yAAAGKkor
+BwIDbzMAAAYDby4AAAYt8SoGKjoCKCIAAAoCA30DAAAEKjoCKCIAAAoCA30EAAAEKh4CKCIAAAoq
+rn4FAAAELR5yrgAAcNAHAAACKCMAAApvJAAACnMlAAAKgAUAAAR+BQAABCoafgYAAAQqHgKABgAA
+BCoafgcAAAQqHgIoJgAACiouczsAAAaABwAABCoAAEJTSkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5
+AAAAAAUAbAAAAFQJAAAjfgAAwAkAAHwIAAAjU3RyaW5ncwAAAAA8EgAAIAEAACNVUwBcEwAAEAAA
+ACNHVUlEAAAAbBMAANwBAAAjQmxvYgAAAAAAAAACAAABVxWiAQkBAAAA+gEzABYAAAEAAAAhAAAA
+CAAAAAcAAAA8AAAAFQAAACYAAAAQAAAAAQAAAAMAAAArAAAALAAAAAEAAAAEAAAAAQAAAAAA6QMB
+AAAAAAAGAHUCoQYGAAkDoQYGAMEBjgYPABUHAAAGAO4B4wUGAFgC4wUGADkC4wUGAPAC4wUGAJUC
+4wUGAK4C4wUGAAUC4wUGACACkgMKAMkCDgEGAKUFkgUKAGAGDgEOAFEGDgEKACwGDgEKAOwHDgEG
+AK8HkgUGAKQBjgYGAHEGwQYGACAGzgUSAHQBxwMSANUBxwMSAFwBuQUGAIkBoQYGAPUAkgUGAPUF
+kgUGAKwDkgUGAA8GkgUGAC8BkgUGAM4AkgUGAHEI4wUAAAAACgAAAAAAAQABAAEAEACuBQAAEAAB
+AAEAAQAQAEQGAAA9AAEABQABABAAzgcAAEkAAQAwAAEAEACjBwAATQADADQAAQAQAFMHAABNAAQA
+NQAAABAAyAYkB00ABQA2AAABEACTByQHZQAHADoABgCjB5YABgBTB5oAAQDcB54AAQDcB54AEQCZ
+BaIAEQBMAaYAEQC+AKoAUCAAAAAAxgAnAwYAAQBYIAAAAADGADIDBgABAGAgAAAAAMYATgiuAAEA
+7yEAAAAAhhiBBgYAAgD3IQAAAACGGIEGMAACAAIiAAAAAIYIbgC0AAUAFyIAAAAAhgijBF0ABQAg
+IgAAAACGCGUAtAAFADUiAAAAAIYIkwRdAAUAPiIAAAAAhgh2ALQABQBTIgAAAACGCLIEXQAFAFwi
+AAAAAIYIEwC0AAUAcSIAAAAAhggRBF0ABQB6IgAAAACGCBwAtAAFAI8iAAAAAIYIIQRdAAUAmCIA
+AAAAhggkALQABQCtIgAAAACGCDAEXQAFALYiAAAAAIYIjQC0AAUAyyIAAAAAhgjeBF0ABQDUIgAA
+AACGCDUAtAAFAOkiAAAAAIYITwRdAAUA8iIAAAAAhgiYALQABQAHIwAAAACGCPAEXQAFABAjAAAA
+AIYIfgC0AAUAJiMAAAAAhgjBBF0ABQAwIwAAAACGCIUAtAAFAEYjAAAAAIYIzwRdAAUAUCMAAAAA
+hggsALQABQBmIwAAAACGCD8EXQAFAHAjAAAAAIYIXQC0AAUAhiMAAAAAhgiEBF0ABQCQIwAAAACG
+CFUAtAAFAKYjAAAAAIYIdQRdAAUAsCMAAAAAhgipALgABQDGIwAAAACGCP8EXQAFANAjAAAAAIYI
+PgC8AAUA5iMAAAAAhghfBF0ABQDwIwAAAACGCLMDwQAFAAAkAAAAAIYIUwXGAAYAGCQAAAAAhghZ
+A8EABwAoJAAAAACGCDcFxgAIAEAkAAAAAIYI3QPBAAkAUCQAAAAAhghuBcYACgBoJAAAAACGCEQD
+wQALAHgkAAAAAIYIGwXGAAwAkCQAAAAAhgBlCF0ADQCYJAAAAACGALYHXQANAKAkAAAAAIYYgQYG
+AA0AwCQAAAAAxgBBCMsADQDlJAAAAADGAToIrgARAPgkAAAAAMYBTgiuABIA+iQAAAAAhhiBBtUA
+EwAJJQAAAACGGIEG1QAUABglAAAAAIMYgQYGABUAICUAAAAAkwhtBtsAFQBMJQAAAACTCDQB4AAV
+AFMlAAAAAJMIQAHlABUAWyUAAAAAlgjCB+sAFgBiJQAAAACGGIEGBgAWAGolAAAAAJEYhwbwABYA
+AAABAGkIAAABAGYGAAACAG4HAAADADoGAAABAD4DAAABAD4DAAABAD4DAAABAD4DAAABAD4DAAAB
+AD4DAAABAD4DAAABAD4DAAABAE0AAAACAPwAAAADAGYGAAAEADoGAAABAGYGAAABAGkIAAABAPIH
+AAABAPIHAAABAD4DCQCBBgEAEQCBBgYAGQCBBgoAKQCBBhAAMQCBBhAAOQCBBhAAQQCBBhAASQCB
+BhAAUQCBBhAAWQCBBhAAYQCBBhAAaQCBBgYAoQCBBgYAwQCBBhUA0QCBBgYAkQAnAwYAkQAyAwYA
+cQBdBywAeQCBBjAAeQBmBjoAeQBuBz4AgQDyAEIAeQB6BUcAgQABAEwAgQAGAVEAeQCJBVcAeQCB
+BQEA4QCBBhAAeQBlCF0AeQC2B10AkQCBBgYA6QCcB2EAkQCCB2gAmQCBBgYA+QDgAG4A+QBtCHYA
+qQCBBnwAyQCBBgYALgALABQBLgATAB0BLgAbADwBLgAjAEUBLgArAG4BLgAzAG4BLgA7AG4BLgBD
+AEUBLgBLAHQBLgBTAG4BLgBbAIsBQwBjANUB4QB7ANUB4wBrANUBKQVzADwBSQVzADwBGwADAAEA
+BwApAAgAKwAAAHIA9AAAAKcE+AAAAGkA9AAAAJcE+AAAAHoA9AAAALYE+AAAABcA9AAAABUE+AAA
+ACAA9AAAACUE+AAAACgA9AAAADQE+AAAAJEA9AAAAOIE+AAAADkA9AAAAFME+AAAAJwA9AAAAPQE
++AAAAIIA9AAAAMUE+AAAAIkA9AAAANME+AAAADAA9AAAAEME+AAAAGEA9AAAAIgE+AAAAFkA9AAA
+AHkE+AAAAK0A/AAAAAMF+AAAAEIAAAEAAGME+AAAALcD9AAAAFcF+AAAAF0D9AAAADsF+AAAAOED
+9AAAAHIF+AAAAEgD9AAAAB8F+AAAAHEGBQEAAFQBCgEAAMYHDwECAAYAAwACAAcABQACAAgABwAC
+AAkACQACAAoACwACAAsADQACAAwADwACAA0AEQACAA4AEwACAA8AFQACABAAFwACABEAGQACABIA
+GwACABMAHQACABQAHwACABUAIQACABYAIwACABcAJQACABgAJwACABkAKQACABoAKwACABsALQAC
+ABwALwACAB0AMQACAB4AMwACAB8ANQACACAANwACACEAOQACACIAOwACACMAPQACACQAPwACACUA
+QQABACYAQwABACcARQABACgARwABACkASQABACoASwABACsATQABACwATwABAC0AUQACADcAUwAC
+ADgAVQABADkAVQACADoAVwAEgAAAAQAAAAAAAAAAAAAAAABuAwAABAAAAAAAAAAAAAAAhACgAAAA
+AAAPAAAAAAAAAAAAAACNAPwHAAAAAA8AAAAAAAAAAAAAAI0AGQgAAAAABAAAAAAAAAAAAAAAhACS
+BQAAAAAAAAAAAQAAANIGAAAAAABHZXRJbnQzMgA8TW9kdWxlPgBnZXRfRkczQQBnZXRfRkdBAGdl
+dF9GVEEAZ2V0X0RSRUIAZ2V0X09SRUIAZ2V0X01JTlVQREFURUQASW5wdXRJRABnZXRfQkxLAGdl
+dF9TVEwAZ2V0X0ZHM00AZ2V0X0ZHTQBnZXRfRlRNAGdldF9UTwBnZXRfUFRTAGdldF9GRzNQQ1QA
+Z2V0X0FTVABtc2NvcmxpYgBnZXRfUGx1c01pbnVzVXBkYXRlZABkZWZhdWx0SW5zdGFuY2UAUnVu
+dGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5kbGUAR2V0U2luZ2xlAElucHV0TmFtZQBHZXRU
+aW1lAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlBpcGVsaW5lAFR5cGUAZ2V0X0N1bHR1cmUAc2V0
+X0N1bHR1cmUAcmVzb3VyY2VDdWx0dXJlAEFwcGxpY2F0aW9uU2V0dGluZ3NCYXNlAEVkaXRvckJy
+b3dzYWJsZVN0YXRlAENvbXBpbGVyR2VuZXJhdGVkQXR0cmlidXRlAERlYnVnZ2VyTm9uVXNlckNv
+ZGVBdHRyaWJ1dGUARGVidWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2FibGVBdHRyaWJ1dGUA
+QXNzZW1ibHlUaXRsZUF0dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFya0F0dHJpYnV0ZQBUYXJnZXRG
+cmFtZXdvcmtBdHRyaWJ1dGUAQXNzZW1ibHlDb25maWd1cmF0aW9uQXR0cmlidXRlAEFzc2VtYmx5
+RGVzY3JpcHRpb25BdHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0dHJpYnV0ZQBBc3Nl
+bWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1dGUAU1NJU1Njcmlw
+dENvbXBvbmVudEVudHJ5UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlDb21wYW55QXR0cmlidXRlAFJ1
+bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAFByZUV4ZWN1dGUAUG9zdEV4ZWN1dGUAdmFsdWUA
+c2V0X092ZXJhbGxEZWZlbnNpdmUAc2V0X092ZXJhbGxPZmZlbnNpdmUAU0NfMzljZDU1NmNiZDI1
+NDQ4M2I3NTE0Njc5MDMzM2NlYmYAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBTdHJpbmcAc2V0
+X092ZXJhbGxTaG9vdGluZwBTeXN0ZW0uQ29tcG9uZW50TW9kZWwAc2V0X092ZXJhbGwAU0NfMzlj
+ZDU1NmNiZDI1NDQ4M2I3NTE0Njc5MDMzM2NlYmYuZGxsAGdldF9GRzNBX0lzTnVsbABnZXRfRkdB
+X0lzTnVsbABnZXRfRlRBX0lzTnVsbABnZXRfRFJFQl9Jc051bGwAZ2V0X09SRUJfSXNOdWxsAGdl
+dF9NSU5VUERBVEVEX0lzTnVsbABnZXRfQkxLX0lzTnVsbABnZXRfU1RMX0lzTnVsbABnZXRfRkcz
+TV9Jc051bGwAZ2V0X0ZHTV9Jc051bGwAZ2V0X0ZUTV9Jc051bGwAZ2V0X1RPX0lzTnVsbABnZXRf
+UFRTX0lzTnVsbABnZXRfRkczUENUX0lzTnVsbABnZXRfQVNUX0lzTnVsbABnZXRfUGx1c01pbnVz
+VXBkYXRlZF9Jc051bGwAc2V0X092ZXJhbGxEZWZlbnNpdmVfSXNOdWxsAHNldF9PdmVyYWxsT2Zm
+ZW5zaXZlX0lzTnVsbABzZXRfT3ZlcmFsbFNob290aW5nX0lzTnVsbABzZXRfT3ZlcmFsbF9Jc051
+bGwAU2V0TnVsbABzZXRfSXRlbQBTeXN0ZW0AcmVzb3VyY2VNYW4AVGltZVNwYW4AU2NyaXB0TWFp
+bgBTeXN0ZW0uQ29uZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0uUmVmbGVj
+dGlvbgBJbnZhbGlkT3BlcmF0aW9uRXhjZXB0aW9uAFN0cmluZ0NvbXBhcmlzb24AQ3VsdHVyZUlu
+Zm8AT3V0cHV0TmFtZU1hcABPdXRwdXRNYXAASW5wdXQwQnVmZmVyAFBpcGVsaW5lQnVmZmVyAFNj
+cmlwdEJ1ZmZlcgBnZXRfUmVzb3VyY2VNYW5hZ2VyAC5jdG9yAC5jY3RvcgBTeXN0ZW0uRGlhZ25v
+c3RpY3MAU3lzdGVtLlJ1bnRpbWUuQ29tcGlsZXJTZXJ2aWNlcwBTeXN0ZW0uUmVzb3VyY2VzAFND
+XzM5Y2Q1NTZjYmQyNTQ0ODNiNzUxNDY3OTAzMzNjZWJmLlByb3BlcnRpZXMuUmVzb3VyY2VzLnJl
+c291cmNlcwBEZWJ1Z2dpbmdNb2RlcwBTQ18zOWNkNTU2Y2JkMjU0NDgzYjc1MTQ2NzkwMzMzY2Vi
+Zi5Qcm9wZXJ0aWVzAFZhcmlhYmxlcwBnZXRfVG90YWxNaW51dGVzAEJ1ZmZlckNvbHVtbkluZGV4
+ZXMAR2V0Q29sdW1uSW5kZXhlcwBTZXR0aW5ncwBFcXVhbHMAQ29ubmVjdGlvbnMAT2JqZWN0AEVu
+ZE9mUm93c2V0AGdldF9EZWZhdWx0AFVzZXJDb21wb25lbnQAUGFyZW50Q29tcG9uZW50AFNjcmlw
+dENvbXBvbmVudABNaWNyb3NvZnQuU3FsU2VydmVyLlR4U2NyaXB0AE1pY3Jvc29mdC5TcWxTZXJ2
+ZXIuUGlwZWxpbmVIb3N0AElucHV0MF9Qcm9jZXNzSW5wdXQASW5wdXQwX1Byb2Nlc3NJbnB1dFJv
+dwBOZXh0Um93AGdldF9Bc3NlbWJseQAAAACAm0kAcwBOAHUAbABsACAAcAByAG8AcABlAHIAdAB5
+ACAAYwBhAG4AbgBvAHQAIABiAGUAIABzAGUAdAAgAHQAbwAgAEYAYQBsAHMAZQAuACAAQQBzAHMA
+aQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABvACAAdABoAGUAIABjAG8AbAB1AG0AbgAgAGkAbgBz
+AHQAZQBhAGQALgAAD0kAbgBwAHUAdAAgADAAAHFTAEMAXwAzADkAYwBkADUANQA2AGMAYgBkADIA
+NQA0ADQAOAAzAGIANwA1ADEANAA2ADcAOQAwADMAMwAzAGMAZQBiAGYALgBQAHIAbwBwAGUAcgB0
+AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAPM1cdTp1CBKtbq3tmVpV8MABCABAQgDIAABBSAB
+ARERBCABAQ4FIAEBEV0QBw0MDAwMDAwMDAwMDAwROQMgAA0JIAMBEkEdCBJFAwYSQQMGHQgEIAEM
+CAQgAQIIBCABCAgFIAEROQgFIAIBCBwDIAACBiACAg4ReQUgAR0ICAcAARJ9EYCBBSAAEoCFByAC
+AQ4SgIUIt3pcVhk04IkIiYRdzYCAzJEDBhIUAwYSGAMGEkkDBhJVAwYSWQMGEiAFIAEBEgwDIAAM
+AyAACAQgABE5BCABAQwEIAEBAgkgBAEIDhJBEkUFIAEBEkkEAAASVQQAABJZBQABARJZBAAAEiAD
+AAABAygADAMoAAIDKAAIBCgAETkECAASVQQIABJZBAgAEiAIAQAIAAAAAAAeAQABAFQCFldyYXBO
+b25FeGNlcHRpb25UaHJvd3MBCAEAAgAAAAAAKAEAI1NDXzM5Y2Q1NTZjYmQyNTQ0ODNiNzUxNDY3
+OTAzMzNjZWJmAAAFAQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMjEAAEkBABouTkVURnJhbWV3b3Jr
+LFZlcnNpb249djQuNwEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC43
+BAEAAAAAALQAAADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwg
+bXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tl
+bj1iNzdhNWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAA
+AAAAAAAAAAAAUEFEUEFEULQAAACgOwAAAAAAAAAAAAC6OwAAACAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAArDsAAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB
+ABAAAAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAAAABIAAAA
+WEAAAOwDAAAAAAAAAAAAAOwDNAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBPAAAAAAC9
+BO/+AAABAAAAAQAAAAAAAAABAAAAAAA/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAARAAAAAEA
+VgBhAHIARgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBvAG4AAAAA
+AAAAsARMAwAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAAAoAwAAAQAwADAAMAAwADAA
+NABiADAAAAAaAAEAAQBDAG8AbQBtAGUAbgB0AHMAAAAAAAAAIgABAAEAQwBvAG0AcABhAG4AeQBO
+AGEAbQBlAAAAAAAAAAAAcAAkAAEARgBpAGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4AAAAAAFMA
+QwBfADMAOQBjAGQANQA1ADYAYwBiAGQAMgA1ADQANAA4ADMAYgA3ADUAMQA0ADYANwA5ADAAMwAz
+ADMAYwBlAGIAZgAAADAACAABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMQAuADAALgAwAC4A
+MAAAAHAAKAABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAAUwBDAF8AMwA5AGMAZAA1ADUANgBj
+AGIAZAAyADUANAA0ADgAMwBiADcANQAxADQANgA3ADkAMAAzADMAMwBjAGUAYgBmAC4AZABsAGwA
+AABIABIAAQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQAAABDAG8AcAB5AHIAaQBnAGgAdAAg
+AEAAIAAgADIAMAAyADEAAAAqAAEAAQBMAGUAZwBhAGwAVAByAGEAZABlAG0AYQByAGsAcwAAAAAA
+AAAAAHgAKAABAE8AcgBpAGcAaQBuAGEAbABGAGkAbABlAG4AYQBtAGUAAABTAEMAXwAzADkAYwBk
+ADUANQA2AGMAYgBkADIANQA0ADQAOAAzAGIANwA1ADEANAA2ADcAOQAwADMAMwAzAGMAZQBiAGYA
+LgBkAGwAbAAAAGgAJAABAFAAcgBvAGQAdQBjAHQATgBhAG0AZQAAAAAAUwBDAF8AMwA5AGMAZAA1
+ADUANgBjAGIAZAAyADUANAA0ADgAMwBiADcANQAxADQANgA3ADkAMAAzADMAMwBjAGUAYgBmAAAA
+NAAIAAEAUAByAG8AZAB1AGMAdABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAADgACAAB
+AEEAcwBzAGUAbQBiAGwAeQAgAFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAABABAAAAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAAAABI
-AAAAWEAAAOwDAAAAAAAAAAAAAOwDNAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBPAAAA
-AAC9BO/+AAABAAAAAQAAAAAAAAABAAAAAAA/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAARAAA
-AAEAVgBhAHIARgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBvAG4A
-AAAAAAAAsARMAwAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAAAoAwAAAQAwADAAMAAw
-ADAANABiADAAAAAaAAEAAQBDAG8AbQBtAGUAbgB0AHMAAAAAAAAAIgABAAEAQwBvAG0AcABhAG4A
-eQBOAGEAbQBlAAAAAAAAAAAAcAAkAAEARgBpAGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4AAAAA
-AFMAQwBfADMAOQBjAGQANQA1ADYAYwBiAGQAMgA1ADQANAA4ADMAYgA3ADUAMQA0ADYANwA5ADAA
-MwAzADMAYwBlAGIAZgAAADAACAABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMQAuADAALgAw
-AC4AMAAAAHAAKAABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAAUwBDAF8AMwA5AGMAZAA1ADUA
-NgBjAGIAZAAyADUANAA0ADgAMwBiADcANQAxADQANgA3ADkAMAAzADMAMwBjAGUAYgBmAC4AZABs
-AGwAAABIABIAAQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQAAABDAG8AcAB5AHIAaQBnAGgA
-dAAgAEAAIAAgADIAMAAyADEAAAAqAAEAAQBMAGUAZwBhAGwAVAByAGEAZABlAG0AYQByAGsAcwAA
-AAAAAAAAAHgAKAABAE8AcgBpAGcAaQBuAGEAbABGAGkAbABlAG4AYQBtAGUAAABTAEMAXwAzADkA
-YwBkADUANQA2AGMAYgBkADIANQA0ADQAOAAzAGIANwA1ADEANAA2ADcAOQAwADMAMwAzAGMAZQBi
-AGYALgBkAGwAbAAAAGgAJAABAFAAcgBvAGQAdQBjAHQATgBhAG0AZQAAAAAAUwBDAF8AMwA5AGMA
-ZAA1ADUANgBjAGIAZAAyADUANAA0ADgAMwBiADcANQAxADQANgA3ADkAMAAzADMAMwBjAGUAYgBm
-AAAANAAIAAEAUAByAG8AZAB1AGMAdABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAADgA
-CAABAEEAcwBzAGUAbQBiAGwAeQAgAFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAwAAAC4NAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAwAAADMOwAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1227,7 +1484,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   </arrayElements>
                 </property>
                 <property
@@ -1263,74 +1520,331 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   dataType="System.String"
                   description="Checksum to match component metedata against compiled codes."
                   name="MetadataChecksum140"
-                  typeConverter="NOTBROWSABLE">F3</property>
+                  typeConverter="NOTBROWSABLE">C8</property>
                 <property
                   dataType="System.String"
                   name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Fact Data Flow Task\Adds Shooting Overall column.Inputs[Input 0]"
+                  refId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Inputs[Input 0]"
                   hasSideEffects="true"
                   name="Input 0">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Fact Data Flow Task\Adds Shooting Overall column.Inputs[Input 0].Columns[FGM]"
+                      refId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Inputs[Input 0].Columns[FGM]"
                       cachedDataType="r4"
                       cachedName="FGM"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FGM]" />
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FGM]" />
                     <inputColumn
-                      refId="Package\Fact Data Flow Task\Adds Shooting Overall column.Inputs[Input 0].Columns[FG3M]"
+                      refId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Inputs[Input 0].Columns[FG3M]"
                       cachedDataType="r4"
                       cachedName="FG3M"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FG3M]" />
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FG3M]" />
                     <inputColumn
-                      refId="Package\Fact Data Flow Task\Adds Shooting Overall column.Inputs[Input 0].Columns[FTM]"
+                      refId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Inputs[Input 0].Columns[FTM]"
                       cachedDataType="r4"
                       cachedName="FTM"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FTM]" />
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FTM]" />
                     <inputColumn
-                      refId="Package\Fact Data Flow Task\Adds Shooting Overall column.Inputs[Input 0].Columns[FG3A]"
+                      refId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Inputs[Input 0].Columns[FG3A]"
                       cachedDataType="r4"
                       cachedName="FG3A"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FG3A]" />
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FG3A]" />
                     <inputColumn
-                      refId="Package\Fact Data Flow Task\Adds Shooting Overall column.Inputs[Input 0].Columns[FGA]"
+                      refId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Inputs[Input 0].Columns[FGA]"
                       cachedDataType="r4"
                       cachedName="FGA"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FGA]" />
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FGA]" />
                     <inputColumn
-                      refId="Package\Fact Data Flow Task\Adds Shooting Overall column.Inputs[Input 0].Columns[FTA]"
+                      refId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Inputs[Input 0].Columns[FTA]"
                       cachedDataType="r4"
                       cachedName="FTA"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FTA]" />
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FTA]" />
                     <inputColumn
-                      refId="Package\Fact Data Flow Task\Adds Shooting Overall column.Inputs[Input 0].Columns[FG3_PCT]"
+                      refId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Inputs[Input 0].Columns[FG3_PCT]"
                       cachedDataType="r4"
                       cachedName="FG3_PCT"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FG3_PCT]" />
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FG3_PCT]" />
+                    <inputColumn
+                      refId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Inputs[Input 0].Columns[OREB]"
+                      cachedDataType="r4"
+                      cachedName="OREB"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[OREB]" />
+                    <inputColumn
+                      refId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Inputs[Input 0].Columns[AST]"
+                      cachedDataType="r4"
+                      cachedName="AST"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[AST]" />
+                    <inputColumn
+                      refId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Inputs[Input 0].Columns[TO]"
+                      cachedDataType="r4"
+                      cachedName="TO"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[TO]" />
+                    <inputColumn
+                      refId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Inputs[Input 0].Columns[PTS]"
+                      cachedDataType="r4"
+                      cachedName="PTS"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PTS]" />
+                    <inputColumn
+                      refId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Inputs[Input 0].Columns[DREB]"
+                      cachedDataType="r4"
+                      cachedName="DREB"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[DREB]" />
+                    <inputColumn
+                      refId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Inputs[Input 0].Columns[STL]"
+                      cachedDataType="r4"
+                      cachedName="STL"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[STL]" />
+                    <inputColumn
+                      refId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Inputs[Input 0].Columns[BLK]"
+                      cachedDataType="r4"
+                      cachedName="BLK"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[BLK]" />
+                    <inputColumn
+                      refId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Inputs[Input 0].Columns[PlusMinusUpdated]"
+                      cachedDataType="i4"
+                      cachedName="PlusMinusUpdated"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PlusMinusUpdated]" />
+                    <inputColumn
+                      refId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Inputs[Input 0].Columns[MIN_UPDATED]"
+                      cachedDataType="dbTime2"
+                      cachedName="MIN_UPDATED"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[MIN_UPDATED]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Fact Data Flow Task\Adds Shooting Overall column.Outputs[Output 0]"
+                  refId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Outputs[Output 0]"
                   name="Output 0"
-                  synchronousInputId="Package\Fact Data Flow Task\Adds Shooting Overall column.Inputs[Input 0]">
+                  synchronousInputId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Inputs[Input 0]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Adds Shooting Overall column.Outputs[Output 0].Columns[OverallShooting]"
+                      refId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Outputs[Output 0].Columns[OverallShooting]"
                       dataType="r4"
-                      lineageId="Package\Fact Data Flow Task\Adds Shooting Overall column.Outputs[Output 0].Columns[OverallShooting]"
+                      lineageId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Outputs[Output 0].Columns[OverallShooting]"
                       name="OverallShooting" />
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Outputs[Output 0].Columns[OverallOffensive]"
+                      dataType="r4"
+                      lineageId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Outputs[Output 0].Columns[OverallOffensive]"
+                      name="OverallOffensive" />
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Outputs[Output 0].Columns[Overall]"
+                      dataType="r4"
+                      lineageId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Outputs[Output 0].Columns[Overall]"
+                      name="Overall" />
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Outputs[Output 0].Columns[OverallDefensive]"
+                      dataType="r4"
+                      lineageId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Outputs[Output 0].Columns[OverallDefensive]"
+                      name="OverallDefensive" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
               </outputs>
             </component>
             <component
-              refId="Package\Fact Data Flow Task\Flat File Destination"
+              refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="FactPerformance DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[FactPerformance]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[STEPH-PAGD\STOREAPPDB.BasketballDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[STEPH-PAGD\STOREAPPDB.BasketballDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="RedirectRow"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].Columns[PerformanceID]"
+                      cachedDataType="i4"
+                      cachedName="PerformanceID"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PerformanceID]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PerformanceID]" />
+                    <inputColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].Columns[GameDate]"
+                      cachedDataType="dbDate"
+                      cachedName="GameDate"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameDate]"
+                      lineageId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Match Output].Columns[GameDate]" />
+                    <inputColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].Columns[OverallShooting]"
+                      cachedDataType="r4"
+                      cachedName="OverallShooting"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OverallShooting]"
+                      lineageId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Outputs[Output 0].Columns[OverallShooting]" />
+                    <inputColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].Columns[GAME_ID]"
+                      cachedDataType="i4"
+                      cachedName="GAME_ID"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameID]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[GAME_ID]" />
+                    <inputColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].Columns[TEAM_ID]"
+                      cachedDataType="i4"
+                      cachedName="TEAM_ID"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TeamID]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[TEAM_ID]" />
+                    <inputColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].Columns[PLAYER_ID]"
+                      cachedDataType="i4"
+                      cachedName="PLAYER_ID"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PlayerID]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PLAYER_ID]" />
+                    <inputColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].Columns[OverallOffensive]"
+                      cachedDataType="r4"
+                      cachedName="OverallOffensive"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OverallOffensive]"
+                      lineageId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Outputs[Output 0].Columns[OverallOffensive]" />
+                    <inputColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].Columns[OverallDefensive]"
+                      cachedDataType="r4"
+                      cachedName="OverallDefensive"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OverallDefense]"
+                      lineageId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Outputs[Output 0].Columns[OverallDefensive]" />
+                    <inputColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].Columns[Overall]"
+                      cachedDataType="r4"
+                      cachedName="Overall"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Overall]"
+                      lineageId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Outputs[Output 0].Columns[Overall]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FactPerformanceID]"
+                      dataType="i4"
+                      name="FactPerformanceID" />
+                    <externalMetadataColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PerformanceID]"
+                      dataType="i4"
+                      name="PerformanceID" />
+                    <externalMetadataColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameID]"
+                      dataType="i4"
+                      name="GameID" />
+                    <externalMetadataColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TeamID]"
+                      dataType="i4"
+                      name="TeamID" />
+                    <externalMetadataColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PlayerID]"
+                      dataType="i4"
+                      name="PlayerID" />
+                    <externalMetadataColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameDate]"
+                      dataType="dbDate"
+                      name="GameDate" />
+                    <externalMetadataColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OverallShooting]"
+                      dataType="r4"
+                      name="OverallShooting" />
+                    <externalMetadataColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OverallOffensive]"
+                      dataType="r4"
+                      name="OverallOffensive" />
+                    <externalMetadataColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OverallDefense]"
+                      dataType="r4"
+                      name="OverallDefense" />
+                    <externalMetadataColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Overall]"
+                      dataType="r4"
+                      name="Overall" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\FactPerformance Data Flow Task\Flat File Destination"
               componentClassID="Microsoft.FlatFileDestination"
               contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Destination"
@@ -1354,86 +1868,86 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Fact Data Flow Task\Flat File Destination.Connections[FlatFileConnection]"
+                  refId="Package\FactPerformance Data Flow Task\Flat File Destination.Connections[FlatFileConnection]"
                   connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
                   connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
                   name="FlatFileConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
+                  refId="Package\FactPerformance Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
                   hasSideEffects="true"
                   name="Flat File Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[PerformanceID]"
+                      refId="Package\FactPerformance Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[PerformanceID]"
                       cachedDataType="i4"
                       cachedName="PerformanceID"
-                      externalMetadataColumnId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PerformanceID]"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PerformanceID]" />
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PerformanceID]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PerformanceID]" />
                     <inputColumn
-                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[GAME_ID]"
+                      refId="Package\FactPerformance Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[GAME_ID]"
                       cachedDataType="i4"
                       cachedName="GAME_ID"
-                      externalMetadataColumnId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GAME_ID]"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[GAME_ID]" />
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GAME_ID]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[GAME_ID]" />
                     <inputColumn
-                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[TEAM_ID]"
+                      refId="Package\FactPerformance Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[TEAM_ID]"
                       cachedDataType="i4"
                       cachedName="TEAM_ID"
-                      externalMetadataColumnId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TEAM_ID]"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[TEAM_ID]" />
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TEAM_ID]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[TEAM_ID]" />
                     <inputColumn
-                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[PLAYER_ID]"
+                      refId="Package\FactPerformance Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[PLAYER_ID]"
                       cachedDataType="i4"
                       cachedName="PLAYER_ID"
-                      externalMetadataColumnId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PLAYER_ID]"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PLAYER_ID]" />
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PLAYER_ID]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PLAYER_ID]" />
                     <inputColumn
-                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[GameDate]"
+                      refId="Package\FactPerformance Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[GameDate]"
                       cachedDataType="dbDate"
                       cachedName="GameDate"
-                      externalMetadataColumnId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GameDate]"
-                      lineageId="Package\Fact Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Match Output].Columns[GameDate]" />
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GameDate]"
+                      lineageId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Match Output].Columns[GameDate]" />
                     <inputColumn
-                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[OverallShooting]"
+                      refId="Package\FactPerformance Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[OverallShooting]"
                       cachedDataType="r4"
                       cachedName="OverallShooting"
-                      externalMetadataColumnId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[OverallShooting]"
-                      lineageId="Package\Fact Data Flow Task\Adds Shooting Overall column.Outputs[Output 0].Columns[OverallShooting]" />
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[OverallShooting]"
+                      lineageId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Outputs[Output 0].Columns[OverallShooting]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PerformanceID]"
+                      refId="Package\FactPerformance Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PerformanceID]"
                       dataType="i4"
                       name="PerformanceID" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GAME_ID]"
+                      refId="Package\FactPerformance Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GAME_ID]"
                       dataType="i4"
                       name="GAME_ID" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TEAM_ID]"
+                      refId="Package\FactPerformance Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TEAM_ID]"
                       dataType="i4"
                       name="TEAM_ID" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PLAYER_ID]"
+                      refId="Package\FactPerformance Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PLAYER_ID]"
                       dataType="i4"
                       name="PLAYER_ID" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GameDate]"
+                      refId="Package\FactPerformance Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GameDate]"
                       dataType="dbDate"
                       name="GameDate" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[OverallShooting]"
+                      refId="Package\FactPerformance Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[OverallShooting]"
                       dataType="r4"
                       name="OverallShooting" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      refId="Package\FactPerformance Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
                       dataType="i4"
                       name="ErrorCode" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      refId="Package\FactPerformance Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
                       dataType="i4"
                       name="ErrorColumn" />
                   </externalMetadataColumns>
@@ -1441,7 +1955,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               </inputs>
             </component>
             <component
-              refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source"
+              refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -1490,7 +2004,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Connections[OleDbConnection]"
+                  refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[STEPH-PAGD\STOREAPPDB.BasketballDB]"
                   connectionManagerRefId="Package.ConnectionManagers[STEPH-PAGD\STOREAPPDB.BasketballDB]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1498,496 +2012,455 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               </connections>
               <outputs>
                 <output
-                  refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output]"
+                  refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PerformanceID]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PerformanceID]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PerformanceID]"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PerformanceID]"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PerformanceID]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PerformanceID]"
                       name="PerformanceID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[GAME_ID]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[GAME_ID]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GAME_ID]"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[GAME_ID]"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GAME_ID]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[GAME_ID]"
                       name="GAME_ID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[TEAM_ID]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[TEAM_ID]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TEAM_ID]"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[TEAM_ID]"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TEAM_ID]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[TEAM_ID]"
                       name="TEAM_ID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PLAYER_ID]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PLAYER_ID]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PLAYER_ID]"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PLAYER_ID]"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PLAYER_ID]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PLAYER_ID]"
                       name="PLAYER_ID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FGM]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FGM]"
                       dataType="r4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FGM]"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FGM]"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FGM]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FGM]"
                       name="FGM"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FGA]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FGA]"
                       dataType="r4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FGA]"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FGA]"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FGA]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FGA]"
                       name="FGA"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FG3M]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FG3M]"
                       dataType="r4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FG3M]"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FG3M]"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FG3M]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FG3M]"
                       name="FG3M"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FG3A]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FG3A]"
                       dataType="r4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FG3A]"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FG3A]"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FG3A]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FG3A]"
                       name="FG3A"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FG3_PCT]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FG3_PCT]"
                       dataType="r4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FG3_PCT]"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FG3_PCT]"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FG3_PCT]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FG3_PCT]"
                       name="FG3_PCT"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FTM]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FTM]"
                       dataType="r4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FTM]"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FTM]"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FTM]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FTM]"
                       name="FTM"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FTA]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FTA]"
                       dataType="r4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FTA]"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FTA]"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FTA]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FTA]"
                       name="FTA"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PLAYER_NAME]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PLAYER_NAME]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PLAYER_NAME]"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PLAYER_NAME]"
                       length="24"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PLAYER_NAME]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PLAYER_NAME]"
                       name="PLAYER_NAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[OREB]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[OREB]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[OREB]"
+                      name="OREB"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[AST]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AST]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[AST]"
+                      name="AST"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[TO]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TO]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[TO]"
+                      name="TO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PTS]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PTS]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PTS]"
+                      name="PTS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[DREB]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DREB]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[DREB]"
+                      name="DREB"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[STL]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[STL]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[STL]"
+                      name="STL"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[BLK]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BLK]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[BLK]"
+                      name="BLK"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PlusMinusUpdated]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PlusMinusUpdated]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PlusMinusUpdated]"
+                      name="PlusMinusUpdated"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[MIN_UPDATED]"
+                      dataType="dbTime2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MIN_UPDATED]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[MIN_UPDATED]"
+                      name="MIN_UPDATED"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PerformanceID]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PerformanceID]"
                       dataType="i4"
                       name="PerformanceID" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GAME_ID]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GAME_ID]"
                       dataType="i4"
                       name="GAME_ID" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TEAM_ID]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TEAM_ID]"
                       dataType="i4"
                       name="TEAM_ID" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TEAM_ABBREVIATION]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TEAM_ABBREVIATION]"
                       codePage="1252"
                       dataType="str"
                       length="3"
                       name="TEAM_ABBREVIATION" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TEAM_CITY]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TEAM_CITY]"
                       codePage="1252"
                       dataType="str"
                       length="25"
                       name="TEAM_CITY" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PLAYER_ID]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PLAYER_ID]"
                       dataType="i4"
                       name="PLAYER_ID" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PLAYER_NAME]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PLAYER_NAME]"
                       codePage="1252"
                       dataType="str"
                       length="24"
                       name="PLAYER_NAME" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[START_POSITION]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[START_POSITION]"
                       codePage="1252"
                       dataType="str"
                       length="1"
                       name="START_POSITION" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[COMMENT]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[COMMENT]"
                       codePage="1252"
                       dataType="str"
                       length="40"
                       name="COMMENT" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MIN_UPDATED]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MIN_UPDATED]"
                       dataType="dbTime2"
                       name="MIN_UPDATED" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FGM]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FGM]"
                       dataType="r4"
                       name="FGM" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FGA]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FGA]"
                       dataType="r4"
                       name="FGA" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FG_PCT]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FG_PCT]"
                       dataType="r4"
                       name="FG_PCT" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FG3M]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FG3M]"
                       dataType="r4"
                       name="FG3M" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FG3A]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FG3A]"
                       dataType="r4"
                       name="FG3A" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FG3_PCT]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FG3_PCT]"
                       dataType="r4"
                       name="FG3_PCT" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FTM]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FTM]"
                       dataType="r4"
                       name="FTM" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FTA]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FTA]"
                       dataType="r4"
                       name="FTA" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FT_PCT]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FT_PCT]"
                       dataType="r4"
                       name="FT_PCT" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[OREB]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[OREB]"
                       dataType="r4"
                       name="OREB" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DREB]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DREB]"
                       dataType="r4"
                       name="DREB" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[REB]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[REB]"
                       dataType="r4"
                       name="REB" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AST]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AST]"
                       dataType="r4"
                       name="AST" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[STL]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[STL]"
                       dataType="r4"
                       name="STL" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BLK]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BLK]"
                       dataType="r4"
                       name="BLK" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TO]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TO]"
                       dataType="r4"
                       name="TO" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PF]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PF]"
                       dataType="r4"
                       name="PF" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PTS]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PTS]"
                       dataType="r4"
                       name="PTS" />
                     <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PlusMinusUpdated]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PlusMinusUpdated]"
                       dataType="i4"
                       name="PlusMinusUpdated" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PerformanceID]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PerformanceID]"
                       dataType="i4"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PerformanceID]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PerformanceID]"
                       name="PerformanceID" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GAME_ID]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GAME_ID]"
                       dataType="i4"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GAME_ID]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GAME_ID]"
                       name="GAME_ID" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TEAM_ID]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TEAM_ID]"
                       dataType="i4"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TEAM_ID]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TEAM_ID]"
                       name="TEAM_ID" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PLAYER_ID]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PLAYER_ID]"
                       dataType="i4"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PLAYER_ID]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PLAYER_ID]"
                       name="PLAYER_ID" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FGM]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FGM]"
                       dataType="r4"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FGM]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FGM]"
                       name="FGM" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FGA]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FGA]"
                       dataType="r4"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FGA]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FGA]"
                       name="FGA" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FG3M]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FG3M]"
                       dataType="r4"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FG3M]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FG3M]"
                       name="FG3M" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FG3A]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FG3A]"
                       dataType="r4"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FG3A]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FG3A]"
                       name="FG3A" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FG3_PCT]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FG3_PCT]"
                       dataType="r4"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FG3_PCT]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FG3_PCT]"
                       name="FG3_PCT" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FTM]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FTM]"
                       dataType="r4"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FTM]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FTM]"
                       name="FTM" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FTA]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FTA]"
                       dataType="r4"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FTA]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FTA]"
                       name="FTA" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PLAYER_NAME]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PLAYER_NAME]"
                       codePage="1252"
                       dataType="str"
                       length="24"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PLAYER_NAME]"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PLAYER_NAME]"
                       name="PLAYER_NAME" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Fact Data Flow Task\OLE DB Destination"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="OLE DB Destination"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[FactPerformance]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Fact Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[STEPH-PAGD\STOREAPPDB.BasketballDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[STEPH-PAGD\STOREAPPDB.BasketballDB]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="RedirectRow"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PerformanceID]"
-                      cachedDataType="i4"
-                      cachedName="PerformanceID"
-                      externalMetadataColumnId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PerformanceID]"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PerformanceID]" />
-                    <inputColumn
-                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GameDate]"
-                      cachedDataType="dbDate"
-                      cachedName="GameDate"
-                      externalMetadataColumnId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameDate]"
-                      lineageId="Package\Fact Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Match Output].Columns[GameDate]" />
-                    <inputColumn
-                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OverallShooting]"
-                      cachedDataType="r4"
-                      cachedName="OverallShooting"
-                      externalMetadataColumnId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OverallShooting]"
-                      lineageId="Package\Fact Data Flow Task\Adds Shooting Overall column.Outputs[Output 0].Columns[OverallShooting]" />
-                    <inputColumn
-                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GAME_ID]"
-                      cachedDataType="i4"
-                      cachedName="GAME_ID"
-                      externalMetadataColumnId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameID]"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[GAME_ID]" />
-                    <inputColumn
-                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TEAM_ID]"
-                      cachedDataType="i4"
-                      cachedName="TEAM_ID"
-                      externalMetadataColumnId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TeamID]"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[TEAM_ID]" />
-                    <inputColumn
-                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PLAYER_ID]"
-                      cachedDataType="i4"
-                      cachedName="PLAYER_ID"
-                      externalMetadataColumnId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PlayerID]"
-                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PLAYER_ID]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FactPerformanceID]"
-                      dataType="i4"
-                      name="FactPerformanceID" />
-                    <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PerformanceID]"
-                      dataType="i4"
-                      name="PerformanceID" />
-                    <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameID]"
-                      dataType="i4"
-                      name="GameID" />
-                    <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TeamID]"
-                      dataType="i4"
-                      name="TeamID" />
-                    <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PlayerID]"
-                      dataType="i4"
-                      name="PlayerID" />
-                    <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameDate]"
-                      dataType="dbDate"
-                      name="GameDate" />
-                    <externalMetadataColumn
-                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OverallShooting]"
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[OREB]"
                       dataType="r4"
-                      name="OverallShooting" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Fact Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[OREB]"
+                      name="OREB" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Fact Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AST]"
+                      dataType="r4"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AST]"
+                      name="AST" />
                     <outputColumn
-                      refId="Package\Fact Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TO]"
+                      dataType="r4"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TO]"
+                      name="TO" />
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PTS]"
+                      dataType="r4"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PTS]"
+                      name="PTS" />
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DREB]"
+                      dataType="r4"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DREB]"
+                      name="DREB" />
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[STL]"
+                      dataType="r4"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[STL]"
+                      name="STL" />
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BLK]"
+                      dataType="r4"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BLK]"
+                      name="BLK" />
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PlusMinusUpdated]"
                       dataType="i4"
-                      lineageId="Package\Fact Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PlusMinusUpdated]"
+                      name="PlusMinusUpdated" />
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MIN_UPDATED]"
+                      dataType="dbTime2"
+                      lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MIN_UPDATED]"
+                      name="MIN_UPDATED" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -1996,25 +2469,25 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </components>
           <paths>
             <path
-              refId="Package\Fact Data Flow Task.Paths[Lookup Match Output]"
-              endId="Package\Fact Data Flow Task\Adds Shooting Overall column.Inputs[Input 0]"
+              refId="Package\FactPerformance Data Flow Task.Paths[Lookup Match Output]"
+              endId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Inputs[Input 0]"
               name="Lookup Match Output"
-              startId="Package\Fact Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Match Output]" />
+              startId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Fact Data Flow Task.Paths[OLE DB Destination Error Output]"
-              endId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
+              refId="Package\FactPerformance Data Flow Task.Paths[OLE DB Destination Error Output]"
+              endId="Package\FactPerformance Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
               name="OLE DB Destination Error Output"
-              startId="Package\Fact Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]" />
+              startId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Outputs[OLE DB Destination Error Output]" />
             <path
-              refId="Package\Fact Data Flow Task.Paths[OLE DB Source Output]"
-              endId="Package\Fact Data Flow Task\Adds GameDate from dimGames.Inputs[Lookup Input]"
+              refId="Package\FactPerformance Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Inputs[Lookup Input]"
               name="OLE DB Source Output"
-              startId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output]" />
+              startId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Fact Data Flow Task.Paths[Output 0]"
-              endId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\FactPerformance Data Flow Task.Paths[Output 0]"
+              endId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input]"
               name="Output 0"
-              startId="Package\Fact Data Flow Task\Adds Shooting Overall column.Outputs[Output 0]" />
+              startId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Outputs[Output 0]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2033,47 +2506,59 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="174,42"
-          Id="Package\Fact Data Flow Task"
+          Size="234,42"
+          Id="Package\FactPerformance Data Flow Task"
           TopLeft="260,79" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Fact Data Flow Task">
+    design-time-name="Package\FactPerformance Data Flow Task">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="220,42"
-          Id="Package\Fact Data Flow Task\Adds Shooting Overall column"
+          Size="315,42"
+          Id="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column"
           TopLeft="78,233" />
         <NodeLayout
           Size="245,42"
-          Id="Package\Fact Data Flow Task\Game Details Table OLE DB Source"
+          Id="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source"
           TopLeft="61,33" />
         <NodeLayout
           Size="233,42"
-          Id="Package\Fact Data Flow Task\Adds GameDate from dimGames"
+          Id="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames"
           TopLeft="69,132" />
         <NodeLayout
-          Size="171,42"
-          Id="Package\Fact Data Flow Task\OLE DB Destination"
+          Size="231,42"
+          Id="Package\FactPerformance Data Flow Task\FactPerformance DB Destination"
           TopLeft="102,333" />
         <EdgeLayout
-          Id="Package\Fact Data Flow Task.Paths[Output 0]"
-          TopLeft="187.75,275">
+          Id="Package\FactPerformance Data Flow Task.Paths[Output 0]"
+          TopLeft="235.5,275">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,58"
+              EndConnector="-18,58"
               Start="0,0"
-              End="0,50.5">
+              End="-18,50.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,50.5" />
+                    End="0,25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25"
+                    Point2="0,29"
+                    Point3="-4,29" />
+                  <mssgle:LineSegment
+                    End="-14,29" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-14,29"
+                    Point2="-18,29"
+                    Point3="-18,33" />
+                  <mssgle:LineSegment
+                    End="-18,50.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2083,7 +2568,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Fact Data Flow Task.Paths[OLE DB Source Output]"
+          Id="Package\FactPerformance Data Flow Task.Paths[OLE DB Source Output]"
           TopLeft="184.5,75">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2105,42 +2590,54 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Fact Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="186.75,174">
+          Id="Package\FactPerformance Data Flow Task.Paths[Lookup Match Output]"
+          TopLeft="185.5,174">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59"
+              EndConnector="50,59"
               Start="0,0"
-              End="0,51.5">
+              End="50,51.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,51.5" />
+                    End="0,25.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.5"
+                    Point2="0,29.5"
+                    Point3="4,29.5" />
+                  <mssgle:LineSegment
+                    End="46,29.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="46,29.5"
+                    Point2="50,29.5"
+                    Point3="50,33.5" />
+                  <mssgle:LineSegment
+                    End="50,51.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,19.9453125,96.3827734375,11.609375"
+              BoundingBox="-23.19138671875,34.5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
           Size="172,42"
-          Id="Package\Fact Data Flow Task\Flat File Destination"
+          Id="Package\FactPerformance Data Flow Task\Flat File Destination"
           TopLeft="604,474" />
         <EdgeLayout
-          Id="Package\Fact Data Flow Task.Paths[OLE DB Destination Error Output]"
-          TopLeft="187.5,375">
+          Id="Package\FactPerformance Data Flow Task.Paths[OLE DB Destination Error Output]"
+          TopLeft="217.5,375">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="502.5,99"
+              EndConnector="472.5,99"
               Start="0,0"
-              End="502.5,91.5">
+              End="472.5,91.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2151,20 +2648,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     Point2="0,49.5"
                     Point3="4,49.5" />
                   <mssgle:LineSegment
-                    End="498.5,49.5" />
+                    End="468.5,49.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="498.5,49.5"
-                    Point2="502.5,49.5"
-                    Point3="502.5,53.5" />
+                    Point1="468.5,49.5"
+                    Point2="472.5,49.5"
+                    Point3="472.5,53.5" />
                   <mssgle:LineSegment
-                    End="502.5,91.5" />
+                    End="472.5,91.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="178.04109375,54.5,146.4178125,11.43359375"
+              BoundingBox="163.04109375,54.5,146.4178125,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2172,7 +2669,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Fact Data Flow Task\Game Details Table OLE DB Source">
+    design-time-name="Package\FactPerformance Data Flow Task\FactPerformance DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2185,7 +2682,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Fact Data Flow Task\Adds GameDate from dimGames">
+    design-time-name="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -2208,7 +2705,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Fact Data Flow Task\OLE DB Destination">
+    design-time-name="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
