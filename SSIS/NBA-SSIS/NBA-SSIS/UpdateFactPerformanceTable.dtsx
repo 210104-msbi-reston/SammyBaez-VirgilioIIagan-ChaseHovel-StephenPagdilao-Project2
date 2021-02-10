@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="29"
-  DTS:VersionGUID="{42B3DCD1-D57D-4283-8BF1-67914537538D}">
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{3072B18C-ADC2-4246-87F9-35DAA24E6715}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -127,6 +127,164 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\FactPerformance Data Flow Task\Adds DateID from dimDate"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Adds DateID from dimDate"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[dimDate]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[dimDate]) [refTable]
+where [refTable].[GameDate] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="DateId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="GameDate" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Season" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Year" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Month" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayoftheMonth" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Match Output].Columns[GameDate]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\FactPerformance Data Flow Task\Adds DateID from dimDate.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[STEPH-PAGD\STOREAPPDB.BasketballDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[STEPH-PAGD\STOREAPPDB.BasketballDB]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\FactPerformance Data Flow Task\Adds DateID from dimDate.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\FactPerformance Data Flow Task\Adds DateID from dimDate.Inputs[Lookup Input].Columns[GameDate]"
+                      cachedDataType="dbDate"
+                      cachedName="GameDate"
+                      lineageId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Match Output].Columns[GameDate]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">GameDate</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\FactPerformance Data Flow Task\Adds DateID from dimDate.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\FactPerformance Data Flow Task\Adds DateID from dimDate.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\Adds DateID from dimDate.Outputs[Lookup Match Output].Columns[DateId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\FactPerformance Data Flow Task\Adds DateID from dimDate.Outputs[Lookup Match Output].Columns[DateId]"
+                      name="DateId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">DateId</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\FactPerformance Data Flow Task\Adds DateID from dimDate.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\FactPerformance Data Flow Task\Adds DateID from dimDate.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\FactPerformance Data Flow Task\Adds DateID from dimDate.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\FactPerformance Data Flow Task\Adds DateID from dimDate.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\Adds DateID from dimDate.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FactPerformance Data Flow Task\Adds DateID from dimDate.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\Adds DateID from dimDate.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FactPerformance Data Flow Task\Adds DateID from dimDate.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames"
               componentClassID="Microsoft.Lookup"
@@ -248,6 +406,20 @@ where [refTable].[GameID] = ?</property>
                           dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied."
                           name="CopyFromReferenceColumn">GameDate</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Match Output].Columns[Season]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Match Output].Columns[Season]"
+                      name="Season"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Season</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1725,12 +1897,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       externalMetadataColumnId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PerformanceID]"
                       lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PerformanceID]" />
                     <inputColumn
-                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].Columns[GameDate]"
-                      cachedDataType="dbDate"
-                      cachedName="GameDate"
-                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameDate]"
-                      lineageId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Match Output].Columns[GameDate]" />
-                    <inputColumn
                       refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].Columns[OverallShooting]"
                       cachedDataType="r4"
                       cachedName="OverallShooting"
@@ -1772,13 +1938,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       cachedName="Overall"
                       externalMetadataColumnId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Overall]"
                       lineageId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Outputs[Output 0].Columns[Overall]" />
+                    <inputColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].Columns[DateId]"
+                      cachedDataType="i4"
+                      cachedName="DateId"
+                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateID]"
+                      lineageId="Package\FactPerformance Data Flow Task\Adds DateID from dimDate.Outputs[Lookup Match Output].Columns[DateId]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FactPerformanceID]"
-                      dataType="i4"
-                      name="FactPerformanceID" />
                     <externalMetadataColumn
                       refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PerformanceID]"
                       dataType="i4"
@@ -1796,10 +1964,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       dataType="i4"
                       name="PlayerID" />
                     <externalMetadataColumn
-                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameDate]"
-                      dataType="dbDate"
-                      name="GameDate" />
-                    <externalMetadataColumn
                       refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OverallShooting]"
                       dataType="r4"
                       name="OverallShooting" />
@@ -1815,6 +1979,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Overall]"
                       dataType="r4"
                       name="Overall" />
+                    <externalMetadataColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateID]"
+                      dataType="i4"
+                      name="DateID" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2474,6 +2642,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               name="Lookup Match Output"
               startId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Match Output]" />
             <path
+              refId="Package\FactPerformance Data Flow Task.Paths[Lookup Match Output1]"
+              endId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\FactPerformance Data Flow Task\Adds DateID from dimDate.Outputs[Lookup Match Output]" />
+            <path
               refId="Package\FactPerformance Data Flow Task.Paths[OLE DB Destination Error Output]"
               endId="Package\FactPerformance Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
               name="OLE DB Destination Error Output"
@@ -2485,7 +2658,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               startId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\FactPerformance Data Flow Task.Paths[Output 0]"
-              endId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\FactPerformance Data Flow Task\Adds DateID from dimDate.Inputs[Lookup Input]"
               name="Output 0"
               startId="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column.Outputs[Output 0]" />
           </paths>
@@ -2518,150 +2691,154 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="315,42"
-          Id="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column"
-          TopLeft="78,233" />
-        <NodeLayout
           Size="245,42"
           Id="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source"
-          TopLeft="61,33" />
+          TopLeft="40.5,5.5" />
         <NodeLayout
-          Size="233,42"
-          Id="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames"
-          TopLeft="69,132" />
+          Size="172,42"
+          Id="Package\FactPerformance Data Flow Task\Flat File Destination"
+          TopLeft="505,412.5" />
         <NodeLayout
           Size="231,42"
           Id="Package\FactPerformance Data Flow Task\FactPerformance DB Destination"
-          TopLeft="102,333" />
+          TopLeft="47.5000000000001,454.5" />
+        <NodeLayout
+          Size="233,42"
+          Id="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames"
+          TopLeft="46.5,107.5" />
+        <NodeLayout
+          Size="315,42"
+          Id="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column"
+          TopLeft="5.50000000000003,209.5" />
         <EdgeLayout
-          Id="Package\FactPerformance Data Flow Task.Paths[Output 0]"
-          TopLeft="235.5,275">
+          Id="Package\FactPerformance Data Flow Task.Paths[OLE DB Destination Error Output]"
+          TopLeft="278.5,475.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-18,58"
+              EndConnector="226.5,-42"
               Start="0,0"
-              End="-18,50.5">
+              End="219,-42">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25" />
+                    End="109.25,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,25"
-                    Point2="0,29"
-                    Point3="-4,29" />
+                    Point1="109.25,0"
+                    Point2="113.25,0"
+                    Point3="113.25,-4" />
                   <mssgle:LineSegment
-                    End="-14,29" />
+                    End="113.25,-38" />
                   <mssgle:CubicBezierSegment
-                    Point1="-14,29"
-                    Point2="-18,29"
-                    Point3="-18,33" />
+                    Point1="113.25,-38"
+                    Point2="113.25,-42"
+                    Point3="117.25,-42" />
                   <mssgle:LineSegment
-                    End="-18,50.5" />
+                    End="219,-42" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FactPerformance Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="184.5,75">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,57"
-              Start="0,0"
-              End="0,49.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,49.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="40.04109375,1,146.4178125,11.43359375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FactPerformance Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="185.5,174">
+          TopLeft="163,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="50,59"
+              EndConnector="0,60"
               Start="0,0"
-              End="50,51.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.5"
-                    Point2="0,29.5"
-                    Point3="4,29.5" />
-                  <mssgle:LineSegment
-                    End="46,29.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="46,29.5"
-                    Point2="50,29.5"
-                    Point3="50,33.5" />
-                  <mssgle:LineSegment
-                    End="50,51.5" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-23.19138671875,34.5,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="172,42"
-          Id="Package\FactPerformance Data Flow Task\Flat File Destination"
-          TopLeft="604,474" />
         <EdgeLayout
-          Id="Package\FactPerformance Data Flow Task.Paths[OLE DB Destination Error Output]"
-          TopLeft="217.5,375">
+          Id="Package\FactPerformance Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="163,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="472.5,99"
+              EndConnector="0,60"
               Start="0,0"
-              End="472.5,91.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,45.5"
-                    Point2="0,49.5"
-                    Point3="4,49.5" />
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="206,42"
+          Id="Package\FactPerformance Data Flow Task\Adds DateID from dimDate"
+          TopLeft="60.0000000000001,311.5" />
+        <EdgeLayout
+          Id="Package\FactPerformance Data Flow Task.Paths[Output 0]"
+          TopLeft="163,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="468.5,49.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="468.5,49.5"
-                    Point2="472.5,49.5"
-                    Point3="472.5,53.5" />
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FactPerformance Data Flow Task.Paths[Lookup Match Output1]"
+          TopLeft="163,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,101"
+              Start="0,0"
+              End="0,93.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="472.5,91.5" />
+                    End="0,93.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="163.04109375,54.5,146.4178125,11.43359375"
+              BoundingBox="-48.19138671875,40.9453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2687,7 +2864,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2697,7 +2874,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2714,6 +2891,29 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\FactPerformance Data Flow Task\Adds DateID from dimDate">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[dimDate]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
