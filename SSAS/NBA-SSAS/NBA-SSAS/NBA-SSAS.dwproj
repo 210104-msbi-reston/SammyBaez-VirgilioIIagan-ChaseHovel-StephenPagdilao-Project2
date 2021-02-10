@@ -6,10 +6,67 @@
     <Name>NBA-SSAS.database</Name>
     <FullPath>NBA-SSAS.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>Performance Cube.cube</Name>
+      <FullPath>Performance Cube.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Performance Cube.partitions</Name>
+          <FullPath>Performance Cube.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>Dim Teams.dim</Name>
+      <FullPath>Dim Teams.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Player.dim</Name>
+      <FullPath>Dim Player.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Games.dim</Name>
+      <FullPath>Dim Games.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Performance.dim</Name>
+      <FullPath>Dim Performance.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>Basketball DB.ds</Name>
+      <FullPath>Basketball DB.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>Basketball DB.dsv</Name>
+      <FullPath>Basketball DB.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
-      <Options />
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>Basketball DB</Id>
+            <Name>Basketball DB</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=STEPH-PAGD\STOREAPPDB;Integrated Security=SSPI;Initial Catalog=BasketballDB</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>Basketball DB</Id>
+            <Name>Basketball DB</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
     </Configuration>
   </Configurations>
 </Project>
