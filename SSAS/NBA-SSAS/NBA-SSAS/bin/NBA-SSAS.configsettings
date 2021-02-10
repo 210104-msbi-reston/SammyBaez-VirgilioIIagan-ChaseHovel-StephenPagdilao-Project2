@@ -19,10 +19,10 @@
         <ID>Dim Player</ID>
       </Dimension>
       <Dimension>
-        <ID>Dim Games</ID>
+        <ID>Dim Performance</ID>
       </Dimension>
       <Dimension>
-        <ID>Dim Performance</ID>
+        <ID>Dim Games</ID>
       </Dimension>
     </Dimensions>
     <Cubes>
@@ -34,22 +34,6 @@
             <Partitions>
               <Partition>
                 <ID>Fact Performance</ID>
-              </Partition>
-            </Partitions>
-          </MeasureGroup>
-          <MeasureGroup>
-            <ID>Dim Games</ID>
-            <Partitions>
-              <Partition>
-                <ID>Dim Games</ID>
-              </Partition>
-            </Partitions>
-          </MeasureGroup>
-          <MeasureGroup>
-            <ID>Dim Performance</ID>
-            <Partitions>
-              <Partition>
-                <ID>Dim Performance</ID>
               </Partition>
             </Partitions>
           </MeasureGroup>

@@ -8,12 +8,12 @@
   </Database>
   <Cubes>
     <ProjectItem>
-      <Name>Performance Cube.cube</Name>
-      <FullPath>Performance Cube.cube</FullPath>
+      <Name>Basketball DB.cube</Name>
+      <FullPath>Basketball DB.cube</FullPath>
       <Dependencies>
         <ProjectItem>
-          <Name>Performance Cube.partitions</Name>
-          <FullPath>Performance Cube.partitions</FullPath>
+          <Name>Basketball DB.partitions</Name>
+          <FullPath>Basketball DB.partitions</FullPath>
         </ProjectItem>
       </Dependencies>
     </ProjectItem>

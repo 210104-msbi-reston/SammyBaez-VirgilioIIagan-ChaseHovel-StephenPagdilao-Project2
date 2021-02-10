@@ -3,7 +3,7 @@
     <Configuration>
       <Name>Development</Name>
       <Options>
-        <TargetServer>localhost</TargetServer>
+        <TargetServer>STEPH-PAGD\STOREAPPDB</TargetServer>
         <TargetDatabase>NBA-SSAS</TargetDatabase>
         <StartObject>
           <ObjectId></ObjectId>

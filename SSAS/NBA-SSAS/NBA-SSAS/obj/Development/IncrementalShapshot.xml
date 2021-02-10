@@ -8,7 +8,7 @@
     <TransactionalDeployment>false</TransactionalDeployment>
     <PartitionDeployment>DeployPartitions</PartitionDeployment>
     <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
-    <ProcessingOption>Default</ProcessingOption>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
     <OutputScript></OutputScript>
     <ImpactAnalysisFile></ImpactAnalysisFile>
     <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
@@ -40,9 +40,16 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>0E/iWsKt0fXA8nqFWqnD76Gtgcs=2/10/2021 11:23:34 AM2/10/2021 11:23:33 AM</TimeStamp>
+        <TimeStamp>vYtIJnzE9N4ngmk6G9zvLWUyF54=2/10/2021 11:39:01 AM2/10/2021 11:23:33 AM</TimeStamp>
         <ID>
           <String>Dim Player</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>PfYIjJBOBbiCQgDjjsaYVfOhMeE=2/10/2021 3:15:46 PM2/10/2021 11:23:33 AM</TimeStamp>
+        <ID>
+          <String>Dim Performance</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
@@ -53,15 +60,8 @@
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>tBBkt8EEwT/+dGPKSUodEZ1eKXM=2/10/2021 11:23:34 AM2/10/2021 11:23:33 AM</TimeStamp>
-        <ID>
-          <String>Dim Performance</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>1cvuW6kmpVsm30VJsugr10Npmus=2/10/2021 11:24:05 AM2/10/2021 11:23:33 AMjLvxhqbqf3MRB507VbtfUKrq+l8=2/10/2021 11:23:34 AM2/10/2021 11:23:33 AM</TimeStamp>
+        <TimeStamp>OD9H9DYQpF/5aUweINkEBp11qOE=2/10/2021 3:40:42 PM2/10/2021 3:40:42 PM6ge+ngrUwELVEyyqxyeNcvv+20c=2/10/2021 3:40:42 PM2/10/2021 3:40:42 PM</TimeStamp>
         <ID>
           <String>Basketball DB</String>
         </ID>
@@ -78,5 +78,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2021-02-10T17:24:48.036667Z</LastDeployed>
+  <LastDeployed>2021-02-10T21:40:50.873333Z</LastDeployed>
 </DeploymentSnapshot>
