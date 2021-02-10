@@ -13,21 +13,15 @@
     </DataSources>
     <Dimensions>
       <Dimension>
-        <ID>Dim Teams</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Player</ID>
+        <ID>Dim Date</ID>
       </Dimension>
       <Dimension>
         <ID>Dim Performance</ID>
       </Dimension>
-      <Dimension>
-        <ID>Dim Games</ID>
-      </Dimension>
     </Dimensions>
     <Cubes>
       <Cube>
-        <ID>Basketball DB</ID>
+        <ID>BasketballDB_Cube</ID>
         <MeasureGroups>
           <MeasureGroup>
             <ID>Fact Performance</ID>

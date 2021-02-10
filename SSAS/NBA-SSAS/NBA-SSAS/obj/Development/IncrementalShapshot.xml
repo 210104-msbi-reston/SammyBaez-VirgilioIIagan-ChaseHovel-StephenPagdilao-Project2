@@ -19,51 +19,37 @@
     <ObjectSnapshots>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
-        <TimeStamp>WT/fvko4gnohnWBkzd+GB+Xi/XA=2/10/2021 11:22:49 AM2/10/2021 11:22:49 AM</TimeStamp>
+        <TimeStamp>wb3AGvFxCTAZtP2kcLp6B/leTF4=2/10/2021 4:18:35 PM2/10/2021 4:18:34 PM</TimeStamp>
         <ID>
           <String>Basketball DB</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>CXhYVH2w5lBXzU+xd6yzErQbFHI=2/10/2021 11:23:10 AM2/10/2021 11:23:10 AM</TimeStamp>
+        <TimeStamp>jaGzjL6yoGftS9EALkor0FL1nfo=2/10/2021 4:32:00 PM2/10/2021 4:31:59 PM</TimeStamp>
         <ID>
-          <String>Basketball DB</String>
+          <String>BasketballDB_View</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>fvGUw5wAvUcnFtDPtcmRTmJyLnY=2/10/2021 11:23:34 AM2/10/2021 11:23:33 AM</TimeStamp>
+        <TimeStamp>W9GhfcNfwoIPHLY5wt4ApW2lT1M=2/10/2021 5:11:02 PM2/10/2021 4:40:07 PM</TimeStamp>
         <ID>
-          <String>Dim Teams</String>
+          <String>Dim Date</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>vYtIJnzE9N4ngmk6G9zvLWUyF54=2/10/2021 11:39:01 AM2/10/2021 11:23:33 AM</TimeStamp>
-        <ID>
-          <String>Dim Player</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>PfYIjJBOBbiCQgDjjsaYVfOhMeE=2/10/2021 3:15:46 PM2/10/2021 11:23:33 AM</TimeStamp>
+        <TimeStamp>Mc54b2tQTs2yOgkz3T6GSDyv/HQ=2/10/2021 5:47:44 PM2/10/2021 5:31:50 PM</TimeStamp>
         <ID>
           <String>Dim Performance</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>uuBpseRtLl0J6WjFrDZh0IPaltc=2/10/2021 11:23:34 AM2/10/2021 11:23:33 AM</TimeStamp>
-        <ID>
-          <String>Dim Games</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>OD9H9DYQpF/5aUweINkEBp11qOE=2/10/2021 3:40:42 PM2/10/2021 3:40:42 PM6ge+ngrUwELVEyyqxyeNcvv+20c=2/10/2021 3:40:42 PM2/10/2021 3:40:42 PM</TimeStamp>
+        <TimeStamp>lho/XLpX3HlpOaF8eqNDgRlCpYo=2/10/2021 5:48:42 PM2/10/2021 5:48:42 PMe6392i+wNqhbpXZQshPOpSfZteY=2/10/2021 5:48:42 PM2/10/2021 5:48:42 PM</TimeStamp>
         <ID>
-          <String>Basketball DB</String>
+          <String>BasketballDB_Cube</String>
         </ID>
       </ObjectSnapshot>
     </ObjectSnapshots>
@@ -78,5 +64,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2021-02-10T21:40:50.873333Z</LastDeployed>
+  <LastDeployed>2021-02-10T23:48:51.35Z</LastDeployed>
 </DeploymentSnapshot>
