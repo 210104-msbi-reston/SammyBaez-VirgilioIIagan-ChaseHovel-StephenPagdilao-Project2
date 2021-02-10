@@ -12,11 +12,94 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{FE3BF760-02E6-4FF4-B87C-E903783BB4D2}">
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{816CE4F4-6092-4C78-8379-2D51D9DDE541}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{1A8698E9-7120-4D04-9FE7-007BDE218446}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Stephen - Work\Documents\Revature\Project2\ErrorLogs\FactPerformanceErrorLog.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PerformanceID"
+              DTS:DTSID="{30B7D83C-E147-429B-8A01-C792BD179029}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GAME_ID"
+              DTS:DTSID="{4C2002EE-57A5-4631-8A6A-9917CD98B923}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TEAM_ID"
+              DTS:DTSID="{3D7637F3-68C0-4EEA-A657-FADD00BA6BAC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PLAYER_ID"
+              DTS:DTSID="{9404503D-D58A-4A42-92E8-3F313E4B5842}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GameDate"
+              DTS:DTSID="{23918B56-1AC2-4FFD-ACF8-C4FA0CFA88C3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OverallShooting"
+              DTS:DTSID="{EF8772A7-A20A-422B-A4BE-963E04369C53}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{DE1A9753-9B22-4621-82AB-328B8C58AB64}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{7E437F81-19A7-4BB3-9370-E3B30FD868B5}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[STEPH-PAGD\STOREAPPDB.BasketballDB]"
       DTS:CreationName="OLEDB"
@@ -343,6 +426,7 @@ public class ScriptMain : UserComponent
          * Add your code here
          */
         float xMul = (float)1.5;
+        float yMul = (float)1;
         float FG2M = Row.FGM - Row.FG3M - Row.FTM;
         float FG2A = Row.FGA - Row.FG3A - Row.FTA;
         float FG2_PCT;
@@ -356,7 +440,7 @@ public class ScriptMain : UserComponent
             FG2_PCT = 0;
         }
 
-        Row.OverallShooting = (Row.FG3M * xMul);
+        Row.OverallShooting = (Row.FG3M * xMul - (float)2.5*(1-Row.FG3PCT) + (FG2M*yMul - (float)1.5*(1-FG2_PCT))) ;
     }
 
 }
@@ -855,7 +939,7 @@ public class Variables
     <msb:CodeName>SC_39cd556cbd254483b75146790333cebf</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_39cd556cbd254483b75146790333cebf</msb:DisplayName>
-    <msb:ProjectId>{2CDC6EC9-6598-4D8F-8274-A3A40FB99AE1}</msb:ProjectId>
+    <msb:ProjectId>{68CB770E-683F-4F48-94BD-255A8599582F}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_39cd556cbd254483b75146790333cebf.csproj" />
@@ -1002,107 +1086,107 @@ namespace SC_39cd556cbd254483b75146790333cebf.Properties {
                     <arrayElement
                       dataType="System.String"><![CDATA[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
-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
+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
-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
+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
-AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAhBQAAAAgAAAAFgAAAAIA
+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
-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
-ABgBLgArAEEBLgAzAEEBLgA7AEEBLgBDABgBLgBLAEcBLgBTAEEBLgBbAF4BQwBjAKgB4QB7AKgB
-4wBrAKgBKQJzAA8BSQJzAA8BGwADAAEABwARAAgAEwAAADgA0AAAAK8D1AAAAC8A0AAAAJ8D1AAA
-AEAA0AAAAL4D1AAAAA4A0AAAAHED1AAAABcA0AAAAIED1AAAAB8A0AAAAJAD1AAAAEgA0AAAAM0D
-1AAAAB8D0AAAAN8D1AAAAN0E2AAAAOYA3QAAACEG4gACAAYAAwACAAcABQACAAgABwACAAkACQAC
-AAoACwACAAsADQACAAwADwACAA0AEQACAA4AEwACAA8AFQACABAAFwACABEAGQACABIAGwACABMA
-HQABABQAHwABABUAIQACAB8AIwACACAAJQABACEAJQACACIAJwAEgAAAAQAAAAAAAAAAAAAAAADW
-AgAABAAAAAAAAAAAAAAAaQBPAAAAAAAPAAAAAAAAAAAAAAByAFcGAAAAAA8AAAAAAAAAAAAAAHIA
-dAYAAAAABAAAAAAAAAAAAAAAaQAHBAAAAAAAAAAAAQAAAD4FAAAAAAA8TW9kdWxlPgBnZXRfRkcz
-QQBnZXRfRkdBAGdldF9GVEEASW5wdXRJRABnZXRfRkczTQBnZXRfRkdNAGdldF9GVE0AZ2V0X0ZH
-M1BDVABtc2NvcmxpYgBkZWZhdWx0SW5zdGFuY2UAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZy
-b21IYW5kbGUAR2V0U2luZ2xlAElucHV0TmFtZQBNaWNyb3NvZnQuU3FsU2VydmVyLkR0cy5QaXBl
-bGluZQBUeXBlAGdldF9DdWx0dXJlAHNldF9DdWx0dXJlAHJlc291cmNlQ3VsdHVyZQBBcHBsaWNh
-dGlvblNldHRpbmdzQmFzZQBFZGl0b3JCcm93c2FibGVTdGF0ZQBDb21waWxlckdlbmVyYXRlZEF0
-dHJpYnV0ZQBEZWJ1Z2dlck5vblVzZXJDb2RlQXR0cmlidXRlAERlYnVnZ2FibGVBdHRyaWJ1dGUA
-RWRpdG9yQnJvd3NhYmxlQXR0cmlidXRlAEFzc2VtYmx5VGl0bGVBdHRyaWJ1dGUAQXNzZW1ibHlU
-cmFkZW1hcmtBdHRyaWJ1dGUAVGFyZ2V0RnJhbWV3b3JrQXR0cmlidXRlAEFzc2VtYmx5Q29uZmln
-dXJhdGlvbkF0dHJpYnV0ZQBBc3NlbWJseURlc2NyaXB0aW9uQXR0cmlidXRlAENvbXBpbGF0aW9u
-UmVsYXhhdGlvbnNBdHRyaWJ1dGUAQXNzZW1ibHlQcm9kdWN0QXR0cmlidXRlAEFzc2VtYmx5Q29w
-eXJpZ2h0QXR0cmlidXRlAFNTSVNTY3JpcHRDb21wb25lbnRFbnRyeVBvaW50QXR0cmlidXRlAEFz
-c2VtYmx5Q29tcGFueUF0dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJpbGl0eUF0dHJpYnV0ZQBQcmVF
-eGVjdXRlAFBvc3RFeGVjdXRlAHZhbHVlAFNDXzM5Y2Q1NTZjYmQyNTQ0ODNiNzUxNDY3OTAzMzNj
-ZWJmAFN5c3RlbS5SdW50aW1lLlZlcnNpb25pbmcAU3RyaW5nAHNldF9PdmVyYWxsU2hvb3RpbmcA
-U3lzdGVtLkNvbXBvbmVudE1vZGVsAFNDXzM5Y2Q1NTZjYmQyNTQ0ODNiNzUxNDY3OTAzMzNjZWJm
-LmRsbABnZXRfRkczQV9Jc051bGwAZ2V0X0ZHQV9Jc051bGwAZ2V0X0ZUQV9Jc051bGwAZ2V0X0ZH
-M01fSXNOdWxsAGdldF9GR01fSXNOdWxsAGdldF9GVE1fSXNOdWxsAGdldF9GRzNQQ1RfSXNOdWxs
-AHNldF9PdmVyYWxsU2hvb3RpbmdfSXNOdWxsAFNldE51bGwAc2V0X0l0ZW0AU3lzdGVtAHJlc291
-cmNlTWFuAFNjcmlwdE1haW4AU3lzdGVtLkNvbmZpZ3VyYXRpb24AU3lzdGVtLkdsb2JhbGl6YXRp
-b24AU3lzdGVtLlJlZmxlY3Rpb24ASW52YWxpZE9wZXJhdGlvbkV4Y2VwdGlvbgBTdHJpbmdDb21w
-YXJpc29uAEN1bHR1cmVJbmZvAE91dHB1dE5hbWVNYXAAT3V0cHV0TWFwAElucHV0MEJ1ZmZlcgBQ
-aXBlbGluZUJ1ZmZlcgBTY3JpcHRCdWZmZXIAZ2V0X1Jlc291cmNlTWFuYWdlcgAuY3RvcgAuY2N0
-b3IAU3lzdGVtLkRpYWdub3N0aWNzAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lz
-dGVtLlJlc291cmNlcwBTQ18zOWNkNTU2Y2JkMjU0NDgzYjc1MTQ2NzkwMzMzY2ViZi5Qcm9wZXJ0
-aWVzLlJlc291cmNlcy5yZXNvdXJjZXMARGVidWdnaW5nTW9kZXMAU0NfMzljZDU1NmNiZDI1NDQ4
-M2I3NTE0Njc5MDMzM2NlYmYuUHJvcGVydGllcwBWYXJpYWJsZXMAQnVmZmVyQ29sdW1uSW5kZXhl
-cwBHZXRDb2x1bW5JbmRleGVzAFNldHRpbmdzAEVxdWFscwBDb25uZWN0aW9ucwBPYmplY3QARW5k
-T2ZSb3dzZXQAZ2V0X0RlZmF1bHQAVXNlckNvbXBvbmVudABQYXJlbnRDb21wb25lbnQAU2NyaXB0
-Q29tcG9uZW50AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuVHhTY3JpcHQATWljcm9zb2Z0LlNxbFNlcnZl
-ci5QaXBlbGluZUhvc3QASW5wdXQwX1Byb2Nlc3NJbnB1dABJbnB1dDBfUHJvY2Vzc0lucHV0Um93
-AE5leHRSb3cAZ2V0X0Fzc2VtYmx5AAAAAACAm0kAcwBOAHUAbABsACAAcAByAG8AcABlAHIAdAB5
-ACAAYwBhAG4AbgBvAHQAIABiAGUAIABzAGUAdAAgAHQAbwAgAEYAYQBsAHMAZQAuACAAQQBzAHMA
-aQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABvACAAdABoAGUAIABjAG8AbAB1AG0AbgAgAGkAbgBz
-AHQAZQBhAGQALgAAD0kAbgBwAHUAdAAgADAAAHFTAEMAXwAzADkAYwBkADUANQA2AGMAYgBkADIA
-NQA0ADQAOAAzAGIANwA1ADEANAA2ADcAOQAwADMAMwAzAGMAZQBiAGYALgBQAHIAbwBwAGUAcgB0
-AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAI9vV/dNbDFAo5+nHrXdmL0ABCABAQgDIAABBSAB
-ARERBCABAQ4FIAEBEVkFBwMMDAwJIAMBEj0dCBJBAwYSPQMGHQgEIAEMCAQgAQIIBSACAQgcAyAA
-AgYgAgIOEXUFIAEdCAgGAAESeRF9BSAAEoCBByACAQ4SgIEIt3pcVhk04IkIiYRdzYCAzJEDBhIU
-AwYSGAMGEkUDBhJRAwYSVQMGEiAFIAEBEgwDIAAMBCABAQwEIAEBAgkgBAEIDhI9EkEFIAEBEkUE
-AAASUQQAABJVBQABARJVBAAAEiADAAABAygADAMoAAIECAASUQQIABJVBAgAEiAIAQAIAAAAAAAe
-AQABAFQCFldyYXBOb25FeGNlcHRpb25UaHJvd3MBCAEAAgAAAAAAKAEAI1NDXzM5Y2Q1NTZjYmQy
-NTQ0ODNiNzUxNDY3OTAzMzNjZWJmAAAFAQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMjEAAEkBABou
-TkVURnJhbWV3b3JrLFZlcnNpb249djQuNwEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBG
-cmFtZXdvcmsgNC43BAEAAAAAAAC0AAAAzsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVz
-b3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwg
-UHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVS
-ZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBBRFC0AAAAVDQAAAAAAAAAAAAAbjQAAAAgAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAGA0AAAAAAAAAAAAAAAAX0NvckRsbE1haW4AbXNjb3JlZS5kbGwAAAAA
-AP8lACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAHgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAACY
+NAAAAAAAAEgAAAACAAUA4CIAAMwQAAABAAAAAAAAAKwzAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAYAgQAAAAEAABEiAADAPwoi
+AACAPwsDbwYAAAYDbwgAAAZZA28KAAAGWQwDbw4AAAYDbwwAAAZZA28QAAAGWQ0JIgAAAAAuBwgJ
+WxMEKwciAAAAABMEAwNvCAAABgZaIgAAIEAiAACAPwNvEgAABllaWQgHWiIAAMA/IgAAgD8RBFla
+WVhvFAAABioeAigYAAAGKioCAwQFKBIAAAoqUgJ7EwAACgJ7FAAAChaUbxUAAAoqIgIWKBYAAAoq
+UgJ7EwAACgJ7FAAACheUbxUAAAoqIgIXKBYAAAoqUgJ7EwAACgJ7FAAAChiUbxUAAAoqIgIYKBYA
+AAoqUgJ7EwAACgJ7FAAAChmUbxUAAAoqIgIZKBYAAAoqUgJ7EwAACgJ7FAAAChqUbxUAAAoqIgIa
+KBYAAAoqUgJ7EwAACgJ7FAAAChuUbxUAAAoqIgIbKBYAAAoqUgJ7EwAACgJ7FAAAChyUbxUAAAoq
+IgIcKBYAAAoqOgIdA4waAAABKBcAAAoqWgMsCAIdKBgAAAoqcgEAAHBzGQAACnoeAigaAAAKKh4C
+KBsAAAoqfgIoHAAACgICcxwAAAZ9AQAABAICcx0AAAZ9AgAABCqSBHKeAABwGm8dAAAKLBUCBQID
+KB4AAAoOBHMFAAAGbxoAAAYqSisHAgNvGwAABgNvFgAABi3xKgYqOgIoHwAACgIDfQMAAAQqOgIo
+HwAACgIDfQQAAAQqHgIoHwAACiqufgUAAAQtHnKuAABw0AcAAAIoIAAACm8hAAAKcyIAAAqABQAA
+BH4FAAAEKhp+BgAABCoeAoAGAAAEKhp+BwAABCoeAigjAAAKKi5zIwAABoAHAAAEKgAAQlNKQgEA
+AQAAAAAADAAAAHY0LjAuMzAzMTkAAAAABQBsAAAAqAYAACN+AAAUBwAA2AYAACNTdHJpbmdzAAAA
+AOwNAAAgAQAAI1VTAAwPAAAQAAAAI0dVSUQAAAAcDwAAsAEAACNCbG9iAAAAAAAAAAIAAAFXFaIB
+CQEAAAD6ATMAFgAAAQAAACAAAAAIAAAABwAAACQAAAAPAAAAIwAAABAAAAABAAAAAwAAABMAAAAU
+AAAAAQAAAAQAAAABAAAAAABFAwEAAAAAAAYABwINBQYAmwINBQYAUwH6BA8AgQUAAAYAgAFPBAYA
+6gFPBAYAywFPBAYAggJPBAYAJwJPBAYAQAJPBAYAlwFPBAYAsgH6AgoAWwKgAAoAzASgAA4AvQSg
+AAoAmASgAAoARwagAAYACgYHBAYANgH6BAYA3QQtBQYAjAQ6BBIABgEvAxIAZwEvAxIA7gAlBAYA
+GwENBQYAjwAHBAYAYQQHBAYAFAMHBAYAewQHBAYAwQAHBAYAaAAHBAYAzAZPBAAAAAABAAAAAAAB
+AAEAAQAQABoEAAAQAAEAAQABABAAsAQAADkAAQAFAAEAEAApBgAARQABABgAAQAQAP4FAABJAAMA
+HAABABAAvwUAAEkABAAdAAAAEAA0BZAFSQAFAB4AAAEQAO4FkAVhAAcAIgAGAP4FfQAGAL8FgQAB
+ADcGhQABADcGhQARAA4EiQARAN4AjQARAFgAkQBQIAAAAADGALkCBgABAFggAAAAAMYAxAIGAAEA
+YCAAAAAAxgCpBpUAAQDtIAAAAACGGO0EBgACAPUgAAAAAIYY7QQjAAIAACEAAAAAhgg0AJsABQAV
+IQAAAACGCKsDRQAFAB4hAAAAAIYIKwCbAAUAMyEAAAAAhgibA0UABQA8IQAAAACGCDwAmwAFAFEh
+AAAAAIYIugNFAAUAWiEAAAAAhggKAJsABQBvIQAAAACGCG0DRQAFAHghAAAAAIYIEwCbAAUAjSEA
+AAAAhgh9A0UABQCWIQAAAACGCBsAmwAFAKshAAAAAIYIjANFAAUAtCEAAAAAhghEAJsABQDJIQAA
+AACGCMkDRQAFANIhAAAAAIYIGwOfAAUA4SEAAAAAhgjbA6QABgD4IQAAAACGAMAGRQAHAAAiAAAA
+AIYAEQZFAAcACCIAAAAAhhjtBAYABwAoIgAAAADGAJwGqQAHAE0iAAAAAMYBlQaVAAsAYCIAAAAA
+xgGpBpUADABiIgAAAACGGO0EswANAHEiAAAAAIYY7QSzAA4AgCIAAAAAgxjtBAYADwCIIgAAAACT
+CNkEuQAPALQiAAAAAJMIxgC+AA8AuyIAAAAAkwjSAMMADwDDIgAAAACWCB0GyQAQAMoiAAAAAIYY
+7QQGABAA0iIAAAAAkRjzBM4AEAAAAAEAxAYAAAEA0gQAAAIAyQUAAAMApgQAAAEA0AIAAAEA0AIA
+AAEAIwAAAAIAlgAAAAMA0gQAAAQApgQAAAEA0gQAAAEAxAYAAAEATQYAAAEATQYAAAEA0AIJAO0E
+AQARAO0EBgAZAO0ECgApAO0EEAAxAO0EEAA5AO0EEABBAO0EEABJAO0EEABRAO0EEABZAO0EEABh
+AO0EEABpAO0EBgCZAO0EBgC5AO0EFQDJAO0EBgCJALkCBgCJAMQCBgBxAO0EIwBxANIELQBxAMkF
+MQB5AIwANQBxAO8DOgBxAP4DPwBxAPYDAQDZAO0EEABxAMAGRQBxABEGRQCJAO0EBgDhAPcFSQCJ
+AN0FUACRAO0EBgDxAHoAVgDxAMgGXQChAO0EYwDBAO0EBgAuAAsA6QAuABMA8gAuABsAEQEuACMA
+GgEuACsAQwEuADMAQwEuADsAQwEuAEMAGgEuAEsASQEuAFMAQwEuAFsAYAFDAGMAqgHhAHsAqgHj
+AGsAqgEpAnMAEQFJAnMAEQEbAAMAAQAHABEACAATAAAAOADSAAAArwPWAAAALwDSAAAAnwPWAAAA
+QADSAAAAvgPWAAAADgDSAAAAcQPWAAAAFwDSAAAAgQPWAAAAHwDSAAAAkAPWAAAASADSAAAAzQPW
+AAAAHwPSAAAA3wPWAAAA3QTaAAAA5gDfAAAAIQbkAAIABgADAAIABwAFAAIACAAHAAIACQAJAAIA
+CgALAAIACwANAAIADAAPAAIADQARAAIADgATAAIADwAVAAIAEAAXAAIAEQAZAAIAEgAbAAIAEwAd
+AAEAFAAfAAEAFQAhAAIAHwAjAAIAIAAlAAEAIQAlAAIAIgAnAASAAAABAAAAAAAAAAAAAAAAANYC
+AAAEAAAAAAAAAAAAAABrAE8AAAAAAA8AAAAAAAAAAAAAAHQAVwYAAAAADwAAAAAAAAAAAAAAdAB0
+BgAAAAAEAAAAAAAAAAAAAABrAAcEAAAAAAAAAAABAAAAPgUAAAAAADxNb2R1bGU+AGdldF9GRzNB
+AGdldF9GR0EAZ2V0X0ZUQQBJbnB1dElEAGdldF9GRzNNAGdldF9GR00AZ2V0X0ZUTQBnZXRfRkcz
+UENUAG1zY29ybGliAGRlZmF1bHRJbnN0YW5jZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBlRnJv
+bUhhbmRsZQBHZXRTaW5nbGUASW5wdXROYW1lAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlBpcGVs
+aW5lAFR5cGUAZ2V0X0N1bHR1cmUAc2V0X0N1bHR1cmUAcmVzb3VyY2VDdWx0dXJlAEFwcGxpY2F0
+aW9uU2V0dGluZ3NCYXNlAEVkaXRvckJyb3dzYWJsZVN0YXRlAENvbXBpbGVyR2VuZXJhdGVkQXR0
+cmlidXRlAERlYnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUARGVidWdnYWJsZUF0dHJpYnV0ZQBF
+ZGl0b3JCcm93c2FibGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRsZUF0dHJpYnV0ZQBBc3NlbWJseVRy
+YWRlbWFya0F0dHJpYnV0ZQBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1dGUAQXNzZW1ibHlDb25maWd1
+cmF0aW9uQXR0cmlidXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQ29tcGlsYXRpb25S
+ZWxheGF0aW9uc0F0dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5
+cmlnaHRBdHRyaWJ1dGUAU1NJU1NjcmlwdENvbXBvbmVudEVudHJ5UG9pbnRBdHRyaWJ1dGUAQXNz
+ZW1ibHlDb21wYW55QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAFByZUV4
+ZWN1dGUAUG9zdEV4ZWN1dGUAdmFsdWUAU0NfMzljZDU1NmNiZDI1NDQ4M2I3NTE0Njc5MDMzM2Nl
+YmYAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBTdHJpbmcAc2V0X092ZXJhbGxTaG9vdGluZwBT
+eXN0ZW0uQ29tcG9uZW50TW9kZWwAU0NfMzljZDU1NmNiZDI1NDQ4M2I3NTE0Njc5MDMzM2NlYmYu
+ZGxsAGdldF9GRzNBX0lzTnVsbABnZXRfRkdBX0lzTnVsbABnZXRfRlRBX0lzTnVsbABnZXRfRkcz
+TV9Jc051bGwAZ2V0X0ZHTV9Jc051bGwAZ2V0X0ZUTV9Jc051bGwAZ2V0X0ZHM1BDVF9Jc051bGwA
+c2V0X092ZXJhbGxTaG9vdGluZ19Jc051bGwAU2V0TnVsbABzZXRfSXRlbQBTeXN0ZW0AcmVzb3Vy
+Y2VNYW4AU2NyaXB0TWFpbgBTeXN0ZW0uQ29uZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlv
+bgBTeXN0ZW0uUmVmbGVjdGlvbgBJbnZhbGlkT3BlcmF0aW9uRXhjZXB0aW9uAFN0cmluZ0NvbXBh
+cmlzb24AQ3VsdHVyZUluZm8AT3V0cHV0TmFtZU1hcABPdXRwdXRNYXAASW5wdXQwQnVmZmVyAFBp
+cGVsaW5lQnVmZmVyAFNjcmlwdEJ1ZmZlcgBnZXRfUmVzb3VyY2VNYW5hZ2VyAC5jdG9yAC5jY3Rv
+cgBTeXN0ZW0uRGlhZ25vc3RpY3MAU3lzdGVtLlJ1bnRpbWUuQ29tcGlsZXJTZXJ2aWNlcwBTeXN0
+ZW0uUmVzb3VyY2VzAFNDXzM5Y2Q1NTZjYmQyNTQ0ODNiNzUxNDY3OTAzMzNjZWJmLlByb3BlcnRp
+ZXMuUmVzb3VyY2VzLnJlc291cmNlcwBEZWJ1Z2dpbmdNb2RlcwBTQ18zOWNkNTU2Y2JkMjU0NDgz
+Yjc1MTQ2NzkwMzMzY2ViZi5Qcm9wZXJ0aWVzAFZhcmlhYmxlcwBCdWZmZXJDb2x1bW5JbmRleGVz
+AEdldENvbHVtbkluZGV4ZXMAU2V0dGluZ3MARXF1YWxzAENvbm5lY3Rpb25zAE9iamVjdABFbmRP
+ZlJvd3NldABnZXRfRGVmYXVsdABVc2VyQ29tcG9uZW50AFBhcmVudENvbXBvbmVudABTY3JpcHRD
+b21wb25lbnQATWljcm9zb2Z0LlNxbFNlcnZlci5UeFNjcmlwdABNaWNyb3NvZnQuU3FsU2VydmVy
+LlBpcGVsaW5lSG9zdABJbnB1dDBfUHJvY2Vzc0lucHV0AElucHV0MF9Qcm9jZXNzSW5wdXRSb3cA
+TmV4dFJvdwBnZXRfQXNzZW1ibHkAAAAAAICbSQBzAE4AdQBsAGwAIABwAHIAbwBwAGUAcgB0AHkA
+IABjAGEAbgBuAG8AdAAgAGIAZQAgAHMAZQB0ACAAdABvACAARgBhAGwAcwBlAC4AIABBAHMAcwBp
+AGcAbgAgAGEAIAB2AGEAbAB1AGUAIAB0AG8AIAB0AGgAZQAgAGMAbwBsAHUAbQBuACAAaQBuAHMA
+dABlAGEAZAAuAAAPSQBuAHAAdQB0ACAAMAAAcVMAQwBfADMAOQBjAGQANQA1ADYAYwBiAGQAMgA1
+ADQANAA4ADMAYgA3ADUAMQA0ADYANwA5ADAAMwAzADMAYwBlAGIAZgAuAFAAcgBvAHAAZQByAHQA
+aQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAodgROCg4WkOY9EhcrpxFyQAEIAEBCAMgAAEFIAEB
+EREEIAEBDgUgAQERWQcHBQwMDAwMCSADARI9HQgSQQMGEj0DBh0IBCABDAgEIAECCAUgAgEIHAMg
+AAIGIAICDhF1BSABHQgIBgABEnkRfQUgABKAgQcgAgEOEoCBCLd6XFYZNOCJCImEXc2AgMyRAwYS
+FAMGEhgDBhJFAwYSUQMGElUDBhIgBSABARIMAyAADAQgAQEMBCABAQIJIAQBCA4SPRJBBSABARJF
+BAAAElEEAAASVQUAAQESVQQAABIgAwAAAQMoAAwDKAACBAgAElEECAASVQQIABIgCAEACAAAAAAA
+HgEAAQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhyb3dzAQgBAAIAAAAAACgBACNTQ18zOWNkNTU2Y2Jk
+MjU0NDgzYjc1MTQ2NzkwMzMzY2ViZgAABQEAAAAAFgEAEUNvcHlyaWdodCBAICAyMDIxAABJAQAa
+Lk5FVEZyYW1ld29yayxWZXJzaW9uPXY0LjcBAFQOFEZyYW1ld29ya0Rpc3BsYXlOYW1lEi5ORVQg
+RnJhbWV3b3JrIDQuNwQBAAAAALQAAADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNv
+dXJjZVJlYWRlciwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQ
+dWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJl
+c291cmNlU2V0AgAAAAAAAAAAAAAAUEFEUEFEULQAAACMNAAAAAAAAAAAAACmNAAAACAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAmDQAAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA
+/yUAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1134,7 +1218,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAwAAACANAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAwAAAC4NAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1244,6 +1328,117 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   <externalMetadataColumns />
                 </output>
               </outputs>
+            </component>
+            <component
+              refId="Package\Fact Data Flow Task\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fact Data Flow Task\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[PerformanceID]"
+                      cachedDataType="i4"
+                      cachedName="PerformanceID"
+                      externalMetadataColumnId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PerformanceID]"
+                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PerformanceID]" />
+                    <inputColumn
+                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[GAME_ID]"
+                      cachedDataType="i4"
+                      cachedName="GAME_ID"
+                      externalMetadataColumnId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GAME_ID]"
+                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[GAME_ID]" />
+                    <inputColumn
+                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[TEAM_ID]"
+                      cachedDataType="i4"
+                      cachedName="TEAM_ID"
+                      externalMetadataColumnId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TEAM_ID]"
+                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[TEAM_ID]" />
+                    <inputColumn
+                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[PLAYER_ID]"
+                      cachedDataType="i4"
+                      cachedName="PLAYER_ID"
+                      externalMetadataColumnId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PLAYER_ID]"
+                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PLAYER_ID]" />
+                    <inputColumn
+                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[GameDate]"
+                      cachedDataType="dbDate"
+                      cachedName="GameDate"
+                      externalMetadataColumnId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GameDate]"
+                      lineageId="Package\Fact Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Match Output].Columns[GameDate]" />
+                    <inputColumn
+                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[OverallShooting]"
+                      cachedDataType="r4"
+                      cachedName="OverallShooting"
+                      externalMetadataColumnId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[OverallShooting]"
+                      lineageId="Package\Fact Data Flow Task\Adds Shooting Overall column.Outputs[Output 0].Columns[OverallShooting]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PerformanceID]"
+                      dataType="i4"
+                      name="PerformanceID" />
+                    <externalMetadataColumn
+                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GAME_ID]"
+                      dataType="i4"
+                      name="GAME_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[TEAM_ID]"
+                      dataType="i4"
+                      name="TEAM_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PLAYER_ID]"
+                      dataType="i4"
+                      name="PLAYER_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GameDate]"
+                      dataType="dbDate"
+                      name="GameDate" />
+                    <externalMetadataColumn
+                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[OverallShooting]"
+                      dataType="r4"
+                      name="OverallShooting" />
+                    <externalMetadataColumn
+                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      dataType="i4"
+                      name="ErrorColumn" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
             </component>
             <component
               refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source"
@@ -1404,6 +1599,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       externalMetadataColumnId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FTA]"
                       lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[FTA]"
                       name="FTA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PLAYER_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PLAYER_NAME]"
+                      length="24"
+                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PLAYER_NAME]"
+                      name="PLAYER_NAME"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -1608,6 +1814,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       dataType="r4"
                       lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FTA]"
                       name="FTA" />
+                    <outputColumn
+                      refId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PLAYER_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="24"
+                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PLAYER_NAME]"
+                      name="PLAYER_NAME" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -1629,7 +1842,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset"></property>
+                  name="OpenRowset">[FactPerformance]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1663,7 +1876,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -1672,6 +1885,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\Fact Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[STEPH-PAGD\STOREAPPDB.BasketballDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[STEPH-PAGD\STOREAPPDB.BasketballDB]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1679,11 +1894,78 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                 <input
                   refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="RedirectRow"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PerformanceID]"
+                      cachedDataType="i4"
+                      cachedName="PerformanceID"
+                      externalMetadataColumnId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PerformanceID]"
+                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PerformanceID]" />
+                    <inputColumn
+                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GameDate]"
+                      cachedDataType="dbDate"
+                      cachedName="GameDate"
+                      externalMetadataColumnId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameDate]"
+                      lineageId="Package\Fact Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Match Output].Columns[GameDate]" />
+                    <inputColumn
+                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OverallShooting]"
+                      cachedDataType="r4"
+                      cachedName="OverallShooting"
+                      externalMetadataColumnId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OverallShooting]"
+                      lineageId="Package\Fact Data Flow Task\Adds Shooting Overall column.Outputs[Output 0].Columns[OverallShooting]" />
+                    <inputColumn
+                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GAME_ID]"
+                      cachedDataType="i4"
+                      cachedName="GAME_ID"
+                      externalMetadataColumnId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameID]"
+                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[GAME_ID]" />
+                    <inputColumn
+                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TEAM_ID]"
+                      cachedDataType="i4"
+                      cachedName="TEAM_ID"
+                      externalMetadataColumnId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TeamID]"
+                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[TEAM_ID]" />
+                    <inputColumn
+                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PLAYER_ID]"
+                      cachedDataType="i4"
+                      cachedName="PLAYER_ID"
+                      externalMetadataColumnId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PlayerID]"
+                      lineageId="Package\Fact Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PLAYER_ID]" />
+                  </inputColumns>
                   <externalMetadataColumns
-                    isUsed="True" />
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FactPerformanceID]"
+                      dataType="i4"
+                      name="FactPerformanceID" />
+                    <externalMetadataColumn
+                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PerformanceID]"
+                      dataType="i4"
+                      name="PerformanceID" />
+                    <externalMetadataColumn
+                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameID]"
+                      dataType="i4"
+                      name="GameID" />
+                    <externalMetadataColumn
+                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TeamID]"
+                      dataType="i4"
+                      name="TeamID" />
+                    <externalMetadataColumn
+                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PlayerID]"
+                      dataType="i4"
+                      name="PlayerID" />
+                    <externalMetadataColumn
+                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameDate]"
+                      dataType="dbDate"
+                      name="GameDate" />
+                    <externalMetadataColumn
+                      refId="Package\Fact Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OverallShooting]"
+                      dataType="r4"
+                      name="OverallShooting" />
+                  </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
@@ -1718,6 +2000,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               endId="Package\Fact Data Flow Task\Adds Shooting Overall column.Inputs[Input 0]"
               name="Lookup Match Output"
               startId="Package\Fact Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Fact Data Flow Task.Paths[OLE DB Destination Error Output]"
+              endId="Package\Fact Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="OLE DB Destination Error Output"
+              startId="Package\Fact Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]" />
             <path
               refId="Package\Fact Data Flow Task.Paths[OLE DB Source Output]"
               endId="Package\Fact Data Flow Task\Adds GameDate from dimGames.Inputs[Lookup Input]"
@@ -1756,7 +2043,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
     design-time-name="Package\Fact Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="220,42"
+          Id="Package\Fact Data Flow Task\Adds Shooting Overall column"
+          TopLeft="78,233" />
         <NodeLayout
           Size="245,42"
           Id="Package\Fact Data Flow Task\Game Details Table OLE DB Source"
@@ -1765,6 +2056,32 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           Size="233,42"
           Id="Package\Fact Data Flow Task\Adds GameDate from dimGames"
           TopLeft="69,132" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Fact Data Flow Task\OLE DB Destination"
+          TopLeft="102,333" />
+        <EdgeLayout
+          Id="Package\Fact Data Flow Task.Paths[Output 0]"
+          TopLeft="187.75,275">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58"
+              Start="0,0"
+              End="0,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Fact Data Flow Task.Paths[OLE DB Source Output]"
           TopLeft="184.5,75">
@@ -1787,10 +2104,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="220,42"
-          Id="Package\Fact Data Flow Task\Adds Shooting Overall column"
-          TopLeft="78,233" />
         <EdgeLayout
           Id="Package\Fact Data Flow Task.Paths[Lookup Match Output]"
           TopLeft="186.75,174">
@@ -1816,41 +2129,43 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="171,42"
-          Id="Package\Fact Data Flow Task\OLE DB Destination"
-          TopLeft="126,333" />
+          Size="172,42"
+          Id="Package\Fact Data Flow Task\Flat File Destination"
+          TopLeft="604,474" />
         <EdgeLayout
-          Id="Package\Fact Data Flow Task.Paths[Output 0]"
-          TopLeft="188,275">
+          Id="Package\Fact Data Flow Task.Paths[OLE DB Destination Error Output]"
+          TopLeft="187.5,375">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="23.5,58"
+              EndConnector="502.5,99"
               Start="0,0"
-              End="23.5,50.5">
+              End="502.5,91.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25" />
+                    End="0,45.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,25"
-                    Point2="0,29"
-                    Point3="4,29" />
+                    Point1="0,45.5"
+                    Point2="0,49.5"
+                    Point3="4,49.5" />
                   <mssgle:LineSegment
-                    End="19.5,29" />
+                    End="498.5,49.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="19.5,29"
-                    Point2="23.5,29"
-                    Point3="23.5,33" />
+                    Point1="498.5,49.5"
+                    Point2="502.5,49.5"
+                    Point3="502.5,53.5" />
                   <mssgle:LineSegment
-                    End="23.5,50.5" />
+                    End="502.5,91.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="178.04109375,54.5,146.4178125,11.43359375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -1875,7 +2190,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1885,10 +2200,23 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fact Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
