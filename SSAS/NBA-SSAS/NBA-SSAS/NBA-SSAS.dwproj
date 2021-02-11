@@ -8,12 +8,12 @@
   </Database>
   <Cubes>
     <ProjectItem>
-      <Name>BasketballDB_Cube.cube</Name>
-      <FullPath>BasketballDB_Cube.cube</FullPath>
+      <Name>BasketbalDB_Cube.cube</Name>
+      <FullPath>BasketbalDB_Cube.cube</FullPath>
       <Dependencies>
         <ProjectItem>
-          <Name>BasketballDB_Cube.partitions</Name>
-          <FullPath>BasketballDB_Cube.partitions</FullPath>
+          <Name>BasketbalDB_Cube.partitions</Name>
+          <FullPath>BasketbalDB_Cube.partitions</FullPath>
         </ProjectItem>
       </Dependencies>
     </ProjectItem>
@@ -27,6 +27,18 @@
       <Name>Dim Performance.dim</Name>
       <FullPath>Dim Performance.dim</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Games.dim</Name>
+      <FullPath>Dim Games.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Teams.dim</Name>
+      <FullPath>Dim Teams.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Player.dim</Name>
+      <FullPath>Dim Player.dim</FullPath>
+    </ProjectItem>
   </Dimensions>
   <DataSources>
     <ProjectItem>
@@ -36,10 +48,16 @@
   </DataSources>
   <DataSourceViews>
     <ProjectItem>
-      <Name>BasketballDB_View.dsv</Name>
-      <FullPath>BasketballDB_View.dsv</FullPath>
+      <Name>BasketbalDB_View.dsv</Name>
+      <FullPath>BasketbalDB_View.dsv</FullPath>
     </ProjectItem>
   </DataSourceViews>
+  <MiningModels>
+    <ProjectItem>
+      <Name>Dim Games.dmm</Name>
+      <FullPath>Dim Games.dmm</FullPath>
+    </ProjectItem>
+  </MiningModels>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
