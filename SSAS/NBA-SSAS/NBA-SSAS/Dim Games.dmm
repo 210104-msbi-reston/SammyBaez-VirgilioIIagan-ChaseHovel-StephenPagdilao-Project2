@@ -16,7 +16,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-5536" scrolltop="-2725" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="14473" y="10451" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-5536" scrolltop="-2381" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="14473" y="10451" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -55,7 +55,7 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>-2725</Value>
+      <Value>-2381</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -76,6 +76,38 @@
     <DataSourceViewID>BasketbalDB_View</DataSourceViewID>
   </Source>
   <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="a5812aa6-ebd2-458e-b215-6910b0d95754">
+      <ID>BLK Home</ID>
+      <Name>BLK Home</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f668a464-7df1-4d18-999e-b5eec84bcc87">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4e81ebc9-278d-4043-a743-91d24b6e8680">
+            <TableID>dbo_dimGames</TableID>
+            <ColumnID>BLK_Home</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="2b842d97-ac2a-4ac9-ac16-fc257a6dfb8e">
+      <ID>STL Home</ID>
+      <Name>STL Home</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8ec69afd-b49e-45fb-9d20-5dfb2b22fdaa">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3f3d2811-d5e4-46c8-a11f-6df9934db986">
+            <TableID>dbo_dimGames</TableID>
+            <ColumnID>STL_Home</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
     <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="ca02623c-adfc-4be9-95e9-c52542475176">
       <ID>AST Away</ID>
       <Name>AST Away</Name>
@@ -88,6 +120,38 @@
           <Source xsi:type="ColumnBinding" dwd:design-time-name="7c02ca66-5cbe-4e3e-ba79-e442b0e552a8">
             <TableID>dbo_dimGames</TableID>
             <ColumnID>AST_Away</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="3dd9083d-cb2f-43e2-a14c-9e534dc6777a">
+      <ID>STL Away</ID>
+      <Name>STL Away</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="96f9aef1-3a3b-409b-8c93-e7b2465dcb19">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e8c39049-e656-48ce-80ce-c92754e4da4d">
+            <TableID>dbo_dimGames</TableID>
+            <ColumnID>STL_Away</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="af756403-4bd4-4c90-a2e5-1d53d5da6289">
+      <ID>BLK Away</ID>
+      <Name>BLK Away</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3206a056-6465-4816-935f-d37c7bd45e14">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="09dc3362-7b10-44e3-abc3-2da9e4a65d05">
+            <TableID>dbo_dimGames</TableID>
+            <ColumnID>BLK_Away</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
@@ -331,6 +395,26 @@
           <ID>REB Home</ID>
           <Name>REB Home</Name>
           <SourceColumnID>REB Home</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="114ec2e3-c5fe-49da-bf2f-0b454b17ba37">
+          <ID>BLK Away</ID>
+          <Name>BLK Away</Name>
+          <SourceColumnID>BLK Away</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="1c5aa25d-fe2f-48e0-9c69-f2cfe1e95de1">
+          <ID>BLK Home</ID>
+          <Name>BLK Home</Name>
+          <SourceColumnID>BLK Home</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="529bc8f1-4b42-4c87-9946-f43ed2b7d3c1">
+          <ID>STL Away</ID>
+          <Name>STL Away</Name>
+          <SourceColumnID>STL Away</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="7b676754-570b-4d62-b840-343b54c39dc6">
+          <ID>STL Home</ID>
+          <Name>STL Home</Name>
+          <SourceColumnID>STL Home</SourceColumnID>
         </Column>
       </Columns>
     </MiningModel>

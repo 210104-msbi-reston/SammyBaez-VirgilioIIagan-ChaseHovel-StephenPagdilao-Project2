@@ -8,7 +8,7 @@
     <TransactionalDeployment>false</TransactionalDeployment>
     <PartitionDeployment>DeployPartitions</PartitionDeployment>
     <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
-    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <ProcessingOption>Default</ProcessingOption>
     <OutputScript></OutputScript>
     <ImpactAnalysisFile></ImpactAnalysisFile>
     <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
@@ -33,14 +33,14 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>oj3Mc4WyPCzAymWFnkcI0L9gmBo=2/11/2021 1:09:04 PM2/11/2021 12:51:59 PM</TimeStamp>
+        <TimeStamp>EqfIw59cbgvu+uJgc1SxBdkKpW8=2/11/2021 3:48:38 PM2/11/2021 12:51:59 PM</TimeStamp>
         <ID>
           <String>Dim Date</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>TpzUuEYT9t+BHe5WMmRIh4AlkIA=2/11/2021 1:10:32 PM2/11/2021 1:04:56 PM</TimeStamp>
+        <TimeStamp>gKlrPF7grvpNcb9o9vo8Sc6TUVo=2/11/2021 3:58:45 PM2/11/2021 1:04:56 PM</TimeStamp>
         <ID>
           <String>Dim Performance</String>
         </ID>
@@ -54,28 +54,28 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>C9kyK29XAc38APP4GTEzDtui+nI=2/11/2021 1:13:14 PM2/11/2021 1:13:14 PM</TimeStamp>
+        <TimeStamp>B7lYxx1L2hK0Oc8hnwRxLOxlse4=2/11/2021 11:57:40 PM2/11/2021 1:13:14 PM</TimeStamp>
         <ID>
           <String>Dim Teams</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>qRvIPaf1YNhgu8AsYq+W3QC/m54=2/11/2021 2:47:57 PM2/11/2021 1:13:14 PM</TimeStamp>
+        <TimeStamp>uUzz4uX73BJ1vYBBe5Nqz4FN5oo=2/11/2021 6:11:25 PM2/11/2021 1:13:14 PM</TimeStamp>
         <ID>
           <String>Dim Player</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>pPkvG8dVimZBeTURLfaKpEAxsno=2/11/2021 1:13:14 PM2/11/2021 1:13:14 PMb3rT8AqnyCIK1o2iQl9Jmw5melc=2/11/2021 1:13:14 PM2/11/2021 1:13:14 PM</TimeStamp>
+        <TimeStamp>brcs0lxhu3Qh76Lv/uzdkvbQViE=2/11/2021 11:57:40 PM2/11/2021 1:13:14 PM+1svLCzvXyNpnaJfnf54yUeeTss=2/11/2021 9:03:09 PM2/11/2021 1:13:14 PM</TimeStamp>
         <ID>
           <String>BasketbalDB_Cube</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.MiningStructure</Type>
-        <TimeStamp>L3+GgKBY4buU4z42z8EyICUvaYE=2/11/2021 2:30:47 PM2/11/2021 1:20:09 PM</TimeStamp>
+        <TimeStamp>4qgTmOb0ySio53joUnfUo5uYpc4=2/11/2021 2:53:06 PM2/11/2021 1:20:09 PM</TimeStamp>
         <ID>
           <String>Dim Games</String>
         </ID>
@@ -92,5 +92,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2021-02-11T20:47:57.636667Z</LastDeployed>
+  <LastDeployed>2021-02-12T05:58:10.896667Z</LastDeployed>
 </DeploymentSnapshot>
