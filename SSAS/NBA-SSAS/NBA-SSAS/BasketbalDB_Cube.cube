@@ -271,15 +271,15 @@
         <Attribute dwd:design-time-name="2b3898b6-ddcf-4ce1-80aa-157569905af4">
           <AttributeID>Abbreviation</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="88fba35b-9f3c-40a0-b3a2-be5d4fe192bb">
-          <AttributeID>City</AttributeID>
-        </Attribute>
-        <Attribute dwd:design-time-name="4ff5044b-d7e7-4fef-bb83-0acd304776da">
+        <Attribute dwd:design-time-name="b1068bb4-50a3-4667-bee7-70951f0ca6b5">
           <AttributeID>State</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cf6f4ffe-ef5b-4353-9763-e1d22bed1899">
+          <AttributeID>City</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
-        <Hierarchy dwd:design-time-name="2ce400d9-1500-4f87-844d-e8ba0abbba41">
+        <Hierarchy dwd:design-time-name="f1c2e9cf-1cc8-4c0e-9d7a-e1a79dc7caa7">
           <HierarchyID>Hierarchy</HierarchyID>
         </Hierarchy>
       </Hierarchies>
