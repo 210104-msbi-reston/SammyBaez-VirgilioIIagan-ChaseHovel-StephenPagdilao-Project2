@@ -14,15 +14,14 @@ Our project aims to find meaningful statistics on NBA regular season historical 
 5. Search and data scrap specific NBA player's statistics in a specific year or a range of years
 6. Search and data scrap specific NBA player's statistics in a specific game
 7. Search and data scrap specific game statistics
-8. Predict the chance of winning when comparing two NBA teams
-9. Predict the overall seasonal outcomes
-10. Predict the potential MVP in the whole league
 
 ## Tech Stack
 * Microsoft SQL Server 2016
 * SSIS
 * SSAS
 * SSRS
+* Hamachi Logmein
+* Excel BI
 
 ## Team
 * Stephen Pagdilao - Team Lead
