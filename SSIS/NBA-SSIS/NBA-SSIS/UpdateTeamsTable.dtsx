@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="32"
-  DTS:VersionGUID="{032DB82D-26CA-479E-91A8-93AE686CF7FE}">
+  DTS:VersionBuild="33"
+  DTS:VersionGUID="{9E1905C2-3A4B-45A3-A6D3-145F4383080B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -309,11 +309,11 @@
           version="1">
           <components>
             <component
-              refId="Package\Teams Data Flow Task\Adds Full Name Team"
+              refId="Package\Teams Data Flow Task\Adds Full Name Team and State"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;12"
               description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
-              name="Adds Full Name Team"
+              name="Adds Full Name Team and State"
               version="12">
               <properties>
                 <property
@@ -777,7 +777,7 @@ public class ScriptMain : UserComponent
             Row.FullTeamName = "Phoenix Suns";
             Row.State = "Arizona";
         }
-        else if (Row.NICKNAME.Equals("Blazers"))
+        else if (Row.NICKNAME.Equals("Trail Blazers"))
         {
             Row.FullTeamName = "Portland Trail Blazers";
             Row.State = "Oregon";
@@ -1028,7 +1028,7 @@ public class Variables
     <msb:CodeName>SC_f284c1dbe7d14de7a71c8b36d651b305</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_f284c1dbe7d14de7a71c8b36d651b305</msb:DisplayName>
-    <msb:ProjectId>{51DB871B-8051-42D7-B057-3B37F119510D}</msb:ProjectId>
+    <msb:ProjectId>{E2D9031E-6611-4F39-B3D0-64EEEAE6666B}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_f284c1dbe7d14de7a71c8b36d651b305.csproj" />
@@ -1175,14 +1175,14 @@ namespace SC_f284c1dbe7d14de7a71c8b36d651b305.Properties {
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAMccJmAAAAAAAAAAAOAAIiALATAAACAAAAAIAAAAAAAAJj4A
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAJAfJmAAAAAAAAAAAOAAIiALATAAACAAAAAIAAAAAAAAMj4A
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
-ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAANQ9AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAOA9AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAALB4AAAAgAAAAIAAAAAIA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAOB4AAAAgAAAAIAAAAAIA
 AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAiAAAAAAAAAAAAAAAAAABAAABA
-LnJlbG9jAAAMAAAAAGAAAAACAAAAKAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAAI
-PgAAAAAAAEgAAAACAAUAeCYAAKQWAAABAAAAAAAAABw9AAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAKAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAAU
+PgAAAAAAAEgAAAACAAUAeCYAALAWAAABAAAAAAAAACg9AAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAIAsQQAAAAAAAADbwYAAAZy
 AQAAcG8SAAAKLBcDcg0AAHBvCAAABgNyKQAAcG8KAAAGKgNvBgAABnI5AABwbxIAAAosFwNySQAA
 cG8IAAAGA3JnAABwbwoAAAYqA28GAAAGcoMAAHBvEgAACiwXA3KTAABwbwgAAAYDcrcAAHBvCgAA
@@ -1200,19 +1200,19 @@ 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
-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
+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
-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
+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
-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
+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
-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
+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
@@ -1293,31 +1293,31 @@ WQBvAHIAawAAD1QAaAB1AG4AZABlAHIAACtPAGsAbABhAGgAbwBtAGEAIABDAGkAdAB5ACAAVABo
 AHUAbgBkAGUAcgAAEU8AawBsAGEAaABvAG0AYQAAC00AYQBnAGkAYwAAG08AcgBsAGEAbgBkAG8A
 IABNAGEAZwBpAGMAAAs3ADYAZQByAHMAACVQAGgAaQBsAGEAZABlAGwAcABoAGkAYQAgADcANgBl
 AHIAcwAAGVAAZQBuAG4AcwB5AGwAdgBhAG4AaQBhAAAJUwB1AG4AcwAAGVAAaABvAGUAbgBpAHgA
-IABTAHUAbgBzAAAPQQByAGkAegBvAG4AYQAAD0IAbABhAHoAZQByAHMAAC1QAG8AcgB0AGwAYQBu
-AGQAIABUAHIAYQBpAGwAIABCAGwAYQB6AGUAcgBzAAANTwByAGUAZwBvAG4AAAtLAGkAbgBnAHMA
-ACFTAGEAYwByAGEAbQBlAG4AdABvACAASwBpAG4AZwBzAAALUwBwAHUAcgBzAAAjUwBhAG4AIABB
-AG4AdABvAG4AaQBvACAAUwBwAHUAcgBzAAAPUgBhAHAAdABvAHIAcwAAH1QAbwByAG8AbgB0AG8A
-IABSAGEAcAB0AG8AcgBzAAAPTwBuAHQAYQByAGkAbwAACUoAYQB6AHoAABNVAHQAYQBoACAASgBh
-AHoAegAACVUAdABhAGgAAA9XAGkAegBhAHIAZABzAAAlVwBhAHMAaABpAG4AZwB0AG8AbgAgAFcA
-aQB6AGEAcgBkAHMAAAlEAC4AQwAuAAAdTgBhAG0AZQAgAE4AbwB0ACAARgBvAHUAbgBkAACAm0kA
-cwBOAHUAbABsACAAcAByAG8AcABlAHIAdAB5ACAAYwBhAG4AbgBvAHQAIABiAGUAIABzAGUAdAAg
-AHQAbwAgAEYAYQBsAHMAZQAuACAAQQBzAHMAaQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABvACAA
-dABoAGUAIABjAG8AbAB1AG0AbgAgAGkAbgBzAHQAZQBhAGQALgAAD0kAbgBwAHUAdAAgADAAAHFT
-AEMAXwBmADIAOAA0AGMAMQBkAGIAZQA3AGQAMQA0AGQAZQA3AGEANwAxAGMAOABiADMANgBkADYA
-NQAxAGIAMwAwADUALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAAAA
-aghracuK/kejP7nz9BAmOgAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQERWQQgAQIOCSADARI9HQgS
-QQMGEj0DBh0IBCABDggEIAECCAUgAgEIHAMgAAIGIAICDhFxBSABHQgIBgABEnUReQQgABJ9BiAC
-AQ4SfQi3elxWGTTgiQiJhF3NgIDMkQMGEhQDBhIYAwYSRQMGElEDBhJVAwYSIAUgAQESDAMgAA4E
-IAEBAgkgBAEIDhI9EkEFIAEBEkUEAAASUQQAABJVBQABARJVBAAAEiADAAABAygADgMoAAIECAAS
-UQQIABJVBAgAEiAIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRpb25UaHJvd3MBCAEAAgAA
-AAAAKAEAI1NDX2YyODRjMWRiZTdkMTRkZTdhNzFjOGIzNmQ2NTFiMzA1AAAFAQAAAAAWAQARQ29w
-eXJpZ2h0IEAgIDIwMjEAAEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249djQuNwEAVA4URnJhbWV3
-b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC43BAEAAAAAAAC0AAAAzsrvvgEAAACRAAAA
-bFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4w
-LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0
-ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBBRFC0AAAA/D0A
-AAAAAAAAAAAAFj4AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg+AAAAAAAAAAAAAAAAX0NvckRs
-bE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+IABTAHUAbgBzAAAPQQByAGkAegBvAG4AYQAAG1QAcgBhAGkAbAAgAEIAbABhAHoAZQByAHMAAC1Q
+AG8AcgB0AGwAYQBuAGQAIABUAHIAYQBpAGwAIABCAGwAYQB6AGUAcgBzAAANTwByAGUAZwBvAG4A
+AAtLAGkAbgBnAHMAACFTAGEAYwByAGEAbQBlAG4AdABvACAASwBpAG4AZwBzAAALUwBwAHUAcgBz
+AAAjUwBhAG4AIABBAG4AdABvAG4AaQBvACAAUwBwAHUAcgBzAAAPUgBhAHAAdABvAHIAcwAAH1QA
+bwByAG8AbgB0AG8AIABSAGEAcAB0AG8AcgBzAAAPTwBuAHQAYQByAGkAbwAACUoAYQB6AHoAABNV
+AHQAYQBoACAASgBhAHoAegAACVUAdABhAGgAAA9XAGkAegBhAHIAZABzAAAlVwBhAHMAaABpAG4A
+ZwB0AG8AbgAgAFcAaQB6AGEAcgBkAHMAAAlEAC4AQwAuAAAdTgBhAG0AZQAgAE4AbwB0ACAARgBv
+AHUAbgBkAACAm0kAcwBOAHUAbABsACAAcAByAG8AcABlAHIAdAB5ACAAYwBhAG4AbgBvAHQAIABi
+AGUAIABzAGUAdAAgAHQAbwAgAEYAYQBsAHMAZQAuACAAQQBzAHMAaQBnAG4AIABhACAAdgBhAGwA
+dQBlACAAdABvACAAdABoAGUAIABjAG8AbAB1AG0AbgAgAGkAbgBzAHQAZQBhAGQALgAAD0kAbgBw
+AHUAdAAgADAAAHFTAEMAXwBmADIAOAA0AGMAMQBkAGIAZQA3AGQAMQA0AGQAZQA3AGEANwAxAGMA
+OABiADMANgBkADYANQAxAGIAMwAwADUALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1
+AHIAYwBlAHMAAAAA0s+Z1IaFmkCmP4prXyonOAAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQERWQQg
+AQIOCSADARI9HQgSQQMGEj0DBh0IBCABDggEIAECCAUgAgEIHAMgAAIGIAICDhFxBSABHQgIBgAB
+EnUReQQgABJ9BiACAQ4SfQi3elxWGTTgiQiJhF3NgIDMkQMGEhQDBhIYAwYSRQMGElEDBhJVAwYS
+IAUgAQESDAMgAA4EIAEBAgkgBAEIDhI9EkEFIAEBEkUEAAASUQQAABJVBQABARJVBAAAEiADAAAB
+AygADgMoAAIECAASUQQIABJVBAgAEiAIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRpb25U
+aHJvd3MBCAEAAgAAAAAAKAEAI1NDX2YyODRjMWRiZTdkMTRkZTdhNzFjOGIzNmQ2NTFiMzA1AAAF
+AQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMjEAAEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249djQu
+NwEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC43BAEAAAAAAAC0AAAA
+zsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBW
+ZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYx
+OTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBB
+RFBBRFC0AAAACD4AAAAAAAAAAAAAIj4AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQ+AAAAAAAA
+AAAAAAAAX0NvckRsbE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1352,7 +1352,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAAKD4AAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAAND4AAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1404,12 +1404,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Teams Data Flow Task\Adds Full Name Team.Inputs[Input 0]"
+                  refId="Package\Teams Data Flow Task\Adds Full Name Team and State.Inputs[Input 0]"
                   hasSideEffects="true"
                   name="Input 0">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Teams Data Flow Task\Adds Full Name Team.Inputs[Input 0].Columns[NICKNAME]"
+                      refId="Package\Teams Data Flow Task\Adds Full Name Team and State.Inputs[Input 0].Columns[NICKNAME]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="13"
@@ -1421,23 +1421,23 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Teams Data Flow Task\Adds Full Name Team.Outputs[Output 0]"
+                  refId="Package\Teams Data Flow Task\Adds Full Name Team and State.Outputs[Output 0]"
                   name="Output 0"
-                  synchronousInputId="Package\Teams Data Flow Task\Adds Full Name Team.Inputs[Input 0]">
+                  synchronousInputId="Package\Teams Data Flow Task\Adds Full Name Team and State.Inputs[Input 0]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Teams Data Flow Task\Adds Full Name Team.Outputs[Output 0].Columns[FullTeamName]"
+                      refId="Package\Teams Data Flow Task\Adds Full Name Team and State.Outputs[Output 0].Columns[FullTeamName]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Teams Data Flow Task\Adds Full Name Team.Outputs[Output 0].Columns[FullTeamName]"
+                      lineageId="Package\Teams Data Flow Task\Adds Full Name Team and State.Outputs[Output 0].Columns[FullTeamName]"
                       name="FullTeamName" />
                     <outputColumn
-                      refId="Package\Teams Data Flow Task\Adds Full Name Team.Outputs[Output 0].Columns[State]"
+                      refId="Package\Teams Data Flow Task\Adds Full Name Team and State.Outputs[Output 0].Columns[State]"
                       codePage="1252"
                       dataType="str"
                       length="20"
-                      lineageId="Package\Teams Data Flow Task\Adds Full Name Team.Outputs[Output 0].Columns[State]"
+                      lineageId="Package\Teams Data Flow Task\Adds Full Name Team and State.Outputs[Output 0].Columns[State]"
                       name="State" />
                   </outputColumns>
                   <externalMetadataColumns />
@@ -1523,7 +1523,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       cachedLength="50"
                       cachedName="FullTeamName"
                       externalMetadataColumnId="Package\Teams Data Flow Task\BasketBallDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FullTeamName]"
-                      lineageId="Package\Teams Data Flow Task\Adds Full Name Team.Outputs[Output 0].Columns[FullTeamName]" />
+                      lineageId="Package\Teams Data Flow Task\Adds Full Name Team and State.Outputs[Output 0].Columns[FullTeamName]" />
                     <inputColumn
                       refId="Package\Teams Data Flow Task\BasketBallDB Destination.Inputs[OLE DB Destination Input].Columns[TEAM_ID]"
                       cachedDataType="i4"
@@ -1599,7 +1599,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       cachedLength="20"
                       cachedName="State"
                       externalMetadataColumnId="Package\Teams Data Flow Task\BasketBallDB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State]"
-                      lineageId="Package\Teams Data Flow Task\Adds Full Name Team.Outputs[Output 0].Columns[State]" />
+                      lineageId="Package\Teams Data Flow Task\Adds Full Name Team and State.Outputs[Output 0].Columns[State]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2209,7 +2209,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           <paths>
             <path
               refId="Package\Teams Data Flow Task.Paths[Flat File Source Output]"
-              endId="Package\Teams Data Flow Task\Adds Full Name Team.Inputs[Input 0]"
+              endId="Package\Teams Data Flow Task\Adds Full Name Team and State.Inputs[Input 0]"
               name="Flat File Source Output"
               startId="Package\Teams Data Flow Task\Team CVS File Source.Outputs[Flat File Source Output]" />
             <path
@@ -2221,7 +2221,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               refId="Package\Teams Data Flow Task.Paths[Output 0]"
               endId="Package\Teams Data Flow Task\BasketBallDB Destination.Inputs[OLE DB Destination Input]"
               name="Output 0"
-              startId="Package\Teams Data Flow Task\Adds Full Name Team.Outputs[Output 0]" />
+              startId="Package\Teams Data Flow Task\Adds Full Name Team and State.Outputs[Output 0]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2256,6 +2256,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           Id="Package\Teams Data Flow Task\BasketBallDB Destination"
           TopLeft="246,251" />
         <NodeLayout
+          Size="230,42"
+          Id="Package\Teams Data Flow Task\Adds Full Name Team and State"
+          TopLeft="248,152" />
+        <NodeLayout
           Size="182,42"
           Id="Package\Teams Data Flow Task\Team CVS File Source"
           TopLeft="243,63" />
@@ -2263,10 +2267,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           Size="176,42"
           Id="Package\Teams Data Flow Task\ErrorLog Destination"
           TopLeft="484,343" />
-        <NodeLayout
-          Size="182,42"
-          Id="Package\Teams Data Flow Task\Adds Full Name Team"
-          TopLeft="248,152" />
+        <EdgeLayout
+          Id="Package\Teams Data Flow Task.Paths[Output 0]"
+          TopLeft="363,194">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-18.5,57"
+              Start="0,0"
+              End="-18.5,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.5"
+                    Point2="0,28.5"
+                    Point3="-4,28.5" />
+                  <mssgle:LineSegment
+                    End="-14.5,28.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-14.5,28.5"
+                    Point2="-18.5,28.5"
+                    Point3="-18.5,32.5" />
+                  <mssgle:LineSegment
+                    End="-18.5,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Teams Data Flow Task.Paths[OLE DB Destination Error Output]"
           TopLeft="344.5,293">
@@ -2305,40 +2339,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Teams Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="336.5,105">
+          TopLeft="334,105">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,47"
+              EndConnector="29,47"
               Start="0,0"
-              End="0,39.5">
+              End="29,39.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,39.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Teams Data Flow Task.Paths[Output 0]"
-          TopLeft="341.75,194">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,57"
-              Start="0,0"
-              End="0,49.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
+                    End="0,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.5"
+                    Point2="0,23.5"
+                    Point3="4,23.5" />
                   <mssgle:LineSegment
-                    End="0,49.5" />
+                    End="25,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="25,23.5"
+                    Point2="29,23.5"
+                    Point3="29,27.5" />
+                  <mssgle:LineSegment
+                    End="29,39.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
