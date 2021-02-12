@@ -1,4 +1,4 @@
-﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="febaf965-5dec-41b8-9a34-2fa5db8de85e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="386766e8-da6f-4eeb-8fc7-ad64fc76376e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>BasketbalDB_View</ID>
   <Name>BasketbalDB_View</Name>
   <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
@@ -232,20 +232,14 @@
                   <xs:element name="OverallOffensive" msprop:design-time-name="c4354418-f447-41e5-a80d-07146b391efa" msprop:DbColumnName="OverallOffensive" msprop:FriendlyName="OverallOffensive" type="xs:float" minOccurs="0" />
                   <xs:element name="OverallDefense" msprop:design-time-name="049e6c0b-f3ac-4f6a-8d20-2a0f9ef5e402" msprop:DbColumnName="OverallDefense" msprop:FriendlyName="OverallDefense" type="xs:float" minOccurs="0" />
                   <xs:element name="Overall" msprop:design-time-name="b48454a8-d85e-4719-b3f0-c86e8a218a01" msprop:DbColumnName="Overall" msprop:FriendlyName="Overall" type="xs:float" minOccurs="0" />
-                  <xs:element name="FG3M" msprop:DbColumnName="FG3M" msprop:design-time-name="f64a40ec-5ac5-427b-b10d-6ca0d9638843" type="xs:float" minOccurs="0" />
-                  <xs:element name="FG3_PCT" msprop:DbColumnName="FG3_PCT" msprop:design-time-name="32b3a84d-c434-40a9-ad51-4d86f7d5225b" type="xs:float" minOccurs="0" />
-                  <xs:element name="FG2M" msprop:DbColumnName="FG2M" msprop:design-time-name="84ed00f0-a7ae-4ea5-b765-6af9a8a4d78c" type="xs:float" minOccurs="0" />
-                  <xs:element name="FG2_PCT" msprop:DbColumnName="FG2_PCT" msprop:design-time-name="b8d8e84c-fa6f-4dee-b5d2-9a986d1a21bd" minOccurs="0">
-                    <xs:simpleType>
-                      <xs:restriction base="xs:string">
-                        <xs:maxLength value="10" />
-                      </xs:restriction>
-                    </xs:simpleType>
-                  </xs:element>
-                  <xs:element name="OREB" msprop:DbColumnName="OREB" msprop:design-time-name="cd50a6f4-4a59-4e04-9c4d-a105ded44678" type="xs:float" minOccurs="0" />
-                  <xs:element name="DREB" msprop:DbColumnName="DREB" msprop:design-time-name="3c9142d1-3e9f-4218-8fd5-aa2a6eb502bb" type="xs:float" minOccurs="0" />
-                  <xs:element name="STL" msprop:DbColumnName="STL" msprop:design-time-name="4c9b2661-e6df-41ea-9598-f2b300921d43" type="xs:float" minOccurs="0" />
-                  <xs:element name="BLK" msprop:DbColumnName="BLK" msprop:design-time-name="6b7dae14-3543-48c2-841a-4f21c13bd805" type="xs:float" minOccurs="0" />
+                  <xs:element name="FG3M" msprop:design-time-name="f64a40ec-5ac5-427b-b10d-6ca0d9638843" msprop:DbColumnName="FG3M" type="xs:float" minOccurs="0" />
+                  <xs:element name="FG3_PCT" msprop:design-time-name="32b3a84d-c434-40a9-ad51-4d86f7d5225b" msprop:DbColumnName="FG3_PCT" type="xs:float" minOccurs="0" />
+                  <xs:element name="FG2M" msprop:design-time-name="84ed00f0-a7ae-4ea5-b765-6af9a8a4d78c" msprop:DbColumnName="FG2M" type="xs:float" minOccurs="0" />
+                  <xs:element name="FG2_PCT" msprop:design-time-name="b8d8e84c-fa6f-4dee-b5d2-9a986d1a21bd" msprop:DbColumnName="FG2_PCT" type="xs:float" minOccurs="0" />
+                  <xs:element name="OREB" msprop:design-time-name="cd50a6f4-4a59-4e04-9c4d-a105ded44678" msprop:DbColumnName="OREB" type="xs:float" minOccurs="0" />
+                  <xs:element name="DREB" msprop:design-time-name="3c9142d1-3e9f-4218-8fd5-aa2a6eb502bb" msprop:DbColumnName="DREB" type="xs:float" minOccurs="0" />
+                  <xs:element name="STL" msprop:design-time-name="4c9b2661-e6df-41ea-9598-f2b300921d43" msprop:DbColumnName="STL" type="xs:float" minOccurs="0" />
+                  <xs:element name="BLK" msprop:design-time-name="6b7dae14-3543-48c2-841a-4f21c13bd805" msprop:DbColumnName="BLK" type="xs:float" minOccurs="0" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
@@ -485,25 +479,25 @@
           <xs:selector xpath=".//dbo_dimTeams" />
           <xs:field xpath="TeamID" />
         </xs:unique>
-        <xs:keyref name="FK__FactPerfo__Playe__6383C8BA" refer="dbo_dimPlayer_Constraint1">
+        <xs:keyref name="FK_FactPerformance_dimTeams" refer="dbo_dimTeams_Constraint1">
           <xs:selector xpath=".//dbo_FactPerformance" />
-          <xs:field xpath="PlayerID" />
-        </xs:keyref>
-        <xs:keyref name="FK_FactPerformance_dimDate" refer="dbo_dimDate_Constraint1">
-          <xs:selector xpath=".//dbo_FactPerformance" />
-          <xs:field xpath="DateID" />
-        </xs:keyref>
-        <xs:keyref name="FK_FactPerformance_dimGames" refer="dbo_dimGames_Constraint1">
-          <xs:selector xpath=".//dbo_FactPerformance" />
-          <xs:field xpath="GameID" />
+          <xs:field xpath="TeamID" />
         </xs:keyref>
         <xs:keyref name="FK_FactPerfo_dimPerfo" refer="dbo_dimPerformance_Constraint1">
           <xs:selector xpath=".//dbo_FactPerformance" />
           <xs:field xpath="PerformanceID" />
         </xs:keyref>
-        <xs:keyref name="FK_FactPerformance_dimTeams" refer="dbo_dimTeams_Constraint1">
+        <xs:keyref name="FK_FactPerformance_dimGames" refer="dbo_dimGames_Constraint1">
           <xs:selector xpath=".//dbo_FactPerformance" />
-          <xs:field xpath="TeamID" />
+          <xs:field xpath="GameID" />
+        </xs:keyref>
+        <xs:keyref name="FK_FactPerformance_dimDate" refer="dbo_dimDate_Constraint1">
+          <xs:selector xpath=".//dbo_FactPerformance" />
+          <xs:field xpath="DateID" />
+        </xs:keyref>
+        <xs:keyref name="FK__FactPerfo__Playe__6383C8BA" refer="dbo_dimPlayer_Constraint1">
+          <xs:selector xpath=".//dbo_FactPerformance" />
+          <xs:field xpath="PlayerID" />
         </xs:keyref>
       </xs:element>
     </xs:schema>

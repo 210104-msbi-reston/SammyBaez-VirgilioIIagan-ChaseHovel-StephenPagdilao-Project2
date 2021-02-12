@@ -8,7 +8,7 @@
     <TransactionalDeployment>false</TransactionalDeployment>
     <PartitionDeployment>DeployPartitions</PartitionDeployment>
     <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
-    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <ProcessingOption>Default</ProcessingOption>
     <OutputScript></OutputScript>
     <ImpactAnalysisFile></ImpactAnalysisFile>
     <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
@@ -26,7 +26,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>9ehfaoD8FmTQsiIOl7j44x3j1M8=2/12/2021 9:38:35 AM2/11/2021 12:46:39 PM</TimeStamp>
+        <TimeStamp>bWSBtFWAQjQ4oz0YCSipgrN7Lp0=2/12/2021 9:53:57 AM2/11/2021 12:46:39 PM</TimeStamp>
         <ID>
           <String>BasketbalDB_View</String>
         </ID>
@@ -68,7 +68,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>fhcm5+TC055nDLLtVNvoJmn6z+c=2/12/2021 9:42:49 AM2/11/2021 1:13:14 PMYaXcll4E5mczVxJvyrsEqlT2Z4A=2/12/2021 9:42:49 AM2/11/2021 1:13:14 PM</TimeStamp>
+        <TimeStamp>bTrLknP7+9n0IDOISsJWUSKY+gk=2/12/2021 11:56:44 AM2/11/2021 1:13:14 PMQvLkZDbxMjsAVOODKWi8LXtjrFw=2/12/2021 11:54:48 AM2/11/2021 1:13:14 PM</TimeStamp>
         <ID>
           <String>BasketbalDB_Cube</String>
         </ID>
@@ -92,5 +92,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2021-02-12T15:42:51.5Z</LastDeployed>
+  <LastDeployed>2021-02-12T17:57:17.696667Z</LastDeployed>
 </DeploymentSnapshot>
