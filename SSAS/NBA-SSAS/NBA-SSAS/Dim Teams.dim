@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1356" scrolltop="-3176" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6059" y="10557" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1356" scrolltop="-2381" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6059" y="10557" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -51,7 +51,7 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>-3176</Value>
+      <Value>-2381</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -64,6 +64,34 @@
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
       <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="119">
+            <Shape Id="Team ID" Expanded="false">
+              <Attributes>
+                <Attribute Id="Team ID" />
+                <Attribute Id="Abbreviation" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="City" Expanded="false">
+              <Attributes>
+                <Attribute Id="City" />
+              </Attributes>
+              <Position x="173" y="20" />
+            </Shape>
+            <Shape Id="State" Expanded="false">
+              <Attributes>
+                <Attribute Id="State" />
+              </Attributes>
+              <Position x="327" y="20" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
     </Annotation>
   </Annotations>
   <LastProcessed>0001-01-01T06:00:00Z</LastProcessed>
@@ -108,6 +136,7 @@
         </AttributeRelationship>
         <AttributeRelationship dwd:design-time-name="dbf8e313-714b-4d7a-a5c9-7fb12013f5aa">
           <AttributeID>City</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
           <Name>City</Name>
         </AttributeRelationship>
       </AttributeRelationships>
@@ -135,18 +164,82 @@
       <ID>City</ID>
       <Name>City</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="d9ba08ef-7449-451d-90ce-d26843d10f57">
+        <KeyColumn dwd:design-time-name="292e02ea-db6b-434a-9b39-059436c353af">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6169898e-85f9-46be-9817-dd46f9c531b4">
+            <TableID>dbo_dimTeams</TableID>
+            <ColumnID>State</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="6cf4f18b-bfe6-4178-9825-76b1dcde983f">
           <DataType>WChar</DataType>
           <DataSize>13</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="e21eb865-991e-4c8b-a1a0-8e2d52537d38">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a8a745ab-ec4a-4cc4-bc4b-d54790098b45">
             <TableID>dbo_dimTeams</TableID>
             <ColumnID>City</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <NameColumn dwd:design-time-name="f7f13df5-302f-4f5b-be68-f5ce8c85263a">
+        <DataType>WChar</DataType>
+        <DataSize>13</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="a11f9525-ddf1-4652-bcfc-338db123ce06">
+          <TableID>dbo_dimTeams</TableID>
+          <ColumnID>City</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="95486c02-60f6-44f6-9f94-d77aa59ad94f">
+          <AttributeID>State</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>State</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cc9f24e5-1819-43ec-8514-5ad3925bf966">
+      <ID>State</ID>
+      <Name>State</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6e4e1bd3-69a3-46fe-a40e-41a96d58f3de">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="df4f1362-5bf5-491e-b148-3a684eca268d">
+            <TableID>dbo_dimTeams</TableID>
+            <ColumnID>State</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
   </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="2a94fe1c-1225-4d7f-b7ff-879fc69e12c6">
+      <ID>Hierarchy</ID>
+      <Name>Hierarchy</Name>
+      <Levels>
+        <Level dwd:design-time-name="392fab3a-e43e-47cf-815c-4d0ec99513f9">
+          <ID>State</ID>
+          <Name>State</Name>
+          <SourceAttributeID>State</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="cc05fb19-5058-4bbc-bb1e-0d880f2221be">
+          <ID>City</ID>
+          <Name>City</Name>
+          <SourceAttributeID>City</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="04fad104-bb91-42e7-99c5-dbb751413711">
+          <ID>TeamName</ID>
+          <Name>TeamName</Name>
+          <SourceAttributeID>Team ID</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
   <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
 </Dimension>

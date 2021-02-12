@@ -8,7 +8,7 @@
     <TransactionalDeployment>false</TransactionalDeployment>
     <PartitionDeployment>DeployPartitions</PartitionDeployment>
     <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
-    <ProcessingOption>Default</ProcessingOption>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
     <OutputScript></OutputScript>
     <ImpactAnalysisFile></ImpactAnalysisFile>
     <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
@@ -26,7 +26,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>R4SwDq98Ai2TUjuJz/x9rB9+U/8=2/11/2021 12:46:40 PM2/11/2021 12:46:39 PM</TimeStamp>
+        <TimeStamp>5fFLBBbG1+HcC4zvVqQiritYqDI=2/12/2021 12:23:31 AM2/11/2021 12:46:39 PM</TimeStamp>
         <ID>
           <String>BasketbalDB_View</String>
         </ID>
@@ -54,7 +54,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>B7lYxx1L2hK0Oc8hnwRxLOxlse4=2/11/2021 11:57:40 PM2/11/2021 1:13:14 PM</TimeStamp>
+        <TimeStamp>8VBcg2ygkeJzlrLs4zQ4xlUHpNI=2/12/2021 12:23:31 AM2/11/2021 1:13:14 PM</TimeStamp>
         <ID>
           <String>Dim Teams</String>
         </ID>
@@ -68,7 +68,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>brcs0lxhu3Qh76Lv/uzdkvbQViE=2/11/2021 11:57:40 PM2/11/2021 1:13:14 PM+1svLCzvXyNpnaJfnf54yUeeTss=2/11/2021 9:03:09 PM2/11/2021 1:13:14 PM</TimeStamp>
+        <TimeStamp>IM+wdJ4gZkerdaFeEEMuQzLM83I=2/12/2021 12:23:31 AM2/11/2021 1:13:14 PM+1svLCzvXyNpnaJfnf54yUeeTss=2/11/2021 9:03:09 PM2/11/2021 1:13:14 PM</TimeStamp>
         <ID>
           <String>BasketbalDB_Cube</String>
         </ID>
@@ -92,5 +92,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2021-02-12T05:58:10.896667Z</LastDeployed>
+  <LastDeployed>2021-02-12T06:23:31.9Z</LastDeployed>
 </DeploymentSnapshot>
