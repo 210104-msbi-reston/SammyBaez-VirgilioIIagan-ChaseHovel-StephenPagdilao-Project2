@@ -20,7 +20,7 @@ Our project aims to find meaningful statistics on NBA regular season historical 
 * SSIS
 * SSAS
 * SSRS
-* Hamachi Logmein
+* Logmein Hamachi
 * Excel BI
 
 ## Team
