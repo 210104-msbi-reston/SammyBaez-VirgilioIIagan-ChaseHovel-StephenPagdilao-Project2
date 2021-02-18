@@ -26,14 +26,14 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">STEPH-PAGD</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1" SSIS:Salt="jjtfe8a/c7A=" SSIS:IV="y72GlDF0Hu1UjR7gVOhZxA==" SSIS:Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc">97nql6Y7Q4qmu4J2LHjvddDDbZba6Tsa1EuCNYFYImKeMUARb78ycgNllX53mnZStbI0iI1RW7Tpv62OPHMBa7kbVn/osaN+Ol80WVs8Q5bryxv8XxoHVq3wBhUAZ+69yB7GP3NxfYlUdpQApJ98wy+zLUBaBI5WN2J6/QECgkxa6oTXZ/GnPCpES2dQN8Iu</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1" SSIS:Salt="XfJOsAtRfVU=" SSIS:IV="6uoD4MNG7t5eoHkfyHYGHA==" SSIS:Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc">DK5d63pbEMfsqMRmguNEEUPQqIVLTDsDinRe+v5ZNoyxdXY2BBf79hEJIfNeCmEo/Mi3OpBU7CFi/8pooRnGzIehcIyClBdCJyfo6wXvYqX6hNAHMVDHrmQsOD/Tn/WF4NGz6zspcSJK3oRa4H+tX6TZN13dKJsWqr4f6nslN5wJFmNy468USPujhnTwniAE</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
           <SSIS:Package SSIS:Name="2017-2018NBA.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="2018-2019NBA.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="2019-2020NBA.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="2020-2021NBA.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="FromGame_DetailsToDimPerformance.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
@@ -90,16 +90,16 @@
               </SSIS:Properties>
               <SSIS:Parameters />
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="2020-2021NBA.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="FromGame_DetailsToDimPerformance.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{6F061948-38D7-4903-BC9A-DF06CDB5EA3E}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{35356A90-5116-4684-8BDB-527E839054FD}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">FromGame_DetailsToDimPerformance</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">63</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">69</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{251437B1-5A4F-4DE1-83DB-63F87587FAA1}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{2B006088-28A0-4209-ACA4-5B9CDC76ECE8}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

@@ -1,0 +1,598 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="d995ed75-80b3-4954-a65c-8087f1e1d2ee" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Performance</ID>
+  <Name>Dim Performance</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3353" scrolltop="-6641" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="11007" y="18283" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dimPerformance" left="-2705" top="-5133" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="8546" height="15266" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e000062210000a23b0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dimPerformance" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-3353</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-6641</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-2705</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-5133</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="159">
+            <Shape Id="Performance ID" Expanded="false">
+              <Attributes>
+                <Attribute Id="Performance ID" />
+                <Attribute Id="AST" />
+                <Attribute Id="BLK" />
+                <Attribute Id="COMMENT" />
+                <Attribute Id="DREB" />
+                <Attribute Id="FG PCT" />
+                <Attribute Id="FG3 PCT" />
+                <Attribute Id="FG3A" />
+                <Attribute Id="FG3M" />
+                <Attribute Id="FGA" />
+                <Attribute Id="FGM" />
+                <Attribute Id="FT PCT" />
+                <Attribute Id="FTA" />
+                <Attribute Id="FTM" />
+                <Attribute Id="MIN UPDATED" />
+                <Attribute Id="OREB" />
+                <Attribute Id="PF" />
+                <Attribute Id="PLAYER ID" />
+                <Attribute Id="Plus Minus Updated" />
+                <Attribute Id="PTS" />
+                <Attribute Id="REB" />
+                <Attribute Id="START POSITION" />
+                <Attribute Id="STL" />
+                <Attribute Id="TEAM ABBREVIATION" />
+                <Attribute Id="TEAM CITY" />
+                <Attribute Id="TO" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="PLAYER NAME" Expanded="false">
+              <Attributes>
+                <Attribute Id="PLAYER NAME" />
+                <Attribute Id="TEAM ID" />
+              </Attributes>
+              <Position x="223" y="20" />
+            </Shape>
+            <Shape Id="GAME ID" Expanded="false">
+              <Attributes>
+                <Attribute Id="GAME ID" />
+              </Attributes>
+              <Position x="427" y="20" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="36662df3-1047-4591-96d1-003997d8fe4f">
+    <DataSourceViewID>Basketball DB</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="6e38a5f7-7a04-4c7c-b1fe-69edefdec812">
+    <KeyErrorLimitAction>StopLogging</KeyErrorLimitAction>
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndContinue</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <Attributes>
+    <Attribute dwd:design-time-name="2ef09339-320a-4c8e-9efe-a743bc137768">
+      <ID>Performance ID</ID>
+      <Name>Performance ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="35396ca5-816b-413a-b853-e4912938eeeb">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4160fdb5-b3f2-4039-ac45-5b1e06fd2e28">
+            <TableID>dbo_dimPerformance</TableID>
+            <ColumnID>PerformanceID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="48086bc7-352a-4151-a812-ad4cee3dc819">
+          <AttributeID>TEAM ABBREVIATION</AttributeID>
+          <Name>TEAM ABBREVIATION</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="50d4d0d6-8173-4cde-9ea2-5fd604ef0c0a">
+          <AttributeID>PLAYER NAME</AttributeID>
+          <Name>PLAYER NAME</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f174886f-62bb-4f6c-ba20-b6c3bb2b384e">
+          <AttributeID>MIN UPDATED</AttributeID>
+          <Name>MIN UPDATED</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e08a92c6-a012-41bc-a220-c61a044d9cb4">
+          <AttributeID>FGM</AttributeID>
+          <Name>FGM</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="de52926c-dfb7-4534-8532-8940cc6358b9">
+          <AttributeID>FGA</AttributeID>
+          <Name>FGA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="36743571-2ac8-4231-ad7a-8e312e33eada">
+          <AttributeID>FG PCT</AttributeID>
+          <Name>FG PCT</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="db109c83-35ec-4301-aaa0-59a0d4b9e503">
+          <AttributeID>FG3M</AttributeID>
+          <Name>FG3M</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6f59ef1a-90a4-4a35-b74c-e1f1b9e8ce2e">
+          <AttributeID>FG3A</AttributeID>
+          <Name>FG3A</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="127afe27-8c9c-46bb-aacb-65117c65d677">
+          <AttributeID>FG3 PCT</AttributeID>
+          <Name>FG3 PCT</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7e3cb669-aaf7-4ab9-aa86-8eb810f69d2b">
+          <AttributeID>FTM</AttributeID>
+          <Name>FTM</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="50b8b35c-fb4e-4cc7-b534-3eb7cc451d76">
+          <AttributeID>FTA</AttributeID>
+          <Name>FTA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="32f101f2-0919-43a1-b638-d0e3472da890">
+          <AttributeID>FT PCT</AttributeID>
+          <Name>FT PCT</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="02809575-883a-4587-92a8-cee09e29e89d">
+          <AttributeID>OREB</AttributeID>
+          <Name>OREB</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3e719581-4b29-42ff-8348-31f205eaed6f">
+          <AttributeID>DREB</AttributeID>
+          <Name>DREB</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="647a1401-51ed-4a91-9950-9b113d191d1e">
+          <AttributeID>REB</AttributeID>
+          <Name>REB</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6c26f945-cb1f-4769-98df-1b907031cc2e">
+          <AttributeID>AST</AttributeID>
+          <Name>AST</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4ad0f212-e3ab-440a-b685-3a38921a3c3d">
+          <AttributeID>STL</AttributeID>
+          <Name>STL</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4b5b796c-be41-4556-aaac-cfb461fcb4b9">
+          <AttributeID>BLK</AttributeID>
+          <Name>BLK</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6322d062-16e7-4a63-b7ce-dc204cc0c589">
+          <AttributeID>TO</AttributeID>
+          <Name>TO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b5abe791-99f3-4c8c-bd04-57f45b5ae907">
+          <AttributeID>PF</AttributeID>
+          <Name>PF</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f2981739-eab8-47b4-93dd-e0cc2c9d62ca">
+          <AttributeID>PTS</AttributeID>
+          <Name>PTS</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7c0ca100-a911-4a6a-aa6e-9e2100b2b671">
+          <AttributeID>Plus Minus Updated</AttributeID>
+          <Name>Plus Minus Updated</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0f51a3e7-6cee-4a3a-95e9-0290312c2256">
+      <ID>GAME ID</ID>
+      <Name>GAME ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c578bb23-2524-433f-8cd3-b23edba156b5">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="20cc4dfc-df1b-4886-878b-8f87118ecd71">
+            <TableID>dbo_dimPerformance</TableID>
+            <ColumnID>GAME_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7fd8b87c-61a8-49fb-8800-d39c8951203f">
+      <ID>TEAM ABBREVIATION</ID>
+      <Name>TEAM ABBREVIATION</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fa74bcb2-86d7-4d44-8ef1-b14ef5761b1e">
+          <DataType>WChar</DataType>
+          <DataSize>3</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fded565d-92b3-4ec1-9d23-2541bc31e1a8">
+            <TableID>dbo_dimPerformance</TableID>
+            <ColumnID>TEAM_ABBREVIATION</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a11df1a9-5e10-4e09-9002-26396bcaf2a1">
+      <ID>PLAYER NAME</ID>
+      <Name>PLAYER NAME</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bce3a7cd-ccc4-4b1f-9261-24106efe03a5">
+          <DataType>WChar</DataType>
+          <DataSize>24</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0b0f2576-5b69-4a99-8d85-9edb3ebc0286">
+            <TableID>dbo_dimPerformance</TableID>
+            <ColumnID>PLAYER_NAME</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="bab9df42-418e-4156-8847-302bc5762ebc">
+          <AttributeID>GAME ID</AttributeID>
+          <Name>GAME ID</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b8a9a2b4-20f2-4608-addd-975c4223dcd1">
+      <ID>MIN UPDATED</ID>
+      <Name>MIN UPDATED</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d4285bb8-0ab0-4908-b28e-173fcb7976e1">
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b5817b0f-7555-42df-8528-f80583d94ed1">
+            <TableID>dbo_dimPerformance</TableID>
+            <ColumnID>MIN_UPDATED</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1f65ccb8-4c65-4e59-af5e-b86e350d79a8">
+      <ID>FGM</ID>
+      <Name>FGM</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="50d93851-fddf-4ac2-923d-67eaa3f5a767">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fc901415-b6d1-4ae8-a24f-d9b13261ddf6">
+            <TableID>dbo_dimPerformance</TableID>
+            <ColumnID>FGM</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9ef5295d-c2b2-4479-b84e-860e549844d8">
+      <ID>FGA</ID>
+      <Name>FGA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b145e988-a115-4086-973e-0ec875191ae6">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="52793b55-72eb-4ec6-8792-db5d14c6db0d">
+            <TableID>dbo_dimPerformance</TableID>
+            <ColumnID>FGA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4e4cfb89-9679-42a5-9d07-522a045687d2">
+      <ID>FG PCT</ID>
+      <Name>FG PCT</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6c078e14-5ca0-4284-abef-330e4ac6baf2">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7bedb0b1-9125-459f-9ac5-9846d9c8e26a">
+            <TableID>dbo_dimPerformance</TableID>
+            <ColumnID>FG_PCT</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="61c44514-9888-4b30-a284-3d226a4c7263">
+      <ID>FG3M</ID>
+      <Name>FG3M</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="90e39cc7-7e6d-4399-be52-aa141bdd4785">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="06e19e32-1eb9-4b7c-9782-aa8153db55c3">
+            <TableID>dbo_dimPerformance</TableID>
+            <ColumnID>FG3M</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="61a4c9c9-fe99-4174-b001-25ed5393c99a">
+      <ID>FG3A</ID>
+      <Name>FG3A</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9439e283-44f0-4e6b-9396-269b23a023e1">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="911a1ce8-1feb-4162-8411-d061f769dbc9">
+            <TableID>dbo_dimPerformance</TableID>
+            <ColumnID>FG3A</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4e33a6b1-c296-47a2-9e39-38f1cfe2719c">
+      <ID>FG3 PCT</ID>
+      <Name>FG3 PCT</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7f9791de-f28b-44a8-9fc9-c4209467500d">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a41c387a-e7f5-43b9-a71f-5eaf7f46aab2">
+            <TableID>dbo_dimPerformance</TableID>
+            <ColumnID>FG3_PCT</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="65652a9f-0cf2-4756-a980-a67f0ee5f59e">
+      <ID>FTM</ID>
+      <Name>FTM</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="43d39902-2f21-4f9a-b93c-deb1baef448a">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e5266351-a051-4b18-a829-d2c611005059">
+            <TableID>dbo_dimPerformance</TableID>
+            <ColumnID>FTM</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e47f034c-45ca-4bf9-a9b3-1d33abd3248d">
+      <ID>FTA</ID>
+      <Name>FTA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="58a0bfd5-7619-4bb8-ac2e-80d94641ea55">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="817601f6-a171-4d81-a796-0d064e4839b4">
+            <TableID>dbo_dimPerformance</TableID>
+            <ColumnID>FTA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="58464839-1f27-4f59-b428-04222fad852d">
+      <ID>FT PCT</ID>
+      <Name>FT PCT</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b7b95518-1e2f-43d7-b37c-2eb84491c723">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7f31a4da-26ab-4085-a904-53822483bc76">
+            <TableID>dbo_dimPerformance</TableID>
+            <ColumnID>FT_PCT</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="413a1a7b-02b1-41e0-9a5f-e3c860b60456">
+      <ID>OREB</ID>
+      <Name>OREB</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fa6a9154-0d2d-4f74-9d51-d9e14c7adfd2">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="267864df-8913-4b51-b2eb-6efe6c07e3d5">
+            <TableID>dbo_dimPerformance</TableID>
+            <ColumnID>OREB</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e073ca12-72e6-48a6-b78d-8a77aa551e82">
+      <ID>DREB</ID>
+      <Name>DREB</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="99686e90-2d59-4162-9920-82081f055cac">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="68e76ffa-6bee-4b64-9c5d-69b419ea5dd3">
+            <TableID>dbo_dimPerformance</TableID>
+            <ColumnID>DREB</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1444507b-2640-4ce7-9d8b-26ab36a047c4">
+      <ID>REB</ID>
+      <Name>REB</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="40ac16c7-aeed-4c61-830c-97b8b5136b16">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cea9fb60-4a3e-4a88-bdb9-9f376820bbd7">
+            <TableID>dbo_dimPerformance</TableID>
+            <ColumnID>REB</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6af87bf2-e311-439a-bbe8-3e323fe80e61">
+      <ID>AST</ID>
+      <Name>AST</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="248c08b2-42ce-4e93-bfb0-9d62c25074e7">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d44f9f6b-7512-4328-b425-9cb46a8d163d">
+            <TableID>dbo_dimPerformance</TableID>
+            <ColumnID>AST</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f775b417-e21d-4ecb-babe-246477731985">
+      <ID>STL</ID>
+      <Name>STL</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d38d3391-00a1-4912-8690-f4df261cff17">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b4e6697f-084d-4658-90f2-54382263581e">
+            <TableID>dbo_dimPerformance</TableID>
+            <ColumnID>STL</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="63fa3423-0973-4eae-9fbe-eac261327797">
+      <ID>BLK</ID>
+      <Name>BLK</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="57d4fea8-b1fe-4ed8-a5d4-1ba2e348731b">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="08040aae-cde5-4200-8abd-ca0d32357842">
+            <TableID>dbo_dimPerformance</TableID>
+            <ColumnID>BLK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d13106e4-d278-483b-b5fe-6f6436910068">
+      <ID>TO</ID>
+      <Name>TO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e87759a8-ac98-47ab-a176-0382cf96f3ac">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7683d0bc-b5d1-466e-af00-f02be4403482">
+            <TableID>dbo_dimPerformance</TableID>
+            <ColumnID>TO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7e5f5eea-0b63-4b49-8a7f-82f36f239805">
+      <ID>PF</ID>
+      <Name>PF</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="25bec807-d616-4801-a783-3c0ff8d4ca8b">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="60796a1d-c518-4f75-b275-fdc22556ac90">
+            <TableID>dbo_dimPerformance</TableID>
+            <ColumnID>PF</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4df230f8-6d7e-4786-b883-3a2d4bb013b6">
+      <ID>PTS</ID>
+      <Name>PTS</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8358cea2-29b4-4029-a4ad-3f5548bcc156">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="81de3cee-81f6-4f1f-91e2-bca505e14c57">
+            <TableID>dbo_dimPerformance</TableID>
+            <ColumnID>PTS</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5d98f228-7d33-41d8-a4a2-c571776eb9c4">
+      <ID>Plus Minus Updated</ID>
+      <Name>Plus Minus Updated</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5e06df58-90f9-4ac6-99e5-5b263e575735">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="69e999a4-ce39-4961-a994-7de7c8fd90f8">
+            <TableID>dbo_dimPerformance</TableID>
+            <ColumnID>PlusMinusUpdated</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
