@@ -12,8 +12,13 @@
   DTS:ObjectName="FromGame_DetailsToDimPerformance"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
+<<<<<<< Updated upstream:SSIS/NBA-SSIS/NBA-SSIS/FromGame_DetailsToDimPerformance.dtsx
   DTS:VersionBuild="69"
   DTS:VersionGUID="{2B006088-28A0-4209-ACA4-5B9CDC76ECE8}">
+=======
+  DTS:VersionBuild="67"
+  DTS:VersionGUID="{F55985AE-3572-4A44-859B-C32916889BC9}">
+>>>>>>> Stashed changes:SSIS/NBA-SSIS/NBA-SSIS/2020-2021NBA.dtsx
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,12 +32,21 @@
           DTS:ConnectionString="Data Source=25.67.200.218\STOREAPPDB;User ID=CSVV_Chase;Initial Catalog=BasketballDB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
+<<<<<<< Updated upstream:SSIS/NBA-SSIS/NBA-SSIS/FromGame_DetailsToDimPerformance.dtsx
             Salt="OZ3KOYN2SoM="
             IV="6d4Xffte1zgKtLDmXa5HeQ==" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
             <CipherData>
               <CipherValue>6d4Xffte1zgKtLDmXa5HeU4/RxrSV4OUloPl5Qh88wrVT/iZkYvZdgcHCRSoROGuRd3D291nXM/5XnNukLTO8h+ADTpjul8nqfHXrtBPEG7CUUUJB8FxO+B29zWNkXFAUKZjxre/2k+8zxJNUaklMMGc3M+Pz18cXQ0VoeoiKJIAdi0uTjr/j/YMl/ZCUnaF</CipherValue>
+=======
+            Salt="F80M4UQVbZM="
+            IV="Z5Zw2ch+u4jC9UEsE+B4nw==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <CipherData>
+              <CipherValue>Z5Zw2ch+u4jC9UEsE+B4nxJKkUIaRSFQEn/fMEP5Wjt22TFM+Fw6RafClQKz2cX09G/0oMntYWJKJU35FtiUD2RONa512buaBkZi43TCZhnDt64IgAZkYoY7ATg6whCnCYZM0MJKA/KGxnk/cTHM+4Zz1qWENw1U+nX4Xtzn3kdGwk2jgwi6DVTxws0NB8XQ</CipherValue>
+>>>>>>> Stashed changes:SSIS/NBA-SSIS/NBA-SSIS/2020-2021NBA.dtsx
             </CipherData>
           </EncryptedData>
         </DTS:ConnectionManager>
@@ -48,12 +62,21 @@
           DTS:ConnectionString="Data Source=25.67.200.218\STOREAPPDB;User ID=CSVV_Chase;Initial Catalog=BasketballDB;Provider=MSOLEDBSQL.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package1-{A9B925EB-2539-4000-B4B5-5EF73B613CE5}25.67.200.218\STOREAPPDB.BasketballDB.CSVV_Chase;">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
+<<<<<<< Updated upstream:SSIS/NBA-SSIS/NBA-SSIS/FromGame_DetailsToDimPerformance.dtsx
             Salt="VZw2215lkY0="
             IV="/h/tHonQZZvNvgCjO8m5iA==" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
             <CipherData>
               <CipherValue>/h/tHonQZZvNvgCjO8m5iGKJayi+cxE6Cv9nB55hx+GN9Y9bZ5lTRB+lNz+n/tVYvXzF1YKcjcZ8h9Ft4AE9GcWdZRjfG2BhsM/mePeNy+EV14h2xosLFhs56Xt8z8EqCunCg8/LMHQsZjDNSPoaHT0yfeg26DNgt3dRXoOPnhbxxvFxCNFeQPPo4sfZlIO/</CipherValue>
+=======
+            Salt="xx6cSOnPeK4="
+            IV="xnl9ZR4NMYUA2Edn8ilYAg==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <CipherData>
+              <CipherValue>xnl9ZR4NMYUA2Edn8ilYAgQizHtaF7Kt9Fe27kbQzozQfr9WLecUm9eIS34jA3ksydEWa9O6izpbFWUyVzzjSCbFRaZJ3I1WmfyPxZowMyF1L+tV+XvbVfvwEQhoo8rQ4AG5DHxPUPDwIx+5lzwCcVJV4MlsbjZ60G+tnzlDxfIivSpjJqJKbSVsryK74feO</CipherValue>
+>>>>>>> Stashed changes:SSIS/NBA-SSIS/NBA-SSIS/2020-2021NBA.dtsx
             </CipherData>
           </EncryptedData>
         </DTS:ConnectionManager>
@@ -4150,6 +4173,1132 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+<<<<<<< Updated upstream:SSIS/NBA-SSIS/NBA-SSIS/FromGame_DetailsToDimPerformance.dtsx
+=======
+    <DTS:Executable
+      DTS:refId="Package\SplitDimGames into Home Away"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{9B21F7A8-D58E-413A-BDD1-6E628E896909}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SplitDimGames into Home Away"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\SplitDimGames into Home Away\Multicast"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="Multicast">
+              <inputs>
+                <input
+                  refId="Package\SplitDimGames into Home Away\Multicast.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SplitDimGames into Home Away\Multicast.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\SplitDimGames into Home Away\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SplitDimGames into Home Away\Multicast.Outputs[Multicast Output 2]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 2"
+                  synchronousInputId="Package\SplitDimGames into Home Away\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SplitDimGames into Home Away\Multicast.Outputs[Multicast Output 3]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 3"
+                  synchronousInputId="Package\SplitDimGames into Home Away\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SplitDimGames into Home Away\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[HomeGames]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SplitDimGames into Home Away\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[25.67.200.218\STOREAPPDB.BasketballDB.CSVV_Chase]"
+                  connectionManagerRefId="Package.ConnectionManagers[25.67.200.218\STOREAPPDB.BasketballDB.CSVV_Chase]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GameID]"
+                      cachedDataType="i4"
+                      cachedName="GameID"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameID]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[GameID]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Season]"
+                      cachedDataType="i2"
+                      cachedName="Season"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Season]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[Season]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GameDate]"
+                      cachedDataType="dbDate"
+                      cachedName="GameDate"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameDate]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[GameDate]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[HomeTeamID]"
+                      cachedDataType="i4"
+                      cachedName="HomeTeamID"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HomeTeamID]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[HomeTeamID]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PTS_Home]"
+                      cachedDataType="i4"
+                      cachedName="PTS_Home"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PTS_Home]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[PTS_Home]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FG_PCT_Home]"
+                      cachedDataType="r4"
+                      cachedName="FG_PCT_Home"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FG_PCT_Home]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[FG_PCT_Home]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FT_PCT_Home]"
+                      cachedDataType="r4"
+                      cachedName="FT_PCT_Home"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FT_PCT_Home]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[FT_PCT_Home]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FG3_PCT_Home]"
+                      cachedDataType="r4"
+                      cachedName="FG3_PCT_Home"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FG3_PCT_Home]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[FG3_PCT_Home]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AST_Home]"
+                      cachedDataType="i4"
+                      cachedName="AST_Home"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AST_Home]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[AST_Home]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[REB_Home]"
+                      cachedDataType="i4"
+                      cachedName="REB_Home"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[REB_Home]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[REB_Home]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OREB_Home]"
+                      cachedDataType="i4"
+                      cachedName="OREB_Home"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OREB_Home]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[OREB_Home]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DREB_Home]"
+                      cachedDataType="i4"
+                      cachedName="DREB_Home"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DREB_Home]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[DREB_Home]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[STL_Home]"
+                      cachedDataType="i4"
+                      cachedName="STL_Home"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STL_Home]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[STL_Home]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BLK_Home]"
+                      cachedDataType="i4"
+                      cachedName="BLK_Home"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BLK_Home]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[BLK_Home]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HomeGameID]"
+                      dataType="i4"
+                      name="HomeGameID" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameID]"
+                      dataType="i4"
+                      name="GameID" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Season]"
+                      dataType="i2"
+                      name="Season" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameDate]"
+                      dataType="dbDate"
+                      name="GameDate" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HomeTeamID]"
+                      dataType="i4"
+                      name="HomeTeamID" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PTS_Home]"
+                      dataType="i4"
+                      name="PTS_Home" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FG_PCT_Home]"
+                      dataType="r4"
+                      name="FG_PCT_Home" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FT_PCT_Home]"
+                      dataType="r4"
+                      name="FT_PCT_Home" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FG3_PCT_Home]"
+                      dataType="r4"
+                      name="FG3_PCT_Home" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AST_Home]"
+                      dataType="i4"
+                      name="AST_Home" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[REB_Home]"
+                      dataType="i4"
+                      name="REB_Home" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OREB_Home]"
+                      dataType="i4"
+                      name="OREB_Home" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DREB_Home]"
+                      dataType="i4"
+                      name="DREB_Home" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STL_Home]"
+                      dataType="i4"
+                      name="STL_Home" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BLK_Home]"
+                      dataType="i4"
+                      name="BLK_Home" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SplitDimGames into Home Away\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SplitDimGames into Home Away\OLE DB Destination 1"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination 1"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[AwayGame]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[25.67.200.218\STOREAPPDB.BasketballDB.CSVV_Chase]"
+                  connectionManagerRefId="Package.ConnectionManagers[25.67.200.218\STOREAPPDB.BasketballDB.CSVV_Chase]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[GameID]"
+                      cachedDataType="i4"
+                      cachedName="GameID"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[GameID]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[GameID]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Season]"
+                      cachedDataType="i2"
+                      cachedName="Season"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Season]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[Season]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[GameDate]"
+                      cachedDataType="dbDate"
+                      cachedName="GameDate"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[GameDate]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[GameDate]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[VisitorTeamID]"
+                      cachedDataType="i4"
+                      cachedName="VisitorTeamID"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[VisitorTeamID]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[VisitorTeamID]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[PTS_Away]"
+                      cachedDataType="i4"
+                      cachedName="PTS_Away"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[PTS_Away]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[PTS_Away]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[FG_PCT_Away]"
+                      cachedDataType="r4"
+                      cachedName="FG_PCT_Away"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[FG_PCT_Away]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[FG_PCT_Away]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[FT_PCT_Away]"
+                      cachedDataType="r4"
+                      cachedName="FT_PCT_Away"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[FT_PCT_Away]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[FT_PCT_Away]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[FG3_PCT_Away]"
+                      cachedDataType="r4"
+                      cachedName="FG3_PCT_Away"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[FG3_PCT_Away]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[FG3_PCT_Away]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[AST_Away]"
+                      cachedDataType="i4"
+                      cachedName="AST_Away"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[AST_Away]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[AST_Away]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[REB_Away]"
+                      cachedDataType="i4"
+                      cachedName="REB_Away"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[REB_Away]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[REB_Away]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[OREB_Away]"
+                      cachedDataType="i4"
+                      cachedName="OREB_Away"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[OREB_Away]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[OREB_Away]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[DREB_Away]"
+                      cachedDataType="i4"
+                      cachedName="DREB_Away"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[DREB_Away]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[DREB_Away]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[STL_Away]"
+                      cachedDataType="i4"
+                      cachedName="STL_Away"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[STL_Away]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[STL_Away]" />
+                    <inputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[BLK_Away]"
+                      cachedDataType="i4"
+                      cachedName="BLK_Away"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[BLK_Away]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[BLK_Away]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[AwayGameID]"
+                      dataType="i4"
+                      name="AwayGameID" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[GameID]"
+                      dataType="i4"
+                      name="GameID" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Season]"
+                      dataType="i2"
+                      name="Season" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[GameDate]"
+                      dataType="dbDate"
+                      name="GameDate" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[VisitorTeamID]"
+                      dataType="i4"
+                      name="VisitorTeamID" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[PTS_Away]"
+                      dataType="i4"
+                      name="PTS_Away" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[FG_PCT_Away]"
+                      dataType="r4"
+                      name="FG_PCT_Away" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[FT_PCT_Away]"
+                      dataType="r4"
+                      name="FT_PCT_Away" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[FG3_PCT_Away]"
+                      dataType="r4"
+                      name="FG3_PCT_Away" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[AST_Away]"
+                      dataType="i4"
+                      name="AST_Away" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[REB_Away]"
+                      dataType="i4"
+                      name="REB_Away" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[OREB_Away]"
+                      dataType="i4"
+                      name="OREB_Away" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[DREB_Away]"
+                      dataType="i4"
+                      name="DREB_Away" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[STL_Away]"
+                      dataType="i4"
+                      name="STL_Away" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[BLK_Away]"
+                      dataType="i4"
+                      name="BLK_Away" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SplitDimGames into Home Away\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[dimGames]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SplitDimGames into Home Away\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[25.67.200.218\STOREAPPDB.BasketballDB.CSVV_Chase]"
+                  connectionManagerRefId="Package.ConnectionManagers[25.67.200.218\STOREAPPDB.BasketballDB.CSVV_Chase]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[GameID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GameID]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[GameID]"
+                      name="GameID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[Season]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Season]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[Season]"
+                      name="Season"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[GameDate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GameDate]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[GameDate]"
+                      name="GameDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[HomeTeamID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[HomeTeamID]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[HomeTeamID]"
+                      name="HomeTeamID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[PTS_Home]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PTS_Home]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[PTS_Home]"
+                      name="PTS_Home"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[FG_PCT_Home]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FG_PCT_Home]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[FG_PCT_Home]"
+                      name="FG_PCT_Home"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[FT_PCT_Home]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FT_PCT_Home]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[FT_PCT_Home]"
+                      name="FT_PCT_Home"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[FG3_PCT_Home]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FG3_PCT_Home]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[FG3_PCT_Home]"
+                      name="FG3_PCT_Home"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[AST_Home]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AST_Home]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[AST_Home]"
+                      name="AST_Home"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[REB_Home]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[REB_Home]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[REB_Home]"
+                      name="REB_Home"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[OREB_Home]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[OREB_Home]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[OREB_Home]"
+                      name="OREB_Home"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[DREB_Home]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DREB_Home]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[DREB_Home]"
+                      name="DREB_Home"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[STL_Home]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[STL_Home]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[STL_Home]"
+                      name="STL_Home"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[BLK_Home]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BLK_Home]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[BLK_Home]"
+                      name="BLK_Home"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[VisitorTeamID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[VisitorTeamID]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[VisitorTeamID]"
+                      name="VisitorTeamID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[PTS_Away]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PTS_Away]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[PTS_Away]"
+                      name="PTS_Away"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[FG_PCT_Away]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FG_PCT_Away]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[FG_PCT_Away]"
+                      name="FG_PCT_Away"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[FT_PCT_Away]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FT_PCT_Away]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[FT_PCT_Away]"
+                      name="FT_PCT_Away"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[FG3_PCT_Away]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FG3_PCT_Away]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[FG3_PCT_Away]"
+                      name="FG3_PCT_Away"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[AST_Away]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AST_Away]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[AST_Away]"
+                      name="AST_Away"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[REB_Away]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[REB_Away]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[REB_Away]"
+                      name="REB_Away"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[OREB_Away]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[OREB_Away]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[OREB_Away]"
+                      name="OREB_Away"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[DREB_Away]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DREB_Away]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[DREB_Away]"
+                      name="DREB_Away"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[STL_Away]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[STL_Away]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[STL_Away]"
+                      name="STL_Away"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[BLK_Away]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BLK_Away]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[BLK_Away]"
+                      name="BLK_Away"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[Winner]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Winner]"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].Columns[Winner]"
+                      name="Winner"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GameID]"
+                      dataType="i4"
+                      name="GameID" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Season]"
+                      dataType="i2"
+                      name="Season" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GameDate]"
+                      dataType="dbDate"
+                      name="GameDate" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[HomeTeamID]"
+                      dataType="i4"
+                      name="HomeTeamID" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PTS_Home]"
+                      dataType="i4"
+                      name="PTS_Home" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FG_PCT_Home]"
+                      dataType="r4"
+                      name="FG_PCT_Home" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FT_PCT_Home]"
+                      dataType="r4"
+                      name="FT_PCT_Home" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FG3_PCT_Home]"
+                      dataType="r4"
+                      name="FG3_PCT_Home" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AST_Home]"
+                      dataType="i4"
+                      name="AST_Home" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[REB_Home]"
+                      dataType="i4"
+                      name="REB_Home" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[OREB_Home]"
+                      dataType="i4"
+                      name="OREB_Home" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DREB_Home]"
+                      dataType="i4"
+                      name="DREB_Home" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[STL_Home]"
+                      dataType="i4"
+                      name="STL_Home" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BLK_Home]"
+                      dataType="i4"
+                      name="BLK_Home" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[VisitorTeamID]"
+                      dataType="i4"
+                      name="VisitorTeamID" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PTS_Away]"
+                      dataType="i4"
+                      name="PTS_Away" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FG_PCT_Away]"
+                      dataType="r4"
+                      name="FG_PCT_Away" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FT_PCT_Away]"
+                      dataType="r4"
+                      name="FT_PCT_Away" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FG3_PCT_Away]"
+                      dataType="r4"
+                      name="FG3_PCT_Away" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AST_Away]"
+                      dataType="i4"
+                      name="AST_Away" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[REB_Away]"
+                      dataType="i4"
+                      name="REB_Away" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[OREB_Away]"
+                      dataType="i4"
+                      name="OREB_Away" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DREB_Away]"
+                      dataType="i4"
+                      name="DREB_Away" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[STL_Away]"
+                      dataType="i4"
+                      name="STL_Away" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BLK_Away]"
+                      dataType="i4"
+                      name="BLK_Away" />
+                    <externalMetadataColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Winner]"
+                      dataType="bool"
+                      name="Winner" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GameID]"
+                      dataType="i4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GameID]"
+                      name="GameID" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Season]"
+                      dataType="i2"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Season]"
+                      name="Season" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GameDate]"
+                      dataType="dbDate"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GameDate]"
+                      name="GameDate" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[HomeTeamID]"
+                      dataType="i4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[HomeTeamID]"
+                      name="HomeTeamID" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PTS_Home]"
+                      dataType="i4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PTS_Home]"
+                      name="PTS_Home" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FG_PCT_Home]"
+                      dataType="r4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FG_PCT_Home]"
+                      name="FG_PCT_Home" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FT_PCT_Home]"
+                      dataType="r4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FT_PCT_Home]"
+                      name="FT_PCT_Home" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FG3_PCT_Home]"
+                      dataType="r4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FG3_PCT_Home]"
+                      name="FG3_PCT_Home" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AST_Home]"
+                      dataType="i4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AST_Home]"
+                      name="AST_Home" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[REB_Home]"
+                      dataType="i4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[REB_Home]"
+                      name="REB_Home" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[OREB_Home]"
+                      dataType="i4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[OREB_Home]"
+                      name="OREB_Home" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DREB_Home]"
+                      dataType="i4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DREB_Home]"
+                      name="DREB_Home" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[STL_Home]"
+                      dataType="i4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[STL_Home]"
+                      name="STL_Home" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BLK_Home]"
+                      dataType="i4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BLK_Home]"
+                      name="BLK_Home" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[VisitorTeamID]"
+                      dataType="i4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[VisitorTeamID]"
+                      name="VisitorTeamID" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PTS_Away]"
+                      dataType="i4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PTS_Away]"
+                      name="PTS_Away" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FG_PCT_Away]"
+                      dataType="r4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FG_PCT_Away]"
+                      name="FG_PCT_Away" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FT_PCT_Away]"
+                      dataType="r4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FT_PCT_Away]"
+                      name="FT_PCT_Away" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FG3_PCT_Away]"
+                      dataType="r4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FG3_PCT_Away]"
+                      name="FG3_PCT_Away" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AST_Away]"
+                      dataType="i4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AST_Away]"
+                      name="AST_Away" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[REB_Away]"
+                      dataType="i4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[REB_Away]"
+                      name="REB_Away" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[OREB_Away]"
+                      dataType="i4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[OREB_Away]"
+                      name="OREB_Away" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DREB_Away]"
+                      dataType="i4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DREB_Away]"
+                      name="DREB_Away" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[STL_Away]"
+                      dataType="i4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[STL_Away]"
+                      name="STL_Away" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BLK_Away]"
+                      dataType="i4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BLK_Away]"
+                      name="BLK_Away" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Winner]"
+                      dataType="bool"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Winner]"
+                      name="Winner" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\SplitDimGames into Home Away.Paths[Multicast Output 1]"
+              endId="Package\SplitDimGames into Home Away\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Multicast Output 1"
+              startId="Package\SplitDimGames into Home Away\Multicast.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\SplitDimGames into Home Away.Paths[Multicast Output 2]"
+              endId="Package\SplitDimGames into Home Away\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+              name="Multicast Output 2"
+              startId="Package\SplitDimGames into Home Away\Multicast.Outputs[Multicast Output 2]" />
+            <path
+              refId="Package\SplitDimGames into Home Away.Paths[OLE DB Source Output]"
+              endId="Package\SplitDimGames into Home Away\Multicast.Inputs[Multicast Input 1]"
+              name="OLE DB Source Output"
+              startId="Package\SplitDimGames into Home Away\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+>>>>>>> Stashed changes:SSIS/NBA-SSIS/NBA-SSIS/2020-2021NBA.dtsx
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
@@ -4203,6 +5352,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+<<<<<<< Updated upstream:SSIS/NBA-SSIS/NBA-SSIS/FromGame_DetailsToDimPerformance.dtsx
+=======
+        <NodeLayout
+          Size="231,42"
+          Id="Package\SplitDimGames into Home Away"
+          TopLeft="256,34" />
+>>>>>>> Stashed changes:SSIS/NBA-SSIS/NBA-SSIS/2020-2021NBA.dtsx
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -4429,6 +5585,159 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load Excel File into DB\OLE DB Destination 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\SplitDimGames into Home Away">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\SplitDimGames into Home Away\OLE DB Source"
+          TopLeft="130,45" />
+        <NodeLayout
+          Size="120,42"
+          Id="Package\SplitDimGames into Home Away\Multicast"
+          TopLeft="139,130" />
+        <EdgeLayout
+          Id="Package\SplitDimGames into Home Away.Paths[OLE DB Source Output]"
+          TopLeft="202,87">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43"
+              Start="0,0"
+              End="0,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171,42"
+          Id="Package\SplitDimGames into Home Away\OLE DB Destination"
+          TopLeft="23,260" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\SplitDimGames into Home Away\OLE DB Destination 1"
+          TopLeft="204,261" />
+        <EdgeLayout
+          Id="Package\SplitDimGames into Home Away.Paths[Multicast Output 1]"
+          TopLeft="180.333333333333,172">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-71.8333333333333,88"
+              Start="0,0"
+              End="-71.8333333333333,80.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.8947368421053" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.8947368421053"
+                    Point2="0,35.8947368421053"
+                    Point3="-4,35.8947368421053" />
+                  <mssgle:LineSegment
+                    End="-67.8333333333333,35.8947368421053" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-67.8333333333333,35.8947368421053"
+                    Point2="-71.8333333333333,35.8947368421053"
+                    Point3="-71.8333333333333,39.8947368421053" />
+                  <mssgle:LineSegment
+                    End="-71.8333333333333,80.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SplitDimGames into Home Away.Paths[Multicast Output 2]"
+          TopLeft="217.666666666667,172">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="76.3333333333333,89"
+              Start="0,0"
+              End="76.3333333333333,81.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.3026315789474" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.3026315789474"
+                    Point2="0,36.3026315789474"
+                    Point3="4,36.3026315789474" />
+                  <mssgle:LineSegment
+                    End="72.3333333333333,36.3026315789474" />
+                  <mssgle:CubicBezierSegment
+                    Point1="72.3333333333333,36.3026315789474"
+                    Point2="76.3333333333333,36.3026315789474"
+                    Point3="76.3333333333333,40.3026315789474" />
+                  <mssgle:LineSegment
+                    End="76.3333333333333,81.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\SplitDimGames into Home Away\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SplitDimGames into Home Away\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SplitDimGames into Home Away\OLE DB Destination 1">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
