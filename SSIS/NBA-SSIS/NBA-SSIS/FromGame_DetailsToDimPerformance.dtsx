@@ -13,8 +13,13 @@
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
 <<<<<<< Updated upstream:SSIS/NBA-SSIS/NBA-SSIS/FromGame_DetailsToDimPerformance.dtsx
+<<<<<<< Updated upstream:SSIS/NBA-SSIS/NBA-SSIS/FromGame_DetailsToDimPerformance.dtsx
   DTS:VersionBuild="69"
   DTS:VersionGUID="{2B006088-28A0-4209-ACA4-5B9CDC76ECE8}">
+=======
+  DTS:VersionBuild="67"
+  DTS:VersionGUID="{F55985AE-3572-4A44-859B-C32916889BC9}">
+>>>>>>> Stashed changes:SSIS/NBA-SSIS/NBA-SSIS/2020-2021NBA.dtsx
 =======
   DTS:VersionBuild="67"
   DTS:VersionGUID="{F55985AE-3572-4A44-859B-C32916889BC9}">
@@ -33,12 +38,21 @@
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
 <<<<<<< Updated upstream:SSIS/NBA-SSIS/NBA-SSIS/FromGame_DetailsToDimPerformance.dtsx
+<<<<<<< Updated upstream:SSIS/NBA-SSIS/NBA-SSIS/FromGame_DetailsToDimPerformance.dtsx
             Salt="OZ3KOYN2SoM="
             IV="6d4Xffte1zgKtLDmXa5HeQ==" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
             <CipherData>
               <CipherValue>6d4Xffte1zgKtLDmXa5HeU4/RxrSV4OUloPl5Qh88wrVT/iZkYvZdgcHCRSoROGuRd3D291nXM/5XnNukLTO8h+ADTpjul8nqfHXrtBPEG7CUUUJB8FxO+B29zWNkXFAUKZjxre/2k+8zxJNUaklMMGc3M+Pz18cXQ0VoeoiKJIAdi0uTjr/j/YMl/ZCUnaF</CipherValue>
+=======
+            Salt="F80M4UQVbZM="
+            IV="Z5Zw2ch+u4jC9UEsE+B4nw==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <CipherData>
+              <CipherValue>Z5Zw2ch+u4jC9UEsE+B4nxJKkUIaRSFQEn/fMEP5Wjt22TFM+Fw6RafClQKz2cX09G/0oMntYWJKJU35FtiUD2RONa512buaBkZi43TCZhnDt64IgAZkYoY7ATg6whCnCYZM0MJKA/KGxnk/cTHM+4Zz1qWENw1U+nX4Xtzn3kdGwk2jgwi6DVTxws0NB8XQ</CipherValue>
+>>>>>>> Stashed changes:SSIS/NBA-SSIS/NBA-SSIS/2020-2021NBA.dtsx
 =======
             Salt="F80M4UQVbZM="
             IV="Z5Zw2ch+u4jC9UEsE+B4nw==" xmlns="http://www.w3.org/2001/04/xmlenc#">
@@ -63,6 +77,7 @@
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
 <<<<<<< Updated upstream:SSIS/NBA-SSIS/NBA-SSIS/FromGame_DetailsToDimPerformance.dtsx
+<<<<<<< Updated upstream:SSIS/NBA-SSIS/NBA-SSIS/FromGame_DetailsToDimPerformance.dtsx
             Salt="VZw2215lkY0="
             IV="/h/tHonQZZvNvgCjO8m5iA==" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
@@ -70,12 +85,17 @@
             <CipherData>
               <CipherValue>/h/tHonQZZvNvgCjO8m5iGKJayi+cxE6Cv9nB55hx+GN9Y9bZ5lTRB+lNz+n/tVYvXzF1YKcjcZ8h9Ft4AE9GcWdZRjfG2BhsM/mePeNy+EV14h2xosLFhs56Xt8z8EqCunCg8/LMHQsZjDNSPoaHT0yfeg26DNgt3dRXoOPnhbxxvFxCNFeQPPo4sfZlIO/</CipherValue>
 =======
+=======
+>>>>>>> Stashed changes:SSIS/NBA-SSIS/NBA-SSIS/2020-2021NBA.dtsx
             Salt="xx6cSOnPeK4="
             IV="xnl9ZR4NMYUA2Edn8ilYAg==" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
             <CipherData>
               <CipherValue>xnl9ZR4NMYUA2Edn8ilYAgQizHtaF7Kt9Fe27kbQzozQfr9WLecUm9eIS34jA3ksydEWa9O6izpbFWUyVzzjSCbFRaZJ3I1WmfyPxZowMyF1L+tV+XvbVfvwEQhoo8rQ4AG5DHxPUPDwIx+5lzwCcVJV4MlsbjZ60G+tnzlDxfIivSpjJqJKbSVsryK74feO</CipherValue>
+<<<<<<< Updated upstream:SSIS/NBA-SSIS/NBA-SSIS/FromGame_DetailsToDimPerformance.dtsx
+>>>>>>> Stashed changes:SSIS/NBA-SSIS/NBA-SSIS/2020-2021NBA.dtsx
+=======
 >>>>>>> Stashed changes:SSIS/NBA-SSIS/NBA-SSIS/2020-2021NBA.dtsx
             </CipherData>
           </EncryptedData>
@@ -4174,7 +4194,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       </DTS:ObjectData>
     </DTS:Executable>
 <<<<<<< Updated upstream:SSIS/NBA-SSIS/NBA-SSIS/FromGame_DetailsToDimPerformance.dtsx
+<<<<<<< Updated upstream:SSIS/NBA-SSIS/NBA-SSIS/FromGame_DetailsToDimPerformance.dtsx
 =======
+=======
+>>>>>>> Stashed changes:SSIS/NBA-SSIS/NBA-SSIS/2020-2021NBA.dtsx
     <DTS:Executable
       DTS:refId="Package\SplitDimGames into Home Away"
       DTS:CreationName="Microsoft.Pipeline"
@@ -5298,6 +5321,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+<<<<<<< Updated upstream:SSIS/NBA-SSIS/NBA-SSIS/FromGame_DetailsToDimPerformance.dtsx
+>>>>>>> Stashed changes:SSIS/NBA-SSIS/NBA-SSIS/2020-2021NBA.dtsx
+=======
 >>>>>>> Stashed changes:SSIS/NBA-SSIS/NBA-SSIS/2020-2021NBA.dtsx
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
@@ -5353,11 +5379,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
 <<<<<<< Updated upstream:SSIS/NBA-SSIS/NBA-SSIS/FromGame_DetailsToDimPerformance.dtsx
+<<<<<<< Updated upstream:SSIS/NBA-SSIS/NBA-SSIS/FromGame_DetailsToDimPerformance.dtsx
 =======
+=======
+>>>>>>> Stashed changes:SSIS/NBA-SSIS/NBA-SSIS/2020-2021NBA.dtsx
         <NodeLayout
           Size="231,42"
           Id="Package\SplitDimGames into Home Away"
           TopLeft="256,34" />
+<<<<<<< Updated upstream:SSIS/NBA-SSIS/NBA-SSIS/FromGame_DetailsToDimPerformance.dtsx
+>>>>>>> Stashed changes:SSIS/NBA-SSIS/NBA-SSIS/2020-2021NBA.dtsx
+=======
 >>>>>>> Stashed changes:SSIS/NBA-SSIS/NBA-SSIS/2020-2021NBA.dtsx
       </GraphLayout>
     </LayoutInfo>
