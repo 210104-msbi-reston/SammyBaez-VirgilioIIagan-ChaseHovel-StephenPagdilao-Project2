@@ -4,8 +4,8 @@
     <Name>NBA-SSIS</Name>
     <LastWriteTime>2021-02-18T17:06:15.1381958Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
-    <Salt>+wgZXtSn</Salt>
-    <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwYFFxlHm6kCakJEB1/uY3QAAAAACAAAAAAAQZgAAAAEAACAAAABfBzym2TfCLZltvp5yP+uNik2eJmdnwDDqcESz1uxE/QAAAAAOgAAAAAIAACAAAAA9p/BngLJEojKLoK8qu53EhY9xpnRUuP11YUmsMGeatjAAAAC25s09OmcgYhVaaZpri3yaiPN33UC8Jp5FPNCVg1F7T+p+BBIaObl4gPuNnoCuwNZAAAAA7rgr3Xt9p9hDFUhwIRsNAuDYtVBAnA5+fTjoLGYNamdM4JYrNM/aAOcgnPQtZC8ckD1jYtjAK182AUK7KaLQ3w==</LastKnownProtectedHashedPassword>
+    <Salt>rWfyVitA</Salt>
+    <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwYFFxlHm6kCakJEB1/uY3QAAAAACAAAAAAAQZgAAAAEAACAAAAC+Tz7J2tK6g8iN66rYFWK3Xqc5LuC6nGyMiVQIIr7pjAAAAAAOgAAAAAIAACAAAADGpk4Pgr2+O98NzLDcbGC45XgqKUJUPgMOxF0gvSdZWDAAAAADleJi5jPhcz2wmN3KM6L767zi/0pf7taL1o/2DdjopBOQNHKOM4sbhzphQXArAKpAAAAAypTF2gCuutGWskeqvlWASsdBO2vOX5s6F/3rd48OLs5LJCvEtnvZKo8q9DQ0s0TSqH9NWdm0b/bv9Qi89uMgPw==</LastKnownProtectedHashedPassword>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
@@ -13,28 +13,28 @@
       <LastWriteTime>2021-02-18T16:03:16.0817833Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
       <Salt>wc8QJnvl</Salt>
-      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwYFFxlHm6kCakJEB1/uY3QAAAAACAAAAAAAQZgAAAAEAACAAAADgFwWyGu/oq4dk/KFrzPlfQdODfR/bQpCUg9XIg3N9qgAAAAAOgAAAAAIAACAAAACcS+FpDKiryB5bd/59iPR4Ioa2wwqNX/j2co9bGbWpgDAAAABO5j/iAe694HwU987r+2ZEKWE3HtWHbdYP8vLYacChyM6pvFW6hpghf4cXKW2vv6JAAAAAe/uX++VBGc+dTS8nQxAVvGmb5tKwf6rDYAk9fdZYwRMkB5oKufmZA2ofHVtuomsxcgqpmQ2I/xnvafbjtflEzA==</LastKnownProtectedHashedPassword>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwYFFxlHm6kCakJEB1/uY3QAAAAACAAAAAAAQZgAAAAEAACAAAADJGRUkMfkpNKvBh5Dnq5dXg8paPcLTaNte9tIqYRmRwQAAAAAOgAAAAAIAACAAAACC7OmLOPxmWqdihcRwhCqJsSJIpcHoJXsk+tUcsKaitjAAAAATf/SGFQAadueXjC5ZUUJdLqEkAoqdgEBDvq2C9QqoQsEZ3VaQ4GoWsfhMsHdY5qxAAAAA38FwxIE/n4SpeiIBE2iG3p7TGYETDiUKcTEwQf5ze4nltWbQrATb19gOsRlgWeYCvYSHsdytD7seavIx+TjRww==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>UpdatePlayersTable.dtsx</Name>
       <LastWriteTime>2021-02-18T16:03:16.0807835Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
       <Salt>yQ+vVysm</Salt>
-      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwYFFxlHm6kCakJEB1/uY3QAAAAACAAAAAAAQZgAAAAEAACAAAABitgTWLiMlPIqMoy3OeF9sCWLbTQCkXOQAemur3M4cOAAAAAAOgAAAAAIAACAAAAA2CJhbMWqLCq4HgS2RiNJ/yBcojnIk2iapobOHLV0HdTAAAABBc16yZEZSQbAkQGR3c/y2KN5IKsx4FiuSqod2QqlNvj0KZKo0OxKqtHSMQql9xNdAAAAA3fjwGjTCnCB+UBE/uoPC+Ggl6mk1OTn4xZXI3yvD4RRPAwR3bFX//gB2G5QxjQphShhXgrLpLmsFSPoGTr2Wvg==</LastKnownProtectedHashedPassword>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwYFFxlHm6kCakJEB1/uY3QAAAAACAAAAAAAQZgAAAAEAACAAAADhu7bjrpwrmZlR+i4fSiupuGL2onLKtn1Jg+Z8Vdj0IQAAAAAOgAAAAAIAACAAAADajPXpEPxdXvDD5TH8i3wwwlG2MrM4cpTYBVfqeG3mgzAAAACLiudq0aMclSjQ9DaqAQgPmT+2x4Jo+2LeEYEUbLiBpWwY25vC06yxwSu0VV1QbhhAAAAA9LarGI1B5vvO7uuhBwwkmZtaLjz0TZ68POprSva2R1XFHLo+ox6V/zoS0jMi/i6oS3DvbAIZmKAqLbFBuNd74w==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>UpdateFactPerformanceTable.dtsx</Name>
       <LastWriteTime>2021-02-18T16:03:16.0797824Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
       <Salt>ZpjUGD1q</Salt>
-      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwYFFxlHm6kCakJEB1/uY3QAAAAACAAAAAAAQZgAAAAEAACAAAAAwsca6lkCFdPTxkLuVxtnBKNxpbpkiHR/lnOBox0qtlgAAAAAOgAAAAAIAACAAAADBQ2Vaefs4uw0vQ5yrZhn+HOqM+BmSC5jIlpBNxIhtsDAAAACSZH1f22HRyJ8AQJ1FK/IwiYB5eZfiksTYgp5pdX/rzcsV9VFfvdF/57x281esoItAAAAA5ZpkPjdHdPx33R+LaBJaOvoNY4BrWCrC/NuyJdLIU8xTrUN43b326u2SEFazjwZxZaxL9Z0udwIEXwl01SuOwQ==</LastKnownProtectedHashedPassword>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwYFFxlHm6kCakJEB1/uY3QAAAAACAAAAAAAQZgAAAAEAACAAAABqEhBasIozsNuaptHmB4Ypl6swc7cYcPRRjO0WhTYk+QAAAAAOgAAAAAIAACAAAAB/DQzog8WBV85/RLKbPzYBMehuE/vZImaik6axRcR+0zAAAABHz1ADMjn7P9o8/9uL7P2B8rEQyxr00htbbbpXG+hh3AjRUs89R8o/itfvb38yKMdAAAAAuNnqtJBZQSxjX2kUVZxW9W6UDrrQBnkwkUuoeA8XMccbUPdD4kX2umDNO3UnxsBLDx4jNqlk2a9CWntRhZkShA==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>FromDWtoDB.dtsx</Name>
-      <LastWriteTime>2021-02-18T21:18:02.102393Z</LastWriteTime>
+      <LastWriteTime>2021-02-18T22:21:02.8054762Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
-      <Salt>C3IXtnzY</Salt>
-      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwYFFxlHm6kCakJEB1/uY3QAAAAACAAAAAAAQZgAAAAEAACAAAADa27qt4RJ6IW+DDtf+t1CDABK45DPtQZGMn6Oxy6ehFQAAAAAOgAAAAAIAACAAAAAJFnqi1jixafE9BqgHwgb0i6xO8DQsaomNlW5+HsRrrDAAAAC3RGTs1cZ8V5WBYYQSQbXzV7og391Xnv8TVIXzJFdYAUposlZwK4fNOxI4rTwPa+5AAAAA5x4A470JTI25DbYHxe5KGGBLBPR3CNGupX5QYIKSMmnMKUDkYcXQgA1TfDsrVMQ73u9eg4zDGelw6QOqvXOR2Q==</LastKnownProtectedHashedPassword>
+      <Salt>BepBbipO</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwYFFxlHm6kCakJEB1/uY3QAAAAACAAAAAAAQZgAAAAEAACAAAAD+DzDuhtuDyAEhkI4JJAxFIMjC5QKj7gS3s4s7f7TDrQAAAAAOgAAAAAIAACAAAAAAaWkcmLtL8pkUjc0CrWCqz+A1/5fZ7N97uojC7hynnDAAAABcn/LukHKi59IvAKuTpROzVbY9yaxgEoGvoHVZH2+XqCR6defy2eHoveaCSPUZDrRAAAAAR50Nq7DD8TZUIBzvqwWmG3YMSSBOf0Spj5jzjCdh0hW19u6xoNGXyzZyC2d6vy2friZXox0LL7Hlvpx+xM0Hdg==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
 </BuildLog>
