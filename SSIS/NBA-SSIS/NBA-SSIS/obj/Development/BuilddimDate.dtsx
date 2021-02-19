@@ -12,8 +12,8 @@
   DTS:ObjectName="BuilddimDate"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="46"
-  DTS:VersionGUID="{7183AC57-C587-4D04-9258-4E0756691EB1}">
+  DTS:VersionBuild="53"
+  DTS:VersionGUID="{C4137A5B-C246-4227-A3E2-41091693C1EA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,12 +27,12 @@
           DTS:ConnectionString="Data Source=25.67.200.218\STOREAPPDB;User ID=CSVV_Virgil;Initial Catalog=BasketballDB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="N46QSTZlMtk="
-            IV="J+AKff4ZB2uO9DmQm2gN4A==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="D4pD0q06694="
+            IV="JYHEMicDZUOUxE66eM51Eg==" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
             <CipherData>
-              <CipherValue>J+AKff4ZB2uO9DmQm2gN4BLYWCYN0PRgxkSBwGXJKsyL+SHGqoyA/QUowhl3FYUDZodsxPXtcnR8xnzvJx9xPrbWcV7dhUiZ98bDzhv3epB+iqnAy5jkIajjhShe0i964SNCGwF60r68uN9k4tVCsGn/AyT+POdKdXMX/ZTJ81Wz7NMuZ7cLQxVgs6ZuNLbc</CipherValue>
+              <CipherValue>JYHEMicDZUOUxE66eM51EjsPOMt5FlDQCVeHIwgoBjE8btN+o3eXFLwyoDrv8blylwWmB0ggcU/KMDRzCyGcZVJw+XWN6mJGL1jiBSqQhoOWtYCPNHaoFT4Esb5u0aBbakL7F0PN6oHcCw3PfXc2eMKCrF5SWmY5etcS84i9qQt5p1TTXVTDqy2f6oWN03PB</CipherValue>
             </CipherData>
           </EncryptedData>
         </DTS:ConnectionManager>
@@ -1252,25 +1252,45 @@
                       cachedDataType="i4"
                       cachedName="Year"
                       externalMetadataColumnId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
-                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[Year]" />
+                      lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[Year]" />
                     <inputColumn
                       refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Month]"
                       cachedDataType="i4"
                       cachedName="Month"
                       externalMetadataColumnId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
-                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[Month]" />
-                    <inputColumn
-                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DayofMonth]"
-                      cachedDataType="i4"
-                      cachedName="DayofMonth"
-                      externalMetadataColumnId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayoftheMonth]"
-                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[DayofMonth]" />
+                      lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[Month]" />
                     <inputColumn
                       refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Season]"
                       cachedDataType="i2"
                       cachedName="Season"
                       externalMetadataColumnId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Season]"
                       lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[Season]" />
+                    <inputColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MonthName]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="MonthName"
+                      externalMetadataColumnId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MonthName]"
+                      lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[MonthName]" />
+                    <inputColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DayofMonth]"
+                      cachedDataType="i4"
+                      cachedName="DayofMonth"
+                      externalMetadataColumnId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayofMonth]"
+                      lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[DayofMonth]" />
+                    <inputColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DayName]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="DayName"
+                      externalMetadataColumnId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayName]"
+                      lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[DayName]" />
+                    <inputColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DayoftheWeek]"
+                      cachedDataType="i4"
+                      cachedName="DayoftheWeek"
+                      externalMetadataColumnId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayoftheWeek]"
+                      lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[DayoftheWeek]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1287,17 +1307,31 @@
                       dataType="i4"
                       name="Month" />
                     <externalMetadataColumn
-                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateId]"
-                      dataType="i4"
-                      name="DateId" />
-                    <externalMetadataColumn
                       refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Season]"
                       dataType="i2"
                       name="Season" />
                     <externalMetadataColumn
-                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayoftheMonth]"
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MonthName]"
+                      dataType="wstr"
+                      length="9"
+                      name="MonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayofMonth]"
                       dataType="i4"
-                      name="DayoftheMonth" />
+                      name="DayofMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayName]"
+                      dataType="wstr"
+                      length="10"
+                      name="DayName" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayoftheWeek]"
+                      dataType="i4"
+                      name="DayoftheWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateId]"
+                      dataType="i4"
+                      name="DateId" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1618,6 +1652,7 @@ public class ScriptMain : UserComponent
      *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
      */
     #endregion
+    int counter = 0;
 
     /// <summary>
     /// This method is called once, before rows begin to be processed in the data flow.
@@ -1658,8 +1693,80 @@ public class ScriptMain : UserComponent
     public override void Input0_ProcessInputRow(Input0Buffer Row)
     {
         Row.Year = Convert.ToInt32(Row.GAMEDATEEST.Substring(0,4));
-        Row.Month = Convert.ToInt32(Row.GAMEDATEEST.Substring(5,2));
+        int currentMonth = Convert.ToInt32(Row.GAMEDATEEST.Substring(5, 2));
+        Row.Month = currentMonth;
         Row.DayofMonth = Convert.ToInt32(Row.GAMEDATEEST.Substring(8,2));
+
+
+        DateTime dt = (DateTime.Parse(Row.GAMEDATEEST));
+        Row.DayoftheWeek = dt.DayOfWeek.GetHashCode() + 1;
+
+        switch (dt.DayOfWeek.GetHashCode())
+        {
+            case 0:
+                Row.DayName = "Sunday";
+                break;
+            case 1:
+                Row.DayName = "Monday";
+                break;
+            case 2:
+                Row.DayName = "Tuesday";
+                break;
+            case 3:
+                Row.DayName = "Wednesday";
+                break;
+            case 4:
+                Row.DayName = "Thursday";
+                break;
+            case 5:
+                Row.DayName = "Friday";
+                break;
+            case 6:
+                Row.DayName = "Saturday";
+                break;
+        }
+
+        switch (currentMonth)
+        {
+            case 1:
+                Row.MonthName = "January";
+                break;
+            case 2:
+                Row.MonthName = "February";
+                break;
+            case 3:
+                Row.MonthName = "March";
+                break;
+            case 4:
+                Row.MonthName = "April";
+                break;
+            case 5:
+                Row.MonthName = "May";
+                break;
+            case 6:
+                Row.MonthName = "June";
+                break;
+            case 7:
+                Row.MonthName = "July";
+                break;
+            case 8:
+                Row.MonthName = "August";
+                break;
+            case 9:
+                Row.MonthName = "September";
+                break;
+            case 10:
+                Row.MonthName = "October";
+                break;
+            case 11:
+                Row.MonthName = "November";
+                break;
+            case 12:
+                Row.MonthName = "December";
+                break;
+        }
+
+        counter++;
     }
 
 }
@@ -1770,6 +1877,72 @@ public class Input0Buffer: ScriptBuffer
         }
     }
 
+    public String MonthName
+    {
+        set
+        {
+            this[4] = value;
+        }
+    }
+    public bool MonthName_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(4);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String DayName
+    {
+        set
+        {
+            this[5] = value;
+        }
+    }
+    public bool DayName_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(5);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Int32 DayoftheWeek
+    {
+        set
+        {
+            this[6] = value;
+        }
+    }
+    public bool DayoftheWeek_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(6);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
     new public bool NextRow()
     {
         return base.NextRow();
@@ -1826,7 +1999,7 @@ namespace SC_4e1a6104cc3e430fa4ff1af7170b42c5.Properties {
     <msb:CodeName>SC_4e1a6104cc3e430fa4ff1af7170b42c5</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_4e1a6104cc3e430fa4ff1af7170b42c5</msb:DisplayName>
-    <msb:ProjectId>{37FA1D3F-69D2-44C7-967C-5A488B411918}</msb:ProjectId>
+    <msb:ProjectId>{751E104D-1E5B-4850-919F-41750816B690}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_4e1a6104cc3e430fa4ff1af7170b42c5.csproj" />
@@ -2065,122 +2238,140 @@ namespace SC_4e1a6104cc3e430fa4ff1af7170b42c5.Properties {
                     <arrayElement
                       dataType="System.String"><![CDATA[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
-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
+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
-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
+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
-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
-AAAAAIYIPgCfAAUA3SAAAAAAhghQA0gABQDmIAAAAACGCFgEAQAFAPUgAAAAAIYIjgOjAAYADCEA
-AAAAhgj5AgEABwAbIQAAAACGCGcDowAIADIhAAAAAIYIAwMBAAkAQSEAAAAAhgh4A6MACgBYIQAA
-AACGAHkGSAALAGAhAAAAAIYAwgVIAAsAaCEAAAAAhhieBAYACwCIIQAAAADGAFUGqAALAK0hAAAA
-AMYBTgaZAA8AwCEAAAAAxgFiBpkAEADCIQAAAACGGJ4EsgARANEhAAAAAIYYngSyABIA4CEAAAAA
-gxieBAYAEwDoIQAAAACTCIoEuAATABQiAAAAAJMIuwC9ABMAGyIAAAAAkwjHAMIAEwAjIgAAAACW
-CM4FyAAUACoiAAAAAIYYngQGABQAMiIAAAAAkRikBM0AFAAAAAEAfQYAAAEAgwQAAAIAegUAAAMA
-TgQAAAEAxQIAAAEAxQIAAAEAxQIAAAEAxQIAAAEAxQIAAAEAxQIAAAEANgAAAAIAiwAAAAMAgwQA
-AAQATgQAAAEAgwQAAAEAfQYAAAEA/gUAAAEA/gUAAAEAxQIJAJ4EAQARAJ4EBgAZAJ4ECgApAJ4E
-EAAxAJ4EEAA5AJ4EEABBAJ4EEABJAJ4EEABRAJ4EEABZAJ4EEABhAJ4EEABpAJ4EBgCZAJ4EBgC5
-AJ4EFQDJAJ4EBgCJAK4CBgCJALkCBgDRAO8CGwDZAAEAIQBxAJ4EJgBxAIMEMABxAHoFNAB5AOUC
-OABxAJcDPQBxAKYDQgBxAJ4DAQDpAJ4EEABxAHkGSABxAMIFSACJAJ4EBgDRAKgFTACJAI4FUwCR
-AJ4EBgD5AHkAWQD5AIEGYQChAJ4EZwDBAJ4EBgAuAAsA7AAuABMA9QAuABsAFAEuACMAHQEuACsA
-RgEuADMARgEuADsARgEuAEMAHQEuAEsATAEuAFMARgEuAFsAYwFDAGMArQHhAHsArQHjAGsArQEp
-AXMAFAFJAXMAFAEDAAEABwAJAAgACwAAAEIA0QAAAFQD1QAAAFwE2QAAAJID1QAAAAwD2QAAAIED
-1QAAAAcD2QAAAHwD1QAAAI4E3QAAANsA4gAAANIF5wACAAYAAwACAAcABQABAAgABwABAAkACQAB
-AAoACwABAAsADQABAAwADwABAA0AEQACABcAEwACABgAFQABABkAFQACABoAFwAEgAAAAQAAAAAA
-AAAAAAAAAAAJAAAABAAAAAAAAAAAAAAAbwBOAAAAAAAPAAAAAAAAAAAAAAB4AAgGAAAAAA8AAAAA
-AAAAAAAAAHgALQYAAAAABAAAAAAAAAAAAAAAbwCvAwAAAAAAAAAAAQAAAO8EAAAAAABUb0ludDMy
-AFNDXzRlMWE2MTA0Y2MzZTQzMGZhNGZmMWFmNzE3MGI0MmM1ADxNb2R1bGU+AElucHV0SUQAZ2V0
-X0dBTUVEQVRFRVNUAG1zY29ybGliAGRlZmF1bHRJbnN0YW5jZQBSdW50aW1lVHlwZUhhbmRsZQBH
-ZXRUeXBlRnJvbUhhbmRsZQBJbnB1dE5hbWUATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUGlwZWxp
-bmUAVHlwZQBnZXRfQ3VsdHVyZQBzZXRfQ3VsdHVyZQByZXNvdXJjZUN1bHR1cmUAQXBwbGljYXRp
-b25TZXR0aW5nc0Jhc2UARWRpdG9yQnJvd3NhYmxlU3RhdGUAQ29tcGlsZXJHZW5lcmF0ZWRBdHRy
-aWJ1dGUARGVidWdnZXJOb25Vc2VyQ29kZUF0dHJpYnV0ZQBEZWJ1Z2dhYmxlQXR0cmlidXRlAEVk
-aXRvckJyb3dzYWJsZUF0dHJpYnV0ZQBBc3NlbWJseVRpdGxlQXR0cmlidXRlAEFzc2VtYmx5VHJh
-ZGVtYXJrQXR0cmlidXRlAFRhcmdldEZyYW1ld29ya0F0dHJpYnV0ZQBBc3NlbWJseUNvbmZpZ3Vy
-YXRpb25BdHRyaWJ1dGUAQXNzZW1ibHlEZXNjcmlwdGlvbkF0dHJpYnV0ZQBDb21waWxhdGlvblJl
-bGF4YXRpb25zQXR0cmlidXRlAEFzc2VtYmx5UHJvZHVjdEF0dHJpYnV0ZQBBc3NlbWJseUNvcHly
-aWdodEF0dHJpYnV0ZQBTU0lTU2NyaXB0Q29tcG9uZW50RW50cnlQb2ludEF0dHJpYnV0ZQBBc3Nl
-bWJseUNvbXBhbnlBdHRyaWJ1dGUAUnVudGltZUNvbXBhdGliaWxpdHlBdHRyaWJ1dGUAUHJlRXhl
-Y3V0ZQBQb3N0RXhlY3V0ZQB2YWx1ZQBTeXN0ZW0uUnVudGltZS5WZXJzaW9uaW5nAEdldFN0cmlu
-ZwBTdWJzdHJpbmcAc2V0X01vbnRoAHNldF9EYXlvZk1vbnRoAFN5c3RlbS5Db21wb25lbnRNb2Rl
-bABTQ180ZTFhNjEwNGNjM2U0MzBmYTRmZjFhZjcxNzBiNDJjNS5kbGwAZ2V0X0dBTUVEQVRFRVNU
-X0lzTnVsbABzZXRfTW9udGhfSXNOdWxsAHNldF9EYXlvZk1vbnRoX0lzTnVsbABzZXRfWWVhcl9J
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAABgAAAAgAAAAGAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAaAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAIAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAADc
+NwAAAAAAAEgAAAACAAUAUCQAAKASAAABAAAAAAAAAPA2AAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAQA8gEAAAEAABEDA28GAAAG
+FhpvEgAACigTAAAKbwgAAAYDbwYAAAYbGG8SAAAKKBMAAAoKAwZvCgAABgMDbwYAAAYeGG8SAAAK
+KBMAAApvDAAABgNvBgAABigUAAAKCwMSASgVAAAKDBIC/hYPAAABbxYAAAoXWG8SAAAGEgEoFQAA
+CgwSAv4WDwAAAW8WAAAKDQlFBwAAAAIAAAAPAAAAHAAAACkAAAA2AAAAQwAAAFAAAAArWQNyAQAA
+cG8QAAAGK0wDcg8AAHBvEAAABis/A3IdAABwbxAAAAYrMgNyLQAAcG8QAAAGKyUDckEAAHBvEAAA
+BisYA3JTAABwbxAAAAYrCwNyYQAAcG8QAAAGBhdZRQwAAAAFAAAAFQAAACUAAAAyAAAAPwAAAEwA
+AABZAAAAZgAAAHMAAACAAAAAjQAAAJoAAAA4oAAAAANycwAAcG8OAAAGOJAAAAADcoMAAHBvDgAA
+BjiAAAAAA3KVAABwbw4AAAYrcwNyoQAAcG8OAAAGK2YDcq0AAHBvDgAABitZA3K1AABwbw4AAAYr
+TANyvwAAcG8OAAAGKz8DcskAAHBvDgAABisyA3LXAABwbw4AAAYrJQNy6wAAcG8OAAAGKxgDcvsA
+AHBvDgAABisLA3INAQBwbw4AAAYCAnsBAAAEF1h9AQAABCoeAigWAAAGKioCAwQFKBcAAAoqUgJ7
+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
+iQAaA1AAgQArBFUAgQA6BFoAgQAyBAEA+QA6BRAAgQAVB2AAgQBeBmAAmQA6BQYA4QBEBmQAmQAq
+BmwAoQA6BQYACQGFAHIACQEdB3sAsQA6BYEA0QA6BQYALgALAAkBLgATABIBLgAbADEBLgAjADoB
+LgArAGMBLgAzAGMBLgA7AGMBLgBDADoBLgBLAGkBLgBTAGMBLgBbAIABQwBjAMoB4wBrAMoBAQF7
+AMoB6QFzADEBCQJzADEBGwADAAEABwAPAAgAEQAAAEIA7gAAAKgD8gAAAPAE9gAAACYE8gAAAEED
+9gAAAP0D8gAAADwD9gAAAPgD8gAAAJsA7gAAAL8D8gAAALMA7gAAANQD8gAAAEsD9gAAAA4E8gAA
+ACIF+gAAAAoB/wAAAG4GBAECAAYAAwACAAcABQABAAgABwABAAkACQABAAoACwABAAsADQABAAwA
+DwABAA0AEQABAA4AEwABAA8AFQABABAAFwABABEAGQABABIAGwABABMAHQACAB0AHwACAB4AIQAB
+AB8AIQACACAAIwAEgAAAAQAAAAAAAAAAAAAAAAAJAAAABAAAAAAAAAAAAAAAiQBOAAAAAAAPAAAA
+AAAAAAAAAACSAKQGAAAAAA8AAAAAAAAAAAAAAJIAyQYAAAAABAAAAAAAAAAAAAAAiQBDBAAAAAAA
+AAAAAQAAAIsFAAAAAAAAAFRvSW50MzIAU0NfNGUxYTYxMDRjYzNlNDMwZmE0ZmYxYWY3MTcwYjQy
+YzUAPE1vZHVsZT4ASW5wdXRJRABnZXRfR0FNRURBVEVFU1QAbXNjb3JsaWIAZGVmYXVsdEluc3Rh
+bmNlAEdldEhhc2hDb2RlAFJ1bnRpbWVUeXBlSGFuZGxlAEdldFR5cGVGcm9tSGFuZGxlAHNldF9N
+b250aE5hbWUASW5wdXROYW1lAHNldF9EYXlOYW1lAERhdGVUaW1lAE1pY3Jvc29mdC5TcWxTZXJ2
+ZXIuRHRzLlBpcGVsaW5lAFR5cGUAZ2V0X0N1bHR1cmUAc2V0X0N1bHR1cmUAcmVzb3VyY2VDdWx0
+dXJlAEFwcGxpY2F0aW9uU2V0dGluZ3NCYXNlAFBhcnNlAEVkaXRvckJyb3dzYWJsZVN0YXRlAENv
+bXBpbGVyR2VuZXJhdGVkQXR0cmlidXRlAERlYnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUARGVi
+dWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2FibGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRsZUF0
+dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFya0F0dHJpYnV0ZQBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1
+dGUAQXNzZW1ibHlDb25maWd1cmF0aW9uQXR0cmlidXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRy
+aWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRy
+aWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1dGUAU1NJU1NjcmlwdENvbXBvbmVudEVudHJ5
+UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlDb21wYW55QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRpYmls
+aXR5QXR0cmlidXRlAFByZUV4ZWN1dGUAUG9zdEV4ZWN1dGUAdmFsdWUAU3lzdGVtLlJ1bnRpbWUu
+VmVyc2lvbmluZwBHZXRTdHJpbmcAU3Vic3RyaW5nAHNldF9Nb250aABzZXRfRGF5b2ZNb250aABz
+ZXRfRGF5b2Z0aGVXZWVrAGdldF9EYXlPZldlZWsAU3lzdGVtLkNvbXBvbmVudE1vZGVsAFNDXzRl
+MWE2MTA0Y2MzZTQzMGZhNGZmMWFmNzE3MGI0MmM1LmRsbABnZXRfR0FNRURBVEVFU1RfSXNOdWxs
+AHNldF9Nb250aE5hbWVfSXNOdWxsAHNldF9EYXlOYW1lX0lzTnVsbABzZXRfTW9udGhfSXNOdWxs
+AHNldF9EYXlvZk1vbnRoX0lzTnVsbABzZXRfRGF5b2Z0aGVXZWVrX0lzTnVsbABzZXRfWWVhcl9J
 c051bGwAU2V0TnVsbABzZXRfSXRlbQBTeXN0ZW0AcmVzb3VyY2VNYW4AU2NyaXB0TWFpbgBTeXN0
 ZW0uQ29uZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0uUmVmbGVjdGlvbgBJ
 bnZhbGlkT3BlcmF0aW9uRXhjZXB0aW9uAFN0cmluZ0NvbXBhcmlzb24AQ3VsdHVyZUluZm8AT3V0
 cHV0TmFtZU1hcABPdXRwdXRNYXAAc2V0X1llYXIASW5wdXQwQnVmZmVyAFBpcGVsaW5lQnVmZmVy
-AFNjcmlwdEJ1ZmZlcgBnZXRfUmVzb3VyY2VNYW5hZ2VyAC5jdG9yAC5jY3RvcgBTeXN0ZW0uRGlh
-Z25vc3RpY3MAU3lzdGVtLlJ1bnRpbWUuQ29tcGlsZXJTZXJ2aWNlcwBTeXN0ZW0uUmVzb3VyY2Vz
-AFNDXzRlMWE2MTA0Y2MzZTQzMGZhNGZmMWFmNzE3MGI0MmM1LlByb3BlcnRpZXMuUmVzb3VyY2Vz
-LnJlc291cmNlcwBEZWJ1Z2dpbmdNb2RlcwBTQ180ZTFhNjEwNGNjM2U0MzBmYTRmZjFhZjcxNzBi
-NDJjNS5Qcm9wZXJ0aWVzAFZhcmlhYmxlcwBCdWZmZXJDb2x1bW5JbmRleGVzAEdldENvbHVtbklu
-ZGV4ZXMAU2V0dGluZ3MARXF1YWxzAENvbm5lY3Rpb25zAE9iamVjdABFbmRPZlJvd3NldABnZXRf
-RGVmYXVsdABVc2VyQ29tcG9uZW50AFBhcmVudENvbXBvbmVudABTY3JpcHRDb21wb25lbnQATWlj
-cm9zb2Z0LlNxbFNlcnZlci5UeFNjcmlwdABDb252ZXJ0AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuUGlw
-ZWxpbmVIb3N0AElucHV0MF9Qcm9jZXNzSW5wdXQASW5wdXQwX1Byb2Nlc3NJbnB1dFJvdwBOZXh0
-Um93AGdldF9Bc3NlbWJseQAAAACAm0kAcwBOAHUAbABsACAAcAByAG8AcABlAHIAdAB5ACAAYwBh
-AG4AbgBvAHQAIABiAGUAIABzAGUAdAAgAHQAbwAgAEYAYQBsAHMAZQAuACAAQQBzAHMAaQBnAG4A
-IABhACAAdgBhAGwAdQBlACAAdABvACAAdABoAGUAIABjAG8AbAB1AG0AbgAgAGkAbgBzAHQAZQBh
-AGQALgAAD0kAbgBwAHUAdAAgADAAAHFTAEMAXwA0AGUAMQBhADYAMQAwADQAYwBjADMAZQA0ADMA
-MABmAGEANABmAGYAMQBhAGYANwAxADcAMABiADQAMgBjADUALgBQAHIAbwBwAGUAcgB0AGkAZQBz
-AC4AUgBlAHMAbwB1AHIAYwBlAHMAAMbKr+I8kPpDsNbaicxmoigABCABAQgDIAABBSABARERBCAB
-AQ4FIAEBEVkFIAIOCAgEAAEIDgkgAwESPR0IEkEDBhI9AwYdCAQgAQ4IBCABAggFIAIBCBwDIAAC
-BiACAg4ReQUgAR0ICAcAARJ9EYCBBSAAEoCFByACAQ4SgIUIt3pcVhk04IkIiYRdzYCAzJEDBhIU
-AwYSGAMGEkUDBhJRAwYSVQMGEiAFIAEBEgwDIAAOBCABAQIJIAQBCA4SPRJBBSABARJFBAAAElEE
-AAASVQUAAQESVQQAABIgAwAAAQMoAA4DKAACAygACAQIABJRBAgAElUECAASIAgBAAgAAAAAAB4B
-AAEAVAIWV3JhcE5vbkV4Y2VwdGlvblRocm93cwEIAQACAAAAAAAoAQAjU0NfNGUxYTYxMDRjYzNl
-NDMwZmE0ZmYxYWY3MTcwYjQyYzUAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAyMQAASQEAGi5O
-RVRGcmFtZXdvcmssVmVyc2lvbj12NC43AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZy
-YW1ld29yayA0LjcEAQAAAAAAtAAAAM7K774BAAAAkQAAAGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291
-cmNlUmVhZGVyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1
-YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkjU3lzdGVtLlJlc291cmNlcy5SdW50aW1lUmVz
-b3VyY2VTZXQCAAAAAAAAAAAAAABQQURQQURQtAAAAPwyAAAAAAAAAAAAABYzAAAAIAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAIMwAAAAAAAAAAAAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/
-JQAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAA
-SAAAAFhAAADsAwAAAAAAAAAAAADsAzQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAA
-AAAAvQTv/gAAAQAAAAEAAAAAAAAAAQAAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQA
-AAABAFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBu
-AAAAAAAAALAETAMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAKAMAAAEAMAAwADAA
-MAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBu
-AHkATgBhAG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAA
-AABTAEMAXwA0AGUAMQBhADYAMQAwADQAYwBjADMAZQA0ADMAMABmAGEANABmAGYAMQBhAGYANwAx
-ADcAMABiADQAMgBjADUAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4A
-MAAuADAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfADQAZQAxAGEANgAx
-ADAANABjAGMAMwBlADQAMwAwAGYAYQA0AGYAZgAxAGEAZgA3ADEANwAwAGIANAAyAGMANQAuAGQA
-bABsAAAASAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBvAHAAeQByAGkAZwBo
-AHQAIABAACAAIAAyADAAMgAxAAAAKgABAAEATABlAGcAYQBsAFQAcgBhAGQAZQBtAGEAcgBrAHMA
-AAAAAAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBDAF8ANABl
-ADEAYQA2ADEAMAA0AGMAYwAzAGUANAAzADAAZgBhADQAZgBmADEAYQBmADcAMQA3ADAAYgA0ADIA
-YwA1AC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAQwBfADQAZQAx
+AFNjcmlwdEJ1ZmZlcgBnZXRfUmVzb3VyY2VNYW5hZ2VyAGNvdW50ZXIALmN0b3IALmNjdG9yAFN5
+c3RlbS5EaWFnbm9zdGljcwBTeXN0ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2VzAFN5c3RlbS5S
+ZXNvdXJjZXMAU0NfNGUxYTYxMDRjYzNlNDMwZmE0ZmYxYWY3MTcwYjQyYzUuUHJvcGVydGllcy5S
+ZXNvdXJjZXMucmVzb3VyY2VzAERlYnVnZ2luZ01vZGVzAFNDXzRlMWE2MTA0Y2MzZTQzMGZhNGZm
+MWFmNzE3MGI0MmM1LlByb3BlcnRpZXMAVmFyaWFibGVzAEJ1ZmZlckNvbHVtbkluZGV4ZXMAR2V0
+Q29sdW1uSW5kZXhlcwBTZXR0aW5ncwBFcXVhbHMAQ29ubmVjdGlvbnMAT2JqZWN0AEVuZE9mUm93
+c2V0AGdldF9EZWZhdWx0AFVzZXJDb21wb25lbnQAUGFyZW50Q29tcG9uZW50AFNjcmlwdENvbXBv
+bmVudABNaWNyb3NvZnQuU3FsU2VydmVyLlR4U2NyaXB0AENvbnZlcnQATWljcm9zb2Z0LlNxbFNl
+cnZlci5QaXBlbGluZUhvc3QASW5wdXQwX1Byb2Nlc3NJbnB1dABJbnB1dDBfUHJvY2Vzc0lucHV0
+Um93AE5leHRSb3cAZ2V0X0Fzc2VtYmx5AAAAAA1TAHUAbgBkAGEAeQAADU0AbwBuAGQAYQB5AAAP
+VAB1AGUAcwBkAGEAeQAAE1cAZQBkAG4AZQBzAGQAYQB5AAARVABoAHUAcgBzAGQAYQB5AAANRgBy
+AGkAZABhAHkAABFTAGEAdAB1AHIAZABhAHkAAA9KAGEAbgB1AGEAcgB5AAARRgBlAGIAcgB1AGEA
+cgB5AAALTQBhAHIAYwBoAAALQQBwAHIAaQBsAAAHTQBhAHkAAAlKAHUAbgBlAAAJSgB1AGwAeQAA
+DUEAdQBnAHUAcwB0AAATUwBlAHAAdABlAG0AYgBlAHIAAA9PAGMAdABvAGIAZQByAAARTgBvAHYA
+ZQBtAGIAZQByAAARRABlAGMAZQBtAGIAZQByAACAm0kAcwBOAHUAbABsACAAcAByAG8AcABlAHIA
+dAB5ACAAYwBhAG4AbgBvAHQAIABiAGUAIABzAGUAdAAgAHQAbwAgAEYAYQBsAHMAZQAuACAAQQBz
+AHMAaQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABvACAAdABoAGUAIABjAG8AbAB1AG0AbgAgAGkA
+bgBzAHQAZQBhAGQALgAAD0kAbgBwAHUAdAAgADAAAHFTAEMAXwA0AGUAMQBhADYAMQAwADQAYwBj
+ADMAZQA0ADMAMABmAGEANABmAGYAMQBhAGYANwAxADcAMABiADQAMgBjADUALgBQAHIAbwBwAGUA
+cgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAAAA53mHGMRWlE6HZ6jWQjGJUwAEIAEBCAMg
+AAEFIAEBEREEIAEBDgUgAQERYQgHBAgRORE9CAUgAg4ICAQAAQgOBQABETkOBCAAET0DIAAICSAD
+ARJFHQgSSQMGEkUDBh0IBCABDggEIAECCAUgAgEIHAMgAAIHIAICDhGAgQUgAR0ICAgAARKAhRGA
+iQUgABKAjQcgAgEOEoCNCLd6XFYZNOCJCImEXc2AgMyRAgYIAwYSFAMGEhgDBhJNAwYSWQMGEl0D
+BhIgBSABARIMAyAADgQgAQECCSAEAQgOEkUSSQUgAQESTQQAABJZBAAAEl0FAAEBEl0EAAASIAMA
+AAEDKAAOAygAAgMoAAgECAASWQQIABJdBAgAEiAIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNl
+cHRpb25UaHJvd3MBCAEAAgAAAAAAKAEAI1NDXzRlMWE2MTA0Y2MzZTQzMGZhNGZmMWFmNzE3MGI0
+MmM1AAAFAQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMjEAAEkBABouTkVURnJhbWV3b3JrLFZlcnNp
+b249djQuNwEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC43BAEAAAAA
+tAAAAM7K774BAAAAkQAAAGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVhZGVyLCBtc2Nvcmxp
+YiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1
+YzU2MTkzNGUwODkjU3lzdGVtLlJlc291cmNlcy5SdW50aW1lUmVzb3VyY2VTZXQCAAAAAAAAAAAA
+AABQQURQQURQtAAAANA3AAAAAAAAAAAAAOo3AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAADcNwAA
+AAAAAAAAAAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/JQAgABAAAAAAAAAAAAAAAAAA
+AAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAEgA
+AABYQAAA7AMAAAAAAAAAAAAA7AM0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8AAAAA
+AL0E7/4AAAEAAAABAAAAAAAAAAEAAAAAAD8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAA
+AQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8AbgAA
+AAAAAACwBEwDAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAACgDAAABADAAMAAwADAA
+MAA0AGIAMAAAABoAAQABAEMAbwBtAG0AZQBuAHQAcwAAAAAAAAAiAAEAAQBDAG8AbQBwAGEAbgB5
+AE4AYQBtAGUAAAAAAAAAAABwACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAAAAAA
+UwBDAF8ANABlADEAYQA2ADEAMAA0AGMAYwAzAGUANAAzADAAZgBhADQAZgBmADEAYQBmADcAMQA3
+ADAAYgA0ADIAYwA1AAAAMAAIAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAuADAA
+LgAwAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABTAEMAXwA0AGUAMQBhADYAMQAw
+ADQAYwBjADMAZQA0ADMAMABmAGEANABmAGYAMQBhAGYANwAxADcAMABiADQAMgBjADUALgBkAGwA
+bAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAAAEMAbwBwAHkAcgBpAGcAaAB0
+ACAAQAAgACAAMgAwADIAMQAAACoAAQABAEwAZQBnAGEAbABUAHIAYQBkAGUAbQBhAHIAawBzAAAA
+AAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUAbgBhAG0AZQAAAFMAQwBfADQAZQAx
 AGEANgAxADAANABjAGMAMwBlADQAMwAwAGYAYQA0AGYAZgAxAGEAZgA3ADEANwAwAGIANAAyAGMA
-NQAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAA4
-AAgAAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAAAAA
+NQAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEAbQBlAAAAAABTAEMAXwA0AGUAMQBh
+ADYAMQAwADQAYwBjADMAZQA0ADMAMABmAGEANABmAGYAMQBhAGYANwAxADcAMABiADQAMgBjADUA
+AAA0AAgAAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAOAAI
+AAEAQQBzAHMAZQBtAGIAbAB5ACAAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -2188,7 +2379,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAAKDMAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAADAAAAPw3AAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -2197,7 +2388,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   </arrayElements>
                 </property>
                 <property
@@ -2233,7 +2424,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   dataType="System.String"
                   description="Checksum to match component metedata against compiled codes."
                   name="MetadataChecksum140"
-                  typeConverter="NOTBROWSABLE">DB</property>
+                  typeConverter="NOTBROWSABLE">72</property>
                 <property
                   dataType="System.String"
                   name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
@@ -2250,7 +2441,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="GAME_DATE_EST"
-                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[GAME_DATE_EST]" />
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[GAME_DATE_EST]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -2276,6 +2467,23 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       dataType="i4"
                       lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[DayofMonth]"
                       name="DayofMonth" />
+                    <outputColumn
+                      refId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[MonthName]"
+                      dataType="wstr"
+                      length="9"
+                      lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[MonthName]"
+                      name="MonthName" />
+                    <outputColumn
+                      refId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[DayName]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[DayName]"
+                      name="DayName" />
+                    <outputColumn
+                      refId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[DayoftheWeek]"
+                      dataType="i4"
+                      lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[DayoftheWeek]"
+                      name="DayoftheWeek" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -2714,54 +2922,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
-                    <inputColumn
-                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[Year]"
-                      cachedDataType="i4"
-                      cachedName="Year"
-                      lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[Year]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[Month]"
-                      cachedDataType="i4"
-                      cachedName="Month"
-                      lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[Month]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[DayofMonth]"
-                      cachedDataType="i4"
-                      cachedName="DayofMonth"
-                      lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[DayofMonth]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -3114,45 +3274,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           name="SortColumnId">#{Package\Loading Dates\Data Conversion.Outputs[Data Conversion Output].Columns[Season]}</property>
                       </properties>
                     </outputColumn>
-                    <outputColumn
-                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[Year]"
-                      dataType="i4"
-                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[Year]"
-                      name="Year">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Loading Dates\Script Component.Outputs[Output 0].Columns[Year]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[Month]"
-                      dataType="i4"
-                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[Month]"
-                      name="Month">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Loading Dates\Script Component.Outputs[Output 0].Columns[Month]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[DayofMonth]"
-                      dataType="i4"
-                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[DayofMonth]"
-                      name="DayofMonth">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Loading Dates\Script Component.Outputs[Output 0].Columns[DayofMonth]}</property>
-                      </properties>
-                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -3162,7 +3283,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           <paths>
             <path
               refId="Package\Loading Dates.Paths[Data Conversion Output]"
-              endId="Package\Loading Dates\Script Component.Inputs[Input 0]"
+              endId="Package\Loading Dates\Sort.Inputs[Sort Input]"
               name="Data Conversion Output"
               startId="Package\Loading Dates\Data Conversion.Outputs[Data Conversion Output]" />
             <path
@@ -3172,12 +3293,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               startId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output]" />
             <path
               refId="Package\Loading Dates.Paths[Output 0]"
-              endId="Package\Loading Dates\Sort.Inputs[Sort Input]"
+              endId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Output 0"
               startId="Package\Loading Dates\Script Component.Outputs[Output 0]" />
             <path
               refId="Package\Loading Dates.Paths[Sort Output]"
-              endId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\Loading Dates\Script Component.Inputs[Input 0]"
               name="Sort Output"
               startId="Package\Loading Dates\Sort.Outputs[Sort Output]" />
           </paths>
@@ -3210,17 +3331,21 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="151,42"
+          Id="Package\Loading Dates\Flat File Source"
+          TopLeft="241,6.5" />
+        <NodeLayout
           Size="171,42"
           Id="Package\Loading Dates\OLE DB Destination"
-          TopLeft="224,441.5" />
+          TopLeft="280,455.5" />
         <NodeLayout
           Size="156,42"
           Id="Package\Loading Dates\Data Conversion"
           TopLeft="238.5,109.5" />
         <NodeLayout
-          Size="151,42"
-          Id="Package\Loading Dates\Flat File Source"
-          TopLeft="241,6.5" />
+          Size="163,42"
+          Id="Package\Loading Dates\Script Component"
+          TopLeft="243,325.5" />
         <EdgeLayout
           Id="Package\Loading Dates.Paths[Flat File Source Output]"
           TopLeft="316.5,48.5">
@@ -3244,49 +3369,23 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="163,42"
-          Id="Package\Loading Dates\Script Component"
-          TopLeft="235,211.5" />
-        <EdgeLayout
-          Id="Package\Loading Dates.Paths[Data Conversion Output]"
-          TopLeft="316.5,151.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
           Size="98,42"
           Id="Package\Loading Dates\Sort"
-          TopLeft="263,312" />
+          TopLeft="265,193" />
         <EdgeLayout
-          Id="Package\Loading Dates.Paths[Output 0]"
-          TopLeft="314.25,253.5">
+          Id="Package\Loading Dates.Paths[Data Conversion Output]"
+          TopLeft="315.25,151.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,58.5"
+              EndConnector="0,41.5"
               Start="0,0"
-              End="0,51">
+              End="0,34">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,51" />
+                    End="0,34" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3297,18 +3396,64 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Loading Dates.Paths[Sort Output]"
-          TopLeft="310.75,354">
+          TopLeft="314,235">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,87.5"
+              EndConnector="10.5,90.5"
               Start="0,0"
-              End="0,80">
+              End="10.5,83">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,80" />
+                    End="0,41.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,41.25"
+                    Point2="0,45.25"
+                    Point3="4,45.25" />
+                  <mssgle:LineSegment
+                    End="6.5,45.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.5,45.25"
+                    Point2="10.5,45.25"
+                    Point3="10.5,49.25" />
+                  <mssgle:LineSegment
+                    End="10.5,83" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Loading Dates.Paths[Output 0]"
+          TopLeft="324.5,367.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="41,88"
+              Start="0,0"
+              End="41,80.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40"
+                    Point2="0,44"
+                    Point3="4,44" />
+                  <mssgle:LineSegment
+                    End="37,44" />
+                  <mssgle:CubicBezierSegment
+                    Point1="37,44"
+                    Point2="41,44"
+                    Point3="41,48" />
+                  <mssgle:LineSegment
+                    End="41,80.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
