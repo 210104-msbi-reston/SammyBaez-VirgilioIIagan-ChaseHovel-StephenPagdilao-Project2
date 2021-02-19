@@ -4,16 +4,16 @@
     <Name>NBA-SSIS</Name>
     <LastWriteTime>2021-02-08T21:54:56.1761022Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
-    <Salt>01E06MgL</Salt>
-    <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1iotLNcF5Ui9PSxESB7NKQAAAAACAAAAAAAQZgAAAAEAACAAAADkPLrZ8KpOuG0zzfw145DXXl/SdPi0DhQEMQtFJBtnPwAAAAAOgAAAAAIAACAAAABh9DWlZO190gsVlMBVWFTarIVbTCqwvWNdDYtVkZdncDAAAACQci6XPjrXlGbmOk+X6Fr3Q6ZntnVpXN/J/hLIalzjsMB+6CpDoa5IqLLwNzGhMlpAAAAAInkb6CFC4KltDN+J6ZzO7Rzn0yVXdUCCrW8UfbjsaHCGStIDXsu5sejvIgudfa+WuKD9qYxKBUuNrcEnH0aatg==</LastKnownProtectedHashedPassword>
+    <Salt>dUliKPJu</Salt>
+    <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1iotLNcF5Ui9PSxESB7NKQAAAAACAAAAAAAQZgAAAAEAACAAAABs8ybWDoe4YfLGgwUttUWd5T5ev6HGM6PrTh01EFx87wAAAAAOgAAAAAIAACAAAAAoZU2h3hr6lqlVVZOOCy16iq9zuSfUfUfitNf3TyN7/DAAAAAQ4eii90QY8kI2sPKAhJC+jR8DsFKpeWl0MGZYFhNc5l/qyxo1Y3zGkIfdPJ/QImBAAAAASgMSCiIh1HhGEq/P1ixD7JKSVQAwVh0CUjSVoZZeJ30jZQ4POf7ReqKPQaObqsq9aTyczhrY8Fti0AQQQaPbag==</LastKnownProtectedHashedPassword>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>FormatGames.dtsx</Name>
-      <LastWriteTime>2021-02-08T21:54:56.1530967Z</LastWriteTime>
+      <LastWriteTime>2021-02-08T22:22:15.5823077Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
-      <Salt>hnrUsmDI</Salt>
-      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1iotLNcF5Ui9PSxESB7NKQAAAAACAAAAAAAQZgAAAAEAACAAAADBFvaZGkTwOhBIBOrl/6QDmZ7gnkknQ1OjZqjNVcgvFAAAAAAOgAAAAAIAACAAAAAqlhNiFGTRUlBUn96K4nBk6Q4Md/hyqkh6RqKJ1UnZzTAAAAC6qRXmS9vm/5FqZ6ZN76n6j8TJzcoa6fm5PbBlmcweGmHeAXUXDbn6gDFWLh2ed0pAAAAAsF+2gwIsww6pKXEts5FAndkDCetr0HR9icjylFmtW8Tyi6JNzlPtY+Sbeah31ONNwdDgckXuIv86tyqvPUE6Tg==</LastKnownProtectedHashedPassword>
+      <Salt>8Ip9uY72</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1iotLNcF5Ui9PSxESB7NKQAAAAACAAAAAAAQZgAAAAEAACAAAADDxcK3HpPoD98pfg3Fr+cFyHtogjcW4UXE7nyUbTLErQAAAAAOgAAAAAIAACAAAABjT/qSffwW2j6dRSSZK2/6U42UfzW0E65Yaqg/K6sIZjAAAACmL63eykQ4H+yE8AOg9N2FmzzOlv3L5KJhLAad+en1jIIjuEi7zbSBF+NrLi7BddNAAAAAuP53GZfJlbaII6ABKIakle6WCNMtnwBDkw4EokRJDwq7MzfoyOB1TnjVECErNwNCtqcQ+s61INA1V5X9HuoIDA==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
 </BuildLog>

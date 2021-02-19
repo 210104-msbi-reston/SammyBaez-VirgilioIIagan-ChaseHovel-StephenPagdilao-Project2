@@ -8,6 +8,8 @@
         <UseWinAuth>false</UseWinAuth>
         <WinAuthUserName />
         <WinAuthDomain />
+        <ServerName />
+        <PathOnServer />
         <UserIDs>
           <ConfigurationSetting>
             <Id>{BE39C649-92EE-40EB-9203-098CC01AA661}</Id>

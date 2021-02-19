@@ -12,8 +12,8 @@
   DTS:ObjectName="FormatGames"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{6C555D05-6C7F-4E48-B589-57D8340F16ED}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{EB4AED3D-410B-4837-89EA-775BFB1C1C47}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,12 +27,12 @@
           DTS:ConnectionString="Data Source=25.67.200.218\STOREAPPDB;User ID=CSVV_admin;Initial Catalog=BasketballDB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="+OVCrXdxwhM="
-            IV="m20mbQcjH2+Zzv2dIO97Xg==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="eA2eAkGKnGE="
+            IV="tNHYnz4xyc8LVlUEZOvXLA==" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
             <CipherData>
-              <CipherValue>m20mbQcjH2+Zzv2dIO97XjXD65s1DMdY+csGYxlYWiv6Xa263QeOLEtan/syn1ydxAJy9ZDNqyeiV5EiXwroKMlfxFNSrunj9G4EYHFUoXdVHkqmnmtJ98f6EPqAGL0lmZ0x9LdCJ5cQ/99fL18w9ZEK8AJUFraWgSSytwfV1eeruBNI42x2wLGrALegUkf+</CipherValue>
+              <CipherValue>tNHYnz4xyc8LVlUEZOvXLB/5ZPnPGtU28PtI92p3u9ifViP3cPWihGGzD07ydngx664zgRqkElkOo0OicnL4G2iyLv/qWZGQulhqzvGd7c2sela21HZNxApOdXDM6kuJ5F3HsU4JLetXJuVr/wH37Y+8muburOksOxp8gWE2O84dyD2WfBkgwhb5lVYldQEr</CipherValue>
             </CipherData>
           </EncryptedData>
         </DTS:ConnectionManager>
@@ -1074,12 +1074,6 @@
                       externalMetadataColumnId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PTS_Home]"
                       lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[PTS_home]" />
                     <inputColumn
-                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FG_PCT_home]"
-                      cachedDataType="r8"
-                      cachedName="FG_PCT_home"
-                      externalMetadataColumnId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FG_PCT_Home]"
-                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[FG_PCT_home]" />
-                    <inputColumn
                       refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FT_PCT_home]"
                       cachedDataType="r8"
                       cachedName="FT_PCT_home"
@@ -1109,12 +1103,6 @@
                       cachedName="PTS_away"
                       externalMetadataColumnId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PTS_Away]"
                       lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[PTS_away]" />
-                    <inputColumn
-                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FG_PCT_away]"
-                      cachedDataType="r8"
-                      cachedName="FG_PCT_away"
-                      externalMetadataColumnId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FG_PCT_Away]"
-                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[FG_PCT_away]" />
                     <inputColumn
                       refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FT_PCT_away]"
                       cachedDataType="r8"
@@ -1163,6 +1151,18 @@
                       cachedName="HOME_TEAM_ID"
                       externalMetadataColumnId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HomeTeamID]"
                       lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[HOME_TEAM_ID]" />
+                    <inputColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FG_PCT_away]"
+                      cachedDataType="r8"
+                      cachedName="FG_PCT_away"
+                      externalMetadataColumnId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FG_PCT_Away]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[FG_PCT_away]" />
+                    <inputColumn
+                      refId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FG_PCT_home]"
+                      cachedDataType="r8"
+                      cachedName="FG_PCT_home"
+                      externalMetadataColumnId="Package\Games CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FG_PCT_Home]"
+                      lineageId="Package\Games CSV\Flat File Source.Outputs[Flat File Source Output].Columns[FG_PCT_home]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1301,7 +1301,7 @@
         <NodeLayout
           Size="171,42"
           Id="Package\Games CSV\OLE DB Destination"
-          TopLeft="547,392" />
+          TopLeft="219,403" />
         <NodeLayout
           Size="151,42"
           Id="Package\Games CSV\Flat File Source"
@@ -1312,26 +1312,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="258,183"
+              EndConnector="-70,194"
               Start="0,0"
-              End="258,175.5">
+              End="-70,186.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,87.5" />
+                    End="0,93" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,87.5"
-                    Point2="0,91.5"
-                    Point3="4,91.5" />
+                    Point1="0,93"
+                    Point2="0,97"
+                    Point3="-4,97" />
                   <mssgle:LineSegment
-                    End="254,91.5" />
+                    End="-66,97" />
                   <mssgle:CubicBezierSegment
-                    Point1="254,91.5"
-                    Point2="258,91.5"
-                    Point3="258,95.5" />
+                    Point1="-66,97"
+                    Point2="-70,97"
+                    Point3="-70,101" />
                   <mssgle:LineSegment
-                    End="258,175.5" />
+                    End="-70,186.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">STEPH-PAGD</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1" SSIS:Salt="HabeJFFQmnU=" SSIS:IV="mhd/HPrxVZRT6u+WZG4fww==" SSIS:Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc">RaheNxeUpKM1pBe5k1Yia7u50fSDElh+NKjhTxTGt1+v4Rzx43vVLbFkNy5aLrBBz/rD2wRHvjciNuapvnroNlo9p2ch3YCOfSaWZRCkmkVXW1kSx9Q1W8lpy2mtf7hkNu3MuFpYz2kwM+2oFIVRImMHxClblVhtYgr9P1fjOLwxoCqMdq1rzUxHOwf/i7Ms</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1" SSIS:Salt="R799bdNzb4w=" SSIS:IV="DRNIZKn+gVAqIJuzXKUvsg==" SSIS:Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc">qzh7heUWawIBWfLefj2Md0r4EJvNucn8QQRM9MujVpnZBj7YQePom7j2EIVudsBrFzZxL/ApNUWsdh/AvvOXrigHQ1qY0qYA5NK+gVevKo2HVw37a00s6WNUn9QyV/YIzDDxLHbbPGuAlY07sUfsxjE3nJ4+gCrwHQYQVVIKQO17c5WDpQCDHqwM6nqQdFMf</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">FormatGames</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">11</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">15</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{6C555D05-6C7F-4E48-B589-57D8340F16ED}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{EB4AED3D-410B-4837-89EA-775BFB1C1C47}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
