@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>SQLServerNBA</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@gameID">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@TeamFullName">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>select
+PLAYER_NAME
+from dimPerformance DP
+inner join dimTeams DTH on DTH.TeamID = DP.TEAM_ID
+where GAME_ID = @gameID and DTH.FullTeamName = @TeamFullName and (PTS &gt;= (select 
+max(PTS)
+from dimPerformance DP
+inner join dimTeams DTH on DTH.TeamID = DP.TEAM_ID
+where GAME_ID = @gameID and DTH.FullTeamName = @TeamFullName))
+order by MIN_UPDATED</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="PLAYER_NAME">
+        <DataField>PLAYER_NAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

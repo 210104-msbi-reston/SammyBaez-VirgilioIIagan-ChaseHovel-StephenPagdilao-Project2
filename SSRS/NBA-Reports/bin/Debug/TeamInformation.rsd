@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>LocalNBAServer</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@teamID">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>SELECT        Abbreviation, FullTeamName, YearFounded, City, State, Arena, Owner, Nickname
+FROM            dimTeams
+WHERE        (TeamID = @teamID)</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="Abbreviation">
+        <DataField>Abbreviation</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="FullTeamName">
+        <DataField>FullTeamName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="YearFounded">
+        <DataField>YearFounded</DataField>
+        <rd:TypeName>System.Int16</rd:TypeName>
+      </Field>
+      <Field Name="City">
+        <DataField>City</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="State">
+        <DataField>State</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Arena">
+        <DataField>Arena</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Owner">
+        <DataField>Owner</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Nickname">
+        <DataField>Nickname</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

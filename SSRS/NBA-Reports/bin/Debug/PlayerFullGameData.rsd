@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>LocalNBAServer</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@gameID">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Int32</rd:DbType>
+          <rd:IsMultiValued>true</rd:IsMultiValued>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>SELECT        dimGames.Season, dimGames.GameDate, dimGames.PTS_Home, dimGames.PTS_Away, Home.FullTeamName AS [Home Team], Away.FullTeamName AS [Away Team], dimGames.GameID
+FROM            dimGames INNER JOIN
+                         dimTeams AS Home ON dimGames.HomeTeamID = Home.TeamID INNER JOIN
+                         dimTeams AS Away ON dimGames.VisitorTeamID = Away.TeamID
+WHERE        (dimGames.GameID IN (@gameID))</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="Season">
+        <DataField>Season</DataField>
+        <rd:TypeName>System.Int16</rd:TypeName>
+      </Field>
+      <Field Name="GameDate">
+        <DataField>GameDate</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="PTS_Home">
+        <DataField>PTS_Home</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="PTS_Away">
+        <DataField>PTS_Away</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Home_Team">
+        <DataField>Home Team</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Away_Team">
+        <DataField>Away Team</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="GameID">
+        <DataField>GameID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
