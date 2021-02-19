@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1340
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "BuildFactShootingPercentagesCube", "BuildFactShootingPercentagesCube\BuildFactShootingPercentagesCube.dwproj", "{BCD61076-EA9F-4D23-AEA0-BD43E86AF99E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCD61076-EA9F-4D23-AEA0-BD43E86AF99E}.Development|Default.ActiveCfg = Development
+		{BCD61076-EA9F-4D23-AEA0-BD43E86AF99E}.Development|Default.Build.0 = Development
+		{BCD61076-EA9F-4D23-AEA0-BD43E86AF99E}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37E9242B-DD04-4FE1-9727-F04550E8EC9C}
+	EndGlobalSection
+EndGlobal

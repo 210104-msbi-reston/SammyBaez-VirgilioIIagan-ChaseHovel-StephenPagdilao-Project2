@@ -1,0 +1,1409 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="ab44a592-6422-44a2-a6b9-b5fabcae5c9f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Basketball DB</ID>
+  <Name>Basketball DB</Name>
+  <CreatedTimestamp>0001-01-01T08:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T08:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="24" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-8784" scrolltop="-4620" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="22013" y="14658" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dimDate" left="2927" top="14800" logicalid="12" controlid="1" masterid="0" hint1="0" hint2="0" width="3122" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000320c0000ea120000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dimDate" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dimTeams" left="20" top="7400" logicalid="13" controlid="2" masterid="0" hint1="0" hint2="0" width="3307" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000eb0c000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dimTeams" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dimPerformance" left="5238" top="0" logicalid="14" controlid="3" masterid="0" hint1="0" hint2="0" width="4260" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000a410000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dimPerformance" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dimPlayer" left="11408" top="8749" logicalid="15" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dimPlayer" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FactPerformance" left="5727" top="7400" logicalid="16" controlid="5" masterid="0" hint1="0" hint2="0" width="3281" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000d10c000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_FactPerformance" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dimGames" left="8449" top="14800" logicalid="17" controlid="6" masterid="0" hint1="0" hint2="0" width="3360" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000200d000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dimGames" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4089" top="12100" logicalid="18" controlid="7" masterid="0" hint1="0" hint2="0" width="2478" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FactPerformance_dimDate]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="5" sourceattachpoint="4" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="4488" y="14800" />
+              <point x="4488" y="13600" />
+              <point x="6267" y="13600" />
+              <point x="6267" y="12400" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3027" top="9501" logicalid="19" controlid="8" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FactPerformance_dimTeams]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="5" sourceattachpoint="19" destattachpoint="18" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="3327" y="9900" />
+              <point x="5727" y="9900" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="6969" top="4501" logicalid="20" controlid="9" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FactPerfo_dimPerfo]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="5" sourceattachpoint="7" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="7368" y="5000" />
+              <point x="7368" y="6200" />
+              <point x="7367" y="6200" />
+              <point x="7367" y="7400" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="8708" top="9501" logicalid="21" controlid="10" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__FactPerfo__Playe__6383C8BA]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="5" sourceattachpoint="12" destattachpoint="19" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="11408" y="9900" />
+              <point x="9008" y="9900" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="7617" top="12100" logicalid="22" controlid="11" masterid="0" hint1="0" hint2="0" width="2912" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FactPerformance_dimGames]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="5" sourceattachpoint="4" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="10129" y="14800" />
+              <point x="10129" y="13600" />
+              <point x="7917" y="13600" />
+              <point x="7917" y="12400" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-8784</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-4620</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>75</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T08:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="2469d449-9554-4616-8b82-729df079d58b">
+      <ID>Dim Performance</ID>
+      <Name>Dim Performance</Name>
+      <DimensionID>Dim Performance</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="f329824a-16e2-4a96-b3d3-45e0b680f9b7">
+          <AttributeID>Performance ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="26af977f-74ff-402c-b8a7-35c3cdc859fe">
+          <AttributeID>GAME ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d2b20e6c-a5ce-4a14-8747-8b45234ba9fa">
+          <AttributeID>TEAM ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2ff62202-122a-4ebe-a296-18eed4517943">
+          <AttributeID>PLAYER ID</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="cb4fc4bd-7b89-46e8-9938-4d183c18b924">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="0aa433ec-ace4-448f-892d-9a248b183b05">
+      <ID>Dim Games</ID>
+      <Name>Dim Games</Name>
+      <DimensionID>Dim Games</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="89759d44-7a86-44a2-8091-1c34a8411a13">
+          <AttributeID>Game ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="06741acb-084d-44e2-835b-feea9806a9ae">
+      <ID>Dim Teams</ID>
+      <Name>Dim Teams</Name>
+      <DimensionID>Dim Teams</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="6efa9ef2-d524-4c83-9ebd-c96f8b866a48">
+          <AttributeID>Team ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="e988b49d-313c-4da2-bd94-4511191b35ea">
+      <ID>Dim Player</ID>
+      <Name>Dim Player</Name>
+      <DimensionID>Dim Player</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="ebdcfae7-f08e-468e-914e-5da6fa52059c">
+          <AttributeID>Player ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="9cb94ca4-24b4-4d48-bdf2-77ab46ea5768">
+      <ID>Dim Date</ID>
+      <Name>Dim Date</Name>
+      <DimensionID>Dim Date</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a64a21d3-3b0d-4129-aabd-afb262e58ffa">
+          <AttributeID>Date Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="035aaf4c-d0b1-4698-9041-4c9df43f1d4a">
+          <AttributeID>Season</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="02a34f0d-8196-450e-a68c-02b583eb43a5">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5441f975-4f7b-4bb1-bfc3-d575f8b210b1">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f66b6b47-6a29-4391-85e5-0a34e7063e57">
+          <AttributeID>Dayofthe Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="659f4cdb-6082-41d1-9cea-54b1c1acb191">
+          <AttributeID>Game Date</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="ce87f348-087f-42bb-9328-7e35ddd7c3ca">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="3199d2b6-93e4-4baf-a7bf-33fae21ebc4c">
+      <ID>Fact Performance</ID>
+      <Name>Fact Performance</Name>
+      <CreatedTimestamp>0001-01-01T08:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T08:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T08:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="cd4f2f44-ee55-4c89-ad0a-3d6f76164daf">
+          <ID>Overall Shooting</ID>
+          <Name>Overall Shooting</Name>
+          <Source dwd:design-time-name="cf8cadcf-2efd-4cf6-90a7-0a6fad6b9f37">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6a714bd8-ce4a-47c9-bee0-1a44f9e11d94">
+              <TableID>dbo_FactPerformance</TableID>
+              <ColumnID>OverallShooting</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="3d16740d-1e41-46c3-be0c-34c5cd9bc417">
+          <ID>Overall Offensive</ID>
+          <Name>Overall Offensive</Name>
+          <Source dwd:design-time-name="436140ad-08ee-49ce-b5b0-3a4e37f8b10f">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="9b2ffcb9-1a2a-45d7-883b-2f439f6a764e">
+              <TableID>dbo_FactPerformance</TableID>
+              <ColumnID>OverallOffensive</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="94e17539-10c3-4270-a796-235a35042573">
+          <ID>Overall Defense</ID>
+          <Name>Overall Defense</Name>
+          <Source dwd:design-time-name="586574ce-fd80-4588-9820-53e18d810085">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="4d994291-11b1-4caa-991e-313ef3a2d0b6">
+              <TableID>dbo_FactPerformance</TableID>
+              <ColumnID>OverallDefense</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="ec953aa9-c665-4e2f-910d-5c4da0cb274a">
+          <ID>Overall</ID>
+          <Name>Overall</Name>
+          <Source dwd:design-time-name="b1f4fbce-5dc9-44e0-83a6-e67396297b48">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="1caaffc2-f656-4c8a-8471-34c58488749c">
+              <TableID>dbo_FactPerformance</TableID>
+              <ColumnID>Overall</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="9f7cdd70-4f19-4e56-b51b-c0282ff6d59e">
+          <ID>FG3M</ID>
+          <Name>FG3M</Name>
+          <Source dwd:design-time-name="6b26399b-589c-4c2e-934e-725ef96bb173">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="fda2a5b6-a9a5-49a9-961d-34a77f358792">
+              <TableID>dbo_FactPerformance</TableID>
+              <ColumnID>FG3M</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e5746041-3c61-4b2a-ba24-1453cf4c1bcd">
+          <ID>FG3 PCT</ID>
+          <Name>FG3 PCT</Name>
+          <Source dwd:design-time-name="4c4687b5-1805-4e7e-abe0-c6ddcdbbf8b8">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="1b219eaa-00c3-45ea-91d1-f620b98625f7">
+              <TableID>dbo_FactPerformance</TableID>
+              <ColumnID>FG3_PCT</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="31ff1865-735e-4aa9-b57c-20af9ec72ba4">
+          <ID>FG2M</ID>
+          <Name>FG2M</Name>
+          <Source dwd:design-time-name="c0a84d72-cde5-426d-9a1a-79a9dd1eb293">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6f450f77-7c41-46fc-828a-394059637972">
+              <TableID>dbo_FactPerformance</TableID>
+              <ColumnID>FG2M</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="78b88b55-d19e-4cd2-a4ac-b76720eba59f">
+          <ID>FG2 PCT</ID>
+          <Name>FG2 PCT</Name>
+          <Source dwd:design-time-name="e4274e5f-9a4e-4c0c-94b7-62e7360d2dac">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b30bf169-b387-482c-8f4a-ed42d2d5913c">
+              <TableID>dbo_FactPerformance</TableID>
+              <ColumnID>FG2_PCT</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="19d3dc6c-4bd0-4519-8b04-ecffe7dbbd7d">
+          <ID>OREB</ID>
+          <Name>OREB</Name>
+          <Source dwd:design-time-name="999a20eb-e41d-41ad-b594-6ecd9ef71b7b">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a6356e65-76dd-44eb-a348-b281eec66f80">
+              <TableID>dbo_FactPerformance</TableID>
+              <ColumnID>OREB</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="0720fc95-4a6f-4554-97b6-f404d492a284">
+          <ID>DREB</ID>
+          <Name>DREB</Name>
+          <Source dwd:design-time-name="4aafc652-ab04-40aa-924b-a175aa8907a8">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="623f8c26-6e54-495b-a0ef-86414956e666">
+              <TableID>dbo_FactPerformance</TableID>
+              <ColumnID>DREB</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="67c02aa2-4eda-418c-8a30-a7b5dc00f103">
+          <ID>STL</ID>
+          <Name>STL</Name>
+          <Source dwd:design-time-name="4a64b361-ad42-443b-a60f-c623d6ddb818">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="57fc4bd5-3a5a-41e2-ae43-fc09e58ddf49">
+              <TableID>dbo_FactPerformance</TableID>
+              <ColumnID>STL</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="f839d72e-1c7a-4b48-ac62-99b219cce778">
+          <ID>BLK</ID>
+          <Name>BLK</Name>
+          <Source dwd:design-time-name="7fa2517c-b3f2-42a7-a06b-941749294c2e">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="5ed94949-b958-4195-b112-bbc09ace2633">
+              <TableID>dbo_FactPerformance</TableID>
+              <ColumnID>BLK</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="f2605810-9d6e-4a0f-9a2d-b4b6de76b7c4">
+          <ID>Fact Performance Count</ID>
+          <Name>Fact Performance Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="97d52c4f-6b70-4cec-8c6d-a193a670725b">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="13320501-abe3-4563-801b-9352e0463ace">
+              <TableID>dbo_FactPerformance</TableID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="9e71724a-5f4d-4947-a1ec-16f2c5aec4e6">
+          <ID>FG3 PCT - Fact Performance</ID>
+          <Name>FG3 PCT - Fact Performance</Name>
+          <AggregateFunction>AverageOfChildren</AggregateFunction>
+          <Source dwd:design-time-name="9cf2b59e-7d2e-422b-af1d-80140f9d46c2">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="574286c3-bcd2-4fca-8553-2b3206093763">
+              <TableID>dbo_FactPerformance</TableID>
+              <ColumnID>FG3_PCT</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="8051d022-e30c-448e-be8b-287d792160ed">
+          <ID>FG2 PCT - Fact Performance</ID>
+          <Name>FG2 PCT - Fact Performance</Name>
+          <AggregateFunction>AverageOfChildren</AggregateFunction>
+          <Source dwd:design-time-name="aacdb1ed-84e2-4e1f-adc4-82fbf06ced60">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="9cb46768-9641-45a5-b0c1-18cc2e991265">
+              <TableID>dbo_FactPerformance</TableID>
+              <ColumnID>FG2_PCT</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="fd157df2-55be-404f-b675-d87fccd8e0b0">
+          <CubeDimensionID>Dim Performance</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a9f0ec2d-8838-4653-abd1-8c9edfb487e8">
+              <AttributeID>Performance ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="031fc934-d95b-4c01-9da7-98c7f3ebfe90">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8234cda3-f460-4aa8-8e4d-0b37164c71bc">
+                    <TableID>dbo_FactPerformance</TableID>
+                    <ColumnID>PerformanceID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e036f4c7-9cd5-4d4f-a448-83c5db852528">
+          <CubeDimensionID>Dim Games</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5a0fc476-39af-459b-b4af-8a873995102d">
+              <AttributeID>Game ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f8bb01f8-d74c-4a66-9ca5-af93cdc2b527">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6fd64650-e0c9-4707-beaf-616f3f5a4114">
+                    <TableID>dbo_FactPerformance</TableID>
+                    <ColumnID>GameID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="810c466b-5d51-42e9-baae-1c155a8ff861">
+          <CubeDimensionID>Dim Teams</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="19ed4e0f-da95-44d4-9801-1bad49f6a657">
+              <AttributeID>Team ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c3b7afdc-9fba-4254-991b-0df1504b2ebd">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="207aa187-53fd-46fb-b33d-eafbb7ba139b">
+                    <TableID>dbo_FactPerformance</TableID>
+                    <ColumnID>TeamID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2735d8ca-58d6-4331-a010-7581741449b3">
+          <CubeDimensionID>Dim Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="96d7e43a-ee9c-424e-8d47-733e8c019e22">
+              <AttributeID>Date Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4b5786ec-3a68-429d-ab27-e566fc38fe3c">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ef4f26ed-c72d-4c06-87b5-a0475ab85d7a">
+                    <TableID>dbo_FactPerformance</TableID>
+                    <ColumnID>DateID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ea1b1ee8-326a-492c-8d76-2c31901a30f9">
+          <CubeDimensionID>Dim Player</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="db886344-2e13-4ec2-b8c8-ecacc0df1d47">
+              <AttributeID>Player ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0a1bf2cb-cea1-4c58-8a6b-898de3a9ed7d">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="398496df-ec9e-464f-9cd5-18c80fe8bf71">
+                    <TableID>dbo_FactPerformance</TableID>
+                    <ColumnID>PlayerID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="4e6226dd-a728-47c4-9d1f-2d12b80abe21">
+      <ID>Dim Date</ID>
+      <Name>Dim Date</Name>
+      <CreatedTimestamp>0001-01-01T08:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T08:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T08:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="74d9a2ad-7747-445c-95bd-f06815820f61">
+          <ID>Season</ID>
+          <Name>Season</Name>
+          <Source dwd:design-time-name="74e719cf-386c-4a0e-8572-0ed547d55e92">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="8f35b771-f742-46c0-8d32-e015f69afcd5">
+              <TableID>dbo_dimDate</TableID>
+              <ColumnID>Season</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="c1b638e2-d7bd-43af-9241-3ec215d094c9">
+          <ID>Year</ID>
+          <Name>Year</Name>
+          <Source dwd:design-time-name="0714c342-65d5-4dfd-b516-49b6555759e8">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a96bbe1a-b108-4e77-9aaa-77c14d8f91fe">
+              <TableID>dbo_dimDate</TableID>
+              <ColumnID>Year</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="0fa91ebc-c9fb-4893-b953-abd8c27b20ab">
+          <ID>Month</ID>
+          <Name>Month</Name>
+          <Source dwd:design-time-name="8db1afed-5270-4fe8-9bf3-241b4f6a5ae2">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="15f48165-f905-4117-9836-d0d4a85bd5b0">
+              <TableID>dbo_dimDate</TableID>
+              <ColumnID>Month</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b223d24e-849a-444c-bf8a-361ee774f719">
+          <ID>Dayof Month</ID>
+          <Name>Dayof Month</Name>
+          <Source dwd:design-time-name="eeb87c41-354c-4a3a-a956-9e707adbdd16">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="94521a90-93a0-49f8-8217-58fa29acfe37">
+              <TableID>dbo_dimDate</TableID>
+              <ColumnID>DayofMonth</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="8b94ed50-ac27-46e8-b4ad-4ce513d4ac0f">
+          <ID>Dayofthe Week</ID>
+          <Name>Dayofthe Week</Name>
+          <Source dwd:design-time-name="e3545238-87f0-43c4-a477-2a839a713fe1">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ebd116e7-a235-4cf3-953e-3983d2b724ee">
+              <TableID>dbo_dimDate</TableID>
+              <ColumnID>DayoftheWeek</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="cac50ec1-2146-42cd-802a-ef15029ec3ee">
+          <ID>Dim Date Count</ID>
+          <Name>Dim Date Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="231101b0-a7ff-498c-869c-d468a10a73ad">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="802ebcf1-87c5-45b8-a9c8-ed657c4ffad8">
+              <TableID>dbo_dimDate</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="92090c1c-9cab-421b-a004-9f71ba2e6241">
+          <CubeDimensionID>Dim Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="47e6ee7e-0957-44df-8382-91133d7c4c33">
+              <AttributeID>Date Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="bf9c5d6a-7823-4452-b9b5-5b23e7733c31">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2098f15e-3d16-4d08-83f1-a9a77e3f66d4">
+                    <TableID>dbo_dimDate</TableID>
+                    <ColumnID>DateId</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="1519648c-f36c-4cc5-a1f0-ff4e2b7a1690">
+      <ID>Dim Performance</ID>
+      <Name>Dim Performance</Name>
+      <CreatedTimestamp>0001-01-01T08:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T08:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T08:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="d33fb138-e78b-4747-9ccb-c9ef213d533f">
+          <ID>GAME ID</ID>
+          <Name>GAME ID</Name>
+          <Source dwd:design-time-name="0f4c7d6d-ebaa-420a-9eee-7835bcee452b">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="c056d192-afdc-4cb6-820c-fca9c539b647">
+              <TableID>dbo_dimPerformance</TableID>
+              <ColumnID>GAME_ID</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="1ce2a77f-ff82-4659-8503-de9eb0688fd5">
+          <ID>TEAM ID</ID>
+          <Name>TEAM ID</Name>
+          <Source dwd:design-time-name="5b744349-e92d-4f9e-a73a-ad01809870b5">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="eb2dd588-75df-4b94-b1b0-777f3074df93">
+              <TableID>dbo_dimPerformance</TableID>
+              <ColumnID>TEAM_ID</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="8fe9256c-9de2-46ca-bc98-257c735b57ed">
+          <ID>PLAYER ID</ID>
+          <Name>PLAYER ID</Name>
+          <Source dwd:design-time-name="fa8d0b96-b49f-4aec-a702-a1443a34338d">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="61b6d05e-7b1b-4dce-a1b6-f744d4a981f1">
+              <TableID>dbo_dimPerformance</TableID>
+              <ColumnID>PLAYER_ID</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="c0fda3d8-ef17-42a4-be14-dd61a52f7b17">
+          <ID>FGM</ID>
+          <Name>FGM</Name>
+          <Source dwd:design-time-name="58cadc0f-c92f-4139-a98a-ac5b6a980420">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="c9adafc8-2b90-4820-97b7-61f5950e74fe">
+              <TableID>dbo_dimPerformance</TableID>
+              <ColumnID>FGM</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="7338c646-bc73-46a4-8a16-17261657fe07">
+          <ID>FGA</ID>
+          <Name>FGA</Name>
+          <Source dwd:design-time-name="5a52156b-687a-47d7-a53b-a76e53749d0b">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="839b0d10-95fe-4370-a433-1acd207a6ef2">
+              <TableID>dbo_dimPerformance</TableID>
+              <ColumnID>FGA</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b144de70-8d9b-48fc-8cfd-139197962e04">
+          <ID>FG PCT</ID>
+          <Name>FG PCT</Name>
+          <Source dwd:design-time-name="9abdef08-cd0d-4f6b-9cf1-726925921587">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="4ffc7181-7145-4647-a227-8cbc69277ad7">
+              <TableID>dbo_dimPerformance</TableID>
+              <ColumnID>FG_PCT</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="cd430829-c695-4cf3-9801-072e2fa51a1a">
+          <ID>FG3M - Dim Performance</ID>
+          <Name>FG3M - Dim Performance</Name>
+          <Source dwd:design-time-name="872840c0-2603-4aa0-9676-9c73c87748e7">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="10f7cf1b-2af7-4ed4-84b9-0543ddc97927">
+              <TableID>dbo_dimPerformance</TableID>
+              <ColumnID>FG3M</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="8f83b6a0-65ad-4388-8567-c080b9554d73">
+          <ID>FG3A</ID>
+          <Name>FG3A</Name>
+          <Source dwd:design-time-name="bbaed8c4-f1d7-4587-8a99-1729b0b30f95">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="8fc7be9c-8a2e-488d-a7fb-bfc054d2dd75">
+              <TableID>dbo_dimPerformance</TableID>
+              <ColumnID>FG3A</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="97e698ea-231c-4f09-ab11-166447eff43c">
+          <ID>FG3 PCT - Dim Performance</ID>
+          <Name>FG3 PCT - Dim Performance</Name>
+          <Source dwd:design-time-name="d137cf78-b7cc-4ed3-aa24-f80f5d18f47c">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="be42d6a8-583b-45be-bd02-a50fd30ab960">
+              <TableID>dbo_dimPerformance</TableID>
+              <ColumnID>FG3_PCT</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="550c4e15-258b-41be-987e-eb0dedad37a0">
+          <ID>FTM</ID>
+          <Name>FTM</Name>
+          <Source dwd:design-time-name="f6e2c523-b932-4957-ad07-1c8b3be033e2">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="51dd7457-b72f-4532-81b6-74029699415e">
+              <TableID>dbo_dimPerformance</TableID>
+              <ColumnID>FTM</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="240b095d-c2e4-4e24-bb5a-7dfb940594f9">
+          <ID>FTA</ID>
+          <Name>FTA</Name>
+          <Source dwd:design-time-name="5556d575-0425-4432-97d6-658f1d7f26e9">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="43417436-a4e5-422d-8e99-4e60e9f8b286">
+              <TableID>dbo_dimPerformance</TableID>
+              <ColumnID>FTA</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b4d8c2a6-26a4-4ff4-9418-f5aa074ede1a">
+          <ID>FT PCT</ID>
+          <Name>FT PCT</Name>
+          <Source dwd:design-time-name="315367a7-b165-4fd3-9480-54eaa29a3a9f">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="7993416e-fcce-484f-8072-09ad895a5b75">
+              <TableID>dbo_dimPerformance</TableID>
+              <ColumnID>FT_PCT</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="2b00899e-50df-4225-89e3-3c07817dab94">
+          <ID>OREB - Dim Performance</ID>
+          <Name>OREB - Dim Performance</Name>
+          <Source dwd:design-time-name="02cfa5ba-cd4a-4eef-9517-835e15d3282b">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="011d46d3-a76e-4920-8b87-77e1decd0c19">
+              <TableID>dbo_dimPerformance</TableID>
+              <ColumnID>OREB</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="56078f77-df8b-4770-8eaf-b23a728a02a7">
+          <ID>DREB - Dim Performance</ID>
+          <Name>DREB - Dim Performance</Name>
+          <Source dwd:design-time-name="53da7a5f-e5ee-4e8c-a33e-07484632b9d7">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e3e80ec3-f19f-417a-8560-82996ec909b6">
+              <TableID>dbo_dimPerformance</TableID>
+              <ColumnID>DREB</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="9a0fe470-9eb9-462d-8bf3-3bd5230ed3c9">
+          <ID>REB</ID>
+          <Name>REB</Name>
+          <Source dwd:design-time-name="f745c891-f107-4499-a656-5f76e8793fdf">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="8a1fd327-8bbf-41df-8fd2-6a2745ffab71">
+              <TableID>dbo_dimPerformance</TableID>
+              <ColumnID>REB</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="1b5125b6-f290-43c1-b292-7c29cddba89c">
+          <ID>AST</ID>
+          <Name>AST</Name>
+          <Source dwd:design-time-name="698c459c-d108-444d-85cf-1b8a80b9a8d0">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6a1cb66f-7514-4df8-ae8f-5513a2078bff">
+              <TableID>dbo_dimPerformance</TableID>
+              <ColumnID>AST</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="04780ae1-85f8-4588-ad80-a3faa3faeb54">
+          <ID>STL - Dim Performance</ID>
+          <Name>STL - Dim Performance</Name>
+          <Source dwd:design-time-name="f0778304-107d-4df2-8a8e-49b6c12f8c54">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="14928eef-0ac2-4bbb-88ff-d03b641ff736">
+              <TableID>dbo_dimPerformance</TableID>
+              <ColumnID>STL</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="2aec742c-b9d6-4f95-9fa0-e08f6fb15a6f">
+          <ID>BLK - Dim Performance</ID>
+          <Name>BLK - Dim Performance</Name>
+          <Source dwd:design-time-name="099446b4-9441-4f1a-b91c-7b767081fbd2">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="3ff88b71-f208-4644-954b-25a214a50751">
+              <TableID>dbo_dimPerformance</TableID>
+              <ColumnID>BLK</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="d482695b-7f5c-4cbe-8c16-f2d81b0c20ab">
+          <ID>TO</ID>
+          <Name>TO</Name>
+          <Source dwd:design-time-name="80c0390b-547a-4b52-8a54-10b7db3cfc20">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6a2c4ffd-81cb-4ce2-a78a-5377fd2a3c84">
+              <TableID>dbo_dimPerformance</TableID>
+              <ColumnID>TO</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="6eb5be52-7728-41af-931e-8df69ee8cbfa">
+          <ID>PF</ID>
+          <Name>PF</Name>
+          <Source dwd:design-time-name="36002d8d-61a8-48c0-89bd-06114c5e977b">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f0a3e019-7969-488d-b659-f2ab68bb328a">
+              <TableID>dbo_dimPerformance</TableID>
+              <ColumnID>PF</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="1d69f588-18c4-4140-a89d-4ff7e49b4aab">
+          <ID>PTS</ID>
+          <Name>PTS</Name>
+          <Source dwd:design-time-name="dd26ee18-95c8-4da1-a328-d22e1e85fb9c">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="8f72e562-b13d-4208-a363-d0743b6a50d8">
+              <TableID>dbo_dimPerformance</TableID>
+              <ColumnID>PTS</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="962db284-fed0-4e8a-99a9-b1abcffd7cf7">
+          <ID>Plus Minus Updated</ID>
+          <Name>Plus Minus Updated</Name>
+          <Source dwd:design-time-name="f553e047-c1d8-4419-b543-bfd90773d1cc">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6fb8f1a5-a6ea-42f4-8bb2-3dff41f4ba60">
+              <TableID>dbo_dimPerformance</TableID>
+              <ColumnID>PlusMinusUpdated</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="6af755ce-396d-4f39-8659-3946f688ec0e">
+          <ID>Dim Performance Count</ID>
+          <Name>Dim Performance Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="f850647c-d73a-4129-860c-3e5e1659dc63">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="657d7f63-1459-4b50-97de-a48962b881b9">
+              <TableID>dbo_dimPerformance</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="02c5fd6b-2822-444e-8ce4-e736b82cd9cd">
+          <CubeDimensionID>Dim Performance</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3cffe843-2b8c-4a43-a477-17268e6ec430">
+              <AttributeID>Performance ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ff962c96-f3ec-4513-a6a5-8ec201d387e9">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="50e4d06d-29e2-4b30-b834-397651e04f59">
+                    <TableID>dbo_dimPerformance</TableID>
+                    <ColumnID>PerformanceID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="379ea5b5-b894-4339-a5a1-311696d0e608">
+      <ID>Dim Games</ID>
+      <Name>Dim Games</Name>
+      <CreatedTimestamp>0001-01-01T08:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T08:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T08:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="20c2702e-3423-4aa8-817a-6adc8c7cb389">
+          <ID>Season - Dim Games</ID>
+          <Name>Season - Dim Games</Name>
+          <Source dwd:design-time-name="348c73f6-84e6-4007-9feb-8c0155766353">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="36585936-43b0-410f-9616-efd58f21c4af">
+              <TableID>dbo_dimGames</TableID>
+              <ColumnID>Season</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b25ada8c-ea0b-4ff7-be71-71f455082631">
+          <ID>Home Team ID</ID>
+          <Name>Home Team ID</Name>
+          <Source dwd:design-time-name="e23b9dff-3887-4346-afd9-1bdbe043b741">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="877ca44f-5f0f-4a12-9a00-081693d2ea98">
+              <TableID>dbo_dimGames</TableID>
+              <ColumnID>HomeTeamID</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="0614fba5-b822-4a03-b2a8-2fbac97c8afd">
+          <ID>PTS Home</ID>
+          <Name>PTS Home</Name>
+          <Source dwd:design-time-name="381a0ab7-758c-4008-a70b-188435f66400">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b719c67f-2dca-45da-8f6b-6870171f35e7">
+              <TableID>dbo_dimGames</TableID>
+              <ColumnID>PTS_Home</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="3370ed08-fe91-45bc-b08d-3925bb0d695c">
+          <ID>FG PCT Home</ID>
+          <Name>FG PCT Home</Name>
+          <Source dwd:design-time-name="0b99f7b5-3c85-4c0b-aff8-b0cd524a7d8b">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="4863cd81-e62e-4e62-94cc-011351ed0340">
+              <TableID>dbo_dimGames</TableID>
+              <ColumnID>FG_PCT_Home</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="49ac436d-4fe6-4b48-b46b-20216e57c087">
+          <ID>FT PCT Home</ID>
+          <Name>FT PCT Home</Name>
+          <Source dwd:design-time-name="5079e0d8-0e7c-4a2a-9bd5-aa86297847d0">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b959199c-b517-431a-afd1-5eec51c36313">
+              <TableID>dbo_dimGames</TableID>
+              <ColumnID>FT_PCT_Home</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="d690f24c-094b-4946-84b9-dba8833078ed">
+          <ID>FG3 PCT Home</ID>
+          <Name>FG3 PCT Home</Name>
+          <Source dwd:design-time-name="d17a2c33-aee8-4d3c-8122-de1650411350">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b6943a13-b4f0-474e-a214-9269c48664e6">
+              <TableID>dbo_dimGames</TableID>
+              <ColumnID>FG3_PCT_Home</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="ccf250c2-eeaa-4919-b8ff-5c6ae05a335b">
+          <ID>AST Home</ID>
+          <Name>AST Home</Name>
+          <Source dwd:design-time-name="226e40d4-8bb2-409e-9d49-722117de69ea">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6c78f2ed-7c7c-48f6-83d2-764fe5e2601d">
+              <TableID>dbo_dimGames</TableID>
+              <ColumnID>AST_Home</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="634c07ad-805d-4bd1-9c64-25a5c54f3946">
+          <ID>REB Home</ID>
+          <Name>REB Home</Name>
+          <Source dwd:design-time-name="78edeacd-93b4-4e4d-abc2-d8c429dabdce">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="118f65b1-1f25-4007-a8a7-5c051e0ea1f6">
+              <TableID>dbo_dimGames</TableID>
+              <ColumnID>REB_Home</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e6831070-6c9b-471a-b88e-987973baecd0">
+          <ID>OREB Home</ID>
+          <Name>OREB Home</Name>
+          <Source dwd:design-time-name="3df6bbf4-f2be-4612-a1f7-b6e88582f7de">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b2b123f5-1bfa-492d-8c14-2d18ce51d07e">
+              <TableID>dbo_dimGames</TableID>
+              <ColumnID>OREB_Home</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="daa1ff12-c677-427f-892a-ddad867dec71">
+          <ID>DREB Home</ID>
+          <Name>DREB Home</Name>
+          <Source dwd:design-time-name="d0e6b121-aedc-4870-98f2-dc97ebc1d0e2">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="9dbf66e0-f89f-494b-a8d4-87f2c716b00d">
+              <TableID>dbo_dimGames</TableID>
+              <ColumnID>DREB_Home</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e64544bc-6bec-4a5f-aa17-9bcfe4e4bf30">
+          <ID>STL Home</ID>
+          <Name>STL Home</Name>
+          <Source dwd:design-time-name="c8500019-8851-4951-b570-430ca255704a">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="02b57d9d-d46e-47d3-991a-bb5e3e5e998a">
+              <TableID>dbo_dimGames</TableID>
+              <ColumnID>STL_Home</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="2b95f1d6-e147-411d-80e4-b973e0278168">
+          <ID>BLK Home</ID>
+          <Name>BLK Home</Name>
+          <Source dwd:design-time-name="8e6b18b2-f729-4e11-a9cd-12fdf80ba8da">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="80c39cc0-b329-44ce-bb67-74c27f4e04b9">
+              <TableID>dbo_dimGames</TableID>
+              <ColumnID>BLK_Home</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="0f9c197e-c7c2-438c-9ebb-cb3f17d7881b">
+          <ID>Visitor Team ID</ID>
+          <Name>Visitor Team ID</Name>
+          <Source dwd:design-time-name="ff4429a2-db2c-4ead-9a81-a6713c9cc501">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="98fd384f-695d-4980-9400-3ebb48d4ffda">
+              <TableID>dbo_dimGames</TableID>
+              <ColumnID>VisitorTeamID</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="08acc24a-7188-436d-adfc-d9c07a9a8836">
+          <ID>PTS Away</ID>
+          <Name>PTS Away</Name>
+          <Source dwd:design-time-name="aff60831-d5bd-4497-8ac8-ef1f51656e93">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="410ec18e-07e1-471b-93b0-e04ad1653f7a">
+              <TableID>dbo_dimGames</TableID>
+              <ColumnID>PTS_Away</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b6757af5-a4af-41e2-a2a4-ee97ec2435a9">
+          <ID>FG PCT Away</ID>
+          <Name>FG PCT Away</Name>
+          <Source dwd:design-time-name="835ec1f1-402f-46e3-a472-e8845b9a56fc">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="d8519ac5-fe9c-4b1a-b0d2-f5d6f3771eb7">
+              <TableID>dbo_dimGames</TableID>
+              <ColumnID>FG_PCT_Away</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="bcbe5f1a-78f0-4e51-a57f-28db4709cc65">
+          <ID>FT PCT Away</ID>
+          <Name>FT PCT Away</Name>
+          <Source dwd:design-time-name="d8568e52-36ff-4e6b-9057-2540b1c75f2c">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="c61b0933-468f-4ae9-93ba-86bde3f19481">
+              <TableID>dbo_dimGames</TableID>
+              <ColumnID>FT_PCT_Away</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="335d1938-3b13-4666-8757-940fe4a65473">
+          <ID>FG3 PCT Away</ID>
+          <Name>FG3 PCT Away</Name>
+          <Source dwd:design-time-name="98648fa0-52e4-4857-b2a3-4479be9367aa">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="d552e292-694a-418b-bf5f-73f4be147365">
+              <TableID>dbo_dimGames</TableID>
+              <ColumnID>FG3_PCT_Away</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="34b6b6e9-4e47-40a6-9491-6050f728cb33">
+          <ID>AST Away</ID>
+          <Name>AST Away</Name>
+          <Source dwd:design-time-name="7a9046b7-2367-48bb-8c9f-d05c4f0c40fe">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2d844d51-80d7-4ea2-b97b-e9e86a56cee6">
+              <TableID>dbo_dimGames</TableID>
+              <ColumnID>AST_Away</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="81a47bbb-288f-4be3-9da4-825d1e778a1a">
+          <ID>REB Away</ID>
+          <Name>REB Away</Name>
+          <Source dwd:design-time-name="87cd26e7-f55f-4b53-b8fc-b286ec727426">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="9f69d0e6-7bc6-44be-9efc-699e84b8f23a">
+              <TableID>dbo_dimGames</TableID>
+              <ColumnID>REB_Away</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="17d693f2-0130-41e3-a49f-11b0cd131eb5">
+          <ID>OREB Away</ID>
+          <Name>OREB Away</Name>
+          <Source dwd:design-time-name="44f28a2f-588c-40b2-ab32-cc348bcc481d">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b314a6be-f775-440f-8c97-cd0af6ee98e3">
+              <TableID>dbo_dimGames</TableID>
+              <ColumnID>OREB_Away</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="ce4ae9a6-afd5-40ec-a74f-5d26095343ca">
+          <ID>DREB Away</ID>
+          <Name>DREB Away</Name>
+          <Source dwd:design-time-name="bc14f815-5acc-431d-9676-c0ec424531a9">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2ab5d49c-9384-4eea-b95e-128857f0cb85">
+              <TableID>dbo_dimGames</TableID>
+              <ColumnID>DREB_Away</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="0ef2daa0-b946-41d9-88ac-1bee60d51893">
+          <ID>STL Away</ID>
+          <Name>STL Away</Name>
+          <Source dwd:design-time-name="9b3b8241-ce9c-4b7b-822c-ce6adfb07d52">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="82778e6e-d270-4a53-9a7c-7c2548cc0c1d">
+              <TableID>dbo_dimGames</TableID>
+              <ColumnID>STL_Away</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="f4467d7b-9a2e-4486-af7d-323e0d536d75">
+          <ID>BLK Away</ID>
+          <Name>BLK Away</Name>
+          <Source dwd:design-time-name="5cc21dce-7832-4490-aabd-287882d5d987">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="cd5d1818-6fd6-40ed-b340-03b2b76ca66b">
+              <TableID>dbo_dimGames</TableID>
+              <ColumnID>BLK_Away</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="13dc1c3f-d2eb-41f5-994a-2d1cafa8d57a">
+          <ID>Dim Games Count</ID>
+          <Name>Dim Games Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="36dace84-a891-47ac-ad8f-85558ef43d43">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="d032d372-f102-4fe7-a45e-630a857cea87">
+              <TableID>dbo_dimGames</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="a9bb6e7c-4a00-4a85-a40b-65ffe91f3ac9">
+          <CubeDimensionID>Dim Games</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="399ae0c1-f5c2-408c-af9f-ba845ad86a5f">
+              <AttributeID>Game ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7de4e325-de96-4fbb-9e94-31c219ab568b">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a74efe37-adb0-4a25-aaa7-52a3908d3346">
+                    <TableID>dbo_dimGames</TableID>
+                    <ColumnID>GameID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="364ccf76-ff2c-45c7-9e78-2d4f93b6d8a3">
+      <ID>Dim Player</ID>
+      <Name>Dim Player</Name>
+      <CreatedTimestamp>0001-01-01T08:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T08:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T08:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="cfd205f0-7848-4bd3-9d7b-56a55989c144">
+          <ID>Team ID - Dim Player</ID>
+          <Name>Team ID - Dim Player</Name>
+          <Source dwd:design-time-name="5a0b3a96-2fd5-43fe-b166-1140ae4a31c6">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="00247a63-a10c-453a-a800-a2801eba2df5">
+              <TableID>dbo_dimPlayer</TableID>
+              <ColumnID>TeamID</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="f132a8fe-513c-4c19-acab-8a36bd26d833">
+          <ID>Dim Player Count</ID>
+          <Name>Dim Player Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="07b25736-4dbc-4bb0-90a4-d931f0162f47">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="28ed5bd0-c946-40d8-9086-6f7e2ce1691d">
+              <TableID>dbo_dimPlayer</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="3957e7f9-b99f-418e-975e-3d1228ab9677">
+          <CubeDimensionID>Dim Player</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7ee7828a-d285-40c9-9af2-50292c3b7597">
+              <AttributeID>Player ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c4b989e5-1a67-48f5-9927-28ea7cdf3978">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="22c3ea6d-b387-43b1-aa07-1f69b17e18d7">
+                    <TableID>dbo_dimPlayer</TableID>
+                    <ColumnID>PlayerID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="74f1c2bc-e374-4769-842b-db2d1f9a1bfc">
+      <ID>Dim Teams</ID>
+      <Name>Dim Teams</Name>
+      <CreatedTimestamp>0001-01-01T08:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T08:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T08:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="63ddc907-b201-4c2a-ba1f-d20090e23210">
+          <ID>Year Founded</ID>
+          <Name>Year Founded</Name>
+          <Source dwd:design-time-name="f6f79e22-fa0c-4d10-b031-916e1796f121">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="93cd03b3-2a4b-4f88-8db7-c04a1a59104d">
+              <TableID>dbo_dimTeams</TableID>
+              <ColumnID>YearFounded</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b139c4e3-2040-45f8-9f9c-2f48db15596a">
+          <ID>Dim Teams Count</ID>
+          <Name>Dim Teams Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="a5c37698-8d74-427b-9234-f03fc268fd46">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="ff445472-0cb3-403c-b57b-e9c5cad3a9ad">
+              <TableID>dbo_dimTeams</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="04880461-3a26-4e55-b150-48aa8d0cfd39">
+          <CubeDimensionID>Dim Teams</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="dbc38056-bb04-45e6-8ae0-5ad1e3f55d87">
+              <AttributeID>Team ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3c77390a-975a-457d-b1e4-d797f97781ea">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="fe3a4780-4aa4-4f2d-9bab-fb5eb792fa67">
+                    <TableID>dbo_dimTeams</TableID>
+                    <ColumnID>TeamID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="f86c1a10-aa8f-40fd-8aa5-727fd43237ac">
+    <DataSourceViewID>Basketball DB</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript dwd:design-time-name="677620b5-bae3-4601-a661-3bfb4927091b">
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/*
+The CALCULATE command controls the aggregation of leaf cells in the cube.
+If the CALCULATE command is deleted or modified, the data within the cube is affected.
+You should edit this command only if you manually specify how the cube is aggregated.
+*/
+CALCULATE; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Avg Seasonal Shooting%]
+ AS , 
+FORMAT_STRING = "Standard", 
+VISIBLE = 1  ; </Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
+</Cube>
