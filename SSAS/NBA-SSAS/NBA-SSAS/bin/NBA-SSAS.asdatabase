@@ -21,7 +21,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1448" scrolltop="-2857" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6059" y="13097" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1448" scrolltop="-2857" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6932" y="16219" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -958,7 +958,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1946" scrolltop="-6958" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6932" y="16219" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1946" scrolltop="-6958" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6668" y="12938" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -1092,7 +1092,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="29" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3213" scrolltop="3279" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="80" x="15108" y="13097" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="24" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3213" scrolltop="3279" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="80" x="17119" y="12938" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -1169,7 +1169,7 @@
                 </layoutobject>
                 <shape groupshapeid="0" groupnode="0" />
               </ddscontrol>
-              <ddscontrol controlprogid="MSDDS.Polyline" left="8523" top="7222" logicalid="24" controlid="13" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="MSDDS.Polyline" left="8523" top="7222" logicalid="18" controlid="7" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobj>
                     <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -1187,7 +1187,7 @@
                   <point x="8823" y="7621" />
                 </connector>
               </ddscontrol>
-              <ddscontrol controlprogid="MSDDS.Polyline" left="7982" top="11942" logicalid="25" controlid="14" masterid="0" hint1="0" hint2="0" width="1201" height="3279" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="MSDDS.Polyline" left="7982" top="11942" logicalid="19" controlid="8" masterid="0" hint1="0" hint2="0" width="1201" height="3279" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobj>
                     <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -1207,7 +1207,7 @@
                   <point x="8282" y="12242" />
                 </connector>
               </ddscontrol>
-              <ddscontrol controlprogid="MSDDS.Polyline" left="5670" top="4501" logicalid="26" controlid="15" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="MSDDS.Polyline" left="5670" top="4501" logicalid="20" controlid="9" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobj>
                     <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -1227,7 +1227,7 @@
                   <point x="6082" y="7400" />
                 </connector>
               </ddscontrol>
-              <ddscontrol controlprogid="MSDDS.Polyline" left="2842" top="7222" logicalid="27" controlid="16" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="MSDDS.Polyline" left="2842" top="7222" logicalid="21" controlid="10" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobj>
                     <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -1245,7 +1245,7 @@
                   <point x="5542" y="7621" />
                 </connector>
               </ddscontrol>
-              <ddscontrol controlprogid="MSDDS.Polyline" left="5004" top="11942" logicalid="28" controlid="17" masterid="0" hint1="0" hint2="0" width="1378" height="3279" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="MSDDS.Polyline" left="5004" top="11942" logicalid="22" controlid="11" masterid="0" hint1="0" hint2="0" width="1378" height="3279" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobj>
                     <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -1679,43 +1679,47 @@ The CALCULATE command controls the aggregation of leaf cells in the cube.
 If the CALCULATE command is deleted or modified, the data within the cube is affected.
 You should edit this command only if you manually specify how the cube is aggregated.
 */
-CALCULATE; 
+CALCULATE;  
 CREATE MEMBER CURRENTCUBE.[Measures].AverageFG3M
  AS [Measures].[SumOfFG3M]/[Measures].[TotalRows], 
-VISIBLE = 1  ; 
+VISIBLE = 1;  
 CREATE MEMBER CURRENTCUBE.[Measures].AverageFG2M
  AS [Measures].[SumOfFG2M]/[Measures].[TotalRows], 
-VISIBLE = 1  ; 
+VISIBLE = 1;  
 CREATE MEMBER CURRENTCUBE.[Measures].AverageDREB
  AS [Measures].[SumOfDREB]/[Measures].[TotalRows], 
-VISIBLE = 1  ; 
+VISIBLE = 1;  
 CREATE MEMBER CURRENTCUBE.[Measures].AverageOREB
  AS [Measures].[SumOfOREB]/[Measures].[TotalRows], 
-VISIBLE = 1  ;  
+VISIBLE = 1;   
 CREATE MEMBER CURRENTCUBE.[Measures].AverageOverall
  AS [Measures].[SumOfOverall]/[Measures].[TotalRows], 
-VISIBLE = 1; 
+VISIBLE = 1;  
 CREATE MEMBER CURRENTCUBE.[Measures].AverageFG2M_PCT
  AS [Measures].[SumOfFG2 PCT]/[Measures].[TotalRows], 
-VISIBLE = 1  ; 
+FORMAT_STRING = "Percent", 
+VISIBLE = 1  ;  
 CREATE MEMBER CURRENTCUBE.[Measures].AverageMissFG2M_PCT
  AS 1-[Measures].[AverageFG2M_PCT], 
-VISIBLE = 1  ; 
+FORMAT_STRING = "Percent", 
+VISIBLE = 1  ;  
 CREATE MEMBER CURRENTCUBE.[Measures].AverageMissFG3M_PCT
  AS 1-[Measures].[AverageFG3M_PCT], 
-VISIBLE = 1  ; 
+FORMAT_STRING = "Percent", 
+VISIBLE = 1  ;  
 CREATE MEMBER CURRENTCUBE.[Measures].AverageFG3M_PCT
  AS [Measures].[SumOfFG3 PCT]/[Measures].[TotalRows], 
-VISIBLE = 1  ;  
+FORMAT_STRING = "Percent", 
+VISIBLE = 1  ;   
 CREATE MEMBER CURRENTCUBE.[Measures].AverageOverallDefense
  AS [Measures].[SumOfOverallDefense]/[Measures].[TotalRows], 
-VISIBLE = 1; 
+VISIBLE = 1;  
 CREATE MEMBER CURRENTCUBE.[Measures].AverageSTL
  AS [Measures].[SumOfSTL]/[Measures].[TotalRows], 
-VISIBLE = 1  ; 
+VISIBLE = 1;  
 CREATE MEMBER CURRENTCUBE.[Measures].AverageBLK
  AS [Measures].[SumBLK]/[Measures].[TotalRows], 
-VISIBLE = 1  ;  
+VISIBLE = 1;   
 CREATE MEMBER CURRENTCUBE.[Measures].AverageOverallOffensive
  AS [Measures].[SumOfOverallOffensive]/[Measures].[TotalRows], 
 VISIBLE = 1; </Text>
@@ -1728,7 +1732,7 @@ VISIBLE = 1; </Text>
   <MiningStructures>
     <MiningStructure>
       <ID>Dim Games</ID>
-      <Name>Dim Games</Name>
+      <Name>Predicting Winning Chances of Home Team</Name>
       <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
       <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
       <Annotations>
@@ -1744,7 +1748,7 @@ VISIBLE = 1; </Text>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-5536" scrolltop="-2381" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="14473" y="10451" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-5536" scrolltop="-2381" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="51223" y="15372" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -2061,11 +2065,43 @@ VISIBLE = 1; </Text>
             </KeyColumn>
           </KeyColumns>
         </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>OREB Home</ID>
+          <Name>OREB Home</Name>
+          <Type>Long</Type>
+          <Content>Continuous</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dimGames</TableID>
+                <ColumnID>OREB_Home</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>OREB Away</ID>
+          <Name>OREB Away</Name>
+          <Type>Long</Type>
+          <Content>Continuous</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dimGames</TableID>
+                <ColumnID>OREB_Away</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
       </Columns>
       <MiningModels>
         <MiningModel>
           <ID>Dim Games</ID>
-          <Name>Dim Games</Name>
+          <Name>Decision Tree</Name>
           <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T06:00:00Z</LastProcessed>
@@ -2144,6 +2180,109 @@ VISIBLE = 1; </Text>
               <Name>STL Home</Name>
               <SourceColumnID>STL Home</SourceColumnID>
             </Column>
+            <Column>
+              <ID>OREB Away</ID>
+              <Name>OREB Away</Name>
+              <SourceColumnID>OREB Away</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>OREB Home</ID>
+              <Name>OREB Home</Name>
+              <SourceColumnID>OREB Home</SourceColumnID>
+            </Column>
+          </Columns>
+        </MiningModel>
+        <MiningModel>
+          <ID>Neural Network</ID>
+          <Name>Neural Network</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T06:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Algorithm>Microsoft_Neural_Network</Algorithm>
+          <Columns>
+            <Column>
+              <ID>Game ID</ID>
+              <Name>Game ID</Name>
+              <SourceColumnID>Game ID</SourceColumnID>
+              <Usage>Key</Usage>
+            </Column>
+            <Column>
+              <ID>Home Team ID</ID>
+              <Name>Home Team ID</Name>
+              <SourceColumnID>Home Team ID</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Visitor Team ID</ID>
+              <Name>Visitor Team ID</Name>
+              <SourceColumnID>Visitor Team ID</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Winner</ID>
+              <Name>Winner</Name>
+              <SourceColumnID>Winner</SourceColumnID>
+              <Usage>PredictOnly</Usage>
+            </Column>
+            <Column>
+              <ID>AST Away</ID>
+              <Name>AST Away</Name>
+              <SourceColumnID>AST Away</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>AST Home</ID>
+              <Name>AST Home</Name>
+              <SourceColumnID>AST Home</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>DREB Away</ID>
+              <Name>DREB Away</Name>
+              <SourceColumnID>DREB Away</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>DREB Home</ID>
+              <Name>DREB Home</Name>
+              <SourceColumnID>DREB Home</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>REB Away</ID>
+              <Name>REB Away</Name>
+              <SourceColumnID>REB Away</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>REB Home</ID>
+              <Name>REB Home</Name>
+              <SourceColumnID>REB Home</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>BLK Away</ID>
+              <Name>BLK Away</Name>
+              <SourceColumnID>BLK Away</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>BLK Home</ID>
+              <Name>BLK Home</Name>
+              <SourceColumnID>BLK Home</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>STL Away</ID>
+              <Name>STL Away</Name>
+              <SourceColumnID>STL Away</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>STL Home</ID>
+              <Name>STL Home</Name>
+              <SourceColumnID>STL Home</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>OREB Away</ID>
+              <Name>OREB Away</Name>
+              <SourceColumnID>OREB Away</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>OREB Home</ID>
+              <Name>OREB Home</Name>
+              <SourceColumnID>OREB Home</SourceColumnID>
+            </Column>
           </Columns>
         </MiningModel>
       </MiningModels>
@@ -2161,7 +2300,7 @@ VISIBLE = 1; </Text>
       <ImpersonationInfo>
         <ImpersonationMode>ImpersonateAccount</ImpersonationMode>
         <Account>STEPH-PAGD\Stephen - Work</Account>
-        <ImpersonationInfoSecurity>PasswordRemoved</ImpersonationInfoSecurity>
+        <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
       </ImpersonationInfo>
       <Timeout>PT0S</Timeout>
     </DataSource>
@@ -2370,7 +2509,7 @@ VISIBLE = 1; </Text>
                       </connector>
                     </ddscontrol>
                   </dds>
-</DiagramLayout>
+                </DiagramLayout>
                 <ShowRelationshipNames>False</ShowRelationshipNames>
                 <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
                 <DiagramViewPortLeft>-2823</DiagramViewPortLeft>
@@ -2648,25 +2787,25 @@ VISIBLE = 1; </Text>
               <xs:selector xpath=".//dbo_dimTeams" />
               <xs:field xpath="TeamID" />
             </xs:unique>
-            <xs:keyref name="FK_FactPerformance_dimTeams" refer="dbo_dimTeams_Constraint1">
+            <xs:keyref name="FK__FactPerfo__Playe__6383C8BA" refer="dbo_dimPlayer_Constraint1">
               <xs:selector xpath=".//dbo_FactPerformance" />
-              <xs:field xpath="TeamID" />
-            </xs:keyref>
-            <xs:keyref name="FK_FactPerfo_dimPerfo" refer="dbo_dimPerformance_Constraint1">
-              <xs:selector xpath=".//dbo_FactPerformance" />
-              <xs:field xpath="PerformanceID" />
-            </xs:keyref>
-            <xs:keyref name="FK_FactPerformance_dimGames" refer="dbo_dimGames_Constraint1">
-              <xs:selector xpath=".//dbo_FactPerformance" />
-              <xs:field xpath="GameID" />
+              <xs:field xpath="PlayerID" />
             </xs:keyref>
             <xs:keyref name="FK_FactPerformance_dimDate" refer="dbo_dimDate_Constraint1">
               <xs:selector xpath=".//dbo_FactPerformance" />
               <xs:field xpath="DateID" />
             </xs:keyref>
-            <xs:keyref name="FK__FactPerfo__Playe__6383C8BA" refer="dbo_dimPlayer_Constraint1">
+            <xs:keyref name="FK_FactPerformance_dimGames" refer="dbo_dimGames_Constraint1">
               <xs:selector xpath=".//dbo_FactPerformance" />
-              <xs:field xpath="PlayerID" />
+              <xs:field xpath="GameID" />
+            </xs:keyref>
+            <xs:keyref name="FK_FactPerfo_dimPerfo" refer="dbo_dimPerformance_Constraint1">
+              <xs:selector xpath=".//dbo_FactPerformance" />
+              <xs:field xpath="PerformanceID" />
+            </xs:keyref>
+            <xs:keyref name="FK_FactPerformance_dimTeams" refer="dbo_dimTeams_Constraint1">
+              <xs:selector xpath=".//dbo_FactPerformance" />
+              <xs:field xpath="TeamID" />
             </xs:keyref>
           </xs:element>
         </xs:schema>
