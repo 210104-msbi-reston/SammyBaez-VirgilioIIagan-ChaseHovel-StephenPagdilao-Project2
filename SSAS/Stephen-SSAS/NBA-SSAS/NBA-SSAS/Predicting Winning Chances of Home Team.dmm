@@ -1,0 +1,558 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c5629b1c-87f6-42c1-b7c2-37556c3ad4f8" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Games</ID>
+  <Name>Predicting Winning Chances of Home Team</Name>
+  <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+      <Value>dbo_dimGames</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-5536" scrolltop="-2381" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="15319" y="13150" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01010000900180380100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dimGames" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3360" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000200d000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dimGames" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-5536</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-2381</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T06:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="a888ce78-003d-4fa3-9467-1733bb48bd7f">
+    <DataSourceViewID>BasketbalDB_View</DataSourceViewID>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="151e2b30-f845-4c6c-a8d8-4ab47917797b">
+      <ID>BLK Home</ID>
+      <Name>BLK Home</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0bfdc89f-bb89-468d-b294-19ba6bfcb942">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b7bd8a5f-709a-4468-9496-cf7f09893e94">
+            <TableID>dbo_dimGames</TableID>
+            <ColumnID>BLK_Home</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="efe6dbac-c2e1-4995-8b83-79a7f4185c98">
+      <ID>STL Home</ID>
+      <Name>STL Home</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="07728807-5df9-4fda-bc8c-7ba18a1dbc26">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="aacb492e-dd4b-4bc4-a573-18b86a39b53c">
+            <TableID>dbo_dimGames</TableID>
+            <ColumnID>STL_Home</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="f0ee40f0-3b82-4d99-94bb-59f3b26e0903">
+      <ID>AST Away</ID>
+      <Name>AST Away</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6a4b67c4-7c3c-497c-977b-6a8dc30b08f2">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c855d54c-3389-4e44-aa37-2d3cf3189e6b">
+            <TableID>dbo_dimGames</TableID>
+            <ColumnID>AST_Away</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="39448934-4820-479d-9d60-676015f1a0cc">
+      <ID>STL Away</ID>
+      <Name>STL Away</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d1873eeb-c3cb-49c5-85d0-c0a6d7272013">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d72ba789-1b93-453a-9bf6-35c50c8c9fb4">
+            <TableID>dbo_dimGames</TableID>
+            <ColumnID>STL_Away</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="4b212104-026c-4435-91ca-a41c556bfc30">
+      <ID>BLK Away</ID>
+      <Name>BLK Away</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bd53337c-63da-4d46-b341-0c42ad4299a3">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f7565762-a820-40dc-99a1-c517c6c20ba9">
+            <TableID>dbo_dimGames</TableID>
+            <ColumnID>BLK_Away</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="80d9d182-4763-49ab-9d8c-673b4699a164">
+      <ID>AST Home</ID>
+      <Name>AST Home</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4a7ccac2-792d-483d-a824-7ff27149ddb6">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="25040d89-7a6e-4262-bbba-703a0246f408">
+            <TableID>dbo_dimGames</TableID>
+            <ColumnID>AST_Home</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="cb0b3e0e-e889-4f06-b228-c4124e1470e8">
+      <ID>DREB Away</ID>
+      <Name>DREB Away</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="817f6714-44b1-499f-983f-e9a1c864b464">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="738ea767-ad65-4028-b809-3d1d889f499e">
+            <TableID>dbo_dimGames</TableID>
+            <ColumnID>DREB_Away</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="bc3921e1-8816-4a04-9161-72899ea907fa">
+      <ID>DREB Home</ID>
+      <Name>DREB Home</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bbe0081a-9821-45b5-a119-69d142fab482">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="91419409-413e-4b99-80d8-41dbee56b45b">
+            <TableID>dbo_dimGames</TableID>
+            <ColumnID>DREB_Home</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="83eac1c4-73bc-4257-9c98-f12fec6270ba">
+      <ID>Game ID</ID>
+      <Name>Game ID</Name>
+      <IsKey>true</IsKey>
+      <Type>Long</Type>
+      <Content>Key</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5c2ddba8-3d70-4480-b9e5-834065298d30">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="de7d9022-2bf2-4989-b77e-aec03710a196">
+            <TableID>dbo_dimGames</TableID>
+            <ColumnID>GameID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="424f3c04-2823-409b-886b-af3b5c4eb4b5">
+      <ID>Home Team ID</ID>
+      <Name>Home Team ID</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4db0470e-d4b8-4e1b-8867-634b3d82cb69">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d8a9f952-8be3-41a5-80db-ea62a588f946">
+            <TableID>dbo_dimGames</TableID>
+            <ColumnID>HomeTeamID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="c4e3905b-458a-4336-91a3-30b80ada504d">
+      <ID>PTS Away</ID>
+      <Name>PTS Away</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a25e8f37-ab81-480d-9fba-71afd716e9a4">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f44e61ba-701e-4f04-8e78-8b093b4a8daa">
+            <TableID>dbo_dimGames</TableID>
+            <ColumnID>PTS_Away</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="95c71de6-68d7-4bba-bd09-3d8302913f86">
+      <ID>PTS Home</ID>
+      <Name>PTS Home</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ef108821-726d-42de-b4e4-7f560634306f">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b19d7295-5331-46c8-99b6-9ba29feea52c">
+            <TableID>dbo_dimGames</TableID>
+            <ColumnID>PTS_Home</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="9517778f-5114-4813-97ac-8891fd0a30b2">
+      <ID>REB Away</ID>
+      <Name>REB Away</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fffeaa6e-5306-462b-b8a4-279f59b9c094">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6db60e34-1a34-4e57-9845-7f387c1fc2e0">
+            <TableID>dbo_dimGames</TableID>
+            <ColumnID>REB_Away</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="a0dae349-6d09-40fb-b971-0d95054f86ee">
+      <ID>REB Home</ID>
+      <Name>REB Home</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="61d9a374-e7ca-4c14-92a2-65a27cf9b6f7">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5cf17982-304d-4502-b4c3-8205d957a8be">
+            <TableID>dbo_dimGames</TableID>
+            <ColumnID>REB_Home</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="c81069e8-c650-4b1e-b41a-dc0db5c812fd">
+      <ID>Visitor Team ID</ID>
+      <Name>Visitor Team ID</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="34de035f-aba0-48ce-9e64-ca10857515be">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9c1ab160-92fe-45ed-a775-cd8e278c5f0c">
+            <TableID>dbo_dimGames</TableID>
+            <ColumnID>VisitorTeamID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="effb1d7d-f8b2-456d-9380-4e38de9ac684">
+      <ID>Winner</ID>
+      <Name>Winner</Name>
+      <Type>Boolean</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="90c5ef9f-8f51-4e40-9d6d-0d4ec10f6366">
+          <DataType>Boolean</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7470bee4-0ffe-45c9-957a-5e77d7cdc5e1">
+            <TableID>dbo_dimGames</TableID>
+            <ColumnID>Winner</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="5cb8e3b8-b687-4212-a6bb-1832fa99f14e">
+      <ID>OREB Home</ID>
+      <Name>OREB Home</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="306692ea-545c-4fc8-891c-44fb61dbefe0">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="28c09884-5309-48ff-875f-ec6843572c40">
+            <TableID>dbo_dimGames</TableID>
+            <ColumnID>OREB_Home</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="c6a0a872-baa9-482d-9f2e-9daa8389330b">
+      <ID>OREB Away</ID>
+      <Name>OREB Away</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c168acd0-031c-4fa3-a4dc-cd9fa25c80d3">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="87e31796-2b32-4c12-a703-fa80833d1a0c">
+            <TableID>dbo_dimGames</TableID>
+            <ColumnID>OREB_Away</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="2089da35-27bf-41ac-a935-8ba5b80bf6b8">
+      <ID>Dim Games</ID>
+      <Name>Decision Tree</Name>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T06:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Decision_Trees</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="77b1624a-7c5c-47b6-9ae9-661d8837d020">
+          <ID>Game ID</ID>
+          <Name>Game ID</Name>
+          <SourceColumnID>Game ID</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="c49bc83b-e758-42c2-b8fa-cd44d510f35f">
+          <ID>Home Team ID</ID>
+          <Name>Home Team ID</Name>
+          <SourceColumnID>Home Team ID</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="fd0173a1-9456-41db-9e87-3e76d60904bf">
+          <ID>Visitor Team ID</ID>
+          <Name>Visitor Team ID</Name>
+          <SourceColumnID>Visitor Team ID</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a9ab4369-be62-4548-9efb-9abdbec50595">
+          <ID>Winner</ID>
+          <Name>Winner</Name>
+          <SourceColumnID>Winner</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="d1417195-bf87-420c-b992-900f7194edef">
+          <ID>AST Away</ID>
+          <Name>AST Away</Name>
+          <SourceColumnID>AST Away</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="6a019cc0-251a-436f-a9ae-7276539bb2de">
+          <ID>AST Home</ID>
+          <Name>AST Home</Name>
+          <SourceColumnID>AST Home</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="5e107c7e-09a3-44fe-9618-6570f72ac91c">
+          <ID>DREB Away</ID>
+          <Name>DREB Away</Name>
+          <SourceColumnID>DREB Away</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="4bb30b50-02f4-4af2-9065-18e3c1628bb6">
+          <ID>DREB Home</ID>
+          <Name>DREB Home</Name>
+          <SourceColumnID>DREB Home</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a83a5e8d-9948-4d5c-9668-c1a0feb8df56">
+          <ID>REB Away</ID>
+          <Name>REB Away</Name>
+          <SourceColumnID>REB Away</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="f7d1f353-8d74-4169-9286-6cb1acb9a58b">
+          <ID>REB Home</ID>
+          <Name>REB Home</Name>
+          <SourceColumnID>REB Home</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="169fdb7d-e143-4f2b-8bf0-fa962a7bd7a4">
+          <ID>BLK Away</ID>
+          <Name>BLK Away</Name>
+          <SourceColumnID>BLK Away</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="6c829dbb-56ab-4ca0-876b-4e81c93dd74a">
+          <ID>BLK Home</ID>
+          <Name>BLK Home</Name>
+          <SourceColumnID>BLK Home</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="873c3ca9-e12a-4fbd-98b0-883abf1353c9">
+          <ID>STL Away</ID>
+          <Name>STL Away</Name>
+          <SourceColumnID>STL Away</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="488fd038-bb99-455c-acca-3c07ed145af7">
+          <ID>STL Home</ID>
+          <Name>STL Home</Name>
+          <SourceColumnID>STL Home</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="3b488fd1-bd98-467c-8ab6-46073b86d930">
+          <ID>OREB Away</ID>
+          <Name>OREB Away</Name>
+          <SourceColumnID>OREB Away</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="e3185e1b-3825-4b38-97f5-0081d123ccb2">
+          <ID>OREB Home</ID>
+          <Name>OREB Home</Name>
+          <SourceColumnID>OREB Home</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+    <MiningModel dwd:design-time-name="0d08f464-11bf-4261-82d6-afe96d8390ca">
+      <ID>Neural Network</ID>
+      <Name>Neural Network</Name>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T06:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Neural_Network</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="af77a9f0-5397-4645-aad5-2c2a34ebad22">
+          <ID>Game ID</ID>
+          <Name>Game ID</Name>
+          <SourceColumnID>Game ID</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="b7c2cbd1-1121-4b73-a6ff-bd58d50b7677">
+          <ID>Home Team ID</ID>
+          <Name>Home Team ID</Name>
+          <SourceColumnID>Home Team ID</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="0be40e3e-e314-4670-9020-879abfb2254b">
+          <ID>Visitor Team ID</ID>
+          <Name>Visitor Team ID</Name>
+          <SourceColumnID>Visitor Team ID</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="b8112f0d-a55e-41f4-8b71-c07f781b0b57">
+          <ID>Winner</ID>
+          <Name>Winner</Name>
+          <SourceColumnID>Winner</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="3f67df06-68e1-4186-aff7-94ef001929b8">
+          <ID>AST Away</ID>
+          <Name>AST Away</Name>
+          <SourceColumnID>AST Away</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="f4dd3eb3-72ba-4fe7-af29-5a3affc7a7fe">
+          <ID>AST Home</ID>
+          <Name>AST Home</Name>
+          <SourceColumnID>AST Home</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="f5bbf2a3-4e4f-4095-b197-9b542696f9a2">
+          <ID>DREB Away</ID>
+          <Name>DREB Away</Name>
+          <SourceColumnID>DREB Away</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ed118803-09e2-458f-bb97-d9d9f5e21ef7">
+          <ID>DREB Home</ID>
+          <Name>DREB Home</Name>
+          <SourceColumnID>DREB Home</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="d624c3ef-6522-4b3f-afe4-fae1474d56b8">
+          <ID>REB Away</ID>
+          <Name>REB Away</Name>
+          <SourceColumnID>REB Away</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="bda46365-92ab-4130-ac68-1f9d66afc097">
+          <ID>REB Home</ID>
+          <Name>REB Home</Name>
+          <SourceColumnID>REB Home</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="66ffb199-aac1-44bd-af48-95efd2be46f4">
+          <ID>BLK Away</ID>
+          <Name>BLK Away</Name>
+          <SourceColumnID>BLK Away</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="f18da5b7-9dbc-4fc1-952c-f76aac7e56bb">
+          <ID>BLK Home</ID>
+          <Name>BLK Home</Name>
+          <SourceColumnID>BLK Home</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="cb44f12a-712b-48f6-b29b-12eed7743758">
+          <ID>STL Away</ID>
+          <Name>STL Away</Name>
+          <SourceColumnID>STL Away</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="33b391a7-7010-4c6d-83e9-e8f23c68e578">
+          <ID>STL Home</ID>
+          <Name>STL Home</Name>
+          <SourceColumnID>STL Home</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="d16bfa44-da9c-4369-8685-c2c4b0c8e009">
+          <ID>OREB Away</ID>
+          <Name>OREB Away</Name>
+          <SourceColumnID>OREB Away</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="0860a7b3-7331-420c-a81d-c2aca5fafaa7">
+          <ID>OREB Home</ID>
+          <Name>OREB Home</Name>
+          <SourceColumnID>OREB Home</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+  </MiningModels>
+  <ddl100_100:HoldoutMaxPercent>30</ddl100_100:HoldoutMaxPercent>
+</MiningStructure>

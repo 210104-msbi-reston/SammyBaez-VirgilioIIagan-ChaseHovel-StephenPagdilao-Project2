@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1340
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "NBA - Cube", "NBA - Cube\NBA - Cube.dwproj", "{CDB78E26-F01B-46CA-8CD4-764C98588371}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDB78E26-F01B-46CA-8CD4-764C98588371}.Development|Default.ActiveCfg = Development
+		{CDB78E26-F01B-46CA-8CD4-764C98588371}.Development|Default.Build.0 = Development
+		{CDB78E26-F01B-46CA-8CD4-764C98588371}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00A154D3-20FC-42A2-B033-BA601BB7B95E}
+	EndGlobalSection
+EndGlobal

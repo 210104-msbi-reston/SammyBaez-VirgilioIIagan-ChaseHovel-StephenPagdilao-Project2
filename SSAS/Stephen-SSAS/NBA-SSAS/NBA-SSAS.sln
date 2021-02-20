@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "NBA-SSAS", "NBA-SSAS\NBA-SSAS.dwproj", "{24F0EC3A-816B-4AF4-8C03-E8EADF2E5D19}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24F0EC3A-816B-4AF4-8C03-E8EADF2E5D19}.Development|Default.ActiveCfg = Development
+		{24F0EC3A-816B-4AF4-8C03-E8EADF2E5D19}.Development|Default.Build.0 = Development
+		{24F0EC3A-816B-4AF4-8C03-E8EADF2E5D19}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C3DCEA72-3BCD-48F7-83F9-4C2FFAF54588}
+	EndGlobalSection
+EndGlobal
