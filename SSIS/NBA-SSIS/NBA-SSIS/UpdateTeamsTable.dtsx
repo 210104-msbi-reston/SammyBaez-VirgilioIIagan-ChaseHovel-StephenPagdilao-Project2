@@ -12,11 +12,32 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="31"
-  DTS:VersionGUID="{313375A3-390B-4F89-81C1-0D137A97CF1A}">
+  DTS:VersionBuild="32"
+  DTS:VersionGUID="{DE48D7F3-FEEA-46FA-BC4B-A5A4052FEBC4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[25.67.200.218\STOREAPPDB.BasketballDB.CSVV_admin]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3546FAC5-B5F8-4BA2-8E14-14E8177EBE4E}"
+      DTS:ObjectName="25.67.200.218\STOREAPPDB.BasketballDB.CSVV_admin">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=25.67.200.218\STOREAPPDB;User ID=CSVV_admin;Initial Catalog=BasketballDB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <EncryptedData
+            Type="http://www.w3.org/2001/04/xmlenc#Element"
+            Salt="dTx3fJU0SPo="
+            IV="WojwBPjL7Ktlrmn7AAcKsw==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <CipherData>
+              <CipherValue>WojwBPjL7Ktlrmn7AAcKs8/gwE73MO1qfct4S0wQyqlEjkwE49ORbrAI1xEez6iFqb9HPDwp+eHqzkebPW1UTz6OdB4OwDjqPyeiSsrHsRshkDBH1pfBhz68RDfGg4lfBNyKWp7MFHpeu5iamw85EJFzqqK8PvbrAFf+g4Z0nCpE0M7cGQYZsACs7KmfZVP8</CipherValue>
+            </CipherData>
+          </EncryptedData>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[STEPH-PAGD\STOREAPPDB.BasketballDB]"
       DTS:CreationName="OLEDB"
@@ -1565,7 +1586,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dimTeams]</property>
+                  name="OpenRowset">[dbo].[dimTeams]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1608,8 +1629,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\Teams Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[STEPH-PAGD\STOREAPPDB.BasketballDB]"
-                  connectionManagerRefId="Package.ConnectionManagers[STEPH-PAGD\STOREAPPDB.BasketballDB]"
+                  connectionManagerID="Package.ConnectionManagers[25.67.200.218\STOREAPPDB.BasketballDB.CSVV_admin]"
+                  connectionManagerRefId="Package.ConnectionManagers[25.67.200.218\STOREAPPDB.BasketballDB.CSVV_admin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1756,6 +1777,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       dataType="str"
                       length="16"
                       name="HeadCoach" />
+                    <externalMetadataColumn
+                      refId="Package\Teams Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="State" />
                   </externalMetadataColumns>
                 </input>
               </inputs>

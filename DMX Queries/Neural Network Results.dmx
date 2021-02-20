@@ -1,0 +1,46 @@
+SELECT
+  (t.[PTS_Home]) as [Home Team Points],
+  (t.[PTS_Away]) as [Away Team Points],
+  ([Neural Network].[Winner]) as [Predicted Result],
+  (PredictProbability([Neural Network].[Winner])*100) as [Probability of Success],
+  (t.[Winner]) as [Actual Result]
+From
+  [Neural Network]
+PREDICTION JOIN
+  OPENQUERY([Basketball DB],
+    'SELECT
+      [PTS_Home],
+      [PTS_Away],
+      [Winner],
+      [HomeTeamID],
+      [AST_Home],
+      [REB_Home],
+      [OREB_Home],
+      [DREB_Home],
+      [STL_Home],
+      [BLK_Home],
+      [VisitorTeamID],
+      [AST_Away],
+      [REB_Away],
+      [OREB_Away],
+      [DREB_Away],
+      [STL_Away],
+      [BLK_Away]
+    FROM
+      [dbo].[dimGames]
+    ') AS t
+ON
+  [Neural Network].[Home Team ID] = t.[HomeTeamID] AND
+  [Neural Network].[AST Home] = t.[AST_Home] AND
+  [Neural Network].[REB Home] = t.[REB_Home] AND
+  [Neural Network].[OREB Home] = t.[OREB_Home] AND
+  [Neural Network].[DREB Home] = t.[DREB_Home] AND
+  [Neural Network].[STL Home] = t.[STL_Home] AND
+  [Neural Network].[BLK Home] = t.[BLK_Home] AND
+  [Neural Network].[Visitor Team ID] = t.[VisitorTeamID] AND
+  [Neural Network].[AST Away] = t.[AST_Away] AND
+  [Neural Network].[REB Away] = t.[REB_Away] AND
+  [Neural Network].[OREB Away] = t.[OREB_Away] AND
+  [Neural Network].[DREB Away] = t.[DREB_Away] AND
+  [Neural Network].[STL Away] = t.[STL_Away] AND
+  [Neural Network].[BLK Away] = t.[BLK_Away]

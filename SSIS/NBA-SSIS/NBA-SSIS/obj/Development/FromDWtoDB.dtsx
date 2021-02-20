@@ -7,13 +7,13 @@
   DTS:CreatorName="DESKTOP-MOA0504\Chase Hovel"
   DTS:DTSID="{CA132D68-3B99-4927-9E10-6B36854AB101}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.128"
+  DTS:LastModifiedProductVersion="15.0.2000.150"
   DTS:LocaleID="1033"
   DTS:ObjectName="FromDWtoDB"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="27"
-  DTS:VersionGUID="{EA9C9486-BDC6-4C3E-967F-7AB4878ADBDA}">
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{885CD497-69A0-4841-9181-25F09694A17E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1200,13 +1200,6 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Creating team infrastructure\Multicast.Outputs[Multicast Output 3]"
-                  deleteOutputOnPathDetached="true"
-                  name="Multicast Output 3"
-                  synchronousInputId="Package\Creating team infrastructure\Multicast.Inputs[Multicast Input 1]">
-                  <externalMetadataColumns />
-                </output>
-                <output
                   refId="Package\Creating team infrastructure\Multicast.Outputs[Multicast Output 4]"
                   dangling="true"
                   deleteOutputOnPathDetached="true"
@@ -1557,133 +1550,6 @@
               </outputs>
             </component>
             <component
-              refId="Package\Creating team infrastructure\TeamID"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="TeamID"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[tbl_TeamID]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Creating team infrastructure\TeamID.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-MOA0504\LEARNINGSERVER.OLTP-Basketball]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-MOA0504\LEARNINGSERVER.OLTP-Basketball]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Creating team infrastructure\TeamID.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Creating team infrastructure\TeamID.Inputs[OLE DB Destination Input].Columns[TeamID]"
-                      cachedDataType="i4"
-                      cachedName="TeamID"
-                      externalMetadataColumnId="Package\Creating team infrastructure\TeamID.Inputs[OLE DB Destination Input].ExternalColumns[TeamID]"
-                      lineageId="Package\Creating team infrastructure\OLE DB Source.Outputs[OLE DB Source Output].Columns[TeamID]" />
-                    <inputColumn
-                      refId="Package\Creating team infrastructure\TeamID.Inputs[OLE DB Destination Input].Columns[FullTeamName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="FullTeamName"
-                      externalMetadataColumnId="Package\Creating team infrastructure\TeamID.Inputs[OLE DB Destination Input].ExternalColumns[FullTeamName]"
-                      lineageId="Package\Creating team infrastructure\OLE DB Source.Outputs[OLE DB Source Output].Columns[FullTeamName]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Creating team infrastructure\TeamID.Inputs[OLE DB Destination Input].ExternalColumns[TeamID]"
-                      dataType="i4"
-                      name="TeamID" />
-                    <externalMetadataColumn
-                      refId="Package\Creating team infrastructure\TeamID.Inputs[OLE DB Destination Input].ExternalColumns[FullTeamName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="FullTeamName" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Creating team infrastructure\TeamID.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Creating team infrastructure\TeamID.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Creating team infrastructure\TeamID.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Creating team infrastructure\TeamID.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Creating team infrastructure\TeamID.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Creating team infrastructure\TeamID.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Creating team infrastructure\TeamInfo"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -1865,11 +1731,6 @@
               name="Multicast Output 2"
               startId="Package\Creating team infrastructure\Multicast.Outputs[Multicast Output 2]" />
             <path
-              refId="Package\Creating team infrastructure.Paths[Multicast Output 3]"
-              endId="Package\Creating team infrastructure\TeamID.Inputs[OLE DB Destination Input]"
-              name="Multicast Output 3"
-              startId="Package\Creating team infrastructure\Multicast.Outputs[Multicast Output 3]" />
-            <path
               refId="Package\Creating team infrastructure.Paths[Multicast Output 5]"
               endId="Package\Creating team infrastructure\Abbreviations.Inputs[OLE DB Destination Input]"
               name="Multicast Output 5"
@@ -1884,13 +1745,14 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task"
+      DTS:refId="Package\Creating teamID table"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{CFFA188B-B750-4100-9EF9-4BE87143F47F}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task"
+      DTS:ObjectName="Creating teamID table"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -1898,7 +1760,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task\Lookup"
+              refId="Package\Creating teamID table\Lookup"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
@@ -1954,7 +1816,7 @@ where [refTable].[Arena] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Arena]};</property>
+                  name="ParameterMap">#{Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[Arena]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1966,7 +1828,7 @@ where [refTable].[Arena] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Lookup.Connections[OleDbConnection]"
+                  refId="Package\Creating teamID table\Lookup.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-MOA0504\LEARNINGSERVER.OLTP-Basketball]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-MOA0504\LEARNINGSERVER.OLTP-Basketball]"
                   description="Connection manager used to access lookup data."
@@ -1974,16 +1836,16 @@ where [refTable].[Arena] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]"
+                  refId="Package\Creating teamID table\Lookup.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Lookup.Inputs[Lookup Input].Columns[Arena]"
+                      refId="Package\Creating teamID table\Lookup.Inputs[Lookup Input].Columns[Arena]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="26"
                       cachedName="Arena"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Arena]">
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[Arena]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -2001,18 +1863,18 @@ where [refTable].[Arena] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output]"
+                  refId="Package\Creating teamID table\Lookup.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Creating teamID table\Lookup.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output].Columns[ArenaID]"
+                      refId="Package\Creating teamID table\Lookup.Outputs[Lookup Match Output].Columns[ArenaID]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output].Columns[ArenaID]"
+                      lineageId="Package\Creating teamID table\Lookup.Outputs[Lookup Match Output].Columns[ArenaID]"
                       name="ArenaID"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -2026,30 +1888,30 @@ where [refTable].[Arena] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Lookup.Outputs[Lookup No Match Output]"
+                  refId="Package\Creating teamID table\Lookup.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Creating teamID table\Lookup.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output]"
+                  refId="Package\Creating teamID table\Lookup.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Creating teamID table\Lookup.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Creating teamID table\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Creating teamID table\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Creating teamID table\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Creating teamID table\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2058,7 +1920,7 @@ where [refTable].[Arena] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Lookup 1"
+              refId="Package\Creating teamID table\Lookup 1"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
@@ -2114,7 +1976,7 @@ where [refTable].[Owner] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Owner]};</property>
+                  name="ParameterMap">#{Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[Owner]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2126,7 +1988,7 @@ where [refTable].[Owner] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Lookup 1.Connections[OleDbConnection]"
+                  refId="Package\Creating teamID table\Lookup 1.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-MOA0504\LEARNINGSERVER.OLTP-Basketball]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-MOA0504\LEARNINGSERVER.OLTP-Basketball]"
                   description="Connection manager used to access lookup data."
@@ -2134,16 +1996,16 @@ where [refTable].[Owner] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Lookup 1.Inputs[Lookup Input]"
+                  refId="Package\Creating teamID table\Lookup 1.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Lookup 1.Inputs[Lookup Input].Columns[Owner]"
+                      refId="Package\Creating teamID table\Lookup 1.Inputs[Lookup Input].Columns[Owner]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="35"
                       cachedName="Owner"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Owner]">
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[Owner]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -2161,18 +2023,18 @@ where [refTable].[Owner] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Lookup 1.Outputs[Lookup Match Output]"
+                  refId="Package\Creating teamID table\Lookup 1.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup 1.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Creating teamID table\Lookup 1.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup 1.Outputs[Lookup Match Output].Columns[InfoID]"
+                      refId="Package\Creating teamID table\Lookup 1.Outputs[Lookup Match Output].Columns[InfoID]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task\Lookup 1.Outputs[Lookup Match Output].Columns[InfoID]"
+                      lineageId="Package\Creating teamID table\Lookup 1.Outputs[Lookup Match Output].Columns[InfoID]"
                       name="InfoID"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -2186,30 +2048,30 @@ where [refTable].[Owner] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Lookup 1.Outputs[Lookup No Match Output]"
+                  refId="Package\Creating teamID table\Lookup 1.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup 1.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Creating teamID table\Lookup 1.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Lookup 1.Outputs[Lookup Error Output]"
+                  refId="Package\Creating teamID table\Lookup 1.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup 1.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Creating teamID table\Lookup 1.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Creating teamID table\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Creating teamID table\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Creating teamID table\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Creating teamID table\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2218,7 +2080,7 @@ where [refTable].[Owner] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Lookup 2"
+              refId="Package\Creating teamID table\Lookup 2"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
@@ -2274,7 +2136,7 @@ where [refTable].[Abbreviation] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Abbreviation]};</property>
+                  name="ParameterMap">#{Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[Abbreviation]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2286,7 +2148,7 @@ where [refTable].[Abbreviation] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Lookup 2.Connections[OleDbConnection]"
+                  refId="Package\Creating teamID table\Lookup 2.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-MOA0504\LEARNINGSERVER.OLTP-Basketball]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-MOA0504\LEARNINGSERVER.OLTP-Basketball]"
                   description="Connection manager used to access lookup data."
@@ -2294,16 +2156,16 @@ where [refTable].[Abbreviation] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Lookup 2.Inputs[Lookup Input]"
+                  refId="Package\Creating teamID table\Lookup 2.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Lookup 2.Inputs[Lookup Input].Columns[Abbreviation]"
+                      refId="Package\Creating teamID table\Lookup 2.Inputs[Lookup Input].Columns[Abbreviation]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="3"
                       cachedName="Abbreviation"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Abbreviation]">
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[Abbreviation]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -2321,18 +2183,18 @@ where [refTable].[Abbreviation] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Lookup 2.Outputs[Lookup Match Output]"
+                  refId="Package\Creating teamID table\Lookup 2.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup 2.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Creating teamID table\Lookup 2.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup 2.Outputs[Lookup Match Output].Columns[AbbreviationID]"
+                      refId="Package\Creating teamID table\Lookup 2.Outputs[Lookup Match Output].Columns[AbbreviationID]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task\Lookup 2.Outputs[Lookup Match Output].Columns[AbbreviationID]"
+                      lineageId="Package\Creating teamID table\Lookup 2.Outputs[Lookup Match Output].Columns[AbbreviationID]"
                       name="AbbreviationID"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -2346,30 +2208,30 @@ where [refTable].[Abbreviation] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Lookup 2.Outputs[Lookup No Match Output]"
+                  refId="Package\Creating teamID table\Lookup 2.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup 2.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Creating teamID table\Lookup 2.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Lookup 2.Outputs[Lookup Error Output]"
+                  refId="Package\Creating teamID table\Lookup 2.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup 2.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Creating teamID table\Lookup 2.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Creating teamID table\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Creating teamID table\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Creating teamID table\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Creating teamID table\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2378,7 +2240,7 @@ where [refTable].[Abbreviation] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\OLE DB Destination"
+              refId="Package\Creating teamID table\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -2435,7 +2297,7 @@ where [refTable].[Abbreviation] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Creating teamID table\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-MOA0504\LEARNINGSERVER.OLTP-Basketball]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-MOA0504\LEARNINGSERVER.OLTP-Basketball]"
                   description="The OLE DB runtime connection used to access the database."
@@ -2443,67 +2305,67 @@ where [refTable].[Abbreviation] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Creating teamID table\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TeamID]"
+                      refId="Package\Creating teamID table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TeamID]"
                       cachedDataType="i4"
                       cachedName="TeamID"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TeamID]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[TeamID]" />
+                      externalMetadataColumnId="Package\Creating teamID table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TeamID]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[TeamID]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FullTeamName]"
+                      refId="Package\Creating teamID table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FullTeamName]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="FullTeamName"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FullTeamName]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FullTeamName]" />
+                      externalMetadataColumnId="Package\Creating teamID table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FullTeamName]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[FullTeamName]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ArenaID]"
+                      refId="Package\Creating teamID table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ArenaID]"
                       cachedDataType="i4"
                       cachedName="ArenaID"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ArenaID]"
-                      lineageId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output].Columns[ArenaID]" />
+                      externalMetadataColumnId="Package\Creating teamID table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ArenaID]"
+                      lineageId="Package\Creating teamID table\Lookup.Outputs[Lookup Match Output].Columns[ArenaID]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[InfoID]"
+                      refId="Package\Creating teamID table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[InfoID]"
                       cachedDataType="i4"
                       cachedName="InfoID"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InfoID]"
-                      lineageId="Package\Data Flow Task\Lookup 1.Outputs[Lookup Match Output].Columns[InfoID]" />
+                      externalMetadataColumnId="Package\Creating teamID table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InfoID]"
+                      lineageId="Package\Creating teamID table\Lookup 1.Outputs[Lookup Match Output].Columns[InfoID]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AbbreviationID]"
+                      refId="Package\Creating teamID table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AbbreviationID]"
                       cachedDataType="i4"
                       cachedName="AbbreviationID"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AbbreviationID]"
-                      lineageId="Package\Data Flow Task\Lookup 2.Outputs[Lookup Match Output].Columns[AbbreviationID]" />
+                      externalMetadataColumnId="Package\Creating teamID table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AbbreviationID]"
+                      lineageId="Package\Creating teamID table\Lookup 2.Outputs[Lookup Match Output].Columns[AbbreviationID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TeamID]"
+                      refId="Package\Creating teamID table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TeamID]"
                       dataType="i4"
                       name="TeamID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FullTeamName]"
+                      refId="Package\Creating teamID table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FullTeamName]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="FullTeamName" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ArenaID]"
+                      refId="Package\Creating teamID table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ArenaID]"
                       dataType="i4"
                       name="ArenaID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InfoID]"
+                      refId="Package\Creating teamID table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InfoID]"
                       dataType="i4"
                       name="InfoID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AbbreviationID]"
+                      refId="Package\Creating teamID table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AbbreviationID]"
                       dataType="i4"
                       name="AbbreviationID" />
                   </externalMetadataColumns>
@@ -2511,22 +2373,22 @@ where [refTable].[Abbreviation] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Creating teamID table\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Creating teamID table\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Creating teamID table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Creating teamID table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Creating teamID table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Creating teamID table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2535,7 +2397,7 @@ where [refTable].[Abbreviation] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\OLE DB Source"
+              refId="Package\Creating teamID table\OLE DB Source"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -2584,7 +2446,7 @@ where [refTable].[Abbreviation] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
+                  refId="Package\Creating teamID table\OLE DB Source.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-MOA0504\LEARNINGSERVER.BasketballDB]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-MOA0504\LEARNINGSERVER.BasketballDB]"
                   description="The OLE DB runtime connection used to access the database."
@@ -2592,187 +2454,187 @@ where [refTable].[Abbreviation] = ?</property>
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]"
+                  refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[TeamID]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[TeamID]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TeamID]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[TeamID]"
+                      externalMetadataColumnId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TeamID]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[TeamID]"
                       name="TeamID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Abbreviation]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[Abbreviation]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Abbreviation]"
+                      externalMetadataColumnId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Abbreviation]"
                       length="3"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Abbreviation]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[Abbreviation]"
                       name="Abbreviation"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nickname]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nickname]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nickname]"
+                      externalMetadataColumnId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nickname]"
                       length="13"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nickname]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nickname]"
                       name="Nickname"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FullTeamName]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[FullTeamName]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FullTeamName]"
+                      externalMetadataColumnId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FullTeamName]"
                       length="50"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FullTeamName]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[FullTeamName]"
                       name="FullTeamName"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[YearFounded]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[YearFounded]"
                       dataType="i2"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[YearFounded]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[YearFounded]"
+                      externalMetadataColumnId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[YearFounded]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[YearFounded]"
                       name="YearFounded"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[City]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[City]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      externalMetadataColumnId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[City]"
                       length="13"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[City]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[City]"
                       name="City"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[State]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[State]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[State]"
+                      externalMetadataColumnId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[State]"
                       length="20"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[State]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[State]"
                       name="State"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Arena]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[Arena]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Arena]"
+                      externalMetadataColumnId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Arena]"
                       length="26"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Arena]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[Arena]"
                       name="Arena"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Owner]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[Owner]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Owner]"
+                      externalMetadataColumnId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Owner]"
                       length="35"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Owner]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[Owner]"
                       name="Owner"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[GeneralManager]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[GeneralManager]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GeneralManager]"
+                      externalMetadataColumnId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GeneralManager]"
                       length="15"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[GeneralManager]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[GeneralManager]"
                       name="GeneralManager"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[HeadCoach]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[HeadCoach]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[HeadCoach]"
+                      externalMetadataColumnId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[HeadCoach]"
                       length="16"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[HeadCoach]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].Columns[HeadCoach]"
                       name="HeadCoach"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TeamID]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TeamID]"
                       dataType="i4"
                       name="TeamID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Abbreviation]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Abbreviation]"
                       codePage="1252"
                       dataType="str"
                       length="3"
                       name="Abbreviation" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nickname]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nickname]"
                       codePage="1252"
                       dataType="str"
                       length="13"
                       name="Nickname" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FullTeamName]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FullTeamName]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="FullTeamName" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[YearFounded]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[YearFounded]"
                       dataType="i2"
                       name="YearFounded" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[City]"
                       codePage="1252"
                       dataType="str"
                       length="13"
                       name="City" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[State]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[State]"
                       codePage="1252"
                       dataType="str"
                       length="20"
                       name="State" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Arena]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Arena]"
                       codePage="1252"
                       dataType="str"
                       length="26"
                       name="Arena" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Owner]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Owner]"
                       codePage="1252"
                       dataType="str"
                       length="35"
                       name="Owner" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GeneralManager]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GeneralManager]"
                       codePage="1252"
                       dataType="str"
                       length="15"
                       name="GeneralManager" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[HeadCoach]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[HeadCoach]"
                       codePage="1252"
                       dataType="str"
                       length="16"
@@ -2780,93 +2642,93 @@ where [refTable].[Abbreviation] = ?</property>
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TeamID]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TeamID]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TeamID]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TeamID]"
                       name="TeamID" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Abbreviation]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Abbreviation]"
                       codePage="1252"
                       dataType="str"
                       length="3"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Abbreviation]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Abbreviation]"
                       name="Abbreviation" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nickname]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nickname]"
                       codePage="1252"
                       dataType="str"
                       length="13"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nickname]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nickname]"
                       name="Nickname" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FullTeamName]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FullTeamName]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FullTeamName]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FullTeamName]"
                       name="FullTeamName" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[YearFounded]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[YearFounded]"
                       dataType="i2"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[YearFounded]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[YearFounded]"
                       name="YearFounded" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[City]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[City]"
                       codePage="1252"
                       dataType="str"
                       length="13"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[City]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[City]"
                       name="City" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[State]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[State]"
                       codePage="1252"
                       dataType="str"
                       length="20"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[State]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[State]"
                       name="State" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Arena]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Arena]"
                       codePage="1252"
                       dataType="str"
                       length="26"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Arena]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Arena]"
                       name="Arena" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Owner]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Owner]"
                       codePage="1252"
                       dataType="str"
                       length="35"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Owner]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Owner]"
                       name="Owner" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GeneralManager]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GeneralManager]"
                       codePage="1252"
                       dataType="str"
                       length="15"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GeneralManager]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GeneralManager]"
                       name="GeneralManager" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[HeadCoach]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[HeadCoach]"
                       codePage="1252"
                       dataType="str"
                       length="16"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[HeadCoach]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[HeadCoach]"
                       name="HeadCoach" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2877,25 +2739,25 @@ where [refTable].[Abbreviation] = ?</property>
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output]"
-              endId="Package\Data Flow Task\Lookup 1.Inputs[Lookup Input]"
+              refId="Package\Creating teamID table.Paths[Lookup Match Output]"
+              endId="Package\Creating teamID table\Lookup 1.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output]" />
+              startId="Package\Creating teamID table\Lookup.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output1]"
-              endId="Package\Data Flow Task\Lookup 2.Inputs[Lookup Input]"
+              refId="Package\Creating teamID table.Paths[Lookup Match Output1]"
+              endId="Package\Creating teamID table\Lookup 2.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Data Flow Task\Lookup 1.Outputs[Lookup Match Output]" />
+              startId="Package\Creating teamID table\Lookup 1.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output2]"
-              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\Creating teamID table.Paths[Lookup Match Output2]"
+              endId="Package\Creating teamID table\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Lookup Match Output"
-              startId="Package\Data Flow Task\Lookup 2.Outputs[Lookup Match Output]" />
+              startId="Package\Creating teamID table\Lookup 2.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
-              endId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]"
+              refId="Package\Creating teamID table.Paths[OLE DB Source Output]"
+              endId="Package\Creating teamID table\Lookup.Inputs[Lookup Input]"
               name="OLE DB Source Output"
-              startId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]" />
+              startId="Package\Creating teamID table\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -5655,27 +5517,27 @@ where [refTable].[GameDate] = ?</property>
         <NodeLayout
           Size="320,42"
           Id="Package\Create Players and Intermediary Team-Player table"
-          TopLeft="18,110" />
+          TopLeft="2,143" />
         <NodeLayout
           Size="212,42"
           Id="Package\Creating team infrastructure"
-          TopLeft="45,27" />
+          TopLeft="47,27" />
         <NodeLayout
-          Size="151,42"
-          Id="Package\Data Flow Task"
-          TopLeft="52,407" />
+          Size="183,42"
+          Id="Package\Creating teamID table"
+          TopLeft="40,92" />
         <NodeLayout
           Size="130,42"
           Id="Package\Date Table"
-          TopLeft="62.5,192.5" />
+          TopLeft="18.5,217.5" />
         <NodeLayout
           Size="140,42"
           Id="Package\GameResults"
-          TopLeft="48.5,270.5" />
+          TopLeft="160.5,267.5" />
         <NodeLayout
           Size="170,42"
           Id="Package\Player Performance"
-          TopLeft="41.5,337.5" />
+          TopLeft="150.5,372.5" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -5723,9 +5585,7 @@ where [refTable].[GameDate] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5747,9 +5607,7 @@ where [refTable].[GameDate] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5860,7 +5718,7 @@ where [refTable].[GameDate] = ?</property>
     design-time-name="Package\Creating team infrastructure">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="120,42"
           Id="Package\Creating team infrastructure\Multicast"
@@ -5870,10 +5728,6 @@ where [refTable].[GameDate] = ?</property>
           Id="Package\Creating team infrastructure\Arenas"
           TopLeft="48,272" />
         <NodeLayout
-          Size="125,42"
-          Id="Package\Creating team infrastructure\TeamInfo"
-          TopLeft="318,272" />
-        <NodeLayout
           Size="150,42"
           Id="Package\Creating team infrastructure\OLE DB Source"
           TopLeft="161,12" />
@@ -5882,9 +5736,53 @@ where [refTable].[GameDate] = ?</property>
           Id="Package\Creating team infrastructure\Abbreviations"
           TopLeft="168,272" />
         <NodeLayout
-          Size="117,42"
-          Id="Package\Creating team infrastructure\TeamID"
-          TopLeft="453,272" />
+          Size="125,42"
+          Id="Package\Creating team infrastructure\TeamInfo"
+          TopLeft="318,272" />
+        <EdgeLayout
+          Id="Package\Creating team infrastructure.Paths[OLE DB Source Output]"
+          TopLeft="234.5,54">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58"
+              Start="0,0"
+              End="0,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Creating team infrastructure.Paths[Multicast Output 5]"
+          TopLeft="236.25,154">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,118"
+              Start="0,0"
+              End="0,110.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,110.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Creating team infrastructure.Paths[Multicast Output 2]"
           TopLeft="261,154">
@@ -5916,9 +5814,7 @@ where [refTable].[GameDate] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5952,100 +5848,14 @@ where [refTable].[GameDate] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Creating team infrastructure.Paths[OLE DB Source Output]"
-          TopLeft="234.5,54">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,58"
-              Start="0,0"
-              End="0,50.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Creating team infrastructure.Paths[Multicast Output 5]"
-          TopLeft="236.25,154">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,118"
-              Start="0,0"
-              End="0,110.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,110.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Creating team infrastructure.Paths[Multicast Output 3]"
-          TopLeft="266.6,154">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="244.9,118"
-              Start="0,0"
-              End="244.9,110.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.0555555555555" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32.0555555555555"
-                    Point2="0,36.0555555555555"
-                    Point3="4,36.0555555555555" />
-                  <mssgle:LineSegment
-                    End="240.9,36.0555555555555" />
-                  <mssgle:CubicBezierSegment
-                    Point1="240.9,36.0555555555555"
-                    Point2="244.9,36.0555555555555"
-                    Point3="244.9,40.0555555555555" />
-                  <mssgle:LineSegment
-                    End="244.9,110.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Creating team infrastructure\Arenas">
+    design-time-name="Package\Creating team infrastructure\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6071,7 +5881,7 @@ where [refTable].[GameDate] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Creating team infrastructure\OLE DB Source">
+    design-time-name="Package\Creating team infrastructure\Arenas">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6096,88 +5906,33 @@ where [refTable].[GameDate] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Creating team infrastructure\TeamID">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Data Flow Task">
+    design-time-name="Package\Creating teamID table">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="150,42"
-          Id="Package\Data Flow Task\OLE DB Source"
+          Id="Package\Creating teamID table\OLE DB Source"
           TopLeft="106,29" />
         <NodeLayout
-          Size="113,42"
-          Id="Package\Data Flow Task\Lookup"
-          TopLeft="117,94" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="177.25,71">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,23"
-              Start="0,0"
-              End="0,15.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
           Size="122,42"
-          Id="Package\Data Flow Task\Lookup 1"
+          Id="Package\Creating teamID table\Lookup 1"
           TopLeft="119,187" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="176.75,136">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,51"
-              Start="0,0"
-              End="0,43.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,43.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,15.9453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Creating teamID table\OLE DB Destination"
+          TopLeft="101,354" />
+        <NodeLayout
+          Size="113,42"
+          Id="Package\Creating teamID table\Lookup"
+          TopLeft="117,94" />
         <NodeLayout
           Size="122,42"
-          Id="Package\Data Flow Task\Lookup 2"
+          Id="Package\Creating teamID table\Lookup 2"
           TopLeft="120,274" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output1]"
+          Id="Package\Creating teamID table.Paths[Lookup Match Output1]"
           TopLeft="180.5,229">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6200,12 +5955,54 @@ where [refTable].[GameDate] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="101,354" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output2]"
+          Id="Package\Creating teamID table.Paths[Lookup Match Output]"
+          TopLeft="176.75,136">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,15.9453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Creating teamID table.Paths[OLE DB Source Output]"
+          TopLeft="177.25,71">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23"
+              Start="0,0"
+              End="0,15.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Creating teamID table.Paths[Lookup Match Output2]"
           TopLeft="183.75,316">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6231,11 +6028,106 @@ where [refTable].[GameDate] = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Creating teamID table\Lookup 1">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[tbl_TeamInfo]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Creating teamID table\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Creating teamID table\Lookup 2">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[tbl_TeamAbbreviations]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Creating teamID table\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[tbl_Arena]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Creating teamID table\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Date Table">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="150,42"
           Id="Package\Date Table\OLE DB Source"
@@ -6263,9 +6155,7 @@ where [refTable].[GameDate] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6579,7 +6469,7 @@ where [refTable].[GameDate] = ?</property>
     design-time-name="Package\Player Performance">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="150,42"
           Id="Package\Player Performance\OLE DB Source"
@@ -6607,9 +6497,7 @@ where [refTable].[GameDate] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6630,101 +6518,6 @@ where [refTable].[GameDate] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Player Performance\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[tbl_Arena]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup 1">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[tbl_TeamInfo]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup 2">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[tbl_TeamAbbreviations]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
