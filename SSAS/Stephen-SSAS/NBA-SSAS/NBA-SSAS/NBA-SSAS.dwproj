@@ -9,11 +9,11 @@
   <Cubes>
     <ProjectItem>
       <Name>BasketbalDB_Cube.cube</Name>
-      <FullPath>BasketbalDB_Cube.cube</FullPath>
+      <FullPath>Stephen_BasketbalDB_Cube.cube</FullPath>
       <Dependencies>
         <ProjectItem>
-          <Name>BasketbalDB_Cube.partitions</Name>
-          <FullPath>BasketbalDB_Cube.partitions</FullPath>
+          <Name>Stephen_BasketbalDB_Cube.partitions</Name>
+          <FullPath>Stephen_BasketbalDB_Cube.partitions</FullPath>
         </ProjectItem>
       </Dependencies>
     </ProjectItem>
@@ -48,8 +48,8 @@
   </DataSources>
   <DataSourceViews>
     <ProjectItem>
-      <Name>BasketbalDB_View.dsv</Name>
-      <FullPath>BasketbalDB_View.dsv</FullPath>
+      <Name>Stephen_BasketbalDB_IndvidualPerformance_View.dsv</Name>
+      <FullPath>Stephen_BasketbalDB_IndvidualPerformance_View.dsv</FullPath>
     </ProjectItem>
   </DataSourceViews>
   <MiningModels>

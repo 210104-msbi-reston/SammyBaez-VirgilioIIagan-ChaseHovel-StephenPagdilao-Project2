@@ -1,6 +1,6 @@
 ﻿<Infos>
   <Item name="Predicting Winning Chances of Home Team.dmm">
-    <Time>637492539349410929</Time>
+    <Time>637495377878879074</Time>
     <Hash length="20">
       <b>139</b>
       <b>215</b>
@@ -24,58 +24,58 @@
       <b>35</b>
     </Hash>
   </Item>
-  <Item name="Dim Player.dim">
-    <Time>637491699378916344</Time>
+  <Item name="Stephen_BasketbalDB_IndvidualPerformance_View.dsv">
+    <Time>637495382309443372</Time>
     <Hash length="20">
-      <b>39</b>
-      <b>116</b>
-      <b>84</b>
-      <b>236</b>
-      <b>237</b>
-      <b>227</b>
-      <b>141</b>
-      <b>162</b>
-      <b>222</b>
-      <b>167</b>
+      <b>199</b>
+      <b>206</b>
+      <b>63</b>
+      <b>132</b>
       <b>106</b>
-      <b>163</b>
-      <b>129</b>
-      <b>95</b>
-      <b>103</b>
-      <b>69</b>
-      <b>196</b>
-      <b>26</b>
+      <b>197</b>
+      <b>240</b>
+      <b>251</b>
+      <b>45</b>
+      <b>2</b>
+      <b>29</b>
+      <b>242</b>
+      <b>233</b>
+      <b>65</b>
+      <b>40</b>
+      <b>64</b>
+      <b>207</b>
       <b>217</b>
-      <b>148</b>
+      <b>189</b>
+      <b>70</b>
     </Hash>
   </Item>
-  <Item name="Dim Performance.dim">
-    <Time>637487180535397357</Time>
+  <Item name="Dim Teams.dim">
+    <Time>637495377878839065</Time>
     <Hash length="20">
-      <b>173</b>
-      <b>109</b>
-      <b>194</b>
-      <b>169</b>
-      <b>139</b>
-      <b>188</b>
-      <b>45</b>
-      <b>177</b>
-      <b>13</b>
-      <b>16</b>
-      <b>64</b>
-      <b>190</b>
-      <b>47</b>
-      <b>105</b>
-      <b>119</b>
-      <b>211</b>
+      <b>228</b>
+      <b>145</b>
+      <b>39</b>
+      <b>39</b>
+      <b>179</b>
+      <b>206</b>
+      <b>115</b>
+      <b>251</b>
+      <b>117</b>
+      <b>69</b>
+      <b>46</b>
+      <b>172</b>
+      <b>171</b>
       <b>176</b>
-      <b>164</b>
-      <b>67</b>
-      <b>203</b>
+      <b>79</b>
+      <b>21</b>
+      <b>188</b>
+      <b>250</b>
+      <b>188</b>
+      <b>187</b>
     </Hash>
   </Item>
   <Item name="Dim Date.dim">
-    <Time>637486553181877527</Time>
+    <Time>637495377878689037</Time>
     <Hash length="20">
       <b>18</b>
       <b>167</b>
@@ -99,8 +99,83 @@
       <b>111</b>
     </Hash>
   </Item>
+  <Item name="Stephen_BasketbalDB_Cube.partitions">
+    <Time>637495377878664030</Time>
+    <Hash length="20">
+      <b>66</b>
+      <b>242</b>
+      <b>228</b>
+      <b>100</b>
+      <b>54</b>
+      <b>241</b>
+      <b>50</b>
+      <b>59</b>
+      <b>0</b>
+      <b>84</b>
+      <b>227</b>
+      <b>131</b>
+      <b>41</b>
+      <b>104</b>
+      <b>188</b>
+      <b>45</b>
+      <b>123</b>
+      <b>99</b>
+      <b>172</b>
+      <b>92</b>
+    </Hash>
+  </Item>
+  <Item name="Dim Player.dim">
+    <Time>637495377878809068</Time>
+    <Hash length="20">
+      <b>39</b>
+      <b>116</b>
+      <b>84</b>
+      <b>236</b>
+      <b>237</b>
+      <b>227</b>
+      <b>141</b>
+      <b>162</b>
+      <b>222</b>
+      <b>167</b>
+      <b>106</b>
+      <b>163</b>
+      <b>129</b>
+      <b>95</b>
+      <b>103</b>
+      <b>69</b>
+      <b>196</b>
+      <b>26</b>
+      <b>217</b>
+      <b>148</b>
+    </Hash>
+  </Item>
+  <Item name="Stephen_BasketbalDB_Cube.cube">
+    <Time>637495384098532450</Time>
+    <Hash length="20">
+      <b>44</b>
+      <b>65</b>
+      <b>119</b>
+      <b>251</b>
+      <b>61</b>
+      <b>150</b>
+      <b>158</b>
+      <b>97</b>
+      <b>119</b>
+      <b>46</b>
+      <b>251</b>
+      <b>24</b>
+      <b>124</b>
+      <b>21</b>
+      <b>102</b>
+      <b>1</b>
+      <b>213</b>
+      <b>245</b>
+      <b>180</b>
+      <b>166</b>
+    </Hash>
+  </Item>
   <Item name="Basketball DB.ds">
-    <Time>637487372971758479</Time>
+    <Time>637495377878684036</Time>
     <Hash length="20">
       <b>98</b>
       <b>124</b>
@@ -125,7 +200,7 @@
     </Hash>
   </Item>
   <Item name="NBA-SSAS.database">
-    <Time>637485529071679741</Time>
+    <Time>637495377882649733</Time>
     <Hash length="20">
       <b>224</b>
       <b>220</b>
@@ -150,7 +225,7 @@
     </Hash>
   </Item>
   <Item name="Dim Games.dim">
-    <Time>637486459944610517</Time>
+    <Time>637495377878714039</Time>
     <Hash length="20">
       <b>183</b>
       <b>110</b>
@@ -174,104 +249,29 @@
       <b>232</b>
     </Hash>
   </Item>
-  <Item name="BasketbalDB_Cube.cube">
-    <Time>637491699378846331</Time>
+  <Item name="Dim Performance.dim">
+    <Time>637495377878804060</Time>
     <Hash length="20">
-      <b>13</b>
-      <b>100</b>
-      <b>186</b>
-      <b>14</b>
-      <b>179</b>
-      <b>219</b>
-      <b>253</b>
-      <b>112</b>
-      <b>21</b>
-      <b>176</b>
-      <b>25</b>
-      <b>175</b>
-      <b>146</b>
-      <b>12</b>
-      <b>200</b>
-      <b>199</b>
-      <b>154</b>
-      <b>39</b>
-      <b>13</b>
-      <b>117</b>
-    </Hash>
-  </Item>
-  <Item name="Dim Teams.dim">
-    <Time>637486870787380972</Time>
-    <Hash length="20">
-      <b>228</b>
-      <b>145</b>
-      <b>39</b>
-      <b>39</b>
-      <b>179</b>
-      <b>206</b>
-      <b>115</b>
-      <b>251</b>
-      <b>117</b>
-      <b>69</b>
-      <b>46</b>
-      <b>172</b>
-      <b>171</b>
-      <b>176</b>
-      <b>79</b>
-      <b>21</b>
-      <b>188</b>
-      <b>250</b>
-      <b>188</b>
-      <b>187</b>
-    </Hash>
-  </Item>
-  <Item name="BasketbalDB_View.dsv">
-    <Time>637487204375414692</Time>
-    <Hash length="20">
+      <b>173</b>
       <b>109</b>
-      <b>100</b>
-      <b>129</b>
-      <b>180</b>
-      <b>85</b>
-      <b>128</b>
-      <b>66</b>
-      <b>52</b>
-      <b>56</b>
-      <b>163</b>
-      <b>61</b>
-      <b>24</b>
-      <b>9</b>
-      <b>40</b>
+      <b>194</b>
       <b>169</b>
-      <b>130</b>
-      <b>179</b>
-      <b>123</b>
-      <b>46</b>
-      <b>157</b>
-    </Hash>
-  </Item>
-  <Item name="BasketbalDB_Cube.partitions">
-    <Time>637487276882370626</Time>
-    <Hash length="20">
-      <b>66</b>
-      <b>242</b>
-      <b>228</b>
-      <b>100</b>
-      <b>54</b>
-      <b>241</b>
-      <b>50</b>
-      <b>59</b>
-      <b>0</b>
-      <b>84</b>
-      <b>227</b>
-      <b>131</b>
-      <b>41</b>
-      <b>104</b>
+      <b>139</b>
       <b>188</b>
       <b>45</b>
-      <b>123</b>
-      <b>99</b>
-      <b>172</b>
-      <b>92</b>
+      <b>177</b>
+      <b>13</b>
+      <b>16</b>
+      <b>64</b>
+      <b>190</b>
+      <b>47</b>
+      <b>105</b>
+      <b>119</b>
+      <b>211</b>
+      <b>176</b>
+      <b>164</b>
+      <b>67</b>
+      <b>203</b>
     </Hash>
   </Item>
 </Infos>
