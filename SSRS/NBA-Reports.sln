@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1340
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "NBA-Reports", "NBA-Reports\NBA-Reports.rptproj", "{CF728AE6-49AC-4B93-B918-E35FA7C08A0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF728AE6-49AC-4B93-B918-E35FA7C08A0B}.Debug|Default.ActiveCfg = Debug
+		{CF728AE6-49AC-4B93-B918-E35FA7C08A0B}.Debug|Default.Build.0 = Debug
+		{CF728AE6-49AC-4B93-B918-E35FA7C08A0B}.Debug|Default.Deploy.0 = Debug
+		{CF728AE6-49AC-4B93-B918-E35FA7C08A0B}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{CF728AE6-49AC-4B93-B918-E35FA7C08A0B}.DebugLocal|Default.Build.0 = DebugLocal
+		{CF728AE6-49AC-4B93-B918-E35FA7C08A0B}.Release|Default.ActiveCfg = Release
+		{CF728AE6-49AC-4B93-B918-E35FA7C08A0B}.Release|Default.Build.0 = Release
+		{CF728AE6-49AC-4B93-B918-E35FA7C08A0B}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6BCBA006-1B4F-43E7-B531-2F3D2305B49A}
+	EndGlobalSection
+EndGlobal

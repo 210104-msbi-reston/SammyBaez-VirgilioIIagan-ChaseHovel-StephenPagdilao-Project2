@@ -1,0 +1,96 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>NBA-SSAS</Database>
+    <Server>STEPH-PAGD\STOREAPPDB</Server>
+    <ConnectionString>Data Source=STEPH-PAGD\STOREAPPDB;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>Ynx8RoE/Z8QFFTkPpZ6U6MxeB1g=2/12/2021 2:34:57 PM2/10/2021 4:18:34 PM</TimeStamp>
+        <ID>
+          <String>Basketball DB</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>bWSBtFWAQjQ4oz0YCSipgrN7Lp0=2/12/2021 9:53:57 AM2/11/2021 12:46:39 PM</TimeStamp>
+        <ID>
+          <String>BasketbalDB_View</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>EqfIw59cbgvu+uJgc1SxBdkKpW8=2/11/2021 3:48:38 PM2/11/2021 12:51:59 PM</TimeStamp>
+        <ID>
+          <String>Dim Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>rW3CqYu8LbENEEC+L2l307CkQ8s=2/12/2021 9:14:13 AM2/11/2021 1:04:56 PM</TimeStamp>
+        <ID>
+          <String>Dim Performance</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>t25lxBqhkb1KsvIksoR28MMYCeg=2/11/2021 1:13:14 PM2/11/2021 1:13:14 PM</TimeStamp>
+        <ID>
+          <String>Dim Games</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>5JEnJ7POc/t1RS6sq7BPFbz6vLs=2/12/2021 12:37:58 AM2/11/2021 1:13:14 PM</TimeStamp>
+        <ID>
+          <String>Dim Teams</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>J3RU7O3jjaLep2qjgV9nRcQa2ZQ=2/17/2021 2:45:37 PM2/11/2021 1:13:14 PM</TimeStamp>
+        <ID>
+          <String>Dim Player</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>DWS6DrPb/XAVsBmvkgzIx5onDXU=2/17/2021 2:45:37 PM2/11/2021 1:13:14 PMQvLkZDbxMjsAVOODKWi8LXtjrFw=2/12/2021 11:54:48 AM2/11/2021 1:13:14 PM</TimeStamp>
+        <ID>
+          <String>BasketbalDB_Cube</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.MiningStructure</Type>
+        <TimeStamp>i9edowOAzQPzTwNOpvKhhLRaDSM=2/18/2021 2:05:34 PM2/11/2021 1:20:09 PM</TimeStamp>
+        <ID>
+          <String>Dim Games</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>4NwQE1BEzolfEiFZ9NXFaf/mOF0=2/10/2021 11:21:47 AM2/10/2021 11:21:46 AM</TimeStamp>
+      <ID>
+        <String>NBA-SSAS</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2021-02-18T22:13:33.993333Z</LastDeployed>
+</DeploymentSnapshot>

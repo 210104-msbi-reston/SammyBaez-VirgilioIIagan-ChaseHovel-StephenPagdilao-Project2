@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>LocalNBAServer</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@playerID">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@seasonNumber">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>select SUM(Datepart("minute",min_Updated)) as SeasonMinutes,AVg(FG_PCT) AS SeasonFGPercent ,AVG(FG3_PCT) SeasonFG3Percent ,AVG(FT_PCT) AS SeasonFT_Pct,SUM(OREB)  AS SeasonOREB,SUM(DREB) AS SeasonDREB,SUM(REB) as SeasonREB,SUM(AST) as SeasonAST,SUM(PTS) as SeasonPts, SUM(STL) as SeasonSteals, SUM(BLK) as SeasonBLKs, SUM([TO]) as SeasonTO, SUM(PF) as SeasonPF from dimPerformance DP 
+inner join dimGames DG on DG.GameID = DP.GAME_ID
+where PLAYER_ID = @playerID and SEASON = @seasonNumber</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="SeasonMinutes">
+        <DataField>SeasonMinutes</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="SeasonFGPercent">
+        <DataField>SeasonFGPercent</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="SeasonFG3Percent">
+        <DataField>SeasonFG3Percent</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="SeasonFT_Pct">
+        <DataField>SeasonFT_Pct</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="SeasonOREB">
+        <DataField>SeasonOREB</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="SeasonDREB">
+        <DataField>SeasonDREB</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="SeasonREB">
+        <DataField>SeasonREB</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="SeasonAST">
+        <DataField>SeasonAST</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="SeasonPts">
+        <DataField>SeasonPts</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="SeasonSteals">
+        <DataField>SeasonSteals</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="SeasonBLKs">
+        <DataField>SeasonBLKs</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="SeasonTO">
+        <DataField>SeasonTO</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="SeasonPF">
+        <DataField>SeasonPF</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

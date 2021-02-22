@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>SQLServerNBA</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@gameID">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>select DG.Season,DG.GameDate,DTH.FullTeamName as HomeTeam,DG.PTS_Home,DG.FG_PCT_Home,
+	   DG.FT_PCT_Home,DG.FG3_PCT_Home,DG.AST_Home,DG.OREB_Home,DG.DREB_Home,DG.REB_Home,DG.STL_Home,DG.BLK_Home,
+	   DTA.FullTeamName as AwayTeam, DG.PTS_Away,DG.FG_PCT_Away,DG.FT_PCT_Away,DG.FG3_PCT_Away,
+	   DG.AST_Away,DG.OREB_Away,DG.DREB_Away ,DG.REB_Away,DG.STL_Away,DG.BLK_Away
+from dimGames DG
+inner join dimTeams DTH on DTH.TeamID = DG.HomeTeamID
+inner join dimTeams DTA on DTA.TeamID = DG.VisitorTeamID
+where GameID = @gameID</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="Season">
+        <DataField>Season</DataField>
+        <rd:TypeName>System.Int16</rd:TypeName>
+      </Field>
+      <Field Name="GameDate">
+        <DataField>GameDate</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="HomeTeam">
+        <DataField>HomeTeam</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="PTS_Home">
+        <DataField>PTS_Home</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="FG_PCT_Home">
+        <DataField>FG_PCT_Home</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="FT_PCT_Home">
+        <DataField>FT_PCT_Home</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="FG3_PCT_Home">
+        <DataField>FG3_PCT_Home</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="AST_Home">
+        <DataField>AST_Home</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="OREB_Home">
+        <DataField>OREB_Home</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="DREB_Home">
+        <DataField>DREB_Home</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="REB_Home">
+        <DataField>REB_Home</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="STL_Home">
+        <DataField>STL_Home</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="BLK_Home">
+        <DataField>BLK_Home</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="AwayTeam">
+        <DataField>AwayTeam</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="PTS_Away">
+        <DataField>PTS_Away</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="FG_PCT_Away">
+        <DataField>FG_PCT_Away</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="FT_PCT_Away">
+        <DataField>FT_PCT_Away</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="FG3_PCT_Away">
+        <DataField>FG3_PCT_Away</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="AST_Away">
+        <DataField>AST_Away</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="OREB_Away">
+        <DataField>OREB_Away</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="DREB_Away">
+        <DataField>DREB_Away</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="REB_Away">
+        <DataField>REB_Away</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="STL_Away">
+        <DataField>STL_Away</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="BLK_Away">
+        <DataField>BLK_Away</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

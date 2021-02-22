@@ -1,0 +1,3482 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/5/2021 4:24:48 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-BN01JAD"
+  DTS:CreatorName="DESKTOP-BN01JAD\V"
+  DTS:DTSID="{D6F38AF7-0130-4281-A13D-B18309995FCD}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.150"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="BuildDimDate"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="2"
+  DTS:VersionBuild="54"
+  DTS:VersionGUID="{7B675267-02F9-41AB-BDDC-AB462273217A}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[25.67.200.218_STOREAPPDB.BasketballDB.CSVV_Virgil]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{2E7BC28E-2CA3-4427-822D-80FC74ADDBA9}"
+      DTS:ObjectName="25.67.200.218_STOREAPPDB.BasketballDB.CSVV_Virgil">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=25.67.200.218\STOREAPPDB;User ID=CSVV_Virgil;Initial Catalog=BasketballDB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <EncryptedData
+            Type="http://www.w3.org/2001/04/xmlenc#Element"
+            Salt="usCfwGug3Lc="
+            IV="9N/QAsv/udu7VzTxsL6qAw==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <CipherData>
+              <CipherValue>9N/QAsv/udu7VzTxsL6qA6eRfp7ty2fH/uhBNTIZq2HUR950VWLn+0lxY2pmJd52jAEgLE3U+sNvh6ugi54FBoSJl87z2C14zxOaRv58kxNwMwnsmEedRqXOTOXeIFH/mddI4uF0QIRbIWuOUSPtsaEJN9z1rn+JcGBwP+ETARmL/NgujiACg7+pk3oWytxa</CipherValue>
+            </CipherData>
+          </EncryptedData>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-BN01JAD\SANDIEGOSERVER.Project2DataDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{862EE8FF-6DDD-4A32-B63E-B9E29F07A2B9}"
+      DTS:ObjectName="DESKTOP-BN01JAD\SANDIEGOSERVER.Project2DataDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-BN01JAD\SANDIEGOSERVER;Initial Catalog=Project2DataDB;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Load Rankings CSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C807ED37-54F3-40C3-BF02-D76B1CE72669}"
+      DTS:ObjectName="Load Rankings CSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\V\Documents\Revature\Project 2\SammyBaez-VirgilioIIagan-ChaseHovel-StephenPagdilao-Project2\Data\ranking.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TEAM_ID"
+              DTS:DTSID="{5C756E84-526F-4893-A85B-8D72B1745481}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LEAGUE_ID"
+              DTS:DTSID="{AB5F6E3E-E254-4672-8CDA-1BA5F65F7138}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SEASON_ID"
+              DTS:DTSID="{BF902C79-C3EC-47E7-83A0-85EC5A244B0A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="STANDINGSDATE"
+              DTS:DTSID="{C5A8A144-7F58-413B-BB42-32C8E26AA54E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CONFERENCE"
+              DTS:DTSID="{6B200FBF-9C3E-4DA3-88AA-47A99E254C2C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TEAM"
+              DTS:DTSID="{E77A3F65-8C12-4ED1-B44B-808761378518}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="G"
+              DTS:DTSID="{4BEDA178-4567-4438-8EB1-AA11F61793C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="W"
+              DTS:DTSID="{A966B5D1-F95C-450C-96E3-4C6F74973DEF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="L"
+              DTS:DTSID="{9680C222-432C-490C-B31F-79ADD5F59A28}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="W_PCT"
+              DTS:DTSID="{1506580C-659B-4C88-B0F7-341C920135F0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HOME_RECORD"
+              DTS:DTSID="{05488255-5DBE-4BA1-9161-BE20E12C8E35}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ROAD_RECORD"
+              DTS:DTSID="{85835F4E-E62F-46B4-A9E4-715364B0CC23}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="RETURNTOPLAY"
+              DTS:DTSID="{62EA0E55-61B2-43D2-AD8B-DD5692AAFF6D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LoadGamesCSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{288CF1FF-878B-4772-BC10-6DDD2F405B8E}"
+      DTS:ObjectName="LoadGamesCSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\V\Documents\Revature\Project 2\SammyBaez-VirgilioIIagan-ChaseHovel-StephenPagdilao-Project2\Data\games.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GAME_DATE_EST"
+              DTS:DTSID="{17B345D1-89C7-42C5-BFCD-622540F12017}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GAME_ID"
+              DTS:DTSID="{933E475D-228B-466E-A1C8-E45CCB0D9A64}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GAME_STATUS_TEXT"
+              DTS:DTSID="{6A9694EB-03DD-46BC-9D29-ED62A8269A98}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HOME_TEAM_ID"
+              DTS:DTSID="{3BA27333-B153-41CD-B2C1-8B642674B65B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="VISITOR_TEAM_ID"
+              DTS:DTSID="{030426DB-082C-4480-993F-24113749CD30}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SEASON"
+              DTS:DTSID="{40507F9E-F9FE-406E-9AF4-853940AEE005}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TEAM_ID_home"
+              DTS:DTSID="{E406F4BA-B926-4361-ABAC-DF2CC4D3E242}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PTS_home"
+              DTS:DTSID="{EAA57D89-2BC4-42C7-8DFF-6AA299B17E5C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FG_PCT_home"
+              DTS:DTSID="{A00D44A4-9622-427A-A688-91EB9F009BDA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FT_PCT_home"
+              DTS:DTSID="{F5D7A77D-3C72-49D0-8F5A-850A93967B94}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FG3_PCT_home"
+              DTS:DTSID="{FA5C5211-30E2-4698-9E0D-16EE57816CF5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AST_home"
+              DTS:DTSID="{9B254BE1-11C1-489E-9C2A-AC5AF7063FB7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="REB_home"
+              DTS:DTSID="{02D45AAE-58B4-4080-8D1C-8BE446095A0A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TEAM_ID_away"
+              DTS:DTSID="{2B3E98B2-0823-4E58-BDED-2200FE9CE788}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PTS_away"
+              DTS:DTSID="{890F52EF-C346-4F6A-A908-89EA10E48BE9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FG_PCT_away"
+              DTS:DTSID="{71ADA698-2EEE-406F-A519-D07A8CD1AF34}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FT_PCT_away"
+              DTS:DTSID="{FF9A462E-AB02-485E-B246-AFD1D5B6106D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FG3_PCT_away"
+              DTS:DTSID="{81752DE0-E832-47A2-9DD2-C3CD413BCD68}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AST_away"
+              DTS:DTSID="{4666F0BD-968A-435E-B9B8-BA42E5A9BA23}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="REB_away"
+              DTS:DTSID="{AD46EC5E-D541-4A53-9709-8296C9DF9F2C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HOME_TEAM_WINS"
+              DTS:DTSID="{B5A666AD-DEB6-4EB8-9C36-422CDC5310CC}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Loading Dates"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{0946D62B-185E-40A8-99BE-4D2A3EB671EF}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Loading Dates"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Loading Dates\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Loading Dates\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Loading Dates\Data Conversion.Inputs[Data Conversion Input].Columns[GAME_DATE_EST]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="GAME_DATE_EST"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[GAME_DATE_EST]" />
+                    <inputColumn
+                      refId="Package\Loading Dates\Data Conversion.Inputs[Data Conversion Input].Columns[SEASON]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SEASON"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[SEASON]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Loading Dates\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Loading Dates\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Loading Dates\Data Conversion.Outputs[Data Conversion Output].Columns[GameDate]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Loading Dates\Data Conversion.Outputs[Data Conversion Output].Columns[GameDate]"
+                      name="GameDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[GAME_DATE_EST]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Data Conversion.Outputs[Data Conversion Output].Columns[Season]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Loading Dates\Data Conversion.Outputs[Data Conversion Output].Columns[Season]"
+                      name="Season"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[SEASON]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Loading Dates\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Loading Dates\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Loading Dates\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Loading Dates\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Loading Dates\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Loading Dates\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Loading Dates\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Loading Dates\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LoadGamesCSV]"
+                  connectionManagerRefId="Package.ConnectionManagers[LoadGamesCSV]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[GAME_DATE_EST]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[GAME_DATE_EST]"
+                      length="50"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[GAME_DATE_EST]"
+                      name="GAME_DATE_EST"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[GAME_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[GAME_ID]"
+                      length="50"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[GAME_ID]"
+                      name="GAME_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[GAME_STATUS_TEXT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[GAME_STATUS_TEXT]"
+                      length="50"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[GAME_STATUS_TEXT]"
+                      name="GAME_STATUS_TEXT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[HOME_TEAM_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[HOME_TEAM_ID]"
+                      length="50"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[HOME_TEAM_ID]"
+                      name="HOME_TEAM_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[VISITOR_TEAM_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[VISITOR_TEAM_ID]"
+                      length="50"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[VISITOR_TEAM_ID]"
+                      name="VISITOR_TEAM_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[SEASON]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SEASON]"
+                      length="50"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[SEASON]"
+                      name="SEASON"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM_ID_home]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TEAM_ID_home]"
+                      length="50"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM_ID_home]"
+                      name="TEAM_ID_home"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[PTS_home]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PTS_home]"
+                      length="50"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[PTS_home]"
+                      name="PTS_home"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[FG_PCT_home]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FG_PCT_home]"
+                      length="50"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[FG_PCT_home]"
+                      name="FG_PCT_home"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[FT_PCT_home]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FT_PCT_home]"
+                      length="50"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[FT_PCT_home]"
+                      name="FT_PCT_home"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[FG3_PCT_home]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FG3_PCT_home]"
+                      length="50"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[FG3_PCT_home]"
+                      name="FG3_PCT_home"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[AST_home]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AST_home]"
+                      length="50"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[AST_home]"
+                      name="AST_home"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[REB_home]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[REB_home]"
+                      length="50"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[REB_home]"
+                      name="REB_home"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM_ID_away]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TEAM_ID_away]"
+                      length="50"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM_ID_away]"
+                      name="TEAM_ID_away"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[PTS_away]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PTS_away]"
+                      length="50"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[PTS_away]"
+                      name="PTS_away"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[FG_PCT_away]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FG_PCT_away]"
+                      length="50"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[FG_PCT_away]"
+                      name="FG_PCT_away"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[FT_PCT_away]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FT_PCT_away]"
+                      length="50"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[FT_PCT_away]"
+                      name="FT_PCT_away"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[FG3_PCT_away]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FG3_PCT_away]"
+                      length="50"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[FG3_PCT_away]"
+                      name="FG3_PCT_away"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[AST_away]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AST_away]"
+                      length="50"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[AST_away]"
+                      name="AST_away"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[REB_away]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[REB_away]"
+                      length="50"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[REB_away]"
+                      name="REB_away"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[HOME_TEAM_WINS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[HOME_TEAM_WINS]"
+                      length="50"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[HOME_TEAM_WINS]"
+                      name="HOME_TEAM_WINS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[GAME_DATE_EST]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="GAME_DATE_EST" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[GAME_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="GAME_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[GAME_STATUS_TEXT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="GAME_STATUS_TEXT" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[HOME_TEAM_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="HOME_TEAM_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[VISITOR_TEAM_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="VISITOR_TEAM_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SEASON]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SEASON" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TEAM_ID_home]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TEAM_ID_home" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PTS_home]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PTS_home" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FG_PCT_home]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FG_PCT_home" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FT_PCT_home]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FT_PCT_home" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FG3_PCT_home]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FG3_PCT_home" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AST_home]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="AST_home" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[REB_home]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="REB_home" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TEAM_ID_away]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TEAM_ID_away" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PTS_away]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PTS_away" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FG_PCT_away]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FG_PCT_away" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FT_PCT_away]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FT_PCT_away" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FG3_PCT_away]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FG3_PCT_away" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AST_away]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="AST_away" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[REB_away]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="REB_away" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[HOME_TEAM_WINS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="HOME_TEAM_WINS" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Loading Dates\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dimDate]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Loading Dates\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[25.67.200.218_STOREAPPDB.BasketballDB.CSVV_Virgil]"
+                  connectionManagerRefId="Package.ConnectionManagers[25.67.200.218_STOREAPPDB.BasketballDB.CSVV_Virgil]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GameDate]"
+                      cachedDataType="date"
+                      cachedName="GameDate"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameDate]"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[GameDate]" />
+                    <inputColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Year]"
+                      cachedDataType="i4"
+                      cachedName="Year"
+                      externalMetadataColumnId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                      lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[Year]" />
+                    <inputColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Month]"
+                      cachedDataType="i4"
+                      cachedName="Month"
+                      externalMetadataColumnId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
+                      lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[Month]" />
+                    <inputColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Season]"
+                      cachedDataType="i2"
+                      cachedName="Season"
+                      externalMetadataColumnId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Season]"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[Season]" />
+                    <inputColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MonthName]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="MonthName"
+                      externalMetadataColumnId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MonthName]"
+                      lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[MonthName]" />
+                    <inputColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DayofMonth]"
+                      cachedDataType="i4"
+                      cachedName="DayofMonth"
+                      externalMetadataColumnId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayofMonth]"
+                      lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[DayofMonth]" />
+                    <inputColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DayName]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="DayName"
+                      externalMetadataColumnId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayName]"
+                      lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[DayName]" />
+                    <inputColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DayoftheWeek]"
+                      cachedDataType="i4"
+                      cachedName="DayoftheWeek"
+                      externalMetadataColumnId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayoftheWeek]"
+                      lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[DayoftheWeek]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameDate]"
+                      dataType="dbTimeStamp"
+                      name="GameDate" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                      dataType="i4"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
+                      dataType="i4"
+                      name="Month" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Season]"
+                      dataType="i2"
+                      name="Season" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MonthName]"
+                      dataType="wstr"
+                      length="9"
+                      name="MonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayofMonth]"
+                      dataType="i4"
+                      name="DayofMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayName]"
+                      dataType="wstr"
+                      length="10"
+                      name="DayName" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayoftheWeek]"
+                      dataType="i4"
+                      name="DayoftheWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateId]"
+                      dataType="i4"
+                      name="DateId" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Loading Dates\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Loading Dates\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Loading Dates\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Loading Dates\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Loading Dates\Script Component"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;12"
+              description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
+              name="Script Component"
+              version="12">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Stores the source code of the component"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="30">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
+    {
+
+        if (InputName.Equals(@"Input 0", StringComparison.Ordinal))
+        {
+            Input0_ProcessInput(new Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
+        }
+
+    }
+
+    public virtual void Input0_ProcessInput(Input0Buffer Buffer)
+    {
+        while (Buffer.NextRow())
+        {
+            Input0_ProcessInputRow(Buffer);
+        }
+    }
+
+    public virtual void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+/* The Script Component allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services data flow.
+ *
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script component. */
+#endregion
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+#endregion
+
+/// <summary>
+/// This is the class to which to add your code.  Do not change the name, attributes, or parent
+/// of this class.
+/// </summary>
+[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
+public class ScriptMain : UserComponent
+{
+    #region Help:  Using Integration Services variables and parameters
+    /* To use a variable in this script, first ensure that the variable has been added to
+     * either the list contained in the ReadOnlyVariables property or the list contained in
+     * the ReadWriteVariables property of this script component, according to whether or not your
+     * code needs to write into the variable.  To do so, save this script, close this instance of
+     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+     * Script Transformation Editor window.
+     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+     *
+     * Example of reading from a variable or parameter:
+     *  DateTime startTime = Variables.MyStartTime;
+     *
+     * Example of writing to a variable:
+     *  Variables.myStringVariable = "new value";
+     */
+    #endregion
+
+    #region Help:  Using Integration Services Connnection Managers
+    /* Some types of connection managers can be used in this script component.  See the help topic
+     * "Working with Connection Managers Programatically" for details.
+     *
+     * To use a connection manager in this script, first ensure that the connection manager has
+     * been added to either the list of connection managers on the Connection Managers page of the
+     * script component editor.  To add the connection manager, save this script, close this instance of
+     * Visual Studio, and add the Connection Manager to the list.
+     *
+     * If the component needs to hold a connection open while processing rows, override the
+     * AcquireConnections and ReleaseConnections methods.
+     * 
+     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+     *
+     * Example of using a File connection manager to acquire a file path:
+     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+     *  string filePath = (string)rawConnection;
+     *
+     * Example of releasing a connection manager:
+     *  Connections.SalesDB.ReleaseConnection(rawConnection);
+     */
+    #endregion
+
+    #region Help:  Firing Integration Services Events
+    /* This script component can fire events.
+     *
+     * Example of firing an error event:
+     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+     *
+     * Example of firing an information event:
+     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+     *
+     * Example of firing a warning event:
+     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+     */
+    #endregion
+    int counter = 0;
+
+    /// <summary>
+    /// This method is called once, before rows begin to be processed in the data flow.
+    ///
+    /// You can remove this method if you don't need to do anything here.
+    /// </summary>
+    public override void PreExecute()
+    {
+        base.PreExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called after all the rows have passed through this component.
+    ///
+    /// You can delete this method if you don't need to do anything here.
+    /// </summary>
+    public override void PostExecute()
+    {
+        base.PostExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called once for every row that passes through the component from Input0.
+    ///
+    /// Example of reading a value from a column in the the row:
+    ///  string zipCode = Row.ZipCode
+    ///
+    /// Example of writing a value to a column in the row:
+    ///  Row.ZipCode = zipCode
+    /// </summary>
+    /// <param name="Row">The row that is currently passing through the component</param>
+    public override void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+        Row.Year = Convert.ToInt32(Row.GAMEDATEEST.Substring(0,4));
+        int currentMonth = Convert.ToInt32(Row.GAMEDATEEST.Substring(5, 2));
+        Row.Month = currentMonth;
+        Row.DayofMonth = Convert.ToInt32(Row.GAMEDATEEST.Substring(8,2));
+
+
+        DateTime dt = (DateTime.Parse(Row.GAMEDATEEST));
+        Row.DayoftheWeek = dt.DayOfWeek.GetHashCode() + 1;
+
+        switch (dt.DayOfWeek.GetHashCode())
+        {
+            case 0:
+                Row.DayName = "Sunday";
+                break;
+            case 1:
+                Row.DayName = "Monday";
+                break;
+            case 2:
+                Row.DayName = "Tuesday";
+                break;
+            case 3:
+                Row.DayName = "Wednesday";
+                break;
+            case 4:
+                Row.DayName = "Thursday";
+                break;
+            case 5:
+                Row.DayName = "Friday";
+                break;
+            case 6:
+                Row.DayName = "Saturday";
+                break;
+        }
+
+        switch (currentMonth)
+        {
+            case 1:
+                Row.MonthName = "January";
+                break;
+            case 2:
+                Row.MonthName = "February";
+                break;
+            case 3:
+                Row.MonthName = "March";
+                break;
+            case 4:
+                Row.MonthName = "April";
+                break;
+            case 5:
+                Row.MonthName = "May";
+                break;
+            case 6:
+                Row.MonthName = "June";
+                break;
+            case 7:
+                Row.MonthName = "July";
+                break;
+            case 8:
+                Row.MonthName = "August";
+                break;
+            case 9:
+                Row.MonthName = "September";
+                break;
+            case 10:
+                Row.MonthName = "October";
+                break;
+            case 11:
+                Row.MonthName = "November";
+                break;
+            case 12:
+                Row.MonthName = "December";
+                break;
+        }
+
+        counter++;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class Input0Buffer: ScriptBuffer
+
+{
+    public Input0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public String GAMEDATEEST
+    {
+        get
+        {
+            return Buffer.GetString(BufferColumnIndexes[0]);
+        }
+    }
+    public bool GAMEDATEEST_IsNull
+    {
+        get
+        {
+            return IsNull(0);
+        }
+    }
+
+    public Int32 Year
+    {
+        set
+        {
+            this[1] = value;
+        }
+    }
+    public bool Year_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(1);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Int32 Month
+    {
+        set
+        {
+            this[2] = value;
+        }
+    }
+    public bool Month_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(2);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Int32 DayofMonth
+    {
+        set
+        {
+            this[3] = value;
+        }
+    }
+    public bool DayofMonth_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(3);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String MonthName
+    {
+        set
+        {
+            this[4] = value;
+        }
+    }
+    public bool MonthName_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(4);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String DayName
+    {
+        set
+        {
+            this[5] = value;
+        }
+    }
+    public bool DayName_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(5);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Int32 DayoftheWeek
+    {
+        set
+        {
+            this[6] = value;
+        }
+    }
+    public bool DayoftheWeek_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(6);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    new public bool NextRow()
+    {
+        return base.NextRow();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_4e1a6104cc3e430fa4ff1af7170b42c5.Properties.Settings.get_Default():SC_4e1a6104cc3e430fa4ff1af7170b42c5.Properties.Sett" +
+    "ings")]
+
+namespace SC_4e1a6104cc3e430fa4ff1af7170b42c5.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>SC_4e1a6104cc3e430fa4ff1af7170b42c5</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>SC_4e1a6104cc3e430fa4ff1af7170b42c5</msb:DisplayName>
+    <msb:ProjectId>{751E104D-1E5B-4850-919F-41750816B690}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="SC_4e1a6104cc3e430fa4ff1af7170b42c5.csproj" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+    <msb:File Include="main.cs" />
+    <msb:File Include="BufferWrapper.cs" />
+    <msb:File Include="ComponentWrapper.cs" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+  </msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("SC_4e1a6104cc3e430fa4ff1af7170b42c5")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("SC_4e1a6104cc3e430fa4ff1af7170b42c5")]
+[assembly: AssemblyCopyright("Copyright @  2021")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.0.0")]
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_4e1a6104cc3e430fa4ff1af7170b42c5.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{13e22e11-f191-4a3f-9662-5136e60e1ed3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_4e1a6104cc3e430fa4ff1af7170b42c5</RootNamespace>
+    <AssemblyName>SC_4e1a6104cc3e430fa4ff1af7170b42c5</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="ScriptComponent" GeneratedNamespace="SC_4e1a6104cc3e430fa4ff1af7170b42c5" IconIndex="0"></Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC150</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_4e1a6104cc3e430fa4ff1af7170b42c5.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_4e1a6104cc3e430fa4ff1af7170b42c5.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_4e1a6104cc3e430fa4ff1af7170b42c5.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace SC_4e1a6104cc3e430fa4ff1af7170b42c5.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_4e1a6104cc3e430fa4ff1af7170b42c5.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Stores the binary representation of the component"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_4e1a6104cc3e430fa4ff1af7170b42c5.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAD5kJWAAAAAAAAAAAOAAIiALATAAABgAAAAIAAAAAAAA+jcA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAKg3AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAABgAAAAgAAAAGAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAaAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAIAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAADc
+NwAAAAAAAEgAAAACAAUAUCQAAKASAAABAAAAAAAAAPA2AAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAQA8gEAAAEAABEDA28GAAAG
+FhpvEgAACigTAAAKbwgAAAYDbwYAAAYbGG8SAAAKKBMAAAoKAwZvCgAABgMDbwYAAAYeGG8SAAAK
+KBMAAApvDAAABgNvBgAABigUAAAKCwMSASgVAAAKDBIC/hYPAAABbxYAAAoXWG8SAAAGEgEoFQAA
+CgwSAv4WDwAAAW8WAAAKDQlFBwAAAAIAAAAPAAAAHAAAACkAAAA2AAAAQwAAAFAAAAArWQNyAQAA
+cG8QAAAGK0wDcg8AAHBvEAAABis/A3IdAABwbxAAAAYrMgNyLQAAcG8QAAAGKyUDckEAAHBvEAAA
+BisYA3JTAABwbxAAAAYrCwNyYQAAcG8QAAAGBhdZRQwAAAAFAAAAFQAAACUAAAAyAAAAPwAAAEwA
+AABZAAAAZgAAAHMAAACAAAAAjQAAAJoAAAA4oAAAAANycwAAcG8OAAAGOJAAAAADcoMAAHBvDgAA
+BjiAAAAAA3KVAABwbw4AAAYrcwNyoQAAcG8OAAAGK2YDcq0AAHBvDgAABitZA3K1AABwbw4AAAYr
+TANyvwAAcG8OAAAGKz8DcskAAHBvDgAABisyA3LXAABwbw4AAAYrJQNy6wAAcG8OAAAGKxgDcvsA
+AHBvDgAABisLA3INAQBwbw4AAAYCAnsBAAAEF1h9AQAABCoeAigWAAAGKioCAwQFKBcAAAoqUgJ7
+GAAACgJ7GQAAChaUbxoAAAoqIgIWKBsAAAoqOgIXA4weAAABKBwAAAoqWgMsCAIXKB0AAAoqch8B
+AHBzHgAACno6AhgDjB4AAAEoHAAACipaAywIAhgoHQAACipyHwEAcHMeAAAKejoCGQOMHgAAASgc
+AAAKKloDLAgCGSgdAAAKKnIfAQBwcx4AAAp6JgIaAygcAAAKKloDLAgCGigdAAAKKnIfAQBwcx4A
+AAp6JgIbAygcAAAKKloDLAgCGygdAAAKKnIfAQBwcx4AAAp6OgIcA4weAAABKBwAAAoqWgMsCAIc
+KB0AAAoqch8BAHBzHgAACnoeAigfAAAKKh4CKCAAAAoqfgIoIQAACgICcxoAAAZ9AgAABAICcxsA
+AAZ9AwAABCqSBHK8AQBwGm8iAAAKLBUCBQIDKCMAAAoOBHMFAAAGbxgAAAYqSisHAgNvGQAABgNv
+FAAABi3xKgYqOgIoJAAACgIDfQQAAAQqOgIoJAAACgIDfQUAAAQqHgIoJAAACiqufgYAAAQtHnLM
+AQBw0AcAAAIoJQAACm8mAAAKcycAAAqABgAABH4GAAAEKhp+BwAABCoeAoAHAAAEKhp+CAAABCoe
+AigoAAAKKi5zIQAABoAIAAAEKgBCU0pCAQABAAAAAAAMAAAAdjQuMC4zMDMxOQAAAAAFAGwAAADo
+BgAAI34AAFQHAAAsBwAAI1N0cmluZ3MAAAAAgA4AAEACAAAjVVMAwBAAABAAAAAjR1VJRAAAANAQ
+AADQAQAAI0Jsb2IAAAAAAAAAAgAAAVcVogEJAQAAAPoBMwAWAAABAAAAIwAAAAgAAAAIAAAAIgAA
+ABkAAAAoAAAAEAAAAAEAAAADAAAAEQAAABIAAAABAAAABAAAAAEAAAAAAHwDAQAAAAAABgAxAloF
+BgDFAloFBgB9AUcFDwDOBQAABgCqAYsEBgAUAosEBgD1AYsEBgCsAosEBgBRAosEBgBqAosEBgDB
+AYsEBgDcAQADCgCFAsQABgC7AEMEBgBcA0MECgARBcQADgACBcQACgDUBMQACgCUBsQABgBXBkME
+BgBgAUcFBgAiBXoFBgDIBHYEEgAwAWYDEgCRAWYDEgASAWEEBgBFAVoFBgAdA0MEBgDBBkMEBgAD
+AEMEBgCdBEMEBgC3BEMEBgDlAEMEBgBzAEMEBgAhB4sEAAAAAC0AAAAAAAEAAQABABAAVgQAABAA
+AQABAAEAEAD1BAAAQQACAAUAAQAQAHYGAABNAAIAFgABABAASwYAAFEABAAaAAEAEAAMBgAAUQAF
+ABsAAAAQAIEF3QVRAAYAHAAAARAAOwbdBWkACAAgAAEAMgWbAAYASwaeAAYADAaiAAEAhAamAAEA
+hAamABEASgSqABEAAgGuABEAVwCyAFAgAAAAAMYA4wIGAAEAWCAAAAAAxgDuAgYAAQBgIAAAAADG
+AP4GtgABAF4iAAAAAIYYOgUGAAIAZiIAAAAAhhg6BT4AAgBxIgAAAACGCD4AvAAFAIYiAAAAAIYI
+pANgAAUAjyIAAAAAhgjsBAEABQCeIgAAAACGCCIEwAAGALUiAAAAAIYILgMBAAcAxCIAAAAAhgjj
+A8AACADbIgAAAACGCDgDAQAJAOoiAAAAAIYI9APAAAoAASMAAAAAhgiXABAACwALIwAAAACGCLsD
+wAAMACIjAAAAAIYIrwAQAA0ALCMAAAAAhgjQA8AADgBDIwAAAACGCEcDAQAPAFIjAAAAAIYICgTA
+ABAAaSMAAAAAhgAVB2AAEQBxIwAAAACGAF4GYAARAHkjAAAAAIYYOgUGABEAmSMAAAAAxgDxBsUA
+EQC+IwAAAADGAeoGtgAVANEjAAAAAMYB/ga2ABYA0yMAAAAAhhg6Bc8AFwDiIwAAAACGGDoFzwAY
+APEjAAAAAIMYOgUGABkA+SMAAAAAkwgeBdUAGQAlJAAAAACTCOoA2gAZACwkAAAAAJMI9gDfABkA
+NCQAAAAAlghqBuUAGgA7JAAAAACGGDoFBgAaAEMkAAAAAJEYQAXqABoAAAABABkHAAABABcFAAAC
+ABYGAAADAOIEAAABAPoCAAABAPoCAAABAPoCAAABAPoCAAABAPoCAAABAPoCAAABAPoCAAABAPoC
+AAABAPoCAAABAPoCAAABAPoCAAABAPoCAAABADYAAAACAKUAAAADABcFAAAEAOIEAAABABcFAAAB
+ABkHAAABAJoGAAABAJoGAAABAPoCCQA6BQEAEQA6BQYAGQA6BQoAKQA6BRAAMQA6BRAAOQA6BRAA
+QQA6BRAASQA6BRAAUQA6BRAAWQA6BRAAYQA6BRAAaQA6BQYAqQA6BQYAyQA6BRUA2QA6BQYAmQDj
+AgYAmQDuAgYA4QAkAyQA6QABACoAcQAqAS8AcQBYAzUAoQBnADoAgQA6BT4AgQAXBUgAgQAWBkwA
+iQAaA1AAgQArBFUAgQA6BFoAgQAyBAEA+QA6BRAAgQAVB2AAgQBeBmAAmQA6BQYA4QBEBmQAmQAq
+BmwAoQA6BQYACQGFAHIACQEdB3sAsQA6BYEA0QA6BQYALgALAAkBLgATABIBLgAbADEBLgAjADoB
+LgArAGMBLgAzAGMBLgA7AGMBLgBDADoBLgBLAGkBLgBTAGMBLgBbAIABQwBjAMoB4wBrAMoBAQF7
+AMoB6QFzADEBCQJzADEBGwADAAEABwAPAAgAEQAAAEIA7gAAAKgD8gAAAPAE9gAAACYE8gAAAEED
+9gAAAP0D8gAAADwD9gAAAPgD8gAAAJsA7gAAAL8D8gAAALMA7gAAANQD8gAAAEsD9gAAAA4E8gAA
+ACIF+gAAAAoB/wAAAG4GBAECAAYAAwACAAcABQABAAgABwABAAkACQABAAoACwABAAsADQABAAwA
+DwABAA0AEQABAA4AEwABAA8AFQABABAAFwABABEAGQABABIAGwABABMAHQACAB0AHwACAB4AIQAB
+AB8AIQACACAAIwAEgAAAAQAAAAAAAAAAAAAAAAAJAAAABAAAAAAAAAAAAAAAiQBOAAAAAAAPAAAA
+AAAAAAAAAACSAKQGAAAAAA8AAAAAAAAAAAAAAJIAyQYAAAAABAAAAAAAAAAAAAAAiQBDBAAAAAAA
+AAAAAQAAAIsFAAAAAAAAAFRvSW50MzIAU0NfNGUxYTYxMDRjYzNlNDMwZmE0ZmYxYWY3MTcwYjQy
+YzUAPE1vZHVsZT4ASW5wdXRJRABnZXRfR0FNRURBVEVFU1QAbXNjb3JsaWIAZGVmYXVsdEluc3Rh
+bmNlAEdldEhhc2hDb2RlAFJ1bnRpbWVUeXBlSGFuZGxlAEdldFR5cGVGcm9tSGFuZGxlAHNldF9N
+b250aE5hbWUASW5wdXROYW1lAHNldF9EYXlOYW1lAERhdGVUaW1lAE1pY3Jvc29mdC5TcWxTZXJ2
+ZXIuRHRzLlBpcGVsaW5lAFR5cGUAZ2V0X0N1bHR1cmUAc2V0X0N1bHR1cmUAcmVzb3VyY2VDdWx0
+dXJlAEFwcGxpY2F0aW9uU2V0dGluZ3NCYXNlAFBhcnNlAEVkaXRvckJyb3dzYWJsZVN0YXRlAENv
+bXBpbGVyR2VuZXJhdGVkQXR0cmlidXRlAERlYnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUARGVi
+dWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2FibGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRsZUF0
+dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFya0F0dHJpYnV0ZQBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1
+dGUAQXNzZW1ibHlDb25maWd1cmF0aW9uQXR0cmlidXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRy
+aWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRy
+aWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1dGUAU1NJU1NjcmlwdENvbXBvbmVudEVudHJ5
+UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlDb21wYW55QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRpYmls
+aXR5QXR0cmlidXRlAFByZUV4ZWN1dGUAUG9zdEV4ZWN1dGUAdmFsdWUAU3lzdGVtLlJ1bnRpbWUu
+VmVyc2lvbmluZwBHZXRTdHJpbmcAU3Vic3RyaW5nAHNldF9Nb250aABzZXRfRGF5b2ZNb250aABz
+ZXRfRGF5b2Z0aGVXZWVrAGdldF9EYXlPZldlZWsAU3lzdGVtLkNvbXBvbmVudE1vZGVsAFNDXzRl
+MWE2MTA0Y2MzZTQzMGZhNGZmMWFmNzE3MGI0MmM1LmRsbABnZXRfR0FNRURBVEVFU1RfSXNOdWxs
+AHNldF9Nb250aE5hbWVfSXNOdWxsAHNldF9EYXlOYW1lX0lzTnVsbABzZXRfTW9udGhfSXNOdWxs
+AHNldF9EYXlvZk1vbnRoX0lzTnVsbABzZXRfRGF5b2Z0aGVXZWVrX0lzTnVsbABzZXRfWWVhcl9J
+c051bGwAU2V0TnVsbABzZXRfSXRlbQBTeXN0ZW0AcmVzb3VyY2VNYW4AU2NyaXB0TWFpbgBTeXN0
+ZW0uQ29uZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0uUmVmbGVjdGlvbgBJ
+bnZhbGlkT3BlcmF0aW9uRXhjZXB0aW9uAFN0cmluZ0NvbXBhcmlzb24AQ3VsdHVyZUluZm8AT3V0
+cHV0TmFtZU1hcABPdXRwdXRNYXAAc2V0X1llYXIASW5wdXQwQnVmZmVyAFBpcGVsaW5lQnVmZmVy
+AFNjcmlwdEJ1ZmZlcgBnZXRfUmVzb3VyY2VNYW5hZ2VyAGNvdW50ZXIALmN0b3IALmNjdG9yAFN5
+c3RlbS5EaWFnbm9zdGljcwBTeXN0ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2VzAFN5c3RlbS5S
+ZXNvdXJjZXMAU0NfNGUxYTYxMDRjYzNlNDMwZmE0ZmYxYWY3MTcwYjQyYzUuUHJvcGVydGllcy5S
+ZXNvdXJjZXMucmVzb3VyY2VzAERlYnVnZ2luZ01vZGVzAFNDXzRlMWE2MTA0Y2MzZTQzMGZhNGZm
+MWFmNzE3MGI0MmM1LlByb3BlcnRpZXMAVmFyaWFibGVzAEJ1ZmZlckNvbHVtbkluZGV4ZXMAR2V0
+Q29sdW1uSW5kZXhlcwBTZXR0aW5ncwBFcXVhbHMAQ29ubmVjdGlvbnMAT2JqZWN0AEVuZE9mUm93
+c2V0AGdldF9EZWZhdWx0AFVzZXJDb21wb25lbnQAUGFyZW50Q29tcG9uZW50AFNjcmlwdENvbXBv
+bmVudABNaWNyb3NvZnQuU3FsU2VydmVyLlR4U2NyaXB0AENvbnZlcnQATWljcm9zb2Z0LlNxbFNl
+cnZlci5QaXBlbGluZUhvc3QASW5wdXQwX1Byb2Nlc3NJbnB1dABJbnB1dDBfUHJvY2Vzc0lucHV0
+Um93AE5leHRSb3cAZ2V0X0Fzc2VtYmx5AAAAAA1TAHUAbgBkAGEAeQAADU0AbwBuAGQAYQB5AAAP
+VAB1AGUAcwBkAGEAeQAAE1cAZQBkAG4AZQBzAGQAYQB5AAARVABoAHUAcgBzAGQAYQB5AAANRgBy
+AGkAZABhAHkAABFTAGEAdAB1AHIAZABhAHkAAA9KAGEAbgB1AGEAcgB5AAARRgBlAGIAcgB1AGEA
+cgB5AAALTQBhAHIAYwBoAAALQQBwAHIAaQBsAAAHTQBhAHkAAAlKAHUAbgBlAAAJSgB1AGwAeQAA
+DUEAdQBnAHUAcwB0AAATUwBlAHAAdABlAG0AYgBlAHIAAA9PAGMAdABvAGIAZQByAAARTgBvAHYA
+ZQBtAGIAZQByAAARRABlAGMAZQBtAGIAZQByAACAm0kAcwBOAHUAbABsACAAcAByAG8AcABlAHIA
+dAB5ACAAYwBhAG4AbgBvAHQAIABiAGUAIABzAGUAdAAgAHQAbwAgAEYAYQBsAHMAZQAuACAAQQBz
+AHMAaQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABvACAAdABoAGUAIABjAG8AbAB1AG0AbgAgAGkA
+bgBzAHQAZQBhAGQALgAAD0kAbgBwAHUAdAAgADAAAHFTAEMAXwA0AGUAMQBhADYAMQAwADQAYwBj
+ADMAZQA0ADMAMABmAGEANABmAGYAMQBhAGYANwAxADcAMABiADQAMgBjADUALgBQAHIAbwBwAGUA
+cgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAAAA53mHGMRWlE6HZ6jWQjGJUwAEIAEBCAMg
+AAEFIAEBEREEIAEBDgUgAQERYQgHBAgRORE9CAUgAg4ICAQAAQgOBQABETkOBCAAET0DIAAICSAD
+ARJFHQgSSQMGEkUDBh0IBCABDggEIAECCAUgAgEIHAMgAAIHIAICDhGAgQUgAR0ICAgAARKAhRGA
+iQUgABKAjQcgAgEOEoCNCLd6XFYZNOCJCImEXc2AgMyRAgYIAwYSFAMGEhgDBhJNAwYSWQMGEl0D
+BhIgBSABARIMAyAADgQgAQECCSAEAQgOEkUSSQUgAQESTQQAABJZBAAAEl0FAAEBEl0EAAASIAMA
+AAEDKAAOAygAAgMoAAgECAASWQQIABJdBAgAEiAIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNl
+cHRpb25UaHJvd3MBCAEAAgAAAAAAKAEAI1NDXzRlMWE2MTA0Y2MzZTQzMGZhNGZmMWFmNzE3MGI0
+MmM1AAAFAQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMjEAAEkBABouTkVURnJhbWV3b3JrLFZlcnNp
+b249djQuNwEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC43BAEAAAAA
+tAAAAM7K774BAAAAkQAAAGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVhZGVyLCBtc2Nvcmxp
+YiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1
+YzU2MTkzNGUwODkjU3lzdGVtLlJlc291cmNlcy5SdW50aW1lUmVzb3VyY2VTZXQCAAAAAAAAAAAA
+AABQQURQQURQtAAAANA3AAAAAAAAAAAAAOo3AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAADcNwAA
+AAAAAAAAAAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/JQAgABAAAAAAAAAAAAAAAAAA
+AAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAEgA
+AABYQAAA7AMAAAAAAAAAAAAA7AM0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8AAAAA
+AL0E7/4AAAEAAAABAAAAAAAAAAEAAAAAAD8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAA
+AQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8AbgAA
+AAAAAACwBEwDAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAACgDAAABADAAMAAwADAA
+MAA0AGIAMAAAABoAAQABAEMAbwBtAG0AZQBuAHQAcwAAAAAAAAAiAAEAAQBDAG8AbQBwAGEAbgB5
+AE4AYQBtAGUAAAAAAAAAAABwACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAAAAAA
+UwBDAF8ANABlADEAYQA2ADEAMAA0AGMAYwAzAGUANAAzADAAZgBhADQAZgBmADEAYQBmADcAMQA3
+ADAAYgA0ADIAYwA1AAAAMAAIAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAuADAA
+LgAwAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABTAEMAXwA0AGUAMQBhADYAMQAw
+ADQAYwBjADMAZQA0ADMAMABmAGEANABmAGYAMQBhAGYANwAxADcAMABiADQAMgBjADUALgBkAGwA
+bAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAAAEMAbwBwAHkAcgBpAGcAaAB0
+ACAAQAAgACAAMgAwADIAMQAAACoAAQABAEwAZQBnAGEAbABUAHIAYQBkAGUAbQBhAHIAawBzAAAA
+AAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUAbgBhAG0AZQAAAFMAQwBfADQAZQAx
+AGEANgAxADAANABjAGMAMwBlADQAMwAwAGYAYQA0AGYAZgAxAGEAZgA3ADEANwAwAGIANAAyAGMA
+NQAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEAbQBlAAAAAABTAEMAXwA0AGUAMQBh
+ADYAMQAwADQAYwBjADMAZQA0ADMAMABmAGEANABmAGYAMQBhAGYANwAxADcAMABiADQAMgBjADUA
+AAA0AAgAAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAOAAI
+AAEAQQBzAHMAZQBtAGIAbAB5ACAAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAADAAAAPw3AAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_4e1a6104cc3e430fa4ff1af7170b42c5</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the programming language used by the script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read-only variables."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read/write variables."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints present on the script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataChecksum140"
+                  typeConverter="NOTBROWSABLE">72</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Loading Dates\Script Component.Inputs[Input 0]"
+                  hasSideEffects="true"
+                  name="Input 0">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Loading Dates\Script Component.Inputs[Input 0].Columns[GAME_DATE_EST]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="GAME_DATE_EST"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[GAME_DATE_EST]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Loading Dates\Script Component.Outputs[Output 0]"
+                  name="Output 0"
+                  synchronousInputId="Package\Loading Dates\Script Component.Inputs[Input 0]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[Year]"
+                      dataType="i4"
+                      lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[Year]"
+                      name="Year" />
+                    <outputColumn
+                      refId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[Month]"
+                      dataType="i4"
+                      lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[Month]"
+                      name="Month" />
+                    <outputColumn
+                      refId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[DayofMonth]"
+                      dataType="i4"
+                      lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[DayofMonth]"
+                      name="DayofMonth" />
+                    <outputColumn
+                      refId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[MonthName]"
+                      dataType="wstr"
+                      length="9"
+                      lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[MonthName]"
+                      name="MonthName" />
+                    <outputColumn
+                      refId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[DayName]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[DayName]"
+                      name="DayName" />
+                    <outputColumn
+                      refId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[DayoftheWeek]"
+                      dataType="i4"
+                      lineageId="Package\Loading Dates\Script Component.Outputs[Output 0].Columns[DayoftheWeek]"
+                      name="DayoftheWeek" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Loading Dates\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Loading Dates\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[GAME_DATE_EST]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="GAME_DATE_EST"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[GAME_DATE_EST]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[GAME_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="GAME_ID"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[GAME_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[GAME_STATUS_TEXT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="GAME_STATUS_TEXT"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[GAME_STATUS_TEXT]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[HOME_TEAM_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="HOME_TEAM_ID"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[HOME_TEAM_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[VISITOR_TEAM_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="VISITOR_TEAM_ID"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[VISITOR_TEAM_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[SEASON]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SEASON"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[SEASON]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[TEAM_ID_home]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TEAM_ID_home"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM_ID_home]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[PTS_home]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PTS_home"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[PTS_home]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[FG_PCT_home]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FG_PCT_home"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[FG_PCT_home]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[FT_PCT_home]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FT_PCT_home"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[FT_PCT_home]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[FG3_PCT_home]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FG3_PCT_home"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[FG3_PCT_home]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[AST_home]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="AST_home"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[AST_home]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[REB_home]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="REB_home"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[REB_home]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[TEAM_ID_away]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TEAM_ID_away"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM_ID_away]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[PTS_away]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PTS_away"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[PTS_away]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[FG_PCT_away]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FG_PCT_away"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[FG_PCT_away]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[FT_PCT_away]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FT_PCT_away"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[FT_PCT_away]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[FG3_PCT_away]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FG3_PCT_away"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[FG3_PCT_away]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[AST_away]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="AST_away"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[AST_away]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[REB_away]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="REB_away"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[REB_away]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[HOME_TEAM_WINS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="HOME_TEAM_WINS"
+                      lineageId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[HOME_TEAM_WINS]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[GameDate]"
+                      cachedDataType="date"
+                      cachedName="GameDate"
+                      lineageId="Package\Loading Dates\Data Conversion.Outputs[Data Conversion Output].Columns[GameDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Loading Dates\Sort.Inputs[Sort Input].Columns[Season]"
+                      cachedDataType="i2"
+                      cachedName="Season"
+                      lineageId="Package\Loading Dates\Data Conversion.Outputs[Data Conversion Output].Columns[Season]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Loading Dates\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[GAME_DATE_EST]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[GAME_DATE_EST]"
+                      name="GAME_DATE_EST">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[GAME_DATE_EST]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[GAME_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[GAME_ID]"
+                      name="GAME_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[GAME_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[GAME_STATUS_TEXT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[GAME_STATUS_TEXT]"
+                      name="GAME_STATUS_TEXT">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[GAME_STATUS_TEXT]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[HOME_TEAM_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[HOME_TEAM_ID]"
+                      name="HOME_TEAM_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[HOME_TEAM_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[VISITOR_TEAM_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[VISITOR_TEAM_ID]"
+                      name="VISITOR_TEAM_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[VISITOR_TEAM_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[SEASON]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[SEASON]"
+                      name="SEASON">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[SEASON]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[TEAM_ID_home]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[TEAM_ID_home]"
+                      name="TEAM_ID_home">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM_ID_home]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[PTS_home]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[PTS_home]"
+                      name="PTS_home">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[PTS_home]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[FG_PCT_home]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[FG_PCT_home]"
+                      name="FG_PCT_home">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[FG_PCT_home]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[FT_PCT_home]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[FT_PCT_home]"
+                      name="FT_PCT_home">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[FT_PCT_home]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[FG3_PCT_home]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[FG3_PCT_home]"
+                      name="FG3_PCT_home">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[FG3_PCT_home]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[AST_home]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[AST_home]"
+                      name="AST_home">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[AST_home]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[REB_home]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[REB_home]"
+                      name="REB_home">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[REB_home]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[TEAM_ID_away]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[TEAM_ID_away]"
+                      name="TEAM_ID_away">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[TEAM_ID_away]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[PTS_away]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[PTS_away]"
+                      name="PTS_away">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[PTS_away]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[FG_PCT_away]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[FG_PCT_away]"
+                      name="FG_PCT_away">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[FG_PCT_away]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[FT_PCT_away]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[FT_PCT_away]"
+                      name="FT_PCT_away">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[FT_PCT_away]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[FG3_PCT_away]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[FG3_PCT_away]"
+                      name="FG3_PCT_away">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[FG3_PCT_away]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[AST_away]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[AST_away]"
+                      name="AST_away">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[AST_away]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[REB_away]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[REB_away]"
+                      name="REB_away">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[REB_away]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[HOME_TEAM_WINS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[HOME_TEAM_WINS]"
+                      name="HOME_TEAM_WINS">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output].Columns[HOME_TEAM_WINS]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[GameDate]"
+                      dataType="date"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[GameDate]"
+                      name="GameDate"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Loading Dates\Data Conversion.Outputs[Data Conversion Output].Columns[GameDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[Season]"
+                      dataType="i2"
+                      lineageId="Package\Loading Dates\Sort.Outputs[Sort Output].Columns[Season]"
+                      name="Season">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Loading Dates\Data Conversion.Outputs[Data Conversion Output].Columns[Season]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Loading Dates.Paths[Data Conversion Output]"
+              endId="Package\Loading Dates\Sort.Inputs[Sort Input]"
+              name="Data Conversion Output"
+              startId="Package\Loading Dates\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Loading Dates.Paths[Flat File Source Output]"
+              endId="Package\Loading Dates\Data Conversion.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Loading Dates\Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Loading Dates.Paths[Output 0]"
+              endId="Package\Loading Dates\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Output 0"
+              startId="Package\Loading Dates\Script Component.Outputs[Output 0]" />
+            <path
+              refId="Package\Loading Dates.Paths[Sort Output]"
+              endId="Package\Loading Dates\Script Component.Inputs[Input 0]"
+              name="Sort Output"
+              startId="Package\Loading Dates\Sort.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="146,42"
+          Id="Package\Loading Dates"
+          TopLeft="430,201" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Loading Dates">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Loading Dates\Flat File Source"
+          TopLeft="241,6.5" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Loading Dates\OLE DB Destination"
+          TopLeft="280,455.5" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Loading Dates\Data Conversion"
+          TopLeft="238.5,109.5" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Loading Dates\Script Component"
+          TopLeft="243,325.5" />
+        <EdgeLayout
+          Id="Package\Loading Dates.Paths[Flat File Source Output]"
+          TopLeft="316.5,48.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61"
+              Start="0,0"
+              End="0,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Loading Dates\Sort"
+          TopLeft="265,193" />
+        <EdgeLayout
+          Id="Package\Loading Dates.Paths[Data Conversion Output]"
+          TopLeft="315.25,151.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.5"
+              Start="0,0"
+              End="0,34">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Loading Dates.Paths[Sort Output]"
+          TopLeft="314,235">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.5,90.5"
+              Start="0,0"
+              End="10.5,83">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,41.25"
+                    Point2="0,45.25"
+                    Point3="4,45.25" />
+                  <mssgle:LineSegment
+                    End="6.5,45.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.5,45.25"
+                    Point2="10.5,45.25"
+                    Point3="10.5,49.25" />
+                  <mssgle:LineSegment
+                    End="10.5,83" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Loading Dates.Paths[Output 0]"
+          TopLeft="324.5,367.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="41,88"
+              Start="0,0"
+              End="41,80.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40"
+                    Point2="0,44"
+                    Point3="4,44" />
+                  <mssgle:LineSegment
+                    End="37,44" />
+                  <mssgle:CubicBezierSegment
+                    Point1="37,44"
+                    Point2="41,44"
+                    Point3="41,48" />
+                  <mssgle:LineSegment
+                    End="41,80.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Loading Dates\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
