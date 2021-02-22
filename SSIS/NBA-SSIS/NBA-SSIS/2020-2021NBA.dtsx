@@ -12,8 +12,8 @@
   DTS:ObjectName="2020-2021NBA"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="66"
-  DTS:VersionGUID="{4286E02F-A437-4E2D-8CBF-12152A624DB1}">
+  DTS:VersionBuild="69"
+  DTS:VersionGUID="{8FC8822B-1BAE-4507-9D8D-47DB93C2808F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,12 +27,12 @@
           DTS:ConnectionString="Data Source=25.67.200.218\STOREAPPDB;User ID=CSVV_Chase;Initial Catalog=BasketballDB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="o2kUKShz21g="
-            IV="KaBViZ4UVlYah9a75YOmKw==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="sdwJCDfbF58="
+            IV="rvZtm6uOnDx6w3M+EU6xYg==" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
             <CipherData>
-              <CipherValue>KaBViZ4UVlYah9a75YOmK7nfoqBR++GY17vkq4du1gZWuldmmOc3rJYuWs/VuJGkm1QT2yU+JCVcnk/i4QWUp4YdJGDnbJU/uOe1My1XyDotajEZdoigBjeAduOOTIy5pUXZJZpA034ctTxDePGiXy7/s4JfrPCMEGyP68j4JKJhLPA7EhQfy9QJwNZ6U8Pu</CipherValue>
+              <CipherValue>rvZtm6uOnDx6w3M+EU6xYqSqZh4yjTizjKoPFjt98oKG5M774WN28ICFS1YBgypeReoJnoxVNSriFNVIuDKC6uR72USJPl8DJn8xJ1OFWWZGKocmWn9BciAQxr4w0ugEVdPKy9IYtgNQ1uIZkiB/OytpbIZhuTIku66jRW0DvZsvoojLQRksed14YlyjTvME</CipherValue>
             </CipherData>
           </EncryptedData>
         </DTS:ConnectionManager>
@@ -48,12 +48,12 @@
           DTS:ConnectionString="Data Source=25.67.200.218\STOREAPPDB;User ID=CSVV_Chase;Initial Catalog=BasketballDB;Provider=MSOLEDBSQL.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package1-{A68A3EC3-09CE-43AC-BF91-647C8077833D}25.67.200.218\STOREAPPDB.BasketballDB.CSVV_Chase;">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="7hTTYy5+eEQ="
-            IV="myKXwvIOwP2eDeIsVPfl9Q==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="J/PVi1LLhOc="
+            IV="ctTemNI8YhepTmtY9JehZQ==" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
             <CipherData>
-              <CipherValue>myKXwvIOwP2eDeIsVPfl9ZtokU+K3TJ6nJ+PRum758bTIC7jzDxvvfuzhayhW9zqfp8oGWwXB02L8C4zPCScgEl0OKK6sPlmSPWILa1G9HQjXxOquX4vxmIJmc/iYYihcc8K3lJUiA57fl53lKxXDwmNgYNPD14fsXkrLioXfUh7v6l0CrDKgmwXoP+gHKML</CipherValue>
+              <CipherValue>ctTemNI8YhepTmtY9JehZWMYwxpFZimM1JW0tyvV1H7aCJYZvaf85u86tbukwq6PBnaQrSXZgYT0S5sf2S4Km5+4i7HfmtGh8EUde8mQNOxewWIbviU75EMezYbUy2Nqt1IvAKWnU8tbirxOFGN9UhGJJeewFwmU+yyDVn3paQIEFFAAwXpmMgZ1pYaJmrs/</CipherValue>
             </CipherData>
           </EncryptedData>
         </DTS:ConnectionManager>
@@ -2525,7 +2525,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[DirectFromGameDetails]</property>
+                  name="OpenRowset"></property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -2560,8 +2560,8 @@
               <connections>
                 <connection
                   refId="Package\Load Excel File into DB\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[25.67.200.218\STOREAPPDB.BasketballDB.CSVV_Chase]"
-                  connectionManagerRefId="Package.ConnectionManagers[25.67.200.218\STOREAPPDB.BasketballDB.CSVV_Chase]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-MOA0504\LEARNINGSERVER.GarbageInfoP2]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-MOA0504\LEARNINGSERVER.GarbageInfoP2]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4262,6 +4262,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="180,42"
+          Id="Package\Load Excel File into DB\OLE DB Destination 1"
+          TopLeft="297,189" />
+        <NodeLayout
           Size="150,42"
           Id="Package\Load Excel File into DB\OLE DB Source"
           TopLeft="177,9" />
@@ -4270,9 +4274,49 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           Id="Package\Load Excel File into DB\Conditional Split"
           TopLeft="169,95" />
         <NodeLayout
+          Size="171,42"
+          Id="Package\Load Excel File into DB\OLE DB Destination"
+          TopLeft="98,274" />
+        <NodeLayout
           Size="163,42"
           Id="Package\Load Excel File into DB\Script Component"
           TopLeft="107,188" />
+        <EdgeLayout
+          Id="Package\Load Excel File into DB.Paths[DNP]"
+          TopLeft="271,137">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="116,52"
+              Start="0,0"
+              End="116,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.1187739463602" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.1187739463602"
+                    Point2="0,21.1187739463602"
+                    Point3="4,21.1187739463602" />
+                  <mssgle:LineSegment
+                    End="112,21.1187739463602" />
+                  <mssgle:CubicBezierSegment
+                    Point1="112,21.1187739463602"
+                    Point2="116,21.1187739463602"
+                    Point3="116,25.1187739463602" />
+                  <mssgle:LineSegment
+                    End="116,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="47.980078125,26.1187739463602,20.03984375,9.2705078125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Load Excel File into DB.Paths[Played]"
           TopLeft="246.5,137">
@@ -4310,32 +4354,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load Excel File into DB.Paths[OLE DB Source Output]"
-          TopLeft="249.25,51">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,44"
-              Start="0,0"
-              End="0,36.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Load Excel File into DB\OLE DB Destination"
-          TopLeft="98,274" />
-        <EdgeLayout
           Id="Package\Load Excel File into DB.Paths[Output 0]"
           TopLeft="186,230">
           <EdgeLayout.Curve>
@@ -4357,44 +4375,26 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="180,42"
-          Id="Package\Load Excel File into DB\OLE DB Destination 1"
-          TopLeft="297,189" />
         <EdgeLayout
-          Id="Package\Load Excel File into DB.Paths[DNP]"
-          TopLeft="271,137">
+          Id="Package\Load Excel File into DB.Paths[OLE DB Source Output]"
+          TopLeft="249.25,51">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="116,52"
+              EndConnector="0,44"
               Start="0,0"
-              End="116,44.5">
+              End="0,36.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.1187739463602" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.1187739463602"
-                    Point2="0,21.1187739463602"
-                    Point3="4,21.1187739463602" />
-                  <mssgle:LineSegment
-                    End="112,21.1187739463602" />
-                  <mssgle:CubicBezierSegment
-                    Point1="112,21.1187739463602"
-                    Point2="116,21.1187739463602"
-                    Point3="116,25.1187739463602" />
-                  <mssgle:LineSegment
-                    End="116,44.5" />
+                    End="0,36.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="47.980078125,26.1187739463602,20.03984375,9.2705078125"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

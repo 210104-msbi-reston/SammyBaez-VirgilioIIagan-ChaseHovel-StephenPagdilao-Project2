@@ -5,15 +5,15 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-MOA0504"
   DTS:CreatorName="DESKTOP-MOA0504\Chase Hovel"
-  DTS:DTSID="{CA132D68-3B99-4927-9E10-6B36854AB101}"
+  DTS:DTSID="{1205CD68-DC0E-468F-BFC8-B0C815CA2F24}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.150"
   DTS:LocaleID="1033"
-  DTS:ObjectName="FromDWtoDB"
+  DTS:ObjectName="CSVToDB"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="30"
-  DTS:VersionGUID="{885CD497-69A0-4841-9181-25F09694A17E}">
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{469B0813-55AB-4251-B00D-24F48F2F7D35}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
