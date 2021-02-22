@@ -12,11 +12,53 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="29"
-  DTS:VersionGUID="{42B3DCD1-D57D-4283-8BF1-67914537538D}">
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{BC42EC98-2A48-48E7-B392-E5E641AF72AB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[25.67.200.218\STOREAPPDB.CSVV_Sam]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{43104E91-92F6-4956-B178-3FCF76702B45}"
+      DTS:ObjectName="25.67.200.218\STOREAPPDB.CSVV_Sam">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=25.67.200.218\STOREAPPDB;User ID=CSVV_Sam;Provider=MSOLEDBSQL.1;Application Name=SSIS-Package1-{43104E91-92F6-4956-B178-3FCF76702B45}25.67.200.218\STOREAPPDB.CSVV_Sam;Auto Translate=False;">
+          <EncryptedData
+            Type="http://www.w3.org/2001/04/xmlenc#Element"
+            Salt="9XIRoerERmQ="
+            IV="L2F53T7axHS2ClLEohxpIA==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <CipherData>
+              <CipherValue>L2F53T7axHS2ClLEohxpIBPzOsKo1AVCy/ldwAQGTVhK4iFHQMEG4HAB8JufXk9pIZ8Ilx6caBvKodREWuM4Ugx4myCMMtFtP0xCC0vCx1zTPKSLk+UC4jmiU5IF+Yv6YnGhEdEVttOKV5ksAXvr0ElGBo9fnBNaqLZmMeTVNuvsphEIjxgPOtzsaI7otvcK</CipherValue>
+            </CipherData>
+          </EncryptedData>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[25.67.200.218\STOREAPPDB.CSVV_Sam1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{FCCABAEC-80DB-4695-B1A6-9EFE6836F054}"
+      DTS:ObjectName="25.67.200.218\STOREAPPDB.CSVV_Sam1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=25.67.200.218\STOREAPPDB;User ID=CSVV_Sam;Provider=MSOLEDBSQL.1;Application Name=SSIS-Package1-{FCCABAEC-80DB-4695-B1A6-9EFE6836F054}25.67.200.218\STOREAPPDB.CSVV_Sam1;Auto Translate=False;">
+          <EncryptedData
+            Type="http://www.w3.org/2001/04/xmlenc#Element"
+            Salt="/U6NQnyyEnk="
+            IV="CU1OCjF1owJ3aQdhCdd2xw==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <CipherData>
+              <CipherValue>CU1OCjF1owJ3aQdhCdd2x17OsQW3KidfUGrCHni51MX80n/u1fcqfMMDS9ZNsAbKRP9JttMJS22ZB6DHvgCeIPoFDSJ6wOA7u2q6xgoG2d10TtPJ3FHO4YlX3x71RR4ic3wIb+DH/+zDKR9WtZLloyRmtqk5Ou2AuzIW6wIVXxs=</CipherValue>
+            </CipherData>
+          </EncryptedData>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
@@ -107,7 +149,18 @@
       DTS:ObjectName="STEPH-PAGD\STOREAPPDB.BasketballDB">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=STEPH-PAGD\STOREAPPDB;Initial Catalog=BasketballDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=25.67.200.218\STOREAPPDB;User ID=CSVV_admin;Initial Catalog=BasketballDB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <EncryptedData
+            Type="http://www.w3.org/2001/04/xmlenc#Element"
+            Salt="Cyf7hqYhe0Q="
+            IV="+db0mtP1LTTZvmp1SuT3+g==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <CipherData>
+              <CipherValue>+db0mtP1LTTZvmp1SuT3+lW4WwqTdsh8LR2wG73Kbqe2wlOV4Mgc7kdo1GS2x/JDapmZV4n+hh+uwLciGtjKOqh2x+fRMX14qENUuhv7Ybtc3xE3Y4CNazzEYEjhH+k9e7+6b3EZtjqMlcBF2PAKvkSLzf/p458POok79AueZB86AriHmjSTozOHoRWyDpts</CipherValue>
+            </CipherData>
+          </EncryptedData>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -1725,12 +1778,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       externalMetadataColumnId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PerformanceID]"
                       lineageId="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source.Outputs[OLE DB Source Output].Columns[PerformanceID]" />
                     <inputColumn
-                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].Columns[GameDate]"
-                      cachedDataType="dbDate"
-                      cachedName="GameDate"
-                      externalMetadataColumnId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameDate]"
-                      lineageId="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames.Outputs[Lookup Match Output].Columns[GameDate]" />
-                    <inputColumn
                       refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].Columns[OverallShooting]"
                       cachedDataType="r4"
                       cachedName="OverallShooting"
@@ -1776,10 +1823,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FactPerformanceID]"
-                      dataType="i4"
-                      name="FactPerformanceID" />
-                    <externalMetadataColumn
                       refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PerformanceID]"
                       dataType="i4"
                       name="PerformanceID" />
@@ -1796,10 +1839,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       dataType="i4"
                       name="PlayerID" />
                     <externalMetadataColumn
-                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GameDate]"
-                      dataType="dbDate"
-                      name="GameDate" />
-                    <externalMetadataColumn
                       refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OverallShooting]"
                       dataType="r4"
                       name="OverallShooting" />
@@ -1815,6 +1854,42 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Overall]"
                       dataType="r4"
                       name="Overall" />
+                    <externalMetadataColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateID]"
+                      dataType="i4"
+                      name="DateID" />
+                    <externalMetadataColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FG3M]"
+                      dataType="r4"
+                      name="FG3M" />
+                    <externalMetadataColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FG3_PCT]"
+                      dataType="r4"
+                      name="FG3_PCT" />
+                    <externalMetadataColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FG2M]"
+                      dataType="r4"
+                      name="FG2M" />
+                    <externalMetadataColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FG2_PCT]"
+                      dataType="r4"
+                      name="FG2_PCT" />
+                    <externalMetadataColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OREB]"
+                      dataType="r4"
+                      name="OREB" />
+                    <externalMetadataColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DREB]"
+                      dataType="r4"
+                      name="DREB" />
+                    <externalMetadataColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STL]"
+                      dataType="r4"
+                      name="STL" />
+                    <externalMetadataColumn
+                      refId="Package\FactPerformance Data Flow Task\FactPerformance DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BLK]"
+                      dataType="r4"
+                      name="BLK" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2518,21 +2593,97 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="315,42"
-          Id="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column"
-          TopLeft="78,233" />
-        <NodeLayout
           Size="245,42"
           Id="Package\FactPerformance Data Flow Task\Game Details Table OLE DB Source"
           TopLeft="61,33" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\FactPerformance Data Flow Task\Flat File Destination"
+          TopLeft="604,474" />
+        <NodeLayout
+          Size="231,42"
+          Id="Package\FactPerformance Data Flow Task\FactPerformance DB Destination"
+          TopLeft="102,333" />
         <NodeLayout
           Size="233,42"
           Id="Package\FactPerformance Data Flow Task\Adds GameDate from dimGames"
           TopLeft="69,132" />
         <NodeLayout
-          Size="231,42"
-          Id="Package\FactPerformance Data Flow Task\FactPerformance DB Destination"
-          TopLeft="102,333" />
+          Size="315,42"
+          Id="Package\FactPerformance Data Flow Task\Adds Shooting, Offensive, Defense Overall column"
+          TopLeft="78,233" />
+        <EdgeLayout
+          Id="Package\FactPerformance Data Flow Task.Paths[OLE DB Destination Error Output]"
+          TopLeft="217.5,375">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="472.5,99"
+              Start="0,0"
+              End="472.5,91.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45.5"
+                    Point2="0,49.5"
+                    Point3="4,49.5" />
+                  <mssgle:LineSegment
+                    End="468.5,49.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="468.5,49.5"
+                    Point2="472.5,49.5"
+                    Point3="472.5,53.5" />
+                  <mssgle:LineSegment
+                    End="472.5,91.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="163.04109375,54.5,146.4178125,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FactPerformance Data Flow Task.Paths[Lookup Match Output]"
+          TopLeft="185.5,174">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="50,59"
+              Start="0,0"
+              End="50,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.5"
+                    Point2="0,29.5"
+                    Point3="4,29.5" />
+                  <mssgle:LineSegment
+                    End="46,29.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="46,29.5"
+                    Point2="50,29.5"
+                    Point3="50,33.5" />
+                  <mssgle:LineSegment
+                    End="50,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-23.19138671875,34.5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\FactPerformance Data Flow Task.Paths[Output 0]"
           TopLeft="235.5,275">
@@ -2587,82 +2738,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FactPerformance Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="185.5,174">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="50,59"
-              Start="0,0"
-              End="50,51.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.5"
-                    Point2="0,29.5"
-                    Point3="4,29.5" />
-                  <mssgle:LineSegment
-                    End="46,29.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="46,29.5"
-                    Point2="50,29.5"
-                    Point3="50,33.5" />
-                  <mssgle:LineSegment
-                    End="50,51.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-23.19138671875,34.5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="172,42"
-          Id="Package\FactPerformance Data Flow Task\Flat File Destination"
-          TopLeft="604,474" />
-        <EdgeLayout
-          Id="Package\FactPerformance Data Flow Task.Paths[OLE DB Destination Error Output]"
-          TopLeft="217.5,375">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="472.5,99"
-              Start="0,0"
-              End="472.5,91.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,45.5"
-                    Point2="0,49.5"
-                    Point3="4,49.5" />
-                  <mssgle:LineSegment
-                    End="468.5,49.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="468.5,49.5"
-                    Point2="472.5,49.5"
-                    Point3="472.5,53.5" />
-                  <mssgle:LineSegment
-                    End="472.5,91.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="163.04109375,54.5,146.4178125,11.43359375"
-              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

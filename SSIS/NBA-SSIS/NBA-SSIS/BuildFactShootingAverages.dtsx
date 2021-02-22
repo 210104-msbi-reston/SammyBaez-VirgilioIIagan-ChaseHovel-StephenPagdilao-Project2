@@ -12,8 +12,8 @@
   DTS:ObjectName="BuildFactShootingAverages"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="26"
-  DTS:VersionGUID="{F89E787C-885F-4D27-B394-E2A5C46B00D5}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{86BAAF8C-A8A2-4049-AA2D-E401CF7BB23C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,12 +27,12 @@
           DTS:ConnectionString="Data Source=25.67.200.218\STOREAPPDB;User ID=CSVV_Virgil;Initial Catalog=BasketballDB;Provider=SQLNCLI11.1;Auto Translate=False;">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="3zgQf08z8D4="
-            IV="0WeTxA1/igd6Lb5/M9ADMQ==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="xEOhsKF70Ek="
+            IV="URj6yyHsmmv8LBHLt7NHBQ==" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
             <CipherData>
-              <CipherValue>0WeTxA1/igd6Lb5/M9ADMZchoD2d6juqmxZb9DBn5FF1bU2Xh4fR39KL8bJ18im0OOutMFrxDYykndBLqRealQ4aQ4VnOTteFYRqb13H/InzqPFgyagJO52CryyWZzauBswkDKBtDrv0V0nRtqio1rYfm60CfnMy1+qJaHrQb+Nhw0rvquAxXWOM6ZvG2rk2</CipherValue>
+              <CipherValue>URj6yyHsmmv8LBHLt7NHBXBM7JDzlnRafpeu1yu5+vmcivzSaaUxrhpZnIi41Qh5GVHDzxc8DCUfaWHo3g9/FATz5g9wP5cq5/uyjFU90xpTi4Ks+pZ8O/RhoKjgRYeYwq/GE0CRW9enTs4P2F1lNrSjQdxY5c2fSVv/HCVpZmrM7l2kKgEcHTorn5eVgXzs</CipherValue>
             </CipherData>
           </EncryptedData>
         </DTS:ConnectionManager>
@@ -45,15 +45,15 @@
       DTS:ObjectName="DESKTOP-BN01JAD\SANDIEGOSERVER.BasketballDB.sa">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=DESKTOP-BN01JAD\SANDIEGOSERVER;User ID=sa;Initial Catalog=BasketballDB;Provider=SQLNCLI11.1;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=25.67.200.218\STOREAPPDB;User ID=CSVV_Sam;Initial Catalog=BasketballDB;Provider=SQLNCLI11.1;Auto Translate=False;">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="/Ul/Tmht6v8="
-            IV="6QDEJ367w5/qq+iM2nhRxw==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="q/a9HYDCpTE="
+            IV="1wZoccGDmOpm2EN7dkZj9g==" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
             <CipherData>
-              <CipherValue>6QDEJ367w5/qq+iM2nhRx97hLsZLWie5/AF7BgISnGbCK3ibAfv7m+C9G2MI/7zm8CZ+elHqc3rPEvH9SMGo1MBGKF36IJZeRneRfyMxM/V2PBRGEH0vWNws+J9h5hGpycDqe5BYWQewjTQUhwRTkrPCLlim5C4uotpieJkU1vTRUPbCL+6LNGC4+q+15eSR</CipherValue>
+              <CipherValue>1wZoccGDmOpm2EN7dkZj9ogYv7vW696NgxPHoPmsiZV4FilHXFoHoeDaqEmpD8FAGtQu8cSeXwawyg9azzzlRhdcRMpbZoFaj/XtTHXl3KZn+X3gqeti4UYGTPJv7glPfPLYjhoNhjUt/833vsNWPi9RQM/GO9Sb8uvPPmUMhEzpz8bT0JbTX+XONWPw2u2D</CipherValue>
             </CipherData>
           </EncryptedData>
         </DTS:ConnectionManager>
@@ -69,12 +69,12 @@
           DTS:ConnectionString="Data Source=DESKTOP-BN01JAD\SANDIEGOSERVER;User ID=sa;Initial Catalog=BasketballDB;Provider=SQLNCLI11.1;Auto Translate=False;">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="BOL0SseZQd0="
-            IV="h4KZ2qKwGfNXQAxKa5azRQ==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="YaYlvFBRVXw="
+            IV="vZCuVjiUWGXbnLdFTy1h9w==" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
             <CipherData>
-              <CipherValue>h4KZ2qKwGfNXQAxKa5azRcS3tFR7hzmENdWHbFQvivaU8RgnrGJDwXwga9miRzXl28xtCmAJfpJyDc4Suinc6d9E3nnQhhpy8sPzQwd7WT/7NCNaG59lFaxNKdg0V0f59qvrjIfqptULJiqRMtHrBQ4eIc7XzImt5Nahu1t54AjH0NiLxkNgO1fJjcvl4oCn</CipherValue>
+              <CipherValue>vZCuVjiUWGXbnLdFTy1h9zWG1Pk0lzFyKzDOWE2rAA4ffBW0O9zMBeK1KINs21Nui1nQBmbieFEfbqSlKXnqszzALRwYONFYVN39qei6LdP3DiVaROUfJu6k5qE0xdfa/1mv57yxOcUhqJoBHiTi1R2ChijsqGMElFQQI3NfMNvXTxA/6V+0ci/tZFKCSUqO</CipherValue>
             </CipherData>
           </EncryptedData>
         </DTS:ConnectionManager>
@@ -90,12 +90,12 @@
           DTS:ConnectionString="Data Source=DESKTOP-BN01JAD\SANDIEGOSERVER;User ID=sa;Initial Catalog=SSISTrainingDB;Provider=SQLNCLI11.1;Auto Translate=False;">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="Cq2FfzbMrmk="
-            IV="STvv8/ZdbVKCo7biw/omUw==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="woC53pninNk="
+            IV="V/TDTaJKT7q3Z4AYZAKp4Q==" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
             <CipherData>
-              <CipherValue>STvv8/ZdbVKCo7biw/omU2PJo0yHOcwVWkI6n82RC7kdhKTlKyvfqrpjxkSQPRI+n98Zx3IzFveY38Rsb9YRLqUXpitsQlilCp7MzuZdUpzlymx2TLnerXPg2u5pH0DLI521clZdtr3dTdyKKIg8fqp+yGxlkiiOewpIHzZSuXDZiFK043r3CHvRsI2wav1y</CipherValue>
+              <CipherValue>V/TDTaJKT7q3Z4AYZAKp4RU7o2LNtziIdBMVMY4P+FFsKEhH2SETuswoHmJkwpLRHYBuEgXUiGYTzVvZ/OttVjgsIMDCjw57w6ZdH42Ps166ZCQnvIqGRbJhR0Cr9oyfOlOn2o2ZHpDdiR16ugBFpLb1dDjyzKp5ysWSPbhNKNGJgj6IkYKIMM/rfHb6BL1g</CipherValue>
             </CipherData>
           </EncryptedData>
         </DTS:ConnectionManager>
@@ -861,8 +861,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Load dimDate.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-BN01JAD\SANDIEGOSERVER.Project2DataDB.sa]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-BN01JAD\SANDIEGOSERVER.Project2DataDB.sa]"
+                  connectionManagerID="Package.ConnectionManagers[25.67.200.218\STOREAPPDB.BasketballDB.CSVV_Virgil]"
+                  connectionManagerRefId="Package.ConnectionManagers[25.67.200.218\STOREAPPDB.BasketballDB.CSVV_Virgil]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1117,8 +1117,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Load dimGames.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-BN01JAD\SANDIEGOSERVER.Project2DataDB.sa]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-BN01JAD\SANDIEGOSERVER.Project2DataDB.sa]"
+                  connectionManagerID="Package.ConnectionManagers[25.67.200.218\STOREAPPDB.BasketballDB.CSVV_Virgil]"
+                  connectionManagerRefId="Package.ConnectionManagers[25.67.200.218\STOREAPPDB.BasketballDB.CSVV_Virgil]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1673,8 +1673,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Load dimPerformance.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-BN01JAD\SANDIEGOSERVER.Project2DataDB.sa]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-BN01JAD\SANDIEGOSERVER.Project2DataDB.sa]"
+                  connectionManagerID="Package.ConnectionManagers[25.67.200.218\STOREAPPDB.BasketballDB.CSVV_Virgil]"
+                  connectionManagerRefId="Package.ConnectionManagers[25.67.200.218\STOREAPPDB.BasketballDB.CSVV_Virgil]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2470,7 +2470,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[FactTrueShooting]</property>
+                  name="OpenRowset">[dbo].[FactTrueShooting]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -2513,8 +2513,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-BN01JAD\SANDIEGOSERVER.BasketballDB.sa]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-BN01JAD\SANDIEGOSERVER.BasketballDB.sa]"
+                  connectionManagerID="Package.ConnectionManagers[25.67.200.218\STOREAPPDB.BasketballDB.CSVV_Virgil]"
+                  connectionManagerRefId="Package.ConnectionManagers[25.67.200.218\STOREAPPDB.BasketballDB.CSVV_Virgil]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2533,18 +2533,6 @@
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateId]"
                       lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[DateId]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TEAM_ID]"
-                      cachedDataType="i4"
-                      cachedName="TEAM_ID"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TEAM_ID]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[TEAM_ID]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PLAYER_ID]"
-                      cachedDataType="i4"
-                      cachedName="PLAYER_ID"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PLAYER_ID]"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[PLAYER_ID]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TrueShootingPercentage]"
                       cachedDataType="r8"
                       cachedName="TrueShootingPercentage"
@@ -2558,17 +2546,17 @@
                       dataType="i4"
                       name="DateId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TEAM_ID]"
-                      dataType="i4"
-                      name="TEAM_ID" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PLAYER_ID]"
-                      dataType="i4"
-                      name="PLAYER_ID" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TrueShootingPercentage]"
                       dataType="r8"
                       name="TrueShootingPercentage" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TeamId]"
+                      dataType="i4"
+                      name="TeamId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PlayerId]"
+                      dataType="i4"
+                      name="PlayerId" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -5681,13 +5669,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="163,42"
-          Id="Package\Data Flow Task\Sort By GameId 1"
-          TopLeft="278,141.75" />
-        <NodeLayout
           Size="144,42"
           Id="Package\Data Flow Task\Load dimDate"
           TopLeft="816.749999999997,52.8928571428572" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Data Flow Task\Script Component"
+          TopLeft="865,602" />
         <NodeLayout
           Size="223,42"
           Id="Package\Data Flow Task\Sort dimDate by Game Season"
@@ -5701,35 +5689,97 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           Id="Package\Data Flow Task\Load dimPerformance"
           TopLeft="272.5,52.5" />
         <NodeLayout
+          Size="130,42"
+          Id="Package\Data Flow Task\Merge Join"
+          TopLeft="622,599" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Data Flow Task\Sort By GameId 2"
+          TopLeft="512.25,139.75" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Data Flow Task\Sort By GameId 1"
+          TopLeft="278,141.75" />
+        <NodeLayout
           Size="167,42"
           Id="Package\Data Flow Task\Joining on GameId"
           TopLeft="388.5,234.25" />
         <NodeLayout
-          Size="154,42"
-          Id="Package\Data Flow Task\Load dimGames"
-          TopLeft="513,53" />
+          Size="98,42"
+          Id="Package\Data Flow Task\Sort"
+          TopLeft="423,450" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="865,669" />
         <NodeLayout
           Size="220,42"
           Id="Package\Data Flow Task\Getting Last DateId of Season"
           TopLeft="775.678571428568,341.285714285715" />
         <NodeLayout
-          Size="163,42"
-          Id="Package\Data Flow Task\Sort By GameId 2"
-          TopLeft="512.25,139.75" />
+          Size="154,42"
+          Id="Package\Data Flow Task\Load dimGames"
+          TopLeft="513,53" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Aggregate Output 1]"
-          TopLeft="883.660714285711,383.285714285715">
+          Id="Package\Data Flow Task.Paths[Sort Output3]"
+          TopLeft="881.642857142854,513.857142857143">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,88.571428571428"
+              EndConnector="-174.309523809521,85.142857142857"
               Start="0,0"
-              End="0,81.071428571428">
+              End="-174.309523809521,77.642857142857">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,81.071428571428" />
+                    End="0,46.4646113764654" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,46.4646113764654"
+                    Point2="0,50.4646113764654"
+                    Point3="-4,50.4646113764654" />
+                  <mssgle:LineSegment
+                    End="-170.309523809521,50.4646113764654" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-170.309523809521,50.4646113764654"
+                    Point2="-174.309523809521,50.4646113764654"
+                    Point3="-174.309523809521,54.4646113764654" />
+                  <mssgle:LineSegment
+                    End="-174.309523809521,77.642857142857" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output2]"
+          TopLeft="472,492">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="194.666666666667,107"
+              Start="0,0"
+              End="194.666666666667,99.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59.419452887538" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,59.419452887538"
+                    Point2="0,63.419452887538"
+                    Point3="4,63.419452887538" />
+                  <mssgle:LineSegment
+                    End="190.666666666667,63.419452887538" />
+                  <mssgle:CubicBezierSegment
+                    Point1="190.666666666667,63.419452887538"
+                    Point2="194.666666666667,63.419452887538"
+                    Point3="194.666666666667,67.419452887538" />
+                  <mssgle:LineSegment
+                    End="194.666666666667,99.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5807,6 +5857,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output 0]"
+          TopLeft="948.5,644">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25"
+              Start="0,0"
+              End="0,17.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output2]"
           TopLeft="591.875,95">
           <EdgeLayout.Curve>
@@ -5873,6 +5945,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Merge Join Output1]"
+          TopLeft="752,621.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="113,0"
+              Start="0,0"
+              End="105.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="105.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Data Flow Task.Paths[Merge Join Output]"
           TopLeft="470.75,276.25">
           <EdgeLayout.Curve>
@@ -5894,10 +5988,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="98,42"
-          Id="Package\Data Flow Task\Sort"
-          TopLeft="423,450" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Aggregate Output 11]"
           TopLeft="470.75,386">
@@ -5920,122 +6010,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="130,42"
-          Id="Package\Data Flow Task\Merge Join"
-          TopLeft="622,599" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output2]"
-          TopLeft="472,492">
+          Id="Package\Data Flow Task.Paths[Aggregate Output 1]"
+          TopLeft="883.660714285711,383.285714285715">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="194.666666666667,107"
+              EndConnector="0,88.571428571428"
               Start="0,0"
-              End="194.666666666667,99.5">
+              End="0,81.071428571428">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,59.419452887538" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,59.419452887538"
-                    Point2="0,63.419452887538"
-                    Point3="4,63.419452887538" />
-                  <mssgle:LineSegment
-                    End="190.666666666667,63.419452887538" />
-                  <mssgle:CubicBezierSegment
-                    Point1="190.666666666667,63.419452887538"
-                    Point2="194.666666666667,63.419452887538"
-                    Point3="194.666666666667,67.419452887538" />
-                  <mssgle:LineSegment
-                    End="194.666666666667,99.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output3]"
-          TopLeft="881.642857142854,513.857142857143">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-174.309523809521,85.142857142857"
-              Start="0,0"
-              End="-174.309523809521,77.642857142857">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,46.4646113764654" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,46.4646113764654"
-                    Point2="0,50.4646113764654"
-                    Point3="-4,50.4646113764654" />
-                  <mssgle:LineSegment
-                    End="-170.309523809521,50.4646113764654" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-170.309523809521,50.4646113764654"
-                    Point2="-174.309523809521,50.4646113764654"
-                    Point3="-174.309523809521,54.4646113764654" />
-                  <mssgle:LineSegment
-                    End="-174.309523809521,77.642857142857" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Data Flow Task\Script Component"
-          TopLeft="865,602" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Merge Join Output1]"
-          TopLeft="752,621.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="113,0"
-              Start="0,0"
-              End="105.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="105.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="865,669" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Output 0]"
-          TopLeft="948.5,644">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,25"
-              Start="0,0"
-              End="0,17.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.5" />
+                    End="0,81.071428571428" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
