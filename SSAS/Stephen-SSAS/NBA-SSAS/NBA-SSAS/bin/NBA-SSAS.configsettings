@@ -7,7 +7,7 @@
         <ImpersonationInfo>
           <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">ImpersonateAccount</ImpersonationMode>
           <Account xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">STEPH-PAGD\Stephen - Work</Account>
-          <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>
+          <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">PasswordRemoved</ImpersonationInfoSecurity>
         </ImpersonationInfo>
       </DataSource>
     </DataSources>
@@ -39,6 +39,11 @@
         <MeasureGroups>
           <MeasureGroup>
             <ID>Fact Performance</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Performance</ID>
+              </Partition>
+            </Partitions>
           </MeasureGroup>
         </MeasureGroups>
       </Cube>

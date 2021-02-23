@@ -48,8 +48,8 @@
   </DataSources>
   <DataSourceViews>
     <ProjectItem>
-      <Name>Stephen_BasketbalDB_IndvidualPerformance_View.dsv</Name>
-      <FullPath>Stephen_BasketbalDB_IndvidualPerformance_View.dsv</FullPath>
+      <Name>BasketbalDB_View.dsv</Name>
+      <FullPath>BasketbalDB_View.dsv</FullPath>
     </ProjectItem>
   </DataSourceViews>
   <MiningModels>
