@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{41601A58-4F14-40E8-90A2-82F8D7081AC4}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{9AC20DCB-265B-4460-BD38-8378DCBFA513}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -145,7 +145,18 @@
       DTS:ObjectName="STEPH-PAGD\STOREAPPDB.BasketballDB">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=STEPH-PAGD\STOREAPPDB;Initial Catalog=BasketballDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=25.67.200.218\STOREAPPDB;User ID=CSVV_admin;Initial Catalog=BasketballDB;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <EncryptedData
+            Type="http://www.w3.org/2001/04/xmlenc#Element"
+            Salt="Tqr39xQQYI4="
+            IV="/p8Uu5T9Q2GUv6dmT1AgdQ==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+            <CipherData>
+              <CipherValue>/p8Uu5T9Q2GUv6dmT1Agdfq4qnVjR/wufwUJ6bWoRtqE1Z6GUsa/YLKDT3G3fp4SA57MJ68wc92GvYnVCkaPX5dWmpxebUiNf9//uohctTEBzm6Zz4Odtr4Zj1NmEds4tRakFfThwU+PczBQTyXG+w6ehvM5mmmv0bgFSHcu2h4l0DcyRa5syzH/NZqLePZy</CipherValue>
+            </CipherData>
+          </EncryptedData>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -782,10 +793,6 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="197,42"
-          Id="Package\Players Data Flow Task\BasketBallDB Destination"
-          TopLeft="213,239" />
-        <NodeLayout
           Size="206,42"
           Id="Package\Players Data Flow Task\Removes duplicated values"
           TopLeft="203,135" />
@@ -793,6 +800,10 @@
           Size="219,42"
           Id="Package\Players Data Flow Task\Error Log Flat File Destination"
           TopLeft="478,305" />
+        <NodeLayout
+          Size="197,42"
+          Id="Package\Players Data Flow Task\BasketBallDB Destination"
+          TopLeft="213,239" />
         <NodeLayout
           Size="189,42"
           Id="Package\Players Data Flow Task\Players CSV File Source"
