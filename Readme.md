@@ -2,25 +2,24 @@
 
 ## Project Description
 
-Created a database structure using MS SQL Server with SQL Server Agent to collaborate with MSBI to extract data from different sources and transforming the data into a singular format and load it to a centralized database
+The project aims to find meaningful statistics on NBA regular season historical data (about 16 years amount of data) such as average points a team makes per game or how many shots they make on average. Using this data, our project can make a number of predictions such as a team's chance of winning against another team, who might win the MVP award, etc. All values will be obtained by SSIS through Microsoft Excel, flat files, and/or web services to be stored onto MS SQL Server 2016. This data will then be analysed using SSAS. Finally, the data is processed using SSRS into easy-to-digest information.
 
 ## Technologies Used
 
 * MS SQL Server - version 2016
-* SQL Server Integration Service - Visual Studio 2019
+* SQL Server Integration Service - Visual Studio 2017/2019
+* SQL Server Analysis Service - Visual Studio 2017/2019
+* SQL Server Reporting Service - Visual Studio 2017/2019
+* ExcelBI
+* PowerBI
 
 ## Features
 
 List of features
-* Automatically loading data from multiple sources using SSIS
-* Database will fill out tables with information based on country's properties such as its population
-* Normalized database to reduce redundancy
-* Multiple views created for statistical analysis
-* Created numerous clustered, non-clustered, and column store indexes to retrieve data quickly
+*
 
 To-do list:
-* Add SQL Server Analysis Server to do further analysis
-* Add SQL Server Reporting Server to represent data in a meaningful way
+*
 
 ## Getting Started
 
