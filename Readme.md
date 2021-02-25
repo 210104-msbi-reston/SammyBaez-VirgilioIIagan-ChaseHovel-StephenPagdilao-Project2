@@ -1,4 +1,4 @@
-# PROJECT NAME
+# Basketbal Prediction and Analysis
 
 ## Project Description
 
@@ -12,6 +12,7 @@ The project aims to find meaningful statistics on NBA regular season historical 
 * SQL Server Reporting Service - Visual Studio 2017/2019
 * MS ExcelBI
 * MS PowerBI
+* LogMeIn Hamachi
 
 ## Features
 
