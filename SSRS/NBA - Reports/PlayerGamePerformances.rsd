@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>LocalNBAServer</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@playerID">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>SELECT        dimPerformance.GAME_ID, dimPerformance.PLAYER_NAME, dimPerformance.MIN_UPDATED, dimPerformance.FGM, dimPerformance.FGA, dimPerformance.FG_PCT, dimPerformance.FG3M, dimPerformance.FG3A, 
+dimPerformance.FG3_PCT, dimPerformance.FTM, dimPerformance.FTA, dimPerformance.FT_PCT, dimPerformance.OREB, dimPerformance.DREB, dimPerformance.REB, dimPerformance.AST, dimPerformance.STL, 
+                         dimPerformance.BLK, dimPerformance.[TO], dimPerformance.PF, dimPerformance.PTS, dimTeams.FullTeamName
+FROM            dimPerformance INNER JOIN
+                         dimTeams ON dimPerformance.TEAM_ID = dimTeams.TeamID
+WHERE        (dimPerformance.PLAYER_ID = @playerID)</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="GAME_ID">
+        <DataField>GAME_ID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="PLAYER_NAME">
+        <DataField>PLAYER_NAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="MIN_UPDATED">
+        <DataField>MIN_UPDATED</DataField>
+        <rd:TypeName>System.TimeSpan</rd:TypeName>
+      </Field>
+      <Field Name="FGM">
+        <DataField>FGM</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="FGA">
+        <DataField>FGA</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="FG_PCT">
+        <DataField>FG_PCT</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="FG3M">
+        <DataField>FG3M</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="FG3A">
+        <DataField>FG3A</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="FG3_PCT">
+        <DataField>FG3_PCT</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="FTM">
+        <DataField>FTM</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="FTA">
+        <DataField>FTA</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="FT_PCT">
+        <DataField>FT_PCT</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="OREB">
+        <DataField>OREB</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="DREB">
+        <DataField>DREB</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="REB">
+        <DataField>REB</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="AST">
+        <DataField>AST</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="STL">
+        <DataField>STL</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="BLK">
+        <DataField>BLK</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="TO">
+        <DataField>TO</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="PF">
+        <DataField>PF</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="PTS">
+        <DataField>PTS</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="FullTeamName">
+        <DataField>FullTeamName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

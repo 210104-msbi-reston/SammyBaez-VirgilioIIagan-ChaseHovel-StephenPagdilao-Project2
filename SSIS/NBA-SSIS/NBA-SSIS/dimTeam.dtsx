@@ -5,22 +5,22 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="STEPH-PAGD"
   DTS:CreatorName="STEPH-PAGD\Stephen - Work"
-  DTS:DTSID="{2A83C768-B48F-4DD3-A221-09D685E5F20C}"
+  DTS:DTSID="{A6CDFEE5-B073-40EB-89FD-FB4372F79224}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.150"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="DimTeam"
   DTS:PackageType="5"
-  DTS:ProtectionLevel="0"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{2144D007-0FFB-4CFF-8BE3-D5E97BD38B54}">
+  DTS:ProtectionLevel="2"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{95DBC956-807E-4C6C-952E-FC0E5FDD1901}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[TeamNames Text File Connection]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{9B4D1DD8-737F-4B17-829A-23ECDD8DD448}"
+      DTS:DTSID="{FA14C599-6AA1-404F-B935-B366E8E6D09E}"
       DTS:ObjectName="TeamNames Text File Connection">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -39,7 +39,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="FullTeamName"
-              DTS:DTSID="{890F6BC0-B124-47AE-96CF-4A61583412BA}"
+              DTS:DTSID="{AE29EAA9-4ACE-4BA1-B57D-C2EA41922C37}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -48,7 +48,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Teams CSV File Connection]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{157BEA72-D888-4D8E-89A0-659550FFA859}"
+      DTS:DTSID="{BE7B5384-FEC3-4A70-BC7C-667F9637CFB0}"
       DTS:ObjectName="Teams CSV File Connection">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -67,7 +67,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="TEAM_ID"
-              DTS:DTSID="{745D16C5-409D-4BED-B4EB-37A5E3D475CF}"
+              DTS:DTSID="{CD74C797-AA34-47FD-A173-F6EA770BDD40}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ABBREVIATION"
-              DTS:DTSID="{37808F48-8D50-412D-8632-88346B5C769F}"
+              DTS:DTSID="{7C905AC6-D3B5-414D-9279-A9C1B019CBF0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -83,7 +83,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="NICKNAME"
-              DTS:DTSID="{9A87E7D1-F5E5-4B85-9558-3A593C68FDDB}"
+              DTS:DTSID="{37551226-D2D0-494E-9A5B-DDF37DA74979}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -91,7 +91,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="YEARFOUNDED"
-              DTS:DTSID="{83BC7E17-A6D6-4179-A61D-7D70CCA5034C}"
+              DTS:DTSID="{2FBBBC02-7B5D-405E-BD8F-218999370C88}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -100,7 +100,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CITY"
-              DTS:DTSID="{542FF0BC-7C8B-4182-B3BC-6A28A312AFAE}"
+              DTS:DTSID="{82F09324-7D2C-4083-8226-D7B92A6E71FD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -109,7 +109,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ARENA"
-              DTS:DTSID="{508F6742-619B-4943-8EFB-B00171525695}"
+              DTS:DTSID="{A59FA368-5069-4367-B6CD-9AA78C505378}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -117,7 +117,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="OWNER"
-              DTS:DTSID="{F800B2AF-4AEC-4C69-AEBA-5631319A4C2D}"
+              DTS:DTSID="{77DD693E-0887-4D15-AD00-3A7C53F5E20C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -126,7 +126,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="GENERALMANAGER"
-              DTS:DTSID="{94D673E5-9906-4BCF-B391-CBC6A0991824}"
+              DTS:DTSID="{49AA0185-ADBC-4BD3-AAA9-92FF6B650D4A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -135,7 +135,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="HEADCOACH"
-              DTS:DTSID="{6FCF9458-565D-487D-B0BA-8009DDDB4623}"
+              DTS:DTSID="{074E23DB-41E6-4E44-AF7F-1F321BD85EB9}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -145,7 +145,7 @@
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{01EB85B5-61D3-44EA-BE13-2549580BE338}"
+      DTS:DTSID="{56CB9D72-AEF4-4384-8DEC-37CAB46C64D1}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="Variable">
@@ -154,7 +154,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{2762598E-76EF-4A68-8E8A-29E7485C8218}"
+      DTS:DTSID="{6DF683F9-93CC-4405-83B4-E11CFD2FAEFA}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="Variable1">
@@ -163,7 +163,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{F99CD089-C67F-4E0F-BF9E-7C7EB414C02B}"
+      DTS:DTSID="{723B9786-1276-4CD7-A399-50CBFCBDE5F0}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="Variable2">
@@ -172,7 +172,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{6027182E-AF88-4920-B2BA-6E78EFB91D3B}"
+      DTS:DTSID="{2CEFBC6A-9947-444B-94FE-EFFACCE313B6}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="Variable3">
@@ -181,7 +181,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{636D9AC0-C19A-48AE-BAA4-EBB6C69E47AA}"
+      DTS:DTSID="{859D72D0-A2AB-405A-AB6C-E500A355A719}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="Variable4">
@@ -194,7 +194,7 @@
       DTS:refId="Package\Teams Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{4E11AEAE-9677-4D43-816D-9B560397E93D}"
+      DTS:DTSID="{9B212EE9-49CB-47F2-9025-AE34D4DA6A40}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Teams Data Flow Task"
