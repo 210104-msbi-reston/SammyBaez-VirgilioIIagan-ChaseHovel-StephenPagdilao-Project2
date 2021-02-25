@@ -10,8 +10,8 @@ The project aims to find meaningful statistics on NBA regular season historical 
 * SQL Server Integration Service - Visual Studio 2017/2019
 * SQL Server Analysis Service - Visual Studio 2017/2019
 * SQL Server Reporting Service - Visual Studio 2017/2019
-* ExcelBI
-* PowerBI
+* MS ExcelBI
+* MS PowerBI
 
 ## Features
 
