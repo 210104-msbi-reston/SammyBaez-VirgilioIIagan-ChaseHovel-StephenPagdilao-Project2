@@ -29,7 +29,9 @@ List of features
 * Data Mining Model on Predicting which team will will a given game.
 
 To-do list:
-*
+* Incorporate more attributes for the data mining model to increase predictive capabilities.
+* Use SQL Server Agent to automatically run SSIS packages to do some ETL processes on new NBA games.
+* 
 
 ## Getting Started
 
