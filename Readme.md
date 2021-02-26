@@ -38,11 +38,8 @@ To-do list:
 - Predictive reports based on our data mining models.
 - Host server on cloud
 - Automatically update reports from live server
-
-* Incorporate more attributes for the data mining model to increase predictive capabilities.
-* Use SQL Server Agent to automatically run SSIS packages to do some ETL processes on new NBA games.
-* Update some reports to add more interaction and useful information.
-* Add detailed playoff predictions to see a teams chances of winning each individual round and their chances of winning the championship.
+- Update some reports to add more interaction and useful information.
+- Add detailed playoff predictions to see a teams chances of winning each individual round and their chances of winning the championship.
 
 ## Getting Started
 
