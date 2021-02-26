@@ -31,7 +31,9 @@ List of features
 To-do list:
 * Incorporate more attributes for the data mining model to increase predictive capabilities.
 * Use SQL Server Agent to automatically run SSIS packages to do some ETL processes on new NBA games.
-* 
+* Incorporate more historical data from the start of the NBA.
+* Create a data mining model to try to predict who will win the MVP award based on top performing players at the time and winner of the award.
+* Predictive reports based on our data mining models.
 
 ## Getting Started
 
