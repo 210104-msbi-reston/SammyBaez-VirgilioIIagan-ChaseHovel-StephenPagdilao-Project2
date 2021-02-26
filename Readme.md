@@ -6,34 +6,38 @@ The project aims to find meaningful statistics on NBA regular season historical 
 
 ## Technologies Used
 
-* MS SQL Server - version 2016
-* SQL Server Integration Service - Visual Studio 2017/2019
-* SQL Server Analysis Service - Visual Studio 2017/2019
-* SQL Server Reporting Service - Visual Studio 2017/2019
-* MS ExcelBI
-* MS PowerBI
-* LogMeIn Hamachi
+- MS SQL Server - version 2016
+- SQL Server Integration Service - Visual Studio 2017/2019
+- SQL Server Analysis Service - Visual Studio 2017/2019
+- SQL Server Reporting Service - Visual Studio 2017/2019
+- MS ExcelBI
+- MS PowerBI
+- LogMeIn Hamachi
 
 ## Features
 
 List of features
-* Power BI and Excel BI report on Individual Overall Performance
-* Power BI report on Individual Contribution to team performance.
-* SSRS report on Team Performance
-* SSRS report on Individual Performance
-* SSRS report on Game Results
-* SSRS report on predicted result of a game given the seasonal performance of two teams.
-* SSRS report on predicted outcomes of a season
-* Normalized Database on NBA statistics from 2003 to 2020.
-* Multidimensional Cube of NBA statistics from 2003 to 2020 for faster querying.
-* Data Mining Model on Predicting which team will will a given game.
+
+- Power BI and Excel BI report on Individual Overall Performance
+- Power BI report on Individual Contribution to team performance.
+- SSRS report on Team Performance
+- SSRS report on Individual Performance
+- SSRS report on Game Results
+- SSRS report on predicted result of a game given the seasonal performance of two teams.
+- SSRS report on predicted outcomes of a season
+- Normalized Database on NBA statistics from 2003 to 2020.
+- Multidimensional Cube of NBA statistics from 2003 to 2020 for faster querying.
+- Data Mining Model on Predicting which team will will a given game.
 
 To-do list:
-* Incorporate more attributes for the data mining model to increase predictive capabilities.
-* Use SQL Server Agent to automatically run SSIS packages to do some ETL processes on new NBA games.
-* Incorporate more historical data from the start of the NBA.
-* Create a data mining model to try to predict who will win the MVP award based on top performing players at the time and winner of the award.
-* Predictive reports based on our data mining models.
+
+- Incorporate more attributes for the data mining model to increase predictive capabilities.
+- Use SQL Server Agent to automatically run SSIS packages to do some ETL processes on new NBA games.
+- Incorporate more historical data from the start of the NBA.
+- Create a data mining model to try to predict who will win the MVP award based on top performing players at the time and winner of the award.
+- Predictive reports based on our data mining models.
+- Host server on cloud
+- Automatically update reports from live server
 
 ## Getting Started
 
@@ -41,8 +45,8 @@ To-do list:
 2. Locate that directory in Git Bash
 3. Type git init and press Enter
 4. Type git pull https://github.com/210104-msbi-reston/Stephen-Pagdilao-P1.git and it will transfer everything to the folder you have specified
-(include git clone command)
-(include all environment setup steps)
+   (include git clone command)
+   (include all environment setup steps)
 
 > Be sure to include BOTH Windows and Unix command  
 > Be sure to mention if the commands only work on a specific platform (eg. AWS, GCP)
@@ -56,5 +60,4 @@ To-do list:
 
 ## License
 
-This project uses the following license: [<license_name>](<link>).
-
+This project uses the following license: [<license_name>](link).
