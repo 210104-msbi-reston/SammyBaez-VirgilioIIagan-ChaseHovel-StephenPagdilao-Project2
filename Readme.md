@@ -50,7 +50,36 @@ To-do list:
 
 ## Usage
 
-> Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
+1. To view how we used ETL in SSIS, navigate to SSIS Folder, open the NBA-SSIS folder and click on NBA-SSIS.sln to open our solution
+2. If prompted with password, enter SqlCSVV123
+
+ ![](https://github.com/210104-msbi-reston/SammyBaez-VirgilioIIagan-ChaseHovel-StephenPagdilao-Project2/blob/main/Project%20Screenshots/SSIS%20Navigation.PNG)
+ 
+ You will be presented with this screen where you can navigate our packages.
+ 
+ ![](https://github.com/210104-msbi-reston/SammyBaez-VirgilioIIagan-ChaseHovel-StephenPagdilao-Project2/blob/main/Project%20Screenshots/SSIS%20Solution.PNG)
+ 
+ 3. To view our SSAS Cube, click on SSAS folder, open Virgil-SSAS , then open NBA-Cube and finally click on NBA-Cube.sln to view our cube.
+ 
+   ![](https://github.com/210104-msbi-reston/SammyBaez-VirgilioIIagan-ChaseHovel-StephenPagdilao-Project2/blob/main/Project%20Screenshots/SSAS%20Navigation.PNG)
+  
+  You will be presented with this screen where you can explore our cube.
+  
+  ![](https://github.com/210104-msbi-reston/SammyBaez-VirgilioIIagan-ChaseHovel-StephenPagdilao-Project2/blob/main/Project%20Screenshots/SSAS%20Cube.PNG)
+  
+  Within the cube you can explore the calculations and hierarchies that we created. 
+  
+  4. In the project screen shots folder you can see examples of our reports. Here are some examples.
+
+   ![](https://github.com/210104-msbi-reston/SammyBaez-VirgilioIIagan-ChaseHovel-StephenPagdilao-Project2/blob/main/Project%20Screenshots/%5BChase%5D%20Game%20Stats.png)
+   ![](https://github.com/210104-msbi-reston/SammyBaez-VirgilioIIagan-ChaseHovel-StephenPagdilao-Project2/blob/main/Project%20Screenshots/%5BSammy%5D%20PowerBI%20Player%20Statistical%20Contribution.PNG)
+   ![](https://github.com/210104-msbi-reston/SammyBaez-VirgilioIIagan-ChaseHovel-StephenPagdilao-Project2/blob/main/Project%20Screenshots/%5BStephen%5D%20PowerBI%20Player%20Statistics.png)
+   ![](https://github.com/210104-msbi-reston/SammyBaez-VirgilioIIagan-ChaseHovel-StephenPagdilao-Project2/blob/main/Project%20Screenshots/%5BVirgil%5D%20Wins%20Predictions.png)
+   
+  
+  
+  
+   
 
 ## License
 
