@@ -62,4 +62,4 @@ To-do list:
 
 ## License
 
-This project uses the following license: [<license_name>](link).
+This project uses the following license: [MIT License](https://github.com/210104-msbi-reston/SammyBaez-VirgilioIIagan-ChaseHovel-StephenPagdilao-Project2/blob/main/LICENSE.txt).
